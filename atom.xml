@@ -4,7 +4,7 @@
   <subtitle><![CDATA[自称数学家，半个程序员]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-16T13:54:02.000Z</updated>
+  <updated>2015-12-16T14:09:29.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://yoursite.com/2015/12/16/Cayley-Hamilton%E5%AE%9A%E7%90%86/"/>
     <id>http://yoursite.com/2015/12/16/Cayley-Hamilton定理/</id>
     <published>2015-12-16T04:37:33.000Z</published>
-    <updated>2015-12-16T13:54:02.000Z</updated>
-    <content type="html"><![CDATA[<p>大一学了矩阵之后一直很喜欢矩阵，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。下面的关于矩阵的定理Cayley-Hamilton定理个人认为是最优美的定理：矩阵的特征多项式是它的一个化零多项式。详细表述和证明如下：</p>
+    <updated>2015-12-16T14:09:29.000Z</updated>
+    <content type="html"><![CDATA[<p>大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：</p>
 <a id="more"></a>
 <p>n阶矩阵A的特征多项式为：<br><span>$$\phi(\lambda)=det(\lambda I - A) = a_n \lambda^n +
 a_{n-1} \lambda^{n-1} + \cdots + a_1 \lambda + a_0$$</span><!-- Has MathJax --></p>
@@ -46,9 +46,11 @@ A B_0 - A^2 B_1 = a_1 A \\
 \end{array} \right.$$</span><!-- Has MathJax -->
 <p>再将上式相加得到最终结果</p>
 <span>$$\phi(A)= a_ n A^n + a_{n-1} A^{n-1} + \cdots + a_1 A +
-a_0 I = \mathbf{0}$$</span><!-- Has MathJax -->]]></content>
+a_0 I = \mathbf{0}$$</span><!-- Has MathJax -->
+<p>上述定理优美在于从形式上，<span>$\phi(\lambda)=det(\lambda I - A)$</span><!-- Has MathJax -->取 <span>$\lambda = A$</span><!-- Has MathJax -->带入恰好也是0（注意数字0和零矩阵的差别），虽然说这样做是完全没有道理。作为直接推论我们知道，一个n阶方阵的任何次方都可以被它的不超过n次的幂线性表出。</p>
+]]></content>
     <summary type="html">
-    <![CDATA[<p>大一学了矩阵之后一直很喜欢矩阵，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。下面的关于矩阵的定理Cayley-Hamilton定理个人认为是最优美的定理：矩阵的特征多项式是它的一个化零多项式。详细表述和证明如下：</p>]]>
+    <![CDATA[<p>大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：</p>]]>
     
     </summary>
     
