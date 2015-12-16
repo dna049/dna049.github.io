@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2015/12/16/Cayley-Hamilton定理/index.html">
 <meta property="og:site_name" content="0.肆玖">
 <meta property="og:description" content="大一学了矩阵之后一直很喜欢矩阵，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。下面的关于矩阵的定理Cayley-Hamilton定理个人认为是最优美的定理，虽然其证明很平凡。定理表述如下：矩阵A的特征多项式就是它的一个化零多项式。详细表述和证明如下：">
-<meta property="og:updated_time" content="2015-12-16T11:50:15.000Z">
+<meta property="og:updated_time" content="2015-12-16T11:52:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cayley-Hamilton定理">
 <meta name="twitter:description" content="大一学了矩阵之后一直很喜欢矩阵，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。下面的关于矩阵的定理Cayley-Hamilton定理个人认为是最优美的定理，虽然其证明很平凡。定理表述如下：矩阵A的特征多项式就是它的一个化零多项式。详细表述和证明如下：">
@@ -173,11 +173,11 @@
 + \cdots + \lambda (B_0 - AB_1) - AB_0$$</span><!-- Has MathJax --><br>另一方面，B是A的伴随矩阵，我们有<br><span>$(\lambda I - A)B = det(\lambda I - A) I$</span><!-- Has MathJax --></p>
 <p>比较系数得到<br><span>$$\left\{ 
 \begin{array}{l} 
-B_ {n-1} = a_n \\
-B_ {n-2} - AB_ {n-1} = a_{n-1} \\
+B_ {n-1} = a_n I \\
+B_ {n-2} - AB_ {n-1} = a_{n-1} I \\
 \cdots \\
-B_0 - AB_1 = a_1 \\
--AB_0 = a_0
+B_0 - AB_1 = a_1 I \\
+-AB_0 = a_0 I
 \end{array} \right.$$</span><!-- Has MathJax --><br>对上式分别左乘<span>$A^n,A^{n-1},\cdots,A,I$</span><!-- Has MathJax -->得到：</p>
 <span>$$\left\{ 
 \begin{array}{l} 
@@ -185,7 +185,7 @@ A^n B_ {n-1} = a_n A^n \\
 A^{n-1} B_ {n-2} - A^n B_ {n-1} = a_{n-1} A^{n-1} \\
 \cdots \\
 A B_0 - A^2 B_1 = a_1 A \\
--AB_0 = a_0
+-AB_0 = a_0 I
 \end{array} \right.$$</span><!-- Has MathJax -->
 <p>再将上式相加得到最终结果</p>
 <span>$\phi(A)= a_ n A^n + a_{n-1} A^{n-1} + \cdots + a_1 A + a_0 I = \mathbf{0}$</span><!-- Has MathJax -->
