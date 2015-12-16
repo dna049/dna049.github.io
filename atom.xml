@@ -4,7 +4,7 @@
   <subtitle><![CDATA[自称数学家，半个程序员]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-16T11:59:14.000Z</updated>
+  <updated>2015-12-16T13:04:51.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/12/16/Cayley-Hamilton%E5%AE%9A%E7%90%86/"/>
     <id>http://yoursite.com/2015/12/16/Cayley-Hamilton定理/</id>
     <published>2015-12-16T04:37:33.000Z</published>
-    <updated>2015-12-16T11:59:14.000Z</updated>
+    <updated>2015-12-16T13:04:51.000Z</updated>
     <content type="html"><![CDATA[<p>大一学了矩阵之后一直很喜欢矩阵，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。下面的关于矩阵的定理Cayley-Hamilton定理个人认为是最优美的定理，虽然其证明很平凡。定理表述如下：矩阵A的特征多项式就是它的一个化零多项式。详细表述和证明如下：</p>
 <a id="more"></a>
 <p>n阶矩阵A的特征多项式为：<br><span>$\phi(\lambda)=det(\lambda I - A) = a_n \lambda^n + a_{n-1} \lambda^{n-1} + \cdots + a_1 \lambda + a_0$</span><!-- Has MathJax --></p>
