@@ -4,7 +4,7 @@
   <subtitle><![CDATA[自称数学家，半个程序员]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-21T03:03:51.000Z</updated>
+  <updated>2015-12-21T03:05:11.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/12/20/%E6%8B%93%E6%89%91%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E5%BC%80%E9%9B%86%E5%92%8C%E9%97%AD%E9%9B%86/"/>
     <id>http://yoursite.com/2015/12/20/拓扑线性空间中的开集和闭集/</id>
     <published>2015-12-20T15:13:32.000Z</published>
-    <updated>2015-12-21T03:03:51.000Z</updated>
+    <updated>2015-12-21T03:05:11.000Z</updated>
     <content type="html"><![CDATA[<p>在复习泛函分析的时候，因为很多结论可以推广到更为一般的情况，因此就看了刘培德先生编著的《拓扑线性空间与算子谱理论》这本书。然后在书中读到了有关开集和闭集的一些性质，在此总结一下，先叙述一下结论。<br>在拓扑线性空间中，</p>
 <ol>
 <li>若A是开集，B是任意集合，则A+B是开集。</li>
