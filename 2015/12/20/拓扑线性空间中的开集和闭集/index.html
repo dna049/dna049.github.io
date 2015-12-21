@@ -1,0 +1,70 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 拓扑线性空间中的开集和闭集 · 0.肆玖</title><meta name="description" content="在复习泛函分析的时候，因为很多结论可以推广到更为一般的情况，因此就看了刘培德先生编著的《拓扑线性空间与算子谱理论》这本书。然后在书中读到了有关开集和闭集的一些性质，在此总结一下，先叙述一下结论。在拓扑线性空间中，
+
+若A是开集，B是任意集合，则A+B是开集。
+若A是闭集，B是闭集，则A+B不一定为闭集。
+若A是紧集，B是闭集，则A+B是闭集。
+
+
+拓扑线性空间拓扑线性空间是一类其线性结构与最一般的拓扑结构有机结合的集合。它作为泛函分析的分支产生于20世纪40到50年代，至今仍然是现代数学乃至自然科学中讨论有关问题和相关理论的最为广泛的框架。它的产生很大直接或间接来自数学上赫赫有名的Nicolas Bourbaki"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="https://github.com/dna049" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="http://dna049.sinaapp.com" target="_blank" class="nav-list-link">LINK</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">拓扑线性空间中的开集和闭集</h1><div class="post-meta"><div class="post-time">2015年12月20日</div></div><div class="post-content"><p>在复习泛函分析的时候，因为很多结论可以推广到更为一般的情况，因此就看了刘培德先生编著的《拓扑线性空间与算子谱理论》这本书。然后在书中读到了有关开集和闭集的一些性质，在此总结一下，先叙述一下结论。<br>在拓扑线性空间中，</p>
+<ol>
+<li>若A是开集，B是任意集合，则A+B是开集。</li>
+<li>若A是闭集，B是闭集，则A+B不一定为闭集。</li>
+<li>若A是紧集，B是闭集，则A+B是闭集。<a id="more"></a>
+</li>
+</ol>
+<h4 id="u62D3_u6251_u7EBF_u6027_u7A7A_u95F4"><a href="#u62D3_u6251_u7EBF_u6027_u7A7A_u95F4" class="headerlink" title="拓扑线性空间"></a>拓扑线性空间</h4><p>拓扑线性空间是一类其线性结构与最一般的拓扑结构有机结合的集合。它作为泛函分析的分支产生于20世纪40到50年代，至今仍然是现代数学乃至自然科学中讨论有关问题和相关理论的最为广泛的框架。它的产生很大直接或间接来自数学上赫赫有名的<a href="https://en.wikipedia.org/wiki/Nicolas_Bourbaki" target="_blank" rel="external">Nicolas Bourbaki学派</a>。</p>
+<h5 id="u62D3_u6251_u7EBF_u6027_u7A7A_u95F4_u7684_u5B9A_u4E49"><a href="#u62D3_u6251_u7EBF_u6027_u7A7A_u95F4_u7684_u5B9A_u4E49" class="headerlink" title="拓扑线性空间的定义"></a>拓扑线性空间的定义</h5><p>设X是标量域K(实数域或复数域)上的拓扑线性空间，$\tau$是X上的拓扑，若</p>
+<ol>
+<li>对于每一点$x \in X$，单点集$\lbrace x \rbrace$是X中的闭集。</li>
+<li>线性空间的加法和数乘关于$\tau$连续。</li>
+</ol>
+<p>则称X是拓扑线性空间（TLS）<br>注：至于线性空间和拓扑的定义是很容易查到。上面条件1说明TLS必然是T1空间，但是经过推理可知TLS是T3空间，因而必然是Hausdorff的。拓扑线性空间的拓扑有很多很好的性质，这里不再多说了。</p>
+<h5 id="u7ED3_u8BBA_u7684_u8BC1_u660E"><a href="#u7ED3_u8BBA_u7684_u8BC1_u660E" class="headerlink" title="结论的证明"></a>结论的证明</h5><p>首先，开集，闭集，紧集这些概念完全是依赖拓扑的。具体可查熊金城《点集拓扑学讲义》，线性空间可以查任何一本线性代数或者高等代数的书。<br>Proof：<br>(i) 若A是开集，B是任意集合，则A+B是开集。<br>因为<span>$A+B = \cup _ {y \in B} A+y$</span><!-- Has MathJax -->是开集，证毕。<br>(ii) 若A是闭集，B是闭集，则A+B不一定为闭集。<br>不妨设<span>$A＝\lbrace (x,y) \;|\; x&gt;0,xy \geq 1 \rbrace ,B＝\lbrace (x,y) \;|\; x&gt;0,xy \leq -1 \rbrace$</span><!-- Has MathJax -->则显然A、B是闭集，但是<span>$A+B =\lbrace (x,y) \;|\; x&gt;0 \rbrace$</span><!-- Has MathJax -->是开集且不是闭集。<br>(iii) 若A是紧集，B是闭集，则A+B是闭集。<br>这里的证明需要用到拓扑的两个结论</p>
+<ol>
+<li>$x \in \overline{A}$当且仅当A中有网（<span>$x _ {\lambda}, \lambda \in \Lambda,x _ \lambda \to x$</span><!-- Has MathJax -->)</li>
+<li>A紧当且仅当A中每一个网 <span>$x _ {\lambda}, \lambda \in \Lambda$</span><!-- Has MathJax -->都有极限点（即有收敛子网）</li>
+</ol>
+<p>若$c \in \overline{A+B}$，则存在网（<span>$c _ {\lambda}= a _ {\lambda} +b _ {\lambda}, \lambda \in \Lambda$</span><!-- Has MathJax -->）使得<span>$c _ {\lambda} \to c$</span><!-- Has MathJax -->,这里<span>$a _ {\lambda} \in A , b _ {\lambda} \in B$</span><!-- Has MathJax -->。由于A紧，于是有子网<span>$a _ {\lambda&apos;} , \lambda&apos; \in \Lambda&apos; \subset \Lambda$</span><!-- Has MathJax -->）使得<span>$a _ {\lambda&apos;} \to a$</span><!-- Has MathJax -->此时<span>$b _ {\lambda&apos;} = c _ {\lambda&apos;} - a _ {\lambda&apos;} \to c-a = b$</span><!-- Has MathJax -->，由于B是闭集，故$b \in B$。于是$c = a + b \in A+B$，即$\overline{A+B} ＝ A+B$，所以A+B是闭的。</p>
+<h5 id="u540E_u8BB0"><a href="#u540E_u8BB0" class="headerlink" title="后记"></a>后记</h5><p>其实现代数学最大的问题，不是不知道怎么处理问题，而是根本不懂问题在说什么。</p>
+<p>我们要相当的努力才能认识到自己是傻逼的事实。</p>
+</div></article></div></section><footer><div class="paginator"><a class="prev"> </a><a href="/2015/12/17/Perron-Frobenius理论/" class="next">下一篇</a></div><div data-thread-key="2015/12/20/拓扑线性空间中的开集和闭集/" data-title="拓扑线性空间中的开集和闭集" data-url="http://yoursite.com/2015/12/20/拓扑线性空间中的开集和闭集/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?e561b60b5caa17e3873a8e31c9e1f5f4";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body></html>
