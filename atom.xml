@@ -4,7 +4,7 @@
   <subtitle><![CDATA[自称数学家，半个程序员]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-23T12:59:25.000Z</updated>
+  <updated>2015-12-23T13:03:29.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://yoursite.com/2015/12/23/hexo-%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%9C%80%E7%AE%80%E5%8D%95%E6%96%B9%E5%BC%8F/"/>
     <id>http://yoursite.com/2015/12/23/hexo-中插入图片最简单方式/</id>
     <published>2015-12-23T12:42:32.000Z</published>
-    <updated>2015-12-23T12:59:25.000Z</updated>
-    <content type="html"><![CDATA[<p>因为上一篇博文需要贴一张本地图片，奈何技术上无法解决。后来查了官方文档，询问hexo交流群（287306637）之后，有给出解决方案（用图床）但是不是我想要的方式，最终通过<a href="https://hexo.io/docs/asset-folders.html" target="_blank" rel="external">官方文档</a>找到了答案</p>
+    <updated>2015-12-23T13:03:29.000Z</updated>
+    <content type="html"><![CDATA[<p>因为上一篇博文需要贴一张本地图片，奈何技术上无法解决。后来查了官方文档并且询问hexo交流群（287306637）之后，有给出解决方案（用图床）但是不是我想要的方式，最终通过<a href="https://hexo.io/docs/asset-folders.html" target="_blank" rel="external">官方文档</a>解决了此问题。</p>
 <a id="more"></a>
 <p>方法其实很简单，只需再修改 _config.yml 文件中的</p>
 <pre><code>post_asset_folder: false
@@ -33,7 +33,7 @@
 </code></pre><p>即可。就是这么简单。<br><img src="example.png" alt="Loading"></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>因为上一篇博文需要贴一张本地图片，奈何技术上无法解决。后来查了官方文档，询问hexo交流群（287306637）之后，有给出解决方案（用图床）但是不是我想要的方式，最终通过<a href="https://hexo.io/docs/asset-folders.html">官方文档</a>找到了答案</p>]]>
+    <![CDATA[<p>因为上一篇博文需要贴一张本地图片，奈何技术上无法解决。后来查了官方文档并且询问hexo交流群（287306637）之后，有给出解决方案（用图床）但是不是我想要的方式，最终通过<a href="https://hexo.io/docs/asset-folders.html">官方文档</a>解决了此问题。</p>]]>
     
     </summary>
     
