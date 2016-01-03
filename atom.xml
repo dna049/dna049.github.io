@@ -4,7 +4,7 @@
   <subtitle><![CDATA[自称数学家，半个程序员]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-01-03T13:59:20.000Z</updated>
+  <updated>2016-01-03T14:07:14.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,30 +18,30 @@
     <title><![CDATA[My Math work edited by LaTex]]></title>
     <link href="http://yoursite.com/2016/01/03/My-Math-work-edited-by-LaTex/"/>
     <id>http://yoursite.com/2016/01/03/My-Math-work-edited-by-LaTex/</id>
-    <published>2016-01-03T13:59:20.000Z</published>
-    <updated>2016-01-03T13:59:20.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="Will_be_update_frequently"><a href="#Will_be_update_frequently" class="headerlink" title="Will be update frequently"></a>Will be update frequently</h3><p>This blog reconding my math work and will be update frequently.</p>
+    <published>2016-01-03T14:07:14.000Z</published>
+    <updated>2016-01-03T14:07:14.000Z</updated>
+    <content type="html"><![CDATA[<p>This blog reconding my math work and will be update frequently.Click to view or download it.</p>
 <a id="more"></a>
-<h4 id="Here_are_PDF_version_of_my_math_work"><a href="#Here_are_PDF_version_of_my_math_work" class="headerlink" title="Here are PDF version of my math work"></a>Here are PDF version of my math work</h4><p><a href="Config of ACM-ICPC.pdf">Config of ACM-ICPC</a></p>
+<h4 id="Here_are_PDF_version_of_my_math_work"><a href="#Here_are_PDF_version_of_my_math_work" class="headerlink" title="Here are PDF version of my math work"></a>Here are PDF version of my math work</h4><p><a href="Config of ACM\-ICPC.pdf">Config of ACM-ICPC</a></p>
 <p><a href="czp_hw1.pdf">Some results about matrix</a></p>
 <p><a href="czp_hw2.pdf">Decomposition of 1 by 1/n </a></p>
 <p><a href="Nowhere dense set and frist category set.pdf">Nowhere dense set and frist category set</a></p>
 <p><a href="Relationship between Spectral Radius ,Numerical Radius and Spectral norm.pdf">Relationship between Spectral Radius ,Numerical Radius and Spectral norm</a></p>
 <p><a href="Some results about group.pdf">Some results about group</a></p>
-<p><a href="The inverse of I-ba and I-ab.pdf">The inverse of I-ba and I-ab</a></p>
+<p><a href="The inverse of I\-ba and I\-ab.pdf">The inverse of I-ba and I-ab</a></p>
 <p><a href="example of function that only derivable on one point.pdf">example of function that only derivable on one point</a></p>
 <p><a href="毕业论文10110057陈智鹏.pdf">undergraduate graduation paper</a></p>
-<h4 id="Here_are_Tex_version_of_my_math_work"><a href="#Here_are_Tex_version_of_my_math_work" class="headerlink" title="Here are Tex version of my math work"></a>Here are Tex version of my math work</h4><p><a href="Config of ACM-ICPC.tex">Config of ACM-ICPC.tex</a></p>
+<h4 id="Here_are_Tex_version_of_my_math_work"><a href="#Here_are_Tex_version_of_my_math_work" class="headerlink" title="Here are Tex version of my math work"></a>Here are Tex version of my math work</h4><p><a href="Config of ACM\-ICPC.tex">Config of ACM-ICPC.tex</a></p>
 <p><a href="czp_hw1.tex">Some results about matrix.tex</a></p>
 <p><a href="czp_hw2.tex">Decomposition of 1 by 1/n.tex</a></p>
 <p><a href="Nowhere dense set and frist category set.tex">Nowhere dense set and frist category set.tex</a></p>
 <p><a href="Relationship between Spectral Radius ,Numerical Radius and Spectral norm.tex">Relationship between Spectral Radius ,Numerical Radius and Spectral norm.tex</a></p>
 <p><a href="Some results about group.tex">Some results about group.tex</a></p>
-<p><a href="The inverse of I-ba and I-ab.tex">The inverse of I-ba and I-ab.tex</a></p>
+<p><a href="The inverse of I\-ba and I\-ab.tex">The inverse of I-ba and I-ab.tex</a></p>
 <p><a href="example of function that only derivable on one point.tex">example of function that only derivable on one point.tex</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="Will_be_update_frequently"><a href="#Will_be_update_frequently" class="headerlink" title="Will be update frequently"></a>Will be update frequently</h3><p>This blog reconding my math work and will be update frequently.</p>]]>
+    <![CDATA[<p>This blog reconding my math work and will be update frequently.Click to view or download it.</p>]]>
     
     </summary>
     
@@ -52,8 +52,8 @@
     <link href="http://yoursite.com/2016/01/03/Several-Algorithms-of-root-Complex/"/>
     <id>http://yoursite.com/2016/01/03/Several-Algorithms-of-root-Complex/</id>
     <published>2016-01-03T07:12:12.000Z</published>
-    <updated>2016-01-03T13:41:49.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="Several_Elegant_Algorithms_of_root_Complex"><a href="#Several_Elegant_Algorithms_of_root_Complex" class="headerlink" title="Several Elegant Algorithms of root Complex"></a>Several Elegant Algorithms of root Complex</h3><p>We, as a ACMer, always take algorithm complexity into consideration when programming. Today, I introduce you some elegant algorithms of root Complex.</p>
+    <updated>2016-01-03T14:06:48.000Z</updated>
+    <content type="html"><![CDATA[<p>I, as a ACMer, always take algorithm complexity into consideration when programming. Today, I introduce you some elegant algorithms of root Complex.</p>
 <a id="more"></a>
 <h3 id="1-__3C_21-_uFFFC5-_3E"><a href="#1-__3C_21-_uFFFC5-_3E" class="headerlink" title="1. <span>$s(n) = \sum_{i=1}^{n} \lfloor \frac{n}{i} \rfloor$</span><!-- Has MathJax -->"></a>1. <span>$s(n) = \sum_{i=1}^{n} \lfloor \frac{n}{i} \rfloor$</span><!-- Has MathJax --></h3><p>Since The range of <span>$\lfloor \frac{n}{i} \rfloor$</span><!-- Has MathJax --> contains at most $2\sqrt{n}$ . There may exist a algorithm of complexity $O(\sqrt{n})$.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">LL <span class="title">getsum</span><span class="params">(LL n)</span></span>&#123; <span class="comment">// The code is simple and easy to understand</span></span><br><span class="line">    LL sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(LL i=<span class="number">1</span>,j;i&lt;=n;i=j+<span class="number">1</span>)&#123; </span><br><span class="line">        j = n/(n/i);</span><br><span class="line">        sum += (j-i+<span class="number">1</span>)*(n/i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>Actually, $s(n)$ donate the number of positive integer point under graph $xy=1$.</p>
@@ -100,7 +100,7 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
 <h3 id="6-_Note"><a href="#6-_Note" class="headerlink" title="6. Note"></a>6. Note</h3><p>All C++ code above should be changed to fit different demands.</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="Several_Elegant_Algorithms_of_root_Complex"><a href="#Several_Elegant_Algorithms_of_root_Complex" class="headerlink" title="Several Elegant Algorithms of root Complex"></a>Several Elegant Algorithms of root Complex</h3><p>We, as a ACMer, always take algorithm complexity into consideration when programming. Today, I introduce you some elegant algorithms of root Complex.</p>]]>
+    <![CDATA[<p>I, as a ACMer, always take algorithm complexity into consideration when programming. Today, I introduce you some elegant algorithms of root Complex.</p>]]>
     
     </summary>
     
@@ -111,8 +111,9 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     <link href="http://yoursite.com/2016/01/03/2016%E5%8E%A6%E9%97%A8%E9%A9%AC%E6%8B%89%E6%9D%BE/"/>
     <id>http://yoursite.com/2016/01/03/2016厦门马拉松/</id>
     <published>2016-01-03T06:18:20.000Z</published>
-    <updated>2016-01-03T09:23:07.000Z</updated>
+    <updated>2016-01-03T14:07:10.000Z</updated>
     <content type="html"><![CDATA[<h3 id="u7B2C_u4E00_u6B21_u5168_u7A0B_u9A6C_u62C9_u677E"><a href="#u7B2C_u4E00_u6B21_u5168_u7A0B_u9A6C_u62C9_u677E" class="headerlink" title="第一次全程马拉松"></a>第一次全程马拉松</h3><p>仅仅只参加几次10公里的我，这次想装个逼跑个全程马拉松。其实我就是这么任性，没办法。然后就BB一下此次马拉松吧。</p>
+<a id="more"></a>
 <h5 id="u5751_u7239_u7684_u7279_u6B65"><a href="#u5751_u7239_u7684_u7279_u6B65" class="headerlink" title="坑爹的特步"></a>坑爹的特步</h5><p>衣服尺码不按照官网提供的来，给我一个3XL简直都不用穿裤子了。</p>
 <h5 id="u6709_u7231_u7684_u8FDB_u660E_u5BFA"><a href="#u6709_u7231_u7684_u8FDB_u660E_u5BFA" class="headerlink" title="有爱的进明寺"></a>有爱的进明寺</h5><p>大约在28公里的时候，进明寺的一些好心人给我提供了补给，三小块芝麻糕吃的让人心里暖暖的。</p>
 <h5 id="u8D5B_u9053_u5F88_u7F8E"><a href="#u8D5B_u9053_u5F88_u7F8E" class="headerlink" title="赛道很美"></a>赛道很美</h5><p>毕竟环海而行，感觉就是舒畅</p>
@@ -125,7 +126,8 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
 <h3 id="u6700_u540E"><a href="#u6700_u540E" class="headerlink" title="最后"></a>最后</h3><p>跑完之后去了趟厦门大学，只有一个门可以进，绕了一大圈。去食堂蹭了顿饭，感觉厦大也没什么好看的，还不如我大华理的奉贤校区。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="u7B2C_u4E00_u6B21_u5168_u7A0B_u9A6C_u62C9_u677E"><a href="#u7B2C_u4E00_u6B21_u5168_u7A0B_u9A6C_u62C9_u677E" class="headerlink" title]]>
+    <![CDATA[<h3 id="u7B2C_u4E00_u6B21_u5168_u7A0B_u9A6C_u62C9_u677E"><a href="#u7B2C_u4E00_u6B21_u5168_u7A0B_u9A6C_u62C9_u677E" class="headerlink" title="第一次全程马拉松"></a>第一次全程马拉松</h3><p>仅仅只参加几次10公里的我，这次想装个逼跑个全程马拉松。其实我就是这么任性，没办法。然后就BB一下此次马拉松吧。</p>]]>
+    
     </summary>
     
   </entry>
