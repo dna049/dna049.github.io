@@ -54,9 +54,9 @@ b_k + b_{k-1} C_k ^{k-1} + \cdots b_1 C_{k} ^1$$</span><!-- Has MathJax --><br>�
     <link href="http://yoursite.com/2016/01/21/%E4%B8%A4%E7%B1%BB%E5%8F%8D%E6%BC%94%E5%85%AC%E5%BC%8F%E5%8F%8A%E5%85%B6%E7%9F%A9%E9%98%B5%E5%BD%A2%E5%BC%8F/"/>
     <id>http://yoursite.com/2016/01/21/两类反演公式及其矩阵形式/</id>
     <published>2016-01-21T09:31:20.000Z</published>
-    <updated>2016-01-21T11:06:30.000Z</updated>
+    <updated>2016-01-21T12:42:51.000Z</updated>
     <content type="html"><![CDATA[<p>在上一篇<a href="http://dna049.com/2016/01/20/数论函数的Dirichlet积/" target="_blank" rel="external">博文</a>中，介绍过数论中的 Mobius 反演公式，让我想起了另一个经典的反演公式－－－二项式反演公式。然而本质上反演公式就是矩阵求逆的过程。只是他们的逆有很简单的形式，因此就有了这样两个反演公式而已。<br><a id="more"></a></p>
-<p>Mobius 反演在上一篇博客中已经提及，现在着重提一下二项式反演公式，这个公式让我在2014年ACM－ICPC亚洲区域赛西安站拿银，当时<a href="2014acmicpc-asia-xian-regional-contest">F题</a>答案直接算需要$n^3$复杂度，而利用二项式反演公式后，可以在$n^2$复杂度内完美解决。1A过题，感觉超爽。</p>
+<p>Mobius 反演在上一篇博客中已经提及，现在着重提一下二项式反演公式，这个公式让我在2014年ACM－ICPC亚洲区域赛西安站拿银，当时<a href="2014acmicpc-asia-xian-regional-contest.pdf">F题</a>答案直接算需要$n^3$复杂度，而利用二项式反演公式后，可以在$n^2$复杂度内完美解决。1A过题，感觉超爽。</p>
 <h3 id="u53CD_u6F14_u516C_u5F0F_u4E0E_u5176_u77E9_u9635_u5F62_u5F0F"><a href="#u53CD_u6F14_u516C_u5F0F_u4E0E_u5176_u77E9_u9635_u5F62_u5F0F" class="headerlink" title="反演公式与其矩阵形式"></a>反演公式与其矩阵形式</h3><p>由<br><span>$$\sum _{r = 1} ^n a _{n,r} f(r) 
 = g(n)$$</span><!-- Has MathJax --><br>其中$g(n)$已知，解出$f(n)$<br><span>$$f(n) = 
 \sum _{r = 1} ^n b _{n,r} g(r)$$</span><!-- Has MathJax --><br>为其反演公式，也称上面两式互为反演公式。</p>
