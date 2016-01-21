@@ -4,7 +4,7 @@
   <subtitle><![CDATA[自称数学家，半个程序员]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-01-19T05:09:40.000Z</updated>
+  <updated>2016-01-21T11:05:42.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[两类反演公式及其矩阵形式]]></title>
+    <link href="http://yoursite.com/2016/01/21/%E4%B8%A4%E7%B1%BB%E5%8F%8D%E6%BC%94%E5%85%AC%E5%BC%8F%E5%8F%8A%E5%85%B6%E7%9F%A9%E9%98%B5%E5%BD%A2%E5%BC%8F/"/>
+    <id>http://yoursite.com/2016/01/21/两类反演公式及其矩阵形式/</id>
+    <published>2016-01-21T09:31:20.000Z</published>
+    <updated>2016-01-21T11:05:42.000Z</updated>
+    <content type="html"><![CDATA[<p>在上一篇<a href="http://dna049.com/2016/01/20/数论函数的Dirichlet积/" target="_blank" rel="external">博文</a>中，介绍过数论中的 Mobius 反演公式，让我想起了另一个经典的反演公式－－－二项式反演公式。然而本质上反演公式就是矩阵求逆的过程。只是他们的逆有很简单的形式，因此就有了这样两个反演公式而已。<br><a id="more"></a></p>
+<p>Mobius 反演在上一篇博客中已经提及，现在着重提一下二项式反演公式，这个公式让我在2014年ACM－ICPC亚洲区域赛西安站拿银，当时<a href="2014acmicpc-asia-xian-regional-contest">F题</a>答案直接算需要$n^3$复杂度，而利用二项式反演公式后，可以在$n^2$复杂度内完美解决。1A过题，感觉超爽。</p>
+<h3 id="u53CD_u6F14_u516C_u5F0F_u4E0E_u5176_u77E9_u9635_u5F62_u5F0F"><a href="#u53CD_u6F14_u516C_u5F0F_u4E0E_u5176_u77E9_u9635_u5F62_u5F0F" class="headerlink" title="反演公式与其矩阵形式"></a>反演公式与其矩阵形式</h3><p>由<br><span>$$\sum _{r = 1} ^n a _{n,r} f(r) 
+= g(n)$$</span><!-- Has MathJax --><br>其中$g(n)$已知，解出$f(n)$<br><span>$$f(n) = 
+\sum _{r = 1} ^n b _{n,r} g(r)$$</span><!-- Has MathJax --><br>为其反演公式，也称上面两式互为反演公式。</p>
+<p>令<br><span>$$A = \left( \begin{matrix} a _{11} &amp; &amp;  \\
+a _{21} &amp; a _{22} &amp; \\
+\cdots &amp; \cdots &amp; \ddots &amp; \\
+a _{n1} &amp; a _{n2} &amp; \cdots &amp; a _{nn} \\
+\end{matrix} \right) 
+\qquad
+B = \left( \begin{matrix} b _{11} &amp; &amp;  \\
+b _{21} &amp; b _{22} &amp; \\
+\cdots &amp; \cdots &amp; \ddots &amp; \\
+b _{n1} &amp; b _{n2} &amp; \cdots &amp; b _{nn} \\
+\end{matrix} \right)$$</span><!-- Has MathJax --></p>
+<p>则上述反演公式本质上就是求矩阵$A$的逆$B$.</p>
+<h3 id="u4E8C_u9879_u5F0F_u53CD_u6F14_u516C_u5F0F"><a href="#u4E8C_u9879_u5F0F_u53CD_u6F14_u516C_u5F0F" class="headerlink" title="二项式反演公式"></a>二项式反演公式</h3><p>若<br><span>$$g(n) = 
+\sum _{r = s} ^n \left(\begin{matrix} n \\ r\end{matrix}\right) f(r)$$</span><!-- Has MathJax --><br>其中 $s \geq 0$ 则<br><span>$$f(n) 
+= \sum _{r = s} ^n (-1)^{n-r} \left(\begin{matrix} n \\ r\end{matrix}\right) g(r)$$</span><!-- Has MathJax --></p>
+<p>Proof: 要证明反演公式，只需证明，对应的矩阵 $A$ 和 $B$ 互为逆即可. 令 $C = A*B$ 则<br><span>$$\begin{align}
+c _{ij} = \sum _{k=1} ^n a _{ik} b _{kj} &amp; = \sum _{k =j} ^ i \left(\begin{matrix} i \\ k\end{matrix}\right) \left(\begin{matrix} k \\ j\end{matrix}\right) = 
+\sum _{k=0} ^ {i-j} \left(\begin{matrix} i \\ k+j\end{matrix}\right) \left(\begin{matrix} k+j \\ j\end{matrix}\right) \\
+&amp; = \left(\begin{matrix} i \\ j\end{matrix}\right) \sum _{k=0} ^ {i-j} \left(\begin{matrix} i-j \\ k\end{matrix}\right) = \left\{ \begin{array}{ll} 1,&amp; i=j \\  0,&amp; i&gt;j\end{array} \right.
+\end{align}$$</span><!-- Has MathJax --><br>证毕。</p>
+<h3 id="u4E24_u7C7B_u53CD_u6F14_u516C_u5F0F_u7684_u5E94_u7528"><a href="#u4E24_u7C7B_u53CD_u6F14_u516C_u5F0F_u7684_u5E94_u7528" class="headerlink" title="两类反演公式的应用"></a>两类反演公式的应用</h3><p>这两类反演公式在组合数学和数论中都有诸多应用，这里简单的提几个。</p>
+<h5 id="28_u9519_u6392_u95EE_u9898_29__u5728__24n_24__u4E2A_u6570_u5B57__241_2C2_2C_5Cdots_2Cn_24__u5F62_u6210__24n_21_24__u4E2A_u6392_u5217__24a_1a_2__5Cdots_a_n_24__u4E2D_u6EE1_u8DB3__24a_i__5Cneq_i_24__u7684_u6392_u5217_u6709_u591A_u5C11_u4E2A_uFF1F"><a href="#28_u9519_u6392_u95EE_u9898_29__u5728__24n_24__u4E2A_u6570_u5B57__241_2C2_2C_5Cdots_2Cn_24__u5F62_u6210__24n_21_24__u4E2A_u6392_u5217__24a_1a_2__5Cdots_a_n_24__u4E2D_u6EE1_u8DB3__24a_i__5Cneq_i_24__u7684_u6392_u5217_u6709_u591A_u5C11_u4E2A_uFF1F" class="headerlink" title="(错排问题) 在 $n$ 个数字 $1,2,\dots,n$ 形成 $n!$ 个排列 $a_1a_2 \dots a_n$ 中满足 $a_i \neq i$ 的排列有多少个？"></a>(错排问题) 在 $n$ 个数字 $1,2,\dots,n$ 形成 $n!$ 个排列 $a_1a_2 \dots a_n$ 中满足 $a_i \neq i$ 的排列有多少个？</h5><p>不妨设答案为 <span>$D_n$</span><!-- Has MathJax --> ,则可以看出恰好有 $r$ 个 <span>$a_i =i$</span><!-- Has MathJax -->的排列数为<span>$\left(\begin{matrix} n \\ r\end{matrix}\right) D_{n-r}$</span><!-- Has MathJax -->,因此<br><span>$$n! =
+\sum _{r = 0} ^n \left(\begin{matrix} n \\ r\end{matrix}\right) D_{n-r}$$</span><!-- Has MathJax --><br>因此<br><span>$$D_n ＝ 
+\sum _{r = 0} ^n (-1)^{n-r} \left(\begin{matrix} n \\ r\end{matrix}\right) r! = n! \sum _{r=0} ^n \frac{(-1)^r}{r!}$$</span><!-- Has MathJax --></p>
+<h5 id="28_u6EE1_u5C04_u4E2A_u6570_29__u6C42m_u5143_u96C6A_u5230n_u5143_u96C6B_u7684_u6EE1_u8EAB_u7684_u4E2A_u6570g_28m_2Cn_29"><a href="#28_u6EE1_u5C04_u4E2A_u6570_29__u6C42m_u5143_u96C6A_u5230n_u5143_u96C6B_u7684_u6EE1_u8EAB_u7684_u4E2A_u6570g_28m_2Cn_29" class="headerlink" title="(满射个数) 求m元集A到n元集B的满身的个数g(m,n)"></a>(满射个数) 求m元集A到n元集B的满身的个数g(m,n)</h5><p>类似于错排的思路，我们有<br><span>$$n^m =
+\sum _{r = 1} ^n \left(\begin{matrix} n \\ r\end{matrix}\right) g(m,r)$$</span><!-- Has MathJax --><br>于是<br><span>$$g(m,n) = 
+\sum _{r = 1} ^n (-1)^{n-r} \left(\begin{matrix} n \\ r\end{matrix}\right) r^m$$</span><!-- Has MathJax --></p>
+<h5 id="Mobius_u53CD_u6F14_u5728_u53EF_u91CD_u590D_u5706_u6392_u5217_u4E2D_u6709_u91CD_u8981_u5E94_u7528_uFF0C_u8FD9_u91CC_u5C31_u4E0D_u8BF4_u4E86_u3002"><a href="#Mobius_u53CD_u6F14_u5728_u53EF_u91CD_u590D_u5706_u6392_u5217_u4E2D_u6709_u91CD_u8981_u5E94_u7528_uFF0C_u8FD9_u91CC_u5C31_u4E0D_u8BF4_u4E86_u3002" class="headerlink" title="Mobius反演在可重复圆排列中有重要应用，这里就不说了。"></a>Mobius反演在可重复圆排列中有重要应用，这里就不说了。</h5><h3 id="Mobius__u77E9_u9635"><a href="#Mobius__u77E9_u9635" class="headerlink" title="Mobius 矩阵"></a>Mobius 矩阵</h3><p>由 Mobius 反演公式对应的矩阵我们有,若<br><span>$$a _{ij} = \left\{ \begin{array}{cc} 1, &amp; j|i \\
+0, &amp; else. \end{array} \right.$$</span><!-- Has MathJax --><br>则，其逆矩阵为<br><span>$$b _{ij} = \left\{ \begin{array}{cc} u(\frac{i}{j}), &amp; j|i \\
+0, &amp; else. \end{array} \right.$$</span><!-- Has MathJax --></p>
+<p>本文参考了<a href="http://www.douban.com/note/480023639/?type=like" target="_blank" rel="external">豆瓣</a>和<a href="http://wenku.baidu.com/link?url=0m3D-588KfEUvocmKGoW5X4z5SHrEKVOaqfLoTeRtJaJcG6oDEUh2QEbJmNa1p2OTkqFLCqhfhM-RsoOI2fkutlqL9q3xgJhIAic4HumI5W" target="_blank" rel="external">百度文库</a>以及 许胤龙，孙淑玲《组合数学引论》。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在上一篇<a href="http://dna049.com/2016/01/20/数论函数的Dirichlet积/">博文</a>中，介绍过数论中的 Mobius 反演公式，让我想起了另一个经典的反演公式－－－二项式反演公式。然而本质上反演公式就是矩阵求逆的过程。只是他们的逆有很简单的形式，因此就有了这样两个反演公式而已。<br>]]>
+    
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[My Math work edited by LaTex]]></title>
@@ -52,7 +102,7 @@
     <link href="http://yoursite.com/2016/01/20/%E6%95%B0%E8%AE%BA%E5%87%BD%E6%95%B0%E7%9A%84Dirichlet%E7%A7%AF/"/>
     <id>http://yoursite.com/2016/01/20/数论函数的Dirichlet积/</id>
     <published>2016-01-20T12:09:26.000Z</published>
-    <updated>2016-01-21T08:38:43.000Z</updated>
+    <updated>2016-01-21T09:32:35.000Z</updated>
     <content type="html"><![CDATA[<p>最近重温潘承洞老先生的《数论基础》(现代数学基础丛书34)，确实是经典中的经典。以现代的眼光看数论函数，使得分析问题更加简洁本质，而这些都要归功于 Dirichlet 积的引入。<br><a id="more"></a></p>
 <h3 id="u5E38_u89C1_u6570_u8BBA_u51FD_u6570"><a href="#u5E38_u89C1_u6570_u8BBA_u51FD_u6570" class="headerlink" title="常见数论函数"></a>常见数论函数</h3><p>为了更好的介绍 Dirichlet 积，先引入一些记号，数论函数是指定义于全体正整数集上的函数。</p>
 <ol>
@@ -221,7 +271,7 @@ n^{\lambda} * \phi _{\lambda}$$</span><!-- Has MathJax --><br>可知<br><span>$$
 <p>其中<br><span>$$a_n = 
 \sum _{d|n} \mu(d) = I(n)$$</span><!-- Has MathJax --><br>又由<br><span>$$\sum _{n=1} ^{\infty} \frac{1}{n^2} = 
 \frac{\pi^2}{6}$$</span><!-- Has MathJax --><br>结论显然。</p>
-<p>该博文大多资料来自 潘承洞《数论基础》，转载请注明<a href="http://dna049.com" target="_blank" rel="external">dna049</a></p>
+<p>该博文大多资料来自 潘承洞《数论基础》，转载请注明<a href="http://dna049.com" target="_blank" rel="external">http://dna049.com</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>最近重温潘承洞老先生的《数论基础》(现代数学基础丛书34)，确实是经典中的经典。以现代的眼光看数论函数，使得分析问题更加简洁本质，而这些都要归功于 Dirichlet 积的引入。<br>]]>
