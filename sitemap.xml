@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/01/03/Several-Algorithms-of-root-Complex/</loc>
+    <lastmod>2016-01-21T12:36:43.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/01/21/%E8%87%AA%E7%84%B6%E6%95%B0%E6%96%B9%E5%B9%82%E5%92%8C%E5%85%AC%E5%BC%8F/</loc>
     <lastmod>2016-01-21T12:29:31.000Z</lastmod>
   </url>
@@ -34,11 +39,6 @@
   <url>
     <loc>http://yoursite.com/2016/01/20/My-Math-work-edited-by-LaTex/</loc>
     <lastmod>2016-01-19T05:09:40.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/01/03/Several-Algorithms-of-root-Complex/</loc>
-    <lastmod>2016-01-03T15:20:58.000Z</lastmod>
   </url>
   
   <url>

@@ -320,7 +320,7 @@ n^{\lambda} * \phi _{\lambda}$$</span><!-- Has MathJax --><br>可知<br><span>$$
     <link href="http://yoursite.com/2016/01/03/Several-Algorithms-of-root-Complex/"/>
     <id>http://yoursite.com/2016/01/03/Several-Algorithms-of-root-Complex/</id>
     <published>2016-01-03T07:12:12.000Z</published>
-    <updated>2016-01-03T15:20:58.000Z</updated>
+    <updated>2016-01-21T12:36:43.000Z</updated>
     <content type="html"><![CDATA[<p>I, as a ACMer, always take algorithm complexity into consideration when programming. Today, I introduce you some elegant algorithms of root Complex.</p>
 <a id="more"></a>
 <h3 id="1-__3C_21-_uFFFC5-_3E"><a href="#1-__3C_21-_uFFFC5-_3E" class="headerlink" title="1. <span>$s(n) = \sum_{i=1}^{n} \lfloor \frac{n}{i} \rfloor$</span><!-- Has MathJax -->"></a>1. <span>$s(n) = \sum_{i=1}^{n} \lfloor \frac{n}{i} \rfloor$</span><!-- Has MathJax --></h3><p>Since The range of <span>$\lfloor \frac{n}{i} \rfloor$</span><!-- Has MathJax --> contains at most $2\sqrt{n}$ . There may exist a algorithm of complexity $O(\sqrt{n})$.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">LL <span class="title">getsum</span><span class="params">(LL n)</span></span>&#123; <span class="comment">// The code is simple and easy to understand</span></span><br><span class="line">    LL sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(LL i=<span class="number">1</span>,j;i&lt;=n;i=j+<span class="number">1</span>)&#123; </span><br><span class="line">        j = n/(n/i);</span><br><span class="line">        sum += (j-i+<span class="number">1</span>)*(n/i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -342,8 +342,9 @@ n^{\lambda} * \phi _{\lambda}$$</span><!-- Has MathJax --><br>可知<br><span>$$
 \frac{n(n+1)(2n+1)}{6} &amp; k=2 \\
 \frac{n^2(n+1)^2}{4} &amp; k=3 \\ 
 \end{array} \right.$$</span><!-- Has MathJax --><br>and for general</p>
-<span>$$\sum_{i=1} ^n i^p =
-\sum_{k=1} ^p \left( \sum_ {j=0}^{k-1} (-1)^j C_k^j (k-j)^{p+1} \right)C_{n+1}^{k+1}$$</span><!-- Has MathJax -->
+<span>$$1^p+2^p+ \dots + n^p =
+\sum _{k=1} ^p \; (\; \sum_{j=1} ^ {k} (-1)^{k-j} C_k^j j^p \;) \; C _{n+1} ^{k+1}$$</span><!-- Has MathJax --> 
+<p>you can see <a href="http://dna049.com/2016/01/21/自然数方幂和公式/" target="_blank" rel="external">my blog</a> for detail.</p>
 <h3 id="4-__3C_21-_uFFFC15-_3E"><a href="#4-__3C_21-_uFFFC15-_3E" class="headerlink" title="4. <span>$g(n) = \sum_{i=1}^n\phi(i)$</span><!-- Has MathJax -->"></a>4. <span>$g(n) = \sum_{i=1}^n\phi(i)$</span><!-- Has MathJax --></h3><p>Throughout this blog, $\phi(n)$ donate the <a href="https://en.wikipedia.org/wiki/Euler%27s_totient_function" target="_blank" rel="external">Euler function</a> unless explicitly stated.$\phi(n)$ counts the positive integers less than or equal to n that are relatively prime to n. Euler’s product formula:<br><span>$$\phi(n) = 
 n \prod _{p|n}( 1-\frac{1}{p} )$$</span><!-- Has MathJax --><br>where the product is over the distinct prime numbers dividing n.</p>
 <p>Now, we begin to computer $g(n)$<br><span>$$g(n) = \sum_ {i=1}^n \phi(i) =
