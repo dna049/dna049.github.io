@@ -4,7 +4,7 @@
   <subtitle><![CDATA[自称数学家，半个程序员]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-16T23:24:49.000Z</updated>
+  <updated>2016-02-17T05:47:02.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,100 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[“公平”的席位分配]]></title>
+    <link href="http://yoursite.com/2016/02/17/%E5%85%AC%E5%B9%B3%E7%9A%84%E5%B8%AD%E4%BD%8D%E5%88%86%E9%85%8D/"/>
+    <id>http://yoursite.com/2016/02/17/公平的席位分配/</id>
+    <published>2016-02-17T04:23:42.000Z</published>
+    <updated>2016-02-17T05:47:02.000Z</updated>
+    <content type="html"><![CDATA[<p>如果说数学有点用，估计大都表现在运筹学中吧。“公平”的席位分配首先本来就是不可能的，公平一般是无法达到的，我们只是尽量降低不公平度，那么我们怎么衡量不公平度呢。就像评价一个人，有不同的指标，不公平度也是一样，这里介绍一种相对合理易于接受，且好判断的方法。</p>
+<h3 id="u95EE_u9898_u8868_u8FF0"><a href="#u95EE_u9898_u8868_u8FF0" class="headerlink" title="问题表述"></a>问题表述</h3><p>某学校三个系部学生共200名,(甲系100,乙系60,丙系40)代表会议共20席,按比例分配三个系分别为10、6、4席。老情况变为下列情况怎样分配才是最公平的,现因学生转系三系人数为103、63、34。 </p>
+<ol>
+<li>问20席该如何分配 ? </li>
+<li>若增加21席又如何分配 ?</li>
+</ol>
+<p>显然，因为无法整除无论如何分配都不公平。下面说一下几种策略。</p>
+<ol>
+<li>按班级人数比例乘以总人数，小数点大的分得多余的一个位子。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">某校</th>
+<th style="text-align:right">甲系</th>
+<th style="text-align:right">乙系</th>
+<th style="text-align:right">丙系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">共200人</td>
+<td style="text-align:right">103</td>
+<td style="text-align:right">63</td>
+<td style="text-align:right">34</td>
+</tr>
+<tr>
+<td style="text-align:center">人数比例</td>
+<td style="text-align:right">51.3</td>
+<td style="text-align:right">31.5</td>
+<td style="text-align:right">17</td>
+</tr>
+<tr>
+<td style="text-align:center">20席位</td>
+<td style="text-align:right">10.3</td>
+<td style="text-align:right">6.3</td>
+<td style="text-align:right">3.4</td>
+</tr>
+<tr>
+<td style="text-align:center">实际分配</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">4</td>
+</tr>
+<tr>
+<td style="text-align:center">21席位</td>
+<td style="text-align:right">10.82</td>
+<td style="text-align:right">6.62</td>
+<td style="text-align:right">3.57</td>
+</tr>
+<tr>
+<td style="text-align:center">实际分配</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">3</td>
+</tr>
+</tbody>
+</table>
+<p>按照上述方法，会出现席位增多而丙系的席位却减少了一个的不合理现象，说明此方法并不合理。</p>
+<h3 id="u6A21_u578B_u5EFA_u7ACB"><a href="#u6A21_u578B_u5EFA_u7ACB" class="headerlink" title="模型建立"></a>模型建立</h3><p>假设由A、B两个单位公平分配席位的情况，设两方人数$p_1,p_2$ ,分配到的席位为 $n_1,n_2$。</p>
+<ol>
+<li>$\frac{p_1}{n_1} = \frac{p_2}{n_2}$ 公平，但是一般是不满足的。</li>
+<li>$\frac{p_1}{n_1} &gt; \frac{p_2}{n_2}$ 对A不公平。</li>
+<li>$\frac{p_1}{n_1} &lt; \frac{p_2}{n_2}$ 对B不公平。</li>
+</ol>
+<p>绝对不公平度为<br>$$ d = \left| \frac{p_1}{n_1} - \frac{p_2}{n_2} \right| $$<br>但这样做还是有不足，例如<br>某两个单位的人数和席位为 $n_1=n_2=10,p_1=120,p_2=100$ 算得  $d=2$.<br>另两个单位的人数和席位为 $n_1=n_2=10,p_1=1020,p_2=1000$ 算得 $d=2$。<br>但是显然，后一种方案，更公平。</p>
+<p>因此，我们引入相对不公平度</p>
+<ol>
+<li>若 $\frac{p_1}{n_1} &gt; \frac{p_2}{n_2}$ 则<br>$$ r_A(n_1,n_2) = \frac{ \frac{p_1}{n_1} - \frac{p_2}{n_2} }{ \frac{p_2}{n_2} }$$</li>
+<li>若 $\frac{p_1}{n_1} &lt; \frac{p_2}{n_2}$<br>$$ r_B(n_1,n_2) =  \frac{\frac{p_2}{n_2} - \frac{p_1}{n_1} }{\frac{p_1}{n_1}}$$<br>我们的目标是让$r_A,r_B$(每种分配只会有一个)最小。</li>
+</ol>
+<h5 id="u786E_u5B9A_u5206_u914D_u65B9_u6848"><a href="#u786E_u5B9A_u5206_u914D_u65B9_u6848" class="headerlink" title="确定分配方案"></a>确定分配方案</h5><p>假设当前 $\frac{p_1}{n_1} &gt; \frac{p_2}{n_2}$ 对A不公平。新增了一个席位。</p>
+<ol>
+<li>若 $\frac{p_1}{n_1+1} &gt; \frac{p_2}{n_2}$ 则A加1席</li>
+<li>若 $\frac{p_1}{n_1+1} &lt; \frac{p_2}{n_2}$<br>若分配给A，则对B的不公平值(相对):<br>$$ r_B(n_1+1,n_2) = \frac{p_2(n_1+1)}{p_1 n_2} -1 $$<br>若分配给B，则对A的不公平值(相对):<br>$$ r_A(n_1,n_2+1) = \frac{p_1(n_2+1)}{p_2 n_1} -1 $$</li>
+</ol>
+<p>若$r_A(n_1,n_2+1)&lt;r_B(n_1+1,n_2)$则席位分配给B，反之给A。<br>即令<br>$$ Q_i = \frac{p_i ^2}{n_i(n_i+1)}$$<br>将席位分配给 $Q$ 值较大者。</p>
+<h3 id="u6A21_u578B_u6C42_u89E3"><a href="#u6A21_u578B_u6C42_u89E3" class="headerlink" title="模型求解"></a>模型求解</h3><p>先按照平均原则取整之后。分出了19席：$n_1=10,n_2=6,n_3=3$<br>第20席:<br>$$ Q_1 = \frac{103^2}{10 \times 11 } = 96.4 \; , \;Q_2 = \frac{63^2}{6 \times 7} = 94.5 \; , \;Q_3 = \frac{34^2}{3 \times 4} = 96.3 $$<br>则分配：$n_1=11,n_2=6,n_3=3$<br>第21席：$Q_1=80.4, Q_2 = 94.5, Q_3 = 96.3$<br>则分配：$n_1=11,n_2=6,n_3=4$.</p>
+<p>本文参考<a href="http://wenku.baidu.com/view/396d4f6aaf1ffc4ffe47ac52.html?re=view" target="_blank" rel="external">文库1</a>和<a href="http://wenku.baidu.com/view/312ef3274b35eefdc9d33304.html?re=view" target="_blank" rel="external">文库2</a>。修改了其中的错误，由于席位分配问题确实是一个经典问题，故在此记录。</p>
+<p>欢迎访问<a href="http://dna049.com" target="_blank" rel="external">http://dna049.com</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>如果说数学有点用，估计大都表现在运筹学中吧。“公平”的席位分配首先本来就是不可能的，公平一般是无法达到的，我们只是尽量降低不公平度，那么我们怎么衡量不公平度呢。就像评价一个人，有不同的指标，不公平度也是一样，这里介绍一种相对合理易于接受，且好判断的方法。</p>
+<h3 i]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[hdu 5628 (Dirichlet积与快速幂的应用)]]></title>
@@ -869,23 +963,6 @@ a_0 I = \mathbf{0}$$</span><!-- Has MathJax -->
 ]]></content>
     <summary type="html">
     <![CDATA[<p>想想我当初也是厉害，貌似是在2014年情人节在网吧写的代码，简直强的不行。<br>]]>
-    
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[素数筛选]]></title>
-    <link href="http://yoursite.com/2015/12/15/%E7%B4%A0%E6%95%B0%E7%AD%9B%E9%80%89/"/>
-    <id>http://yoursite.com/2015/12/15/素数筛选/</id>
-    <published>2015-12-15T15:07:44.000Z</published>
-    <updated>2015-12-15T15:20:09.000Z</updated>
-    <content type="html"><![CDATA[<p>判断一个数是否为素数，是一个很古老的问题，这里给出一个素数筛选的函数和调用实例。当然这里也有限制，要求数不能超过1e7。当然适当修改代码或者对于不同的需求可以相应修改达到不同目的。下面代码是提交到hdu2879上排行第一的代码：<br><a id="more"></a></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span>    //140MS	7772K</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">5000006</span>;    <span class="comment">//允许的最大数组为2500*2500</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX=<span class="number">10000007</span>;</span><br><span class="line"><span class="keyword">bool</span> temp[N];</span><br><span class="line"><span class="keyword">int</span> prim[<span class="number">700000</span>];       <span class="comment">// 10^7内的素数不超过700000</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isprime</span><span class="params">()</span></span>&#123;          <span class="comment">//可以返回小于MAX的素数个数</span></span><br><span class="line">    <span class="keyword">int</span> t=<span class="number">0</span>;</span><br><span class="line">    prim[t++]=<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">int</span> kill=<span class="keyword">int</span>(<span class="built_in">sqrt</span>(<span class="number">1.0</span>*MAX))+<span class="number">1</span>;    <span class="comment">//换时间</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">3</span>;i&lt;kill;i+=<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!temp[i&gt;&gt;<span class="number">1</span>])&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i*i;j&lt;MAX;j+=i&lt;&lt;<span class="number">1</span>)&#123;</span><br><span class="line">                temp[j&gt;&gt;<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    kill=MAX&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i!=kill;++i)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!temp[i])&#123;</span><br><span class="line">            prim[t++]=i&lt;&lt;<span class="number">1</span>|<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> t;</span><br><span class="line">&#125;</span><br><span class="line">__<span class="function">int64 <span class="title">mypow</span><span class="params">(<span class="keyword">int</span> n,__int64 m)</span></span>&#123;</span><br><span class="line">    __int64 x=<span class="number">2</span>,r=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n&amp;<span class="number">1</span>) r=r*x%m;</span><br><span class="line">        n&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">        x=x*x%m;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> r;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="comment">//printf("%d\n",isprime());</span></span><br><span class="line">    isprime();</span><br><span class="line">    <span class="keyword">int</span> T,n;</span><br><span class="line">    __int64 m;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">    <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%I64d"</span>,&amp;n,&amp;m);</span><br><span class="line">        <span class="keyword">int</span> s=<span class="number">0</span>,r=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(prim[s]&lt;=n&amp;&amp;prim[s]!=<span class="number">0</span>)&#123;</span><br><span class="line">            r+=n/prim[s++];     <span class="comment">//不会超int</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%I64d\n"</span>,mypow(r,m));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>该文最早是2014-03-02写在csdn上的，现在转移过来。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>判断一个数是否为素数，是一个很古老的问题，这里给出一个素数筛选的函数和调用实例。当然这里也有限制，要求数不能超过1e7。当然适当修改代码或者对于不同的需求可以相应修改达到不同目的。下面代码是提交到hdu2879上排行第一的代码：<br>]]>
     
     </summary>
     

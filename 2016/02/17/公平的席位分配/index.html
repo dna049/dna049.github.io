@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> “公平”的席位分配 · 0.肆玖</title><meta name="description" content="如果说数学有点用，估计大都表现在运筹学中吧。“公平”的席位分配首先本来就是不可能的，公平一般是无法达到的，我们只是尽量降低不公平度，那么我们怎么衡量不公平度呢。就像评价一个人，有不同的指标，不公平度也是一样，这里介绍一种相对合理易于接受，且好判断的方法。
+问题表述某学校三个系部学生共200名,(甲系100,乙系60,丙系40)代表会议共20席,按比例分配三个系分别为10、6、4席。老情况变为下列情况怎样分配才是最公平的,现因学生转系三系人数为103、63、34。 
+
+问20席该如何分配 ? 
+若增加21席又如何分配 ?
+
+显然，因为无法整除无论如何分配都不公平。下面说一下几种策略。
+
+按班级人数比例乘以总人数，小数点大的分得多余的一个位子。
+
+
+
+
+某校
+甲系
+&lt;th"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="https://github.com/dna049" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="http://dna049.sinaapp.com" target="_blank" class="nav-list-link">LINK</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">“公平”的席位分配</h1><div class="post-meta"><div class="post-time">2016年2月17日</div></div><div class="post-content"><p>如果说数学有点用，估计大都表现在运筹学中吧。“公平”的席位分配首先本来就是不可能的，公平一般是无法达到的，我们只是尽量降低不公平度，那么我们怎么衡量不公平度呢。就像评价一个人，有不同的指标，不公平度也是一样，这里介绍一种相对合理易于接受，且好判断的方法。</p>
+<h3 id="u95EE_u9898_u8868_u8FF0"><a href="#u95EE_u9898_u8868_u8FF0" class="headerlink" title="问题表述"></a>问题表述</h3><p>某学校三个系部学生共200名,(甲系100,乙系60,丙系40)代表会议共20席,按比例分配三个系分别为10、6、4席。老情况变为下列情况怎样分配才是最公平的,现因学生转系三系人数为103、63、34。 </p>
+<ol>
+<li>问20席该如何分配 ? </li>
+<li>若增加21席又如何分配 ?</li>
+</ol>
+<p>显然，因为无法整除无论如何分配都不公平。下面说一下几种策略。</p>
+<ol>
+<li>按班级人数比例乘以总人数，小数点大的分得多余的一个位子。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">某校</th>
+<th style="text-align:right">甲系</th>
+<th style="text-align:right">乙系</th>
+<th style="text-align:right">丙系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">共200人</td>
+<td style="text-align:right">103</td>
+<td style="text-align:right">63</td>
+<td style="text-align:right">34</td>
+</tr>
+<tr>
+<td style="text-align:center">人数比例</td>
+<td style="text-align:right">51.3</td>
+<td style="text-align:right">31.5</td>
+<td style="text-align:right">17</td>
+</tr>
+<tr>
+<td style="text-align:center">20席位</td>
+<td style="text-align:right">10.3</td>
+<td style="text-align:right">6.3</td>
+<td style="text-align:right">3.4</td>
+</tr>
+<tr>
+<td style="text-align:center">实际分配</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">4</td>
+</tr>
+<tr>
+<td style="text-align:center">21席位</td>
+<td style="text-align:right">10.82</td>
+<td style="text-align:right">6.62</td>
+<td style="text-align:right">3.57</td>
+</tr>
+<tr>
+<td style="text-align:center">实际分配</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">3</td>
+</tr>
+</tbody>
+</table>
+<p>按照上述方法，会出现席位增多而丙系的席位却减少了一个的不合理现象，说明此方法并不合理。</p>
+<h3 id="u6A21_u578B_u5EFA_u7ACB"><a href="#u6A21_u578B_u5EFA_u7ACB" class="headerlink" title="模型建立"></a>模型建立</h3><p>假设由A、B两个单位公平分配席位的情况，设两方人数$p_1,p_2$ ,分配到的席位为 $n_1,n_2$。</p>
+<ol>
+<li>$\frac{p_1}{n_1} = \frac{p_2}{n_2}$ 公平，但是一般是不满足的。</li>
+<li>$\frac{p_1}{n_1} &gt; \frac{p_2}{n_2}$ 对A不公平。</li>
+<li>$\frac{p_1}{n_1} &lt; \frac{p_2}{n_2}$ 对B不公平。</li>
+</ol>
+<p>绝对不公平度为<br>$$ d = \left| \frac{p_1}{n_1} - \frac{p_2}{n_2} \right| $$<br>但这样做还是有不足，例如<br>某两个单位的人数和席位为 $n_1=n_2=10,p_1=120,p_2=100$ 算得  $d=2$.<br>另两个单位的人数和席位为 $n_1=n_2=10,p_1=1020,p_2=1000$ 算得 $d=2$。<br>但是显然，后一种方案，更公平。</p>
+<p>因此，我们引入相对不公平度</p>
+<ol>
+<li>若 $\frac{p_1}{n_1} &gt; \frac{p_2}{n_2}$ 则<br>$$ r_A(n_1,n_2) = \frac{ \frac{p_1}{n_1} - \frac{p_2}{n_2} }{ \frac{p_2}{n_2} }$$</li>
+<li>若 $\frac{p_1}{n_1} &lt; \frac{p_2}{n_2}$<br>$$ r_B(n_1,n_2) =  \frac{\frac{p_2}{n_2} - \frac{p_1}{n_1} }{\frac{p_1}{n_1}}$$<br>我们的目标是让$r_A,r_B$(每种分配只会有一个)最小。</li>
+</ol>
+<h5 id="u786E_u5B9A_u5206_u914D_u65B9_u6848"><a href="#u786E_u5B9A_u5206_u914D_u65B9_u6848" class="headerlink" title="确定分配方案"></a>确定分配方案</h5><p>假设当前 $\frac{p_1}{n_1} &gt; \frac{p_2}{n_2}$ 对A不公平。新增了一个席位。</p>
+<ol>
+<li>若 $\frac{p_1}{n_1+1} &gt; \frac{p_2}{n_2}$ 则A加1席</li>
+<li>若 $\frac{p_1}{n_1+1} &lt; \frac{p_2}{n_2}$<br>若分配给A，则对B的不公平值(相对):<br>$$ r_B(n_1+1,n_2) = \frac{p_2(n_1+1)}{p_1 n_2} -1 $$<br>若分配给B，则对A的不公平值(相对):<br>$$ r_A(n_1,n_2+1) = \frac{p_1(n_2+1)}{p_2 n_1} -1 $$</li>
+</ol>
+<p>若$r_A(n_1,n_2+1)&lt;r_B(n_1+1,n_2)$则席位分配给B，反之给A。<br>即令<br>$$ Q_i = \frac{p_i ^2}{n_i(n_i+1)}$$<br>将席位分配给 $Q$ 值较大者。</p>
+<h3 id="u6A21_u578B_u6C42_u89E3"><a href="#u6A21_u578B_u6C42_u89E3" class="headerlink" title="模型求解"></a>模型求解</h3><p>先按照平均原则取整之后。分出了19席：$n_1=10,n_2=6,n_3=3$<br>第20席:<br>$$ Q_1 = \frac{103^2}{10 \times 11 } = 96.4 \; , \;Q_2 = \frac{63^2}{6 \times 7} = 94.5 \; , \;Q_3 = \frac{34^2}{3 \times 4} = 96.3 $$<br>则分配：$n_1=11,n_2=6,n_3=3$<br>第21席：$Q_1=80.4, Q_2 = 94.5, Q_3 = 96.3$<br>则分配：$n_1=11,n_2=6,n_3=4$.</p>
+<p>本文参考<a href="http://wenku.baidu.com/view/396d4f6aaf1ffc4ffe47ac52.html?re=view" target="_blank" rel="external">文库1</a>和<a href="http://wenku.baidu.com/view/312ef3274b35eefdc9d33304.html?re=view" target="_blank" rel="external">文库2</a>。修改了其中的错误，由于席位分配问题确实是一个经典问题，故在此记录。</p>
+<p>欢迎访问<a href="http://dna049.com" target="_blank" rel="external">http://dna049.com</a></p>
+</div></article></div></section><footer><div class="paginator"><a class="prev"> </a><a href="/2016/02/16/hdu-5628-Dirichlet积与快速幂的应用/" class="next">下一篇</a></div><div data-thread-key="2016/02/17/公平的席位分配/" data-title="“公平”的席位分配" data-url="http://yoursite.com/2016/02/17/公平的席位分配/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?e561b60b5caa17e3873a8e31c9e1f5f4";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body></html>
