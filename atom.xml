@@ -4,7 +4,7 @@
   <subtitle><![CDATA[自称数学家，半个程序员]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-17T05:57:58.000Z</updated>
+  <updated>2016-02-18T15:18:45.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,65 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[拓扑线性空间的若干基本定理]]></title>
+    <link href="http://yoursite.com/2016/02/18/%E6%8B%93%E6%89%91%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E8%8B%A5%E5%B9%B2%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86/"/>
+    <id>http://yoursite.com/2016/02/18/拓扑线性空间的若干基本定理/</id>
+    <published>2016-02-18T08:02:15.000Z</published>
+    <updated>2016-02-18T15:18:45.000Z</updated>
+    <content type="html"><![CDATA[<p>在泛函分析中几个基本重要的定理：一致有界原理，开映射定理，闭图像定理等都可以相应的推广到拓扑线性空间中。以下内容来自刘培德《拓扑线性空间与算子谱理论》第二章。<br><a id="more"></a></p>
+<p>设 $X,Y$ 是拓扑线性空间，记$L(X,Y)$ 是 $X$ 到 $Y$ 的线性算子全体，而$\mathscr{L}(X,Y)$ 是 $X$ 到 $Y$ 的连续线性算子全体。$N_X(x)$ 表示 $x \in X$ 的邻域全体。除非特别声明，以下$X,Y$都是拓扑线性空间</p>
+<h3 id="u7B49_u5EA6_u8FDE_u7EED_u548C_u4E00_u81F4_u6709_u754C"><a href="#u7B49_u5EA6_u8FDE_u7EED_u548C_u4E00_u81F4_u6709_u754C" class="headerlink" title="等度连续和一致有界"></a>等度连续和一致有界</h3><p>等度连续: 称算子族 $\mathscr{H} \subset L(X,Y)$ 是等度连续的，若 $\forall U \in N_Y(0), V \in N_X(0)$ 使得<br><span>$$T(V) \subset U, \; \forall T \in \mathscr{H}
+ \; \Leftrightarrow \;
+\cup_{T \in \mathscr{H} } T(V) \subset U$$</span><!-- Has MathJax --></p>
+<p>一致有界: 称算子族 $\mathscr{H} \subset L(X,Y)$ 是一致有界的，若对 $X$ 中任一有界集 $E$ , $\cup_{T \in \mathscr{H}} T(E)$ 是有界.</p>
+<p><strong>定理1</strong> 设 $\mathscr{H}$ 是 $L(X,Y)$ 中的一族算子。</p>
+<ol>
+<li>若 $\mathscr{H}$ 是等度连续的，则 $\mathscr{H}$ 是一致有界的。</li>
+<li>若 $X$ 是可度量化的，$\mathscr{H}$ 是一致有界的，则 $\mathscr{H}$ 是等度连续的</li>
+</ol>
+<p>证明：</p>
+<ol>
+<li>若 $\mathscr{H}$ 是等度连续的，则$\forall U \in N_Y(0), \exists V \in N_X(0)$ 使得 $T(V) \subset U, \; \forall T \in \mathscr{H}$ .对 $X$ 中任一有界集 $E$，则 $\exists t &gt; 0$ 使得 $s&gt;t$ 时，$E \subset sV$,于是<span>$$T(E) \subset T(sV) = sT(V) \subset sU , \;
+\forall T \in \mathscr{H}$$</span><!-- Has MathJax -->
+从而 $\cup _ {T \in \mathscr{H} } T(V) \subset U$ , $\mathscr{H}$ 是一致有界的。</li>
+<li>反证，设 $U \in N_Y(0)$ ,若不存在 $V$ 使得 $\cup_{T \in \mathscr{H} } T(V) \subset U$ ,则可取 $T_n \in \mathscr{H},x_n \in X, x_n \to 0$ 但 $Tx_n \notin U$.由于 $d(x_n,0) \to 0$ ,存在 $r_n \to \infty$ 使得 $r_n x_n \to 0$ . $r_n x_n$ 是有界的，从而 $\cup_{T \in \mathscr{H}} T(r_n x_n)$ 有界。但是<br>$$ r_n ^{-1} T(r_n x_n) = T(x_n) \notin U $$<br>矛盾与有界性的等价条件。</li>
+</ol>
+<h3 id="u4E00_u81F4_u6709_u754C_u6027_u539F_u7406"><a href="#u4E00_u81F4_u6709_u754C_u6027_u539F_u7406" class="headerlink" title="一致有界性原理"></a>一致有界性原理</h3><p><strong>定理2</strong> 设 $\mathscr{H} \subset \mathscr{L}(X,Y)$ , 记$E$为使 $\lbrace Tx:T \in \mathscr{H} \rbrace$ 的点 $x$ 全体。若 $E$ 是第二纲集，则 $\mathscr{H}$ 等度连续，此时必有 $E=X$.</p>
+<p>证明：设 $W \in N_Y(0)$ ，取0点的平衡邻域 $U$ 使得 $ \overline{U} + \overline{U} \subset W$ 。记 $B = \cap_{T \in \mathscr{H} } T^{-1} (\overline{U})$，有 $T$ 的连续性知 $B$ 是闭集。$\forall x \in E, \lbrace Tx, T \in mathscr{H} \rbrace$ 有界。因此，$\exists n$ 使得 $Tx \in nU \forall T \in \mathscr{H} $，即 $\frac{x}{n} \in T^{-1} (U) \in T^{-1} (\overline{U})$ 。于是 $x \in nB,E \subset \cup_{n=1}^{\infty} nB$。$E$ 是第二纲集，因此有某个 $(nB)^{o} \neq \emptyset $,从而 $(B)^{o} \neq \emptyset $.<br>设 $x \in B^{o}$,记 $V = x-B^{o}$ ,则 $V \in N_X(0)$.注意到 $T(B) \in \overline{U} ,\forall T \in \mathscr{H} $。因此<br>$$ T(V) \subset Tx - T(B) \subset \overline{U} - \overline{U} \in W ,\forall T \in \mathscr{H} $$<br>这说明 $\mathscr{H}$ 是等度连续的。<br>由定理1知，此时 $\mathscr{H}$ 是一致有界的，又单点集 ${x}$ 有界，因此 $\lbrace Tx:T \in \mathscr{H} \rbrace$ 有界，所以 $E=X$。</p>
+<p>定理3 (Banach-Steinhaus) 设 $ T_n\in \mathscr{L}(X,Y)$ , 记$E$为使 $\lim_{n \to \infty} T_n x $ 存在的 $x$ 全体。若 $E$ 是第二纲集，则$E=X$.<br>证明：由于收敛序列是有界的，因此根据定理2，上述结论显然。</p>
+<h3 id="u5F00_u6620_u5C04_u5B9A_u7406"><a href="#u5F00_u6620_u5C04_u5B9A_u7406" class="headerlink" title="开映射定理"></a>开映射定理</h3><p>从 $X$ 到 $Y$ 的线性算子称为开算子，如果它把 $X$ 中的每一个开集映成 $Y$ 中的开集。</p>
+<p><strong>定理4</strong> (开映射定理) 若 $X,Y$ 是 $F$ 空间(完备的赋准范空间)，$T \in \mathscr{L}(X,Y),T(X)$ 是 $Y$ 中的第二纲集，则 $T$ 是开算子，且此时$Y=T(X)$。</p>
+<p>为证明开映射定理，先证明三个引理。</p>
+<p><strong>引理1</strong> 设 $T:X \to Y$ 是线性算子，则 $T$ 是开映射，当且仅当 $\forall V \in N_X(0)$,$0 \in Y$ 是 $T(V)$ 的内点。</p>
+<p>证明：若$T$ 是开算子，$V \in N_X(0)$,则 $T(V)$开，又 $T0=0$ ,故 $0 \in Y$ 是 $T(V)$ 的内点。<br>反之，若 $T$ 将0点的邻域映成以0为内点的集合。则对每个开集 $B \subset X$ ,$B$ 可以写成 $B = \cup_{x \in B } (x+V_x) $ 于是<br>$$ T(B) = \cup_{x \in B} T(x+V_x) = \cup_{x \in B}(Tx - T(V_x)) $$<br>由于 $T(V_x)$ 是以0为内点，上式表明 $Tx$ 是 $T(B)$ 的内点,从而 $T(B)$ 是 $Y$ 中的开集。</p>
+<p><strong>引理2</strong> 设 $T:X \to Y$ 是线性算子，则 $T$ 是开映射，则 $T$ 是到上(满)的。</p>
+<p>证明: 若 $T$ 是开映射，则 $\forall V \in X$, $T(V)$ 是 $Y$ 中的开集，$V,T(V)$都是吸收的，所以<br>$$ Y = \cup_{n=1}^{\infty} nT(V) = T(\cup_{n=1}^{\infty} nV) = T(X) $$</p>
+<p><strong>引理3</strong> 设 $T:X \to Y$ 是线性算子，若 $T(X)$ 是 $Y$ 中的第二纲集，则 $\forall U \in N_X(0),\exists B \in N_Y(0)$ 使得 $B \in \overline{T(U)}$</p>
+<p>证明: $\forall U \in N_X(0)$ ,取 $\forall V \in N_X(0)$ 使得 $V$ 是平衡的且 $V-V \subset U$.<br>$$ T(X) = T(\cup_{n=1}^{\infty} nV) = \cup_{n=1}^{\infty} nT(V)$$ 是第二纲的，所以 $\exists n$ 使得 $\overline{nT(V)}^{o} \neq \emptyset$，因此 $\overline{T(V)}^{o} \neq \emptyset$. 于是存在开集 $B \in N_X(0)$ 使得<br>$$B \subset \overline{T(V)} - \overline{T(V)} \subset \overline{T(V-V)} \subset \overline{T(U)} $$ </p>
+<p>开映射定理证明: 设 $p,q$ 分别是 $X,Y$ 上的准范数，取<br>$$ U=\lbrace x \colon p(x)&lt;r \rbrace ,\quad U_n = \lbrace x \colon q(x) &lt; \frac{r}{2^n} \rbrace $$<br>由引理3知，存在$B_n \in N_Y(0)$ 使得 $B_n \subset \overline{T(U_n)}$.由引理1知，我们只需证明 $B_1 \subset U$.记<br>$$ O_n = \lbrace y \in Y \colon q(y) &lt; \frac{1}{n} \rbrace $$<br>任取 $y_1 \in B_1 \subset \overline{T(U_1)}$, 于是 $\exists x_1 \in U_1$ 使得 $y_2 = y_1 - Tx_1 \in B_2 \cap O_2$,类似地做，$\exists x_n \in U_n$ 使得 $y_{n+1} = y_n - Tx_n \in B_{n+1} \cap O_{n+1}$<br>此时<br>$$ y_{n+1} = y_1 -T(\sum_{i=1}^n x_i)$$<br>由于<br>$$ p(\sum_{i=1}^n x_i) \leq \sum_{i=1}^n p(x_i) &lt; \sum_{i=1}^n \frac{r}{2^n} &lt; r $$<br>并且由于 $\lbrace \sum_{i=1}^n x_i \rbrace$ 是Cauchy列，$\exists x_0 \in X, \sum_{i=1}^n x_i \to x_0$ 并且 $p(x_0) &lt; r$,从而 $x_0 \in U$。<br>注意到 $y_n \in O_n$, $y_n \to 0$。由 $T$ 的连续性<br>$$ 0 = \lim_{n \to \infty} y_{n+1} = y_1 - \lim_{n \to \infty} T(\sum_{i=1}^n x_i) = y_1 - Tx_0 $$<br>即 $y_1 = Tx_0 \in T(U)$,故$B \in T(U)$,证毕。</p>
+<p><strong>推论1</strong> (Banach逆算子定理的推广) 从 $F$ 空间到　$F$ 空间上的每一个连续线性满算子 $T$ 的开算子，若 $T$ 还是一一的，则 $T$ 是同胚映射。<br><strong>推论2</strong> (范数等价定理的推广) 设 $X$ 上有两种拓扑 $\tau_1,\tau_2$,并且$\tau_1,\tau_2$ 都使 $X$ 成为 $F$ 空间，若$\tau_1,\tau_2$ 是可比较的，则$\tau_1 ＝ \tau_2$ 。</p>
+<h3 id="u95ED_u56FE_u50CF_u5B9A_u7406"><a href="#u95ED_u56FE_u50CF_u5B9A_u7406" class="headerlink" title="闭图像定理"></a>闭图像定理</h3><p>设 $X,Y$ 是拓扑线性空间，$X \times Y$ 是乘积空间，$T \colon X \to Y$ 是线性算子，称 $T$ 是闭算子，若 $T$ 的图像 $\mathscr{G}(T) = \lbrace (x,Tx) \colon \forall x \in X \rbrace$ 是 $X \times Y$ 中的闭集。</p>
+<p><strong>定理5</strong> 设 $X,Y$ 是拓扑线性空间，$T \colon X \to Y$ 是线性算子</p>
+<ol>
+<li>若 $T$ 是连续的，则 $T$ 是闭算子</li>
+<li>(闭图像定理)若 $T$ 是闭算子，并且 $X,Y$ 都是 $F$ 空间，则 $T$ 是连续的。</li>
+</ol>
+<p>证明:</p>
+<ol>
+<li>设$T \colon X \to Y$ 连续，$(x_{\lambda},\lambda \in \Lambda)$ 是 $X$ 中的网，$x_{\lambda} \to x ,Tx_{\lambda} \to y$,则<br>$$ y = \lim_{\lambda \in \Lambda} Tx_{\lambda} =  T(\lim_{\lambda \in \Lambda} x_{\lambda}) = Tx$$<br>因此 $(x,y) \in \mathscr{G}(T)$,因此 $T$ 是闭算子。</li>
+<li>注意到此时 $X \times Y$ 也是 $F$ 空间，由于 $\mathscr{G}(T)$ 是 $X \times Y$ 的线性子空间，若 $\mathscr{G}(T)$ 在 $X \times Y$ 中闭，$\mathscr{G}(T)$ 也是 $F$ 空间。由乘积拓扑的定义，两投影<br>$$ \pi_1 \colon \mathscr{G}(T) \to X, (x,Tx) \mapsto x, $$<br>$$ \pi_2 \colon \mathscr{G}(T) \to X, (x,Tx) \mapsto Tx $$<br>都是连续的。特别的 $\pi_1$ 是一一到上的，由推论1知，$\pi_1^{-1} \colon X \to \mathscr{G}(T)$ 连续，此时<br>$$ Tx = \pi_2(x,Tx) = \pi_2 \circ \pi_1^{-1} x,\forall x \in X $$<br>从而$T=\pi_2 \circ \pi_1^{-1}$</li>
+</ol>
+<pre><code>我发现我喜欢在此记录我学习的东西，反正这里也很少会有人来看，写出来很大的目的是让我自己走一遍过程，写总比看来的深刻。
+</code></pre><p>欢迎访问0.0 <a href="http://dna049.com" target="_blank" rel="external">http://dna049.com</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在泛函分析中几个基本重要的定理：一致有界原理，开映射定理，闭图像定理等都可以相应的推广到拓扑线性空间中。以下内容来自刘培德《拓扑线性空间与算子谱理论》第二章。<br>]]>
+    
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[“公平”的席位分配]]></title>
@@ -947,22 +1006,6 @@ a_0 I = \mathbf{0}$$</span><!-- Has MathJax -->
     <![CDATA[<h4 id="u8BA1_u7B97_u5668_u5230_u5904_u90FD_u6709_uFF0C_u6709_u5565_u597D_u5199_u7684_u5462_uFF1F"><a href="#u8BA1_u7B97_u5668_u5230_u5904_u90FD_u6709_uFF0C_u6709_u5565_u597D_u5199_u7684_u5462_uFF1F" class="headerlink" title="计算器到处都有，有啥好写的呢？"></a>计算器到处都有，有啥好写的呢？</h4><p>我们在写程序时，对于长串计算，我们通常直接输入了，让计算机高级语言（例如C++）给我们算就行了。但是，仔细想想这件事其实并不简单。</p>
 <pre><code>ps:最处想做这件事的原因是：我在大学想写一个带GUI界面的计算器，就在这里被卡住了。
 </code></pre><p>其实这是一个很有名的问题，大家有兴趣可以搜一下 <a href="http://baike.baidu.com/link?url=K67J7hWFkpdwOzjAA-nalFK4JqnnLI5TPtK1Dx7dOBn0P5WhAsq09j0e4qBI590vomEWc0w2gtCFWreeta0gr_">逆波兰式</a><br>]]>
-    
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[产生520的复杂代码]]></title>
-    <link href="http://yoursite.com/2015/12/15/%E4%BA%A7%E7%94%9F520%E7%9A%84%E5%A4%8D%E6%9D%82%E4%BB%A3%E7%A0%81/"/>
-    <id>http://yoursite.com/2015/12/15/产生520的复杂代码/</id>
-    <published>2015-12-15T15:23:16.000Z</published>
-    <updated>2015-12-15T15:31:24.000Z</updated>
-    <content type="html"><![CDATA[<p>想想我当初也是厉害，貌似是在2014年情人节在网吧写的代码，简直强的不行。<br><a id="more"></a></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> clr(a, b) memset(a, b, sizeof(a))</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> eps=<span class="number">1e-8</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> PI=<span class="built_in">acos</span>(-<span class="number">1.0</span>);</span><br><span class="line"><span class="comment">/**********************************</span><br><span class="line">*</span><br><span class="line">* composed by CZP10110057 at ECUST</span><br><span class="line">*</span><br><span class="line">***********************************/</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">5000006</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX=<span class="number">10000007</span>;</span><br><span class="line"><span class="keyword">bool</span> temp[N];</span><br><span class="line"><span class="keyword">int</span> p[<span class="number">700000</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isprime</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t=<span class="number">0</span>;</span><br><span class="line">    p[t++]=<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">int</span> kill=<span class="keyword">int</span>(<span class="built_in">sqrt</span>(MAX+<span class="number">0.1</span>))+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">3</span>;i&lt;kill;i+=<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!temp[i&gt;&gt;<span class="number">1</span>])&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i*i;j&lt;MAX;j+=(i&lt;&lt;<span class="number">1</span>))&#123;</span><br><span class="line">                temp[j&gt;&gt;<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    kill=MAX&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;kill;++i)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!temp[i])&#123;</span><br><span class="line">            p[t++]=i&lt;&lt;<span class="number">1</span>|<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> t;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">mypow</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> r=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n&amp;<span class="number">1</span>) r*=x;</span><br><span class="line">        n&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">        x*=x;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> r;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	isprime();</span><br><span class="line">	<span class="keyword">int</span> myHeart=<span class="number">1</span>;</span><br><span class="line">	myHeart*=p[mypow(p[<span class="number">0</span>],p[<span class="number">0</span>]*p[<span class="number">0</span>])];</span><br><span class="line">	myHeart*=p[<span class="number">2</span>]*mypow(p[<span class="number">0</span>],p[<span class="number">1</span>]);</span><br><span class="line">	myHeart*=p[p[mypow(p[<span class="number">2</span>],p[<span class="number">0</span>])]];</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;myHeart&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>想想我当初也是厉害，貌似是在2014年情人节在网吧写的代码，简直强的不行。<br>]]>
     
     </summary>
     
