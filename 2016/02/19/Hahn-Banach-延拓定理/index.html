@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Hahn-Banach 延拓定理 · 0.肆玖</title><meta name="description" content="Hahn-Banach 延拓定理通常分为分析和几何的形式，其中几何形式通常称为凸集分离性定理。
+Hahn-Banach 延拓定理的分析形式定义1 设 $X$ 是线性空间，$p \colon X \to \mathbb{R}$ 是一个泛函，若 $p$ 满足
+
+$p(x+y) \leq p(x)+p(y)$ 则称 $p$ 在 $X$ 上是次可加的，若
+$p(tx)=tp(x),\; \forall x \in X,t \geq 0$ 则称 $p$ 在 $X$ 上是正齐次的，若 $p$ 满足1和
+$p(ax)=|a|p(x),\; \forall x \in X, a \in \Phi $ 则称 $p$ 是 $X$ 上"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="https://github.com/dna049" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="http://dna049.sinaapp.com" target="_blank" class="nav-list-link">LINK</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Hahn-Banach 延拓定理</h1><div class="post-meta"><div class="post-time">2016年2月19日</div></div><div class="post-content"><p>Hahn-Banach 延拓定理通常分为分析和几何的形式，其中几何形式通常称为凸集分离性定理。<br><a id="more"></a></p>
+<h3 id="Hahn-Banach__u5EF6_u62D3_u5B9A_u7406_u7684_u5206_u6790_u5F62_u5F0F"><a href="#Hahn-Banach__u5EF6_u62D3_u5B9A_u7406_u7684_u5206_u6790_u5F62_u5F0F" class="headerlink" title="Hahn-Banach 延拓定理的分析形式"></a>Hahn-Banach 延拓定理的分析形式</h3><p><strong>定义1</strong> 设 $X$ 是线性空间，$p \colon X \to \mathbb{R}$ 是一个泛函，若 $p$ 满足</p>
+<ol>
+<li>$p(x+y) \leq p(x)+p(y)$ 则称 $p$ 在 $X$ 上是次可加的，若</li>
+<li>$p(tx)=tp(x),\; \forall x \in X,t \geq 0$ 则称 $p$ 在 $X$ 上是正齐次的，若 $p$ 满足1和</li>
+<li>$p(ax)=|a|p(x),\; \forall x \in X, a \in \Phi $ 则称 $p$ 是 $X$ 上的半范数。</li>
+</ol>
+<p><strong>定理1</strong> (实情形) 设 $X$ 是实线性空间， $p \colon X \to \mathbb{R}$是正齐性次可加泛函，$Y$ 是 $X$ 的线性子空间。若 $f_0 \colon Y \to \mathbb{R}$ 是 $Y$ 上的线性泛函，满足<br>$$ f_0(x) \leq p(x),\; \forall x \in Y $$<br>则 $X$ 上存在线性泛函 $f \colon X \to \mathbb{R}$使得<br>$$ f|_Y = f_0 ,f(x) \leq p(x),\; \forall x \in X $$</p>
+<p>证明: 设 $x_0 \in X \setminus Y$ 记 $ \widetilde{Y} = span\lbrace  x_0,Y\rbrace$,首先将 $Y$ 延拓到 $\widetilde{Y}$ 再利用Zorn引理延拓完成整个证明。<br>$$ f(x) + f(y) =f(x+y) \leq p(x+y) \leq p(x-x_0) + p(x_0+y),\; \forall x,y \in Y $$<br>因此<br>$$ f(x) - p(x-x_0) \leq p(x_0+y) - f(y) $$<br>我们记 $ \alpha \equiv \inf_{y \in Y} p(x_0+y) - f(y)$，则<br>$$ f(x) - \alpha \leq p(x - x_0) ,\; f(y) + \alpha \leq f(y+x_0) ,\; \forall x,y \in Y$$<br>在 $\widetilde{Y}$ 上定义 $ f(tx_0 +y) = t \alpha + f_0(y) $ 显然 $f$ 是 $\widetilde{Y}$ 上的线性泛函且是 $f_0$ 的延拓且满足 $f(x) \leq p(x)$。<br>根据延拓关系建立偏序关系，用Zorn引理即知定理1成立</p>
+<p><strong>定理2</strong> (复情形) 设 $X$ 是复线性空间， $p \colon X \to \mathbb{R}$是 $X$ 上的半范数，$Y$ 是 $X$ 的线性子空间。若 $f_0 \colon Y \to \mathbb{C}$ 是 $Y$ 上的线性泛函，满足<br>$$ |f_0(x)| \leq p(x),\; \forall x \in Y $$<br>则 $X$ 上存在线性泛函 $f \colon X \to \mathbb{C}$使得<br>$$ f|_Y = f_0 ,|f(x)| \leq p(x),\; \forall x \in X $$</p>
+<p>证明: 考虑实部应用定理1，可以证明定理2. 取 $u = \Re{f_0}$ 则，由定理1，$u$ 可以延拓到 $X$ 上得到实线性泛函 $U$ 使得 $U(x) \leq p(x) ,\; \forall x \in X$ 。定义 $f(x) = U(x) - iU(ix),\; \forall x \in X$ 任意验证 $f$ 即为所求。  </p>
+<p><strong>推论1</strong> 设 $X$ 是赋范空间，$x_0 \in X$,则存在连续线性泛函 $f$ 满足 $f(x_0) = ||x_0|| ,||f|| = 1$.<br><strong>推论2</strong> 设 $Y$ 是赋范空间 $X$ 的真闭子空间， 则存在连续线性泛函 $f$ 满足</p>
+<ol>
+<li>$f(y) = 0,y \in Y$,</li>
+<li>$f(x) = dist(x,Y)$</li>
+<li>$||f|| = 1$</li>
+</ol>
+<p><strong>推论3</strong> 设 $X$ 是赋范空间，$x_0,y_0 \in X, x_0 \neq y_0$ ，则存在连续线性泛函 $f$，使得 $f(x_0) \neq f(y_0)$</p>
+<h3 id="Hahn-Banach__u5EF6_u62D3_u5B9A_u7406_u7684_u51E0_u4F55_u5F62_u5F0F"><a href="#Hahn-Banach__u5EF6_u62D3_u5B9A_u7406_u7684_u51E0_u4F55_u5F62_u5F0F" class="headerlink" title="Hahn-Banach 延拓定理的几何形式"></a>Hahn-Banach 延拓定理的几何形式</h3><p><strong>定理3</strong> 设 $X$ 是拓扑线性空间， $X^{* }$ 表示其上连续线性泛函全体，$A,B \subset X$ 是非空凸集。</p>
+<ol>
+<li>若 $A^{o} \neq \emptyset, A^{o} \cap B = \emptyset$ 则 $\exists f \in X^{* },f \neq 0$ 使得<br>$$ \Re f(x) \leq \Re f(y),\; \forall x \in A,y \in B. $$</li>
+<li>若 $A$ 是开集，$A \cap B = \emptyset$, 则 $\exists f \in X^{* },r \in \mathbb{R}$ 使得<br>$$ \Re f(x) &lt; r \leq \Re f(y),\; \forall x \in A,y \in B. $$<br>若B也是开集，则可使右端不等式严格成立。</li>
+<li>若空间 $X$ 是局部凸的，$A$ 是紧集，$B$ 是闭集，$A \cap B = \emptyset$ 则 $\exists f \in X^{* },r_1,r_2 \in \mathbb{R}$ 使得<br>$$ \Re f(x) \leq r_1 &lt; r_2 \leq \Re f(y),\; \forall x \in A,y \in B. $$</li>
+<li>若空间 $X$ 是局部凸的，$A$ 是平衡开集，$A \cap B = \emptyset$ 则 $\exists f \in X^{* },r \in \mathbb{R}$ 使得<br>$$ |f(x)| &lt; r \leq |f(y)|, \; \forall x \in A,y \in B $$</li>
+</ol>
+<p>证明: 由于复线性泛函 $f$ 可以写成 $f(x) = \Re f(x) - i \Re f(ix)$ ,我们不妨假设 $X$ 是实空间，否则先将复空间视作是空间，得出实线性泛函，然后根据上式构造$X$上的复线性泛函，并不为影响上面的结论。</p>
+<ol>
+<li>不妨假定(线性泛函平移一下) $0 \in A^{o}$，取 $x_0 \in B$,令 $C = A^{o} - B + x_0$ 则 $C$ 是开凸集，$x_0 \notin C$。若$\mu_C$是$C$的 Minkovski 泛函(是正齐次次可加泛函)，则$\mu_C(x_0) \geq 1$ 定义<br>$$ M = \lbrace t x_0 \colon t \in \mathbb{R} \rbrace , f_0(t x_0) = t$$<br>在 $M$ 上 $f_0(t x_0) = t \leq t\mu_C(x_0) \leq \mu_0(t x_0)$ 由定理1知，存在线性泛函 $f \colon X \to \mathbb{R}$ 使得<br>$$ f|_M = f_0 ,f(x) \leq \mu_C(x),\; \forall x \in X $$<br>注意到在$C \cap (-C)$ 上<br>$$ \pm f(x) = f(\pm x) \leq \mu_C (\pm x) \leq 1$$<br>易知 $f$ 连续。<br>当 $x \in A^{o},y \in B$ 时 $x-y+x_0 \in C$,因此<br>$$f(x-y+x_0) \leq \mu_C(x-y+x_0) \leq 1$$<br>因此 $f(x) &lt; f(y)$,又对于凸集$A$ 有$ \overline{A^{o}} = \overline{A}$，所以 $f(x) \leq f(y),\; \forall x \in A ,y \in B$.</li>
+<li>对上述 $f$ 记 $r = \inf_{y \in B} f(y)$,若 $A$ 是开集，则有 $f(x) \leq r, \forall x \in A$，否则设 $x_0 \in A,f(x_0) = r$.因为 $A$ 是开集，因此存在 $z \in X$ 使得$x_0 \pm z \in A,f(z) \neq 0$.于是 $f(x_0 \pm z) = r \pm  f(z)$矛盾，同理 $B$ 为开集时，右端也是严格的。</li>
+<li>当 $A$ 紧，$B$ 闭时，取凸邻域 $V \in N(0)$，使得$ (A+V) \cap B = 0 $ ，由1，存在 $f \in X^{* },r \in \mathbb{R}$ 使得<br>$$ \Re f(x) &lt; r \leq \Re f(y),\; \forall x \in A+V,y \in B. $$<br>记 $r_1 = \sup_{x \in A} f(x),r_2 =\inf_{y \in B} f(y)$.因为 $A$ 是紧集，因此 r_1 必然可达到，此时必有 $r_1 \leq  r_2$，否则又会出现类似于2的矛盾。</li>
+<li>根据2，存在$f \in X^{* },r&gt;0$ 使得<br>$$ \Re f(x) &lt; r \leq \Re f(y),\; \forall x \in A,y \in B. $$<br>由于 $A$ 是平衡集，故 $x \in A$ 当且仅当 $e^{-i \theta}x \in A, \theta \in \mathbb{R}$,特别的取 $\theta = \arg f(x)$ 则<br>$$ |f(x)| = e^{-i \theta}f(x) = f(e^{i \theta}x) = \Re f(e^{i \theta}x) &lt; r $$<br>这是我们要的不等式左边，右边直接由 $\Re f(y) \leq |f(y)|$ 得到,证毕。</li>
+</ol>
+<p>欢迎访问和评论 <a href="http://dna049.com" target="_blank" rel="external">http://dna049.com</a></p>
+</div></article></div></section><footer><div class="paginator"><a class="prev"> </a><a href="/2016/02/18/拓扑线性空间的若干基本定理/" class="next">下一篇</a></div><div data-thread-key="2016/02/19/Hahn-Banach-延拓定理/" data-title="Hahn-Banach 延拓定理" data-url="http://yoursite.com/2016/02/19/Hahn-Banach-延拓定理/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?e561b60b5caa17e3873a8e31c9e1f5f4";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body></html>
