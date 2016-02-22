@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 整数集上的一种奇特拓扑 · 0.肆玖</title><meta name="description" content="在《Proofs from THE BOOK》里素数无限的六种证明的第五种讲到了一种用点集拓扑学方法证明的方法，其中引入了整数集上的一种奇特拓扑。
+对 $a,b \in \mathbb{Z},b&amp;gt;0$，令$$ N_{a,b} = \lbrace a + nb \colon n \in \mathbb{Z} \rbrace $$我们称集合 $O \in \mathbb{Z}$ 是开集，若$O$ 是空集，或者 $ \forall a \in O,\exists b&amp;gt;0,st N_{a,b} \in O$,容易验证这样定义的开集族全体构成了 $\mathbb{Z}$ 上的拓扑。并且每个$N_{a,b}$ 都是既开又闭的。这是由于$$ N_{a,b} = \mathbb{Z} \setminus \cup_{i-1}^{b-1} N_{a+i,b}$$
+又由$$ \mathbb{Z} \setminus \lbrace -1,1 \rbrace = \cup_{p \in P} N_{0,p} $$若素数只有有限个，则$P$是有限集，从而$\lbrace -1,1 \rbrace$是开集，矛盾。
+"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="https://github.com/dna049" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="http://dna049.sinaapp.com" target="_blank" class="nav-list-link">LINK</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">整数集上的一种奇特拓扑</h1><div class="post-meta"><div class="post-time">2016年2月22日</div></div><div class="post-content"><p>在《Proofs from THE BOOK》里素数无限的六种证明的第五种讲到了一种用点集拓扑学方法证明的方法，其中引入了整数集上的一种奇特拓扑。<br><a id="more"></a></p>
+<p>对 $a,b \in \mathbb{Z},b&gt;0$，令<br>$$ N_{a,b} = \lbrace a + nb \colon n \in \mathbb{Z} \rbrace $$<br>我们称集合 $O \in \mathbb{Z}$ 是开集，若$O$ 是空集，或者 $ \forall a \in O,\exists b&gt;0,st N_{a,b} \in O$,容易验证这样定义的开集族全体构成了 $\mathbb{Z}$ 上的拓扑。并且每个$N_{a,b}$ 都是既开又闭的。这是由于<br>$$ N_{a,b} = \mathbb{Z} \setminus \cup_{i-1}^{b-1} N_{a+i,b}$$</p>
+<p>又由<br>$$ \mathbb{Z} \setminus \lbrace -1,1 \rbrace = \cup_{p \in P} N_{0,p} $$<br>若素数只有有限个，则$P$是有限集，从而$\lbrace -1,1 \rbrace$是开集，矛盾。</p>
+</div></article></div></section><footer><div class="paginator"><a class="prev"> </a><a href="/2016/02/19/Hahn-Banach-延拓定理/" class="next">下一篇</a></div><div data-thread-key="2016/02/22/整数集上的一种奇特拓扑/" data-title="整数集上的一种奇特拓扑" data-url="http://yoursite.com/2016/02/22/整数集上的一种奇特拓扑/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?e561b60b5caa17e3873a8e31c9e1f5f4";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body></html>

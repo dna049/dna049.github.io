@@ -4,7 +4,7 @@
   <subtitle><![CDATA[自称数学家，半个程序员]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-19T03:00:08.000Z</updated>
+  <updated>2016-02-22T14:02:32.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,23 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[整数集上的一种奇特拓扑]]></title>
+    <link href="http://yoursite.com/2016/02/22/%E6%95%B4%E6%95%B0%E9%9B%86%E4%B8%8A%E7%9A%84%E4%B8%80%E7%A7%8D%E5%A5%87%E7%89%B9%E6%8B%93%E6%89%91/"/>
+    <id>http://yoursite.com/2016/02/22/整数集上的一种奇特拓扑/</id>
+    <published>2016-02-22T13:41:23.000Z</published>
+    <updated>2016-02-22T14:02:32.000Z</updated>
+    <content type="html"><![CDATA[<p>在《Proofs from THE BOOK》里素数无限的六种证明的第五种讲到了一种用点集拓扑学方法证明的方法，其中引入了整数集上的一种奇特拓扑。<br><a id="more"></a></p>
+<p>对 $a,b \in \mathbb{Z},b&gt;0$，令<br>$$ N_{a,b} = \lbrace a + nb \colon n \in \mathbb{Z} \rbrace $$<br>我们称集合 $O \in \mathbb{Z}$ 是开集，若$O$ 是空集，或者 $ \forall a \in O,\exists b&gt;0,st N_{a,b} \in O$,容易验证这样定义的开集族全体构成了 $\mathbb{Z}$ 上的拓扑。并且每个$N_{a,b}$ 都是既开又闭的。这是由于<br>$$ N_{a,b} = \mathbb{Z} \setminus \cup_{i-1}^{b-1} N_{a+i,b}$$</p>
+<p>又由<br>$$ \mathbb{Z} \setminus \lbrace -1,1 \rbrace = \cup_{p \in P} N_{0,p} $$<br>若素数只有有限个，则$P$是有限集，从而$\lbrace -1,1 \rbrace$是开集，矛盾。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在《Proofs from THE BOOK》里素数无限的六种证明的第五种讲到了一种用点集拓扑学方法证明的方法，其中引入了整数集上的一种奇特拓扑。<br>]]>
+    
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Hahn-Banach 延拓定理]]></title>
@@ -1001,32 +1018,6 @@ a_0 I = \mathbf{0}$$</span><!-- Has MathJax -->
 ]]></content>
     <summary type="html">
     <![CDATA[<p>大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：</p>]]>
-    
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[仅在一点连续的函数例子]]></title>
-    <link href="http://yoursite.com/2015/12/16/%E4%BB%85%E5%9C%A8%E4%B8%80%E7%82%B9%E8%BF%9E%E7%BB%AD%E7%9A%84%E5%87%BD%E6%95%B0%E4%BE%8B%E5%AD%90/"/>
-    <id>http://yoursite.com/2015/12/16/仅在一点连续的函数例子/</id>
-    <published>2015-12-15T16:26:38.000Z</published>
-    <updated>2015-12-15T16:53:29.000Z</updated>
-    <content type="html"><![CDATA[<p>在一元微积分中，有一个广为人知的结论：一元函数在一点可导，必在该点连续，即可导必连续。</p>
-<p>自然会有这样一个问题：</p>
-<pre><code>一元函数在一点可导能否推出它在该点的一个小邻域连续呢？
-</code></pre><p>这个想法是很自然的，不严格的思考可能会认为应该是对的,但是它并不成立。下面给出一个反例：</p>
-<p>\[ f(x) = x^2 D(x) = \left\{<br>\begin{array}{ll}<br>0 &amp; x \in \mathbb{Q} \\<br>x^2 &amp; x \notin \mathbb{Q}<br>\end{array} \right. \]</p>
-<p>其中$D(x)$为Dirichlet函数。<br><a id="more"></a><br>容易验证函数$f(x)$在$x=0$处可导，但在$x \neq 0$处不连续。即否定了上述问题。</p>
-<p>最后，类似地，我们还可以通过Dirichlet函数构造$\mathbb{R}$上一些仅在有限个点连续的函数。也可以通过周期函数构造仅在所有整数点连续的函数。但是由Baire纲定理可以证明，不存在在所有有理数点连续，无理点间断的函数。最后Riemann函数给出了一个在所有有理数点间断，无理点连续的函数。这些反例使得人们对函数连续的概念有了更感性的认识。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>在一元微积分中，有一个广为人知的结论：一元函数在一点可导，必在该点连续，即可导必连续。</p>
-<p>自然会有这样一个问题：</p>
-<pre><code>一元函数在一点可导能否推出它在该点的一个小邻域连续呢？
-</code></pre><p>这个想法是很自然的，不严格的思考可能会认为应该是对的,但是它并不成立。下面给出一个反例：</p>
-<p>\[ f(x) = x^2 D(x) = \left\{<br>\begin{array}{ll}<br>0 &amp; x \in \mathbb{Q} \\<br>x^2 &amp; x \notin \mathbb{Q}<br>\end{array} \right. \]</p>
-<p>其中$D(x)$为Dirichlet函数。<br>]]>
     
     </summary>
     
