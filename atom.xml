@@ -3,9 +3,9 @@
   <title><![CDATA[0.肆玖]]></title>
   <subtitle><![CDATA[自称未来数学家，半个程序员]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
+  <link href="http://dna049.com/"/>
   <updated>2016-02-23T00:35:12.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://dna049.com/</id>
   
   <author>
     <name><![CDATA[dna049]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[整数集上的一种奇特拓扑]]></title>
-    <link href="http://yoursite.com/2016/02/22/%E6%95%B4%E6%95%B0%E9%9B%86%E4%B8%8A%E7%9A%84%E4%B8%80%E7%A7%8D%E5%A5%87%E7%89%B9%E6%8B%93%E6%89%91/"/>
-    <id>http://yoursite.com/2016/02/22/整数集上的一种奇特拓扑/</id>
+    <link href="http://dna049.com/2016/02/22/%E6%95%B4%E6%95%B0%E9%9B%86%E4%B8%8A%E7%9A%84%E4%B8%80%E7%A7%8D%E5%A5%87%E7%89%B9%E6%8B%93%E6%89%91/"/>
+    <id>http://dna049.com/2016/02/22/整数集上的一种奇特拓扑/</id>
     <published>2016-02-22T13:41:23.000Z</published>
     <updated>2016-02-23T00:35:12.000Z</updated>
     <content type="html"><![CDATA[<p>在《Proofs from THE BOOK》里素数无限的六种证明的第五种讲到了一种用点集拓扑学知识证明的方法，其中引入了整数集上的一种奇特拓扑。<br><a id="more"></a></p>
@@ -34,8 +34,8 @@
   
   <entry>
     <title><![CDATA[Hahn-Banach 延拓定理]]></title>
-    <link href="http://yoursite.com/2016/02/19/Hahn-Banach-%E5%BB%B6%E6%8B%93%E5%AE%9A%E7%90%86/"/>
-    <id>http://yoursite.com/2016/02/19/Hahn-Banach-延拓定理/</id>
+    <link href="http://dna049.com/2016/02/19/Hahn-Banach-%E5%BB%B6%E6%8B%93%E5%AE%9A%E7%90%86/"/>
+    <id>http://dna049.com/2016/02/19/Hahn-Banach-延拓定理/</id>
     <published>2016-02-19T00:26:38.000Z</published>
     <updated>2016-02-19T03:00:08.000Z</updated>
     <content type="html"><![CDATA[<p>Hahn-Banach 延拓定理通常分为分析和几何的形式，其中几何形式通常称为凸集分离性定理。<br><a id="more"></a></p>
@@ -70,7 +70,7 @@
 <li>当 $A$ 紧，$B$ 闭时，取凸邻域 $V \in N(0)$，使得$ (A+V) \cap B = 0 $ ，由1，存在 $f \in X^{* },r \in \mathbb{R}$ 使得<br>$$ \Re f(x) &lt; r \leq \Re f(y),\; \forall x \in A+V,y \in B. $$<br>记 $r_1 = \sup_{x \in A} f(x),r_2 =\inf_{y \in B} f(y)$.因为 $A$ 是紧集，因此 r_1 必然可达到，此时必有 $r_1 \leq  r_2$，否则又会出现类似于2的矛盾。</li>
 <li>根据2，存在$f \in X^{* },r&gt;0$ 使得<br>$$ \Re f(x) &lt; r \leq \Re f(y),\; \forall x \in A,y \in B. $$<br>由于 $A$ 是平衡集，故 $x \in A$ 当且仅当 $e^{-i \theta}x \in A, \theta \in \mathbb{R}$,特别的取 $\theta = \arg f(x)$ 则<br>$$ |f(x)| = e^{-i \theta}f(x) = f(e^{i \theta}x) = \Re f(e^{i \theta}x) &lt; r $$<br>这是我们要的不等式左边，右边直接由 $\Re f(y) \leq |f(y)|$ 得到,证毕。</li>
 </ol>
-<p>欢迎访问和评论 <a href="http://dna049.com" target="_blank" rel="external">http://dna049.com</a></p>
+<p>欢迎访问和评论 <a href="http://dna049.com">http://dna049.com</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>Hahn-Banach 延拓定理通常分为分析和几何的形式，其中几何形式通常称为凸集分离性定理。<br>]]>
@@ -81,8 +81,8 @@
   
   <entry>
     <title><![CDATA[拓扑线性空间的若干基本定理]]></title>
-    <link href="http://yoursite.com/2016/02/18/%E6%8B%93%E6%89%91%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E8%8B%A5%E5%B9%B2%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86/"/>
-    <id>http://yoursite.com/2016/02/18/拓扑线性空间的若干基本定理/</id>
+    <link href="http://dna049.com/2016/02/18/%E6%8B%93%E6%89%91%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E8%8B%A5%E5%B9%B2%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86/"/>
+    <id>http://dna049.com/2016/02/18/拓扑线性空间的若干基本定理/</id>
     <published>2016-02-18T08:02:15.000Z</published>
     <updated>2016-02-18T15:18:47.000Z</updated>
     <content type="html"><![CDATA[<p>在泛函分析中几个基本重要的定理：一致有界原理，开映射定理，闭图像定理等都可以相应的推广到拓扑线性空间中。以下内容来自刘培德《拓扑线性空间与算子谱理论》第二章。<br><a id="more"></a></p>
@@ -129,7 +129,7 @@
 <li>注意到此时 $X \times Y$ 也是 $F$ 空间，由于 $\mathscr{G}(T)$ 是 $X \times Y$ 的线性子空间，若 $\mathscr{G}(T)$ 在 $X \times Y$ 中闭，$\mathscr{G}(T)$ 也是 $F$ 空间。由乘积拓扑的定义，两投影<br>$$ \pi_1 \colon \mathscr{G}(T) \to X, (x,Tx) \mapsto x, $$<br>$$ \pi_2 \colon \mathscr{G}(T) \to X, (x,Tx) \mapsto Tx $$<br>都是连续的。特别的 $\pi_1$ 是一一到上的，由推论1知，$\pi_1^{-1} \colon X \to \mathscr{G}(T)$ 连续，此时<br>$$ Tx = \pi_2(x,Tx) = \pi_2 \circ \pi_1^{-1} x,\forall x \in X $$<br>从而$T=\pi_2 \circ \pi_1^{-1}$</li>
 </ol>
 <pre><code>我发现我喜欢在此记录我学习的东西，反正这里也很少会有人来看，写出来很大的目的是让我自己走一遍过程，写总比看来的深刻。
-</code></pre><p>欢迎访问0.0 <a href="http://dna049.com" target="_blank" rel="external">http://dna049.com</a></p>
+</code></pre><p>欢迎访问0.0 <a href="http://dna049.com">http://dna049.com</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>在泛函分析中几个基本重要的定理：一致有界原理，开映射定理，闭图像定理等都可以相应的推广到拓扑线性空间中。以下内容来自刘培德《拓扑线性空间与算子谱理论》第二章。<br>]]>
@@ -140,8 +140,8 @@
   
   <entry>
     <title><![CDATA[“公平”的席位分配]]></title>
-    <link href="http://yoursite.com/2016/02/17/%E5%85%AC%E5%B9%B3%E7%9A%84%E5%B8%AD%E4%BD%8D%E5%88%86%E9%85%8D/"/>
-    <id>http://yoursite.com/2016/02/17/公平的席位分配/</id>
+    <link href="http://dna049.com/2016/02/17/%E5%85%AC%E5%B9%B3%E7%9A%84%E5%B8%AD%E4%BD%8D%E5%88%86%E9%85%8D/"/>
+    <id>http://dna049.com/2016/02/17/公平的席位分配/</id>
     <published>2016-02-17T04:23:42.000Z</published>
     <updated>2016-02-17T05:57:58.000Z</updated>
     <content type="html"><![CDATA[<p>如果说数学有点用，估计大都表现在运筹学中吧。“公平”的席位分配首先本来就是不可能的，公平一般是无法达到的，我们只是尽量降低不公平度，那么我们怎么衡量不公平度呢。就像评价一个人，有不同的指标，不公平度也是一样，这里介绍一种相对合理易于接受，且好判断的方法。<br><a id="more"></a></p>
@@ -223,7 +223,7 @@
 <p>若$r_A(n_1,n_2+1)&lt;r_B(n_1+1,n_2)$则席位分配给B，反之给A。<br>即令<br>$$ Q_i = \frac{p_i ^2}{n_i(n_i+1)}$$<br>将席位分配给 $Q$ 值较大者。</p>
 <h3 id="u6A21_u578B_u6C42_u89E3"><a href="#u6A21_u578B_u6C42_u89E3" class="headerlink" title="模型求解"></a>模型求解</h3><p>先按照平均原则取整之后。分出了19席：$n_1=10,n_2=6,n_3=3$<br>第20席:<br>$$ Q_1 = \frac{103^2}{10 \times 11 } = 96.4 \; , \;Q_2 = \frac{63^2}{6 \times 7} = 94.5 \; , \;Q_3 = \frac{34^2}{3 \times 4} = 96.3 $$<br>则分配：$n_1=11,n_2=6,n_3=3$<br>第21席：$Q_1=80.4, Q_2 = 94.5, Q_3 = 96.3$<br>则分配：$n_1=11,n_2=6,n_3=4$.</p>
 <p>本文参考<a href="http://wenku.baidu.com/view/396d4f6aaf1ffc4ffe47ac52.html?re=view" target="_blank" rel="external">文库1</a>和<a href="http://wenku.baidu.com/view/312ef3274b35eefdc9d33304.html?re=view" target="_blank" rel="external">文库2</a>。修改了其中的错误，由于席位分配问题确实是一个经典问题，故在此记录。</p>
-<p>欢迎访问<a href="http://dna049.com" target="_blank" rel="external">http://dna049.com</a></p>
+<p>欢迎访问<a href="http://dna049.com">http://dna049.com</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>如果说数学有点用，估计大都表现在运筹学中吧。“公平”的席位分配首先本来就是不可能的，公平一般是无法达到的，我们只是尽量降低不公平度，那么我们怎么衡量不公平度呢。就像评价一个人，有不同的指标，不公平度也是一样，这里介绍一种相对合理易于接受，且好判断的方法。<br>]]>
@@ -234,8 +234,8 @@
   
   <entry>
     <title><![CDATA[hdu 5628 (Dirichlet积与快速幂的应用)]]></title>
-    <link href="http://yoursite.com/2016/02/16/hdu-5628-Dirichlet%E7%A7%AF%E4%B8%8E%E5%BF%AB%E9%80%9F%E5%B9%82%E7%9A%84%E5%BA%94%E7%94%A8/"/>
-    <id>http://yoursite.com/2016/02/16/hdu-5628-Dirichlet积与快速幂的应用/</id>
+    <link href="http://dna049.com/2016/02/16/hdu-5628-Dirichlet%E7%A7%AF%E4%B8%8E%E5%BF%AB%E9%80%9F%E5%B9%82%E7%9A%84%E5%BA%94%E7%94%A8/"/>
+    <id>http://dna049.com/2016/02/16/hdu-5628-Dirichlet积与快速幂的应用/</id>
     <published>2016-02-16T15:56:10.000Z</published>
     <updated>2016-02-16T23:24:49.000Z</updated>
     <content type="html"><![CDATA[<p>突然有点想打一场BestCoder，然后就看了看BC发现有道应用Dirichlet积的题。于是就去试了试。当然老套路还是很好过的，后来我想写的优美一点写成类的形式，不过一直出现Crash，于是跟周学长讨论了一下，外加一点看书，终于也是搞定了，就此存一下模版吧 0.0<br><a id="more"></a></p>
@@ -249,8 +249,8 @@
   
   <entry>
     <title><![CDATA[二次剩余和Guass互反律]]></title>
-    <link href="http://yoursite.com/2016/02/16/%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99%E5%92%8CGuass%E4%BA%92%E5%8F%8D%E5%BE%8B/"/>
-    <id>http://yoursite.com/2016/02/16/二次剩余和Guass互反律/</id>
+    <link href="http://dna049.com/2016/02/16/%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99%E5%92%8CGuass%E4%BA%92%E5%8F%8D%E5%BE%8B/"/>
+    <id>http://dna049.com/2016/02/16/二次剩余和Guass互反律/</id>
     <published>2016-02-16T13:05:36.000Z</published>
     <updated>2016-02-17T04:22:15.000Z</updated>
     <content type="html"><![CDATA[<p>从二次剩余问题，引入Legendre符号，由此一步步导出Guass互反律，最后延伸到Jacobi符号，整个步骤确实连贯优美，脍炙人口。<br><a id="more"></a></p>
@@ -282,8 +282,8 @@
   
   <entry>
     <title><![CDATA[自然数方幂和公式]]></title>
-    <link href="http://yoursite.com/2016/01/21/%E8%87%AA%E7%84%B6%E6%95%B0%E6%96%B9%E5%B9%82%E5%92%8C%E5%85%AC%E5%BC%8F/"/>
-    <id>http://yoursite.com/2016/01/21/自然数方幂和公式/</id>
+    <link href="http://dna049.com/2016/01/21/%E8%87%AA%E7%84%B6%E6%95%B0%E6%96%B9%E5%B9%82%E5%92%8C%E5%85%AC%E5%BC%8F/"/>
+    <id>http://dna049.com/2016/01/21/自然数方幂和公式/</id>
     <published>2016-01-21T11:16:51.000Z</published>
     <updated>2016-01-24T08:54:42.000Z</updated>
     <content type="html"><![CDATA[<p>关于自然数方幂和公式，网上的求解版本有很多种。这里介绍一种不为人知，十分简洁明了的求解方法，该公式并非原创，但是整个证明过程和方法完全原创。它的思想来源于我高中时在一本数学竞赛书中的数列例题(书名忘了…)，正因为一本本这样的书，让我大学选择了数学系，现在依然在学习数学。<br><a id="more"></a></p>
@@ -302,11 +302,11 @@ a_p A_n ^p + a_{p-1} A_n ^{p-1} + a_{p-2} A_n ^{p-2} + \cdots + a_1 A_n ^1$$</sp
 \frac{a_p A_{n+1} ^{p+1}}{p+1} + \frac{a_{p-1} A_{n+1} ^{p}}{p} + \cdots + \frac{a_1 A_{n+1} ^2}{2}$$</span><!-- Has MathJax --><br>因此问题的关键就转化成如何求解数组 $a_k ,k=1,2,\cdots,p$<br>我们发现当 $n＝k$ 时成立<br><span>$$k^p =
 a_k A_k ^k + a_{k-1} A_k ^{k-1} + \cdots a_1 A_{k} ^1$$</span><!-- Has MathJax --><br>令 $b_k = k! \cdot a_k$ 则<br><span>$$k^p = 
 b_k + b_{k-1} C_k ^{k-1} + \cdots b_1 C_{k} ^1$$</span><!-- Has MathJax --><br>即<br><span>$$k^p = 
-\sum _{j=1} ^k b_j C _{k} ^j$$</span><!-- Has MathJax --><br>应用二项式反演知(可参考<a href="http://dna049.com/2016/01/21/两类反演公式及其矩阵形式/" target="_blank" rel="external">我的博文</a>)<br><span>$$b_k = 
+\sum _{j=1} ^k b_j C _{k} ^j$$</span><!-- Has MathJax --><br>应用二项式反演知(可参考<a href="http://dna049.com/2016/01/21/两类反演公式及其矩阵形式/">我的博文</a>)<br><span>$$b_k = 
 \sum _{j=1} ^k (-1)^{k-j} C _{k} ^j k^p$$</span><!-- Has MathJax --><br>因此最终,我们有公式</p>
 <span>$$1^p+2^p+ \dots + n^p =
 \sum _{k=1} ^p \; (\; \sum_{j=1} ^ {k} (-1)^{k-j} C_k^j j^p \;) \; C _{n+1} ^{k+1}$$</span><!-- Has MathJax --> 
-<p>本博文完全由作者(dna0.49)原创于2016年1月21号，转载或引用请注明<a href="http://dna049.com" target="_blank" rel="external">http://dna049.com</a></p>
+<p>本博文完全由作者(dna0.49)原创于2016年1月21号，转载或引用请注明<a href="http://dna049.com">http://dna049.com</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>关于自然数方幂和公式，网上的求解版本有很多种。这里介绍一种不为人知，十分简洁明了的求解方法，该公式并非原创，但是整个证明过程和方法完全原创。它的思想来源于我高中时在一本数学竞赛书中的数列例题(书名忘了…)，正因为一本本这样的书，让我大学选择了数学系，现在依然在学习数学。<br>]]>
@@ -317,11 +317,11 @@ b_k + b_{k-1} C_k ^{k-1} + \cdots b_1 C_{k} ^1$$</span><!-- Has MathJax --><br>�
   
   <entry>
     <title><![CDATA[两类反演公式及其矩阵形式]]></title>
-    <link href="http://yoursite.com/2016/01/21/%E4%B8%A4%E7%B1%BB%E5%8F%8D%E6%BC%94%E5%85%AC%E5%BC%8F%E5%8F%8A%E5%85%B6%E7%9F%A9%E9%98%B5%E5%BD%A2%E5%BC%8F/"/>
-    <id>http://yoursite.com/2016/01/21/两类反演公式及其矩阵形式/</id>
+    <link href="http://dna049.com/2016/01/21/%E4%B8%A4%E7%B1%BB%E5%8F%8D%E6%BC%94%E5%85%AC%E5%BC%8F%E5%8F%8A%E5%85%B6%E7%9F%A9%E9%98%B5%E5%BD%A2%E5%BC%8F/"/>
+    <id>http://dna049.com/2016/01/21/两类反演公式及其矩阵形式/</id>
     <published>2016-01-21T09:31:20.000Z</published>
     <updated>2016-01-26T02:19:43.000Z</updated>
-    <content type="html"><![CDATA[<p>在上一篇<a href="http://dna049.com/2016/01/20/数论函数的Dirichlet积/" target="_blank" rel="external">博文</a>中，介绍过数论中的 Mobius 反演公式，让我想起了另一个经典的反演公式－－－二项式反演公式。然而本质上反演公式就是矩阵求逆的过程。只是他们的逆有很简单的形式，因此就有了这样两个反演公式而已。<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p>在上一篇<a href="http://dna049.com/2016/01/20/数论函数的Dirichlet积/">博文</a>中，介绍过数论中的 Mobius 反演公式，让我想起了另一个经典的反演公式－－－二项式反演公式。然而本质上反演公式就是矩阵求逆的过程。只是他们的逆有很简单的形式，因此就有了这样两个反演公式而已。<br><a id="more"></a></p>
 <p>Mobius 反演在上一篇博客中已经提及，现在着重提一下二项式反演公式，这个公式让我在2014年ACM－ICPC亚洲区域赛西安站拿银，当时<a href="2014acmicpc-asia-xian-regional-contest.pdf">F题</a>答案直接算需要$n^3$复杂度，而利用二项式反演公式后，可以在$n^2$复杂度内完美解决。1A过题，感觉超爽。</p>
 <h3 id="u53CD_u6F14_u516C_u5F0F_u4E0E_u5176_u77E9_u9635_u5F62_u5F0F"><a href="#u53CD_u6F14_u516C_u5F0F_u4E0E_u5176_u77E9_u9635_u5F62_u5F0F" class="headerlink" title="反演公式与其矩阵形式"></a>反演公式与其矩阵形式</h3><p>由<br><span>$$\sum _{r = 1} ^n a _{n,r} f(r) 
 = g(n)$$</span><!-- Has MathJax --><br>其中$g(n)$已知，解出$f(n)$<br><span>$$f(n) = 
@@ -367,8 +367,8 @@ c _{ij} = \sum _{k=1} ^n a _{ik} b _{kj} &amp; = \sum _{k =j} ^ i \left(\begin{m
   
   <entry>
     <title><![CDATA[My Math work edited by LaTex]]></title>
-    <link href="http://yoursite.com/2016/01/20/My-Math-work-edited-by-LaTex/"/>
-    <id>http://yoursite.com/2016/01/20/My-Math-work-edited-by-LaTex/</id>
+    <link href="http://dna049.com/2016/01/20/My-Math-work-edited-by-LaTex/"/>
+    <id>http://dna049.com/2016/01/20/My-Math-work-edited-by-LaTex/</id>
     <published>2016-01-20T13:09:36.000Z</published>
     <updated>2016-01-19T05:09:40.000Z</updated>
     <content type="html"><![CDATA[<p>This blog makes a record of my math work and will be update frequently.Click to view or download it.</p>
@@ -400,8 +400,8 @@ c _{ij} = \sum _{k=1} ^n a _{ik} b _{kj} &amp; = \sum _{k =j} ^ i \left(\begin{m
   
   <entry>
     <title><![CDATA[数论函数的 Dirichlet 积]]></title>
-    <link href="http://yoursite.com/2016/01/20/%E6%95%B0%E8%AE%BA%E5%87%BD%E6%95%B0%E7%9A%84Dirichlet%E7%A7%AF/"/>
-    <id>http://yoursite.com/2016/01/20/数论函数的Dirichlet积/</id>
+    <link href="http://dna049.com/2016/01/20/%E6%95%B0%E8%AE%BA%E5%87%BD%E6%95%B0%E7%9A%84Dirichlet%E7%A7%AF/"/>
+    <id>http://dna049.com/2016/01/20/数论函数的Dirichlet积/</id>
     <published>2016-01-20T12:09:26.000Z</published>
     <updated>2016-01-24T08:56:27.000Z</updated>
     <content type="html"><![CDATA[<p>最近重温潘承洞老先生的《数论基础》(现代数学基础丛书34)，确实是经典中的经典。以现代的眼光看数论函数，使得分析问题更加简洁本质，而这些都要归功于 Dirichlet 积的引入。<br><a id="more"></a></p>
@@ -572,7 +572,7 @@ n^{\lambda} * \phi _{\lambda}$$</span><!-- Has MathJax --><br>可知<br><span>$$
 <p>其中<br><span>$$a_n = 
 \sum _{d|n} \mu(d) = I(n)$$</span><!-- Has MathJax --><br>又由<br><span>$$\sum _{n=1} ^{\infty} \frac{1}{n^2} = 
 \frac{\pi^2}{6}$$</span><!-- Has MathJax --><br>结论显然。</p>
-<p>该博文大多资料来自 潘承洞《数论基础》，转载请注明<a href="http://dna049.com" target="_blank" rel="external">http://dna049.com</a></p>
+<p>该博文大多资料来自 潘承洞《数论基础》，转载请注明<a href="http://dna049.com">http://dna049.com</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>最近重温潘承洞老先生的《数论基础》(现代数学基础丛书34)，确实是经典中的经典。以现代的眼光看数论函数，使得分析问题更加简洁本质，而这些都要归功于 Dirichlet 积的引入。<br>]]>
@@ -583,8 +583,8 @@ n^{\lambda} * \phi _{\lambda}$$</span><!-- Has MathJax --><br>可知<br><span>$$
   
   <entry>
     <title><![CDATA[Several Algorithms of root Complex]]></title>
-    <link href="http://yoursite.com/2016/01/03/Several-Algorithms-of-root-Complex/"/>
-    <id>http://yoursite.com/2016/01/03/Several-Algorithms-of-root-Complex/</id>
+    <link href="http://dna049.com/2016/01/03/Several-Algorithms-of-root-Complex/"/>
+    <id>http://dna049.com/2016/01/03/Several-Algorithms-of-root-Complex/</id>
     <published>2016-01-03T07:12:12.000Z</published>
     <updated>2016-01-21T12:36:43.000Z</updated>
     <content type="html"><![CDATA[<p>I, as a ACMer, always take algorithm complexity into consideration when programming. Today, I introduce you some elegant algorithms of root Complex.</p>
@@ -610,7 +610,7 @@ n^{\lambda} * \phi _{\lambda}$$</span><!-- Has MathJax --><br>可知<br><span>$$
 \end{array} \right.$$</span><!-- Has MathJax --><br>and for general</p>
 <span>$$1^p+2^p+ \dots + n^p =
 \sum _{k=1} ^p \; (\; \sum_{j=1} ^ {k} (-1)^{k-j} C_k^j j^p \;) \; C _{n+1} ^{k+1}$$</span><!-- Has MathJax --> 
-<p>you can see <a href="http://dna049.com/2016/01/21/自然数方幂和公式/" target="_blank" rel="external">my blog</a> for detail.</p>
+<p>you can see <a href="http://dna049.com/2016/01/21/自然数方幂和公式/">my blog</a> for detail.</p>
 <h3 id="4-__3C_21-_uFFFC15-_3E"><a href="#4-__3C_21-_uFFFC15-_3E" class="headerlink" title="4. <span>$g(n) = \sum_{i=1}^n\phi(i)$</span><!-- Has MathJax -->"></a>4. <span>$g(n) = \sum_{i=1}^n\phi(i)$</span><!-- Has MathJax --></h3><p>Throughout this blog, $\phi(n)$ donate the <a href="https://en.wikipedia.org/wiki/Euler%27s_totient_function" target="_blank" rel="external">Euler function</a> unless explicitly stated.$\phi(n)$ counts the positive integers less than or equal to n that are relatively prime to n. Euler’s product formula:<br><span>$$\phi(n) = 
 n \prod _{p|n}( 1-\frac{1}{p} )$$</span><!-- Has MathJax --><br>where the product is over the distinct prime numbers dividing n.</p>
 <p>Now, we begin to computer $g(n)$<br><span>$$g(n) = \sum_ {i=1}^n \phi(i) =
@@ -643,8 +643,8 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
   
   <entry>
     <title><![CDATA[2016厦门马拉松]]></title>
-    <link href="http://yoursite.com/2016/01/03/2016%E5%8E%A6%E9%97%A8%E9%A9%AC%E6%8B%89%E6%9D%BE/"/>
-    <id>http://yoursite.com/2016/01/03/2016厦门马拉松/</id>
+    <link href="http://dna049.com/2016/01/03/2016%E5%8E%A6%E9%97%A8%E9%A9%AC%E6%8B%89%E6%9D%BE/"/>
+    <id>http://dna049.com/2016/01/03/2016厦门马拉松/</id>
     <published>2016-01-03T06:18:20.000Z</published>
     <updated>2016-01-03T14:07:10.000Z</updated>
     <content type="html"><![CDATA[<h3 id="u7B2C_u4E00_u6B21_u5168_u7A0B_u9A6C_u62C9_u677E"><a href="#u7B2C_u4E00_u6B21_u5168_u7A0B_u9A6C_u62C9_u677E" class="headerlink" title="第一次全程马拉松"></a>第一次全程马拉松</h3><p>仅仅只参加几次10公里的我，这次想装个逼跑个全程马拉松。其实我就是这么任性，没办法。然后就BB一下此次马拉松吧。</p>
@@ -669,8 +669,8 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
   
   <entry>
     <title><![CDATA[好好反省]]></title>
-    <link href="http://yoursite.com/2015/12/30/%E5%A5%BD%E5%A5%BD%E5%8F%8D%E7%9C%81/"/>
-    <id>http://yoursite.com/2015/12/30/好好反省/</id>
+    <link href="http://dna049.com/2015/12/30/%E5%A5%BD%E5%A5%BD%E5%8F%8D%E7%9C%81/"/>
+    <id>http://dna049.com/2015/12/30/好好反省/</id>
     <published>2015-12-30T03:45:06.000Z</published>
     <updated>2016-01-20T12:07:43.000Z</updated>
     <content type="html"><![CDATA[<p>现在的我已经一无所有。学习，爱情，友情一无所有，大学让我成了一个目中无人自私的家伙。现在的我却成了自卑，自己都讨厌自己的人。总是想洗心革面缺总是三分钟的热血。我也不知道何时能够做回那个高中数学竞赛时的0.肆玖，但是有一种预感，他就要回来。</p>
@@ -691,8 +691,8 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
   
   <entry>
     <title><![CDATA[打回原形]]></title>
-    <link href="http://yoursite.com/2015/12/24/%E6%89%93%E5%9B%9E%E5%8E%9F%E5%BD%A2/"/>
-    <id>http://yoursite.com/2015/12/24/打回原形/</id>
+    <link href="http://dna049.com/2015/12/24/%E6%89%93%E5%9B%9E%E5%8E%9F%E5%BD%A2/"/>
+    <id>http://dna049.com/2015/12/24/打回原形/</id>
     <published>2015-12-24T13:50:21.000Z</published>
     <updated>2015-12-24T14:15:47.000Z</updated>
     <content type="html"><![CDATA[<p>最近状态好差，感觉自己真的老了。好怀念初一的时候，傻的很充实。怀念大一的时候，青春有干劲。然而现在一副要死的样。我想改变，想丢掉名字性别。转土重来，一个人静静，可是一个人静静的时候却又感到空虚。</p>
@@ -710,8 +710,8 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
   
   <entry>
     <title><![CDATA[hexo 中插入图片最简单方式]]></title>
-    <link href="http://yoursite.com/2015/12/23/hexo-%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%9C%80%E7%AE%80%E5%8D%95%E6%96%B9%E5%BC%8F/"/>
-    <id>http://yoursite.com/2015/12/23/hexo-中插入图片最简单方式/</id>
+    <link href="http://dna049.com/2015/12/23/hexo-%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%9C%80%E7%AE%80%E5%8D%95%E6%96%B9%E5%BC%8F/"/>
+    <id>http://dna049.com/2015/12/23/hexo-中插入图片最简单方式/</id>
     <published>2015-12-23T12:42:32.000Z</published>
     <updated>2015-12-23T13:03:29.000Z</updated>
     <content type="html"><![CDATA[<p>因为上一篇博文需要贴一张本地图片，奈何技术上无法解决。后来查了官方文档并且询问hexo交流群（287306637）之后，有给出解决方案（用图床）但是不是我想要的方式，最终通过<a href="https://hexo.io/docs/asset-folders.html" target="_blank" rel="external">官方文档</a>解决了此问题。</p>
@@ -735,8 +735,8 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
   
   <entry>
     <title><![CDATA[本科数学系学习路线图]]></title>
-    <link href="http://yoursite.com/2015/12/23/%E6%9C%AC%E7%A7%91%E6%95%B0%E5%AD%A6%E7%B3%BB%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E5%9B%BE/"/>
-    <id>http://yoursite.com/2015/12/23/本科数学系学习路线图/</id>
+    <link href="http://dna049.com/2015/12/23/%E6%9C%AC%E7%A7%91%E6%95%B0%E5%AD%A6%E7%B3%BB%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E5%9B%BE/"/>
+    <id>http://dna049.com/2015/12/23/本科数学系学习路线图/</id>
     <published>2015-12-23T09:52:57.000Z</published>
     <updated>2015-12-24T13:48:53.000Z</updated>
     <content type="html"><![CDATA[<p>最近在看刘培德先生的书《拓扑线性空间和算子谱理论》，简直爱不释手。而拓扑线性空间理论是在1950年左右由<a href="https://sv.wikipedia.org/wiki/Nicolas_Bourbaki" target="_blank" rel="external">Nicolas Bourbaki学派</a>建立。不禁让我回顾本科学习生涯中，从学习300年前一直到100年前的数学，现在又在学习几十年前的数学。于是就把本科学习路线总结如下图，下图由此<a href="https://www.processon.com" target="_blank" rel="external">网站</a>在线产生</p>
@@ -755,8 +755,8 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
   
   <entry>
     <title><![CDATA[拓扑线性空间中的开集和闭集]]></title>
-    <link href="http://yoursite.com/2015/12/20/%E6%8B%93%E6%89%91%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E5%BC%80%E9%9B%86%E5%92%8C%E9%97%AD%E9%9B%86/"/>
-    <id>http://yoursite.com/2015/12/20/拓扑线性空间中的开集和闭集/</id>
+    <link href="http://dna049.com/2015/12/20/%E6%8B%93%E6%89%91%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E5%BC%80%E9%9B%86%E5%92%8C%E9%97%AD%E9%9B%86/"/>
+    <id>http://dna049.com/2015/12/20/拓扑线性空间中的开集和闭集/</id>
     <published>2015-12-20T15:13:32.000Z</published>
     <updated>2016-01-20T12:21:57.000Z</updated>
     <content type="html"><![CDATA[<p>在复习泛函分析的时候，因为很多结论可以推广到更为一般的情况，因此就看了刘培德先生编著的《拓扑线性空间与算子谱理论》这本书。然后在书中读到了有关开集和闭集的一些性质，在此总结一下，先叙述一下结论。<br>在拓扑线性空间中，</p>
@@ -795,8 +795,8 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
   
   <entry>
     <title><![CDATA[Perron-Frobenius理论]]></title>
-    <link href="http://yoursite.com/2015/12/17/Perron-Frobenius%E7%90%86%E8%AE%BA/"/>
-    <id>http://yoursite.com/2015/12/17/Perron-Frobenius理论/</id>
+    <link href="http://dna049.com/2015/12/17/Perron-Frobenius%E7%90%86%E8%AE%BA/"/>
+    <id>http://dna049.com/2015/12/17/Perron-Frobenius理论/</id>
     <published>2015-12-17T02:27:18.000Z</published>
     <updated>2015-12-18T01:26:32.000Z</updated>
     <content type="html"><![CDATA[<p>1907年O.Perron发现正矩阵的谱有特别有趣的性质。G.Frobenius在1908-1912年间将Perron的工作推广到不可约非负矩阵的情形，并得到了新的进一步结果。Ferron-Frobenius理论有很多证明方式，下面介绍H.Wielandt的优美证明。<br><a id="more"></a></p>
@@ -880,8 +880,8 @@ ry^0&gt; 0$$</span><!-- Has MathJax --><br>其中<span>$y_0 = (I+A)^{n-1}x^0 &gt
   
   <entry>
     <title><![CDATA[Shur定理]]></title>
-    <link href="http://yoursite.com/2015/12/16/Shur%E5%AE%9A%E7%90%86/"/>
-    <id>http://yoursite.com/2015/12/16/Shur定理/</id>
+    <link href="http://dna049.com/2015/12/16/Shur%E5%AE%9A%E7%90%86/"/>
+    <id>http://dna049.com/2015/12/16/Shur定理/</id>
     <published>2015-12-16T14:10:14.000Z</published>
     <updated>2016-01-26T02:19:05.000Z</updated>
     <content type="html"><![CDATA[<p>在研究一个数学对象时，我们经常会对它进行分类。比如我们通常把数分为：实数，虚数；实数又分成有理数，无理数；当然也有按照正负来分的。还有整数分成素数（也叫质数）和合数，等等。现在我们谈谈矩阵的分类，以下默认矩阵是方的。<br><a id="more"></a></p>
@@ -984,8 +984,8 @@ U \left( \begin{matrix}
   
   <entry>
     <title><![CDATA[Cayley-Hamilton定理]]></title>
-    <link href="http://yoursite.com/2015/12/16/Cayley-Hamilton%E5%AE%9A%E7%90%86/"/>
-    <id>http://yoursite.com/2015/12/16/Cayley-Hamilton定理/</id>
+    <link href="http://dna049.com/2015/12/16/Cayley-Hamilton%E5%AE%9A%E7%90%86/"/>
+    <id>http://dna049.com/2015/12/16/Cayley-Hamilton定理/</id>
     <published>2015-12-16T04:37:33.000Z</published>
     <updated>2016-01-20T13:14:37.000Z</updated>
     <content type="html"><![CDATA[<p>大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：</p>
