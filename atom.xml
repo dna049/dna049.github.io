@@ -4,7 +4,7 @@
   <subtitle><![CDATA[自称未来数学家，半个程序员]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dna049.com/"/>
-  <updated>2016-02-23T00:35:12.000Z</updated>
+  <updated>2016-02-23T11:04:03.000Z</updated>
   <id>http://dna049.com/</id>
   
   <author>
@@ -15,11 +15,48 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[My Math work edited by LaTex]]></title>
+    <link href="http://dna049.com/2016/02/23/My-Math-work-edited-by-LaTex/"/>
+    <id>http://dna049.com/2016/02/23/My-Math-work-edited-by-LaTex/</id>
+    <published>2016-02-23T11:04:03.000Z</published>
+    <updated>2016-02-23T11:04:03.000Z</updated>
+    <content type="html"><![CDATA[<p>This blog makes a record of my math work and will be update frequently.Click to view or download it.</p>
+<a id="more"></a>
+<h4 id="Here_are_PDF_version_of_my_math_work"><a href="#Here_are_PDF_version_of_my_math_work" class="headerlink" title="Here are PDF version of my math work"></a>Here are PDF version of my math work</h4><p><a href="1.pdf">Config of ACM-ICPC</a></p>
+<p><a href="2.pdf">Some results about matrix</a></p>
+<p><a href="3.pdf">Decomposition of 1 by 1/n </a></p>
+<p><a href="4.pdf">Nowhere dense set and frist category set</a></p>
+<p><a href="5.pdf">Relationship between Spectral Radius ,Numerical Radius and Spectral norm</a></p>
+<p><a href="6.pdf">Some results about group</a></p>
+<p><a href="7.pdf">The inverse of I-ba and I-ab</a></p>
+<p><a href="8.pdf">example of function that only derivable on one point</a></p>
+<p><a href="0.pdf">undergraduate graduation paper</a></p>
+<h4 id="Here_are_Tex_version_of_my_math_work"><a href="#Here_are_Tex_version_of_my_math_work" class="headerlink" title="Here are Tex version of my math work"></a>Here are Tex version of my math work</h4><p><a href="1.tex">Config of ACM-ICPC.tex</a></p>
+<p><a href="2.tex">Some results about matrix.tex</a></p>
+<p><a href="3.tex">Decomposition of 1 by 1/n.tex</a></p>
+<p><a href="4.tex">Nowhere dense set and frist category set.tex</a></p>
+<p><a href="5.tex">Relationship between Spectral Radius ,Numerical Radius and Spectral norm.tex</a></p>
+<p><a href="6.tex">Some results about group.tex</a></p>
+<p><a href="7.tex">The inverse of I-ba and I-ab.tex</a></p>
+<p><a href="8.tex">example of function that only derivable on one point.tex</a></p>
+<h3 id="LaTex_is_a_wonderful_tool_for_Mathematics"><a href="#LaTex_is_a_wonderful_tool_for_Mathematics" class="headerlink" title="LaTex is a wonderful tool for Mathematics"></a>LaTex is a wonderful tool for Mathematics</h3>]]></content>
+    <summary type="html">
+    <![CDATA[<p>This blog makes a record of my math work and will be update frequently.Click to view or download it.</p>]]>
+    
+    </summary>
+    
+      <category term="Tex" scheme="http://dna049.com/tags/Tex/"/>
+    
+      <category term="数学" scheme="http://dna049.com/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[整数集上的一种奇特拓扑]]></title>
     <link href="http://dna049.com/2016/02/22/%E6%95%B4%E6%95%B0%E9%9B%86%E4%B8%8A%E7%9A%84%E4%B8%80%E7%A7%8D%E5%A5%87%E7%89%B9%E6%8B%93%E6%89%91/"/>
     <id>http://dna049.com/2016/02/22/整数集上的一种奇特拓扑/</id>
     <published>2016-02-22T13:41:23.000Z</published>
-    <updated>2016-02-23T00:35:12.000Z</updated>
+    <updated>2016-02-23T11:04:55.000Z</updated>
     <content type="html"><![CDATA[<p>在《Proofs from THE BOOK》里素数无限的六种证明的第五种讲到了一种用点集拓扑学知识证明的方法，其中引入了整数集上的一种奇特拓扑。<br><a id="more"></a></p>
 <p>对 $a,b \in \mathbb{Z},b&gt;0$，令<br>$$ N_{a,b} = \lbrace a + nb \colon n \in \mathbb{Z} \rbrace $$<br>我们称集合 $O \subset \mathbb{Z}$ 是开集，若$O = \emptyset$，或者 $ \forall a \in O,\exists b&gt;0,st. N_{a,b} \subset O$,容易验证这样定义的开集族全体构成了 $\mathbb{Z}$ 上的拓扑。<br>并且每个$N_{a,b}$ 都是既开又闭的。这是由于<br>$$ N_{a,b} = \mathbb{Z} \setminus \cup_{i-1}^{b-1} N_{a+i,b}$$</p>
 <p>又由<br>$$ \mathbb{Z} \setminus \lbrace -1,1 \rbrace = \cup_{p \in P} N_{0,p} $$<br>若素数只有有限个，则$P$是有限集，从而$\lbrace -1,1 \rbrace$是开集，矛盾。</p>
@@ -30,6 +67,8 @@
     
     </summary>
     
+      <category term="－ 数论 - 拓扑" scheme="http://dna049.com/tags/%EF%BC%8D-%E6%95%B0%E8%AE%BA-%E6%8B%93%E6%89%91/"/>
+    
   </entry>
   
   <entry>
@@ -37,7 +76,7 @@
     <link href="http://dna049.com/2016/02/19/Hahn-Banach-%E5%BB%B6%E6%8B%93%E5%AE%9A%E7%90%86/"/>
     <id>http://dna049.com/2016/02/19/Hahn-Banach-延拓定理/</id>
     <published>2016-02-19T00:26:38.000Z</published>
-    <updated>2016-02-19T03:00:08.000Z</updated>
+    <updated>2016-02-23T11:06:48.000Z</updated>
     <content type="html"><![CDATA[<p>Hahn-Banach 延拓定理通常分为分析和几何的形式，其中几何形式通常称为凸集分离性定理。<br><a id="more"></a></p>
 <h3 id="Hahn-Banach__u5EF6_u62D3_u5B9A_u7406_u7684_u5206_u6790_u5F62_u5F0F"><a href="#Hahn-Banach__u5EF6_u62D3_u5B9A_u7406_u7684_u5206_u6790_u5F62_u5F0F" class="headerlink" title="Hahn-Banach 延拓定理的分析形式"></a>Hahn-Banach 延拓定理的分析形式</h3><p><strong>定义1</strong> 设 $X$ 是线性空间，$p \colon X \to \mathbb{R}$ 是一个泛函，若 $p$ 满足</p>
 <ol>
@@ -77,6 +116,8 @@
     
     </summary>
     
+      <category term="－ 泛函分析" scheme="http://dna049.com/tags/%EF%BC%8D-%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"/>
+    
   </entry>
   
   <entry>
@@ -84,7 +125,7 @@
     <link href="http://dna049.com/2016/02/18/%E6%8B%93%E6%89%91%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E8%8B%A5%E5%B9%B2%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86/"/>
     <id>http://dna049.com/2016/02/18/拓扑线性空间的若干基本定理/</id>
     <published>2016-02-18T08:02:15.000Z</published>
-    <updated>2016-02-18T15:18:47.000Z</updated>
+    <updated>2016-02-23T11:08:40.000Z</updated>
     <content type="html"><![CDATA[<p>在泛函分析中几个基本重要的定理：一致有界原理，开映射定理，闭图像定理等都可以相应的推广到拓扑线性空间中。以下内容来自刘培德《拓扑线性空间与算子谱理论》第二章。<br><a id="more"></a></p>
 <p>设 $X,Y$ 是拓扑线性空间，记$L(X,Y)$ 是 $X$ 到 $Y$ 的线性算子全体，而$\mathscr{L}(X,Y)$ 是 $X$ 到 $Y$ 的连续线性算子全体。$N_X(x)$ 表示 $x \in X$ 的邻域全体。除非特别声明，以下$X,Y$都是拓扑线性空间</p>
 <h3 id="u7B49_u5EA6_u8FDE_u7EED_u548C_u4E00_u81F4_u6709_u754C"><a href="#u7B49_u5EA6_u8FDE_u7EED_u548C_u4E00_u81F4_u6709_u754C" class="headerlink" title="等度连续和一致有界"></a>等度连续和一致有界</h3><p>等度连续: 称算子族 $\mathscr{H} \subset L(X,Y)$ 是等度连续的，若 $\forall U \in N_Y(0), V \in N_X(0)$ 使得<br><span>$$T(V) \subset U, \; \forall T \in \mathscr{H}
@@ -136,6 +177,8 @@
     
     </summary>
     
+      <category term="泛函分析" scheme="http://dna049.com/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"/>
+    
   </entry>
   
   <entry>
@@ -143,7 +186,7 @@
     <link href="http://dna049.com/2016/02/17/%E5%85%AC%E5%B9%B3%E7%9A%84%E5%B8%AD%E4%BD%8D%E5%88%86%E9%85%8D/"/>
     <id>http://dna049.com/2016/02/17/公平的席位分配/</id>
     <published>2016-02-17T04:23:42.000Z</published>
-    <updated>2016-02-17T05:57:58.000Z</updated>
+    <updated>2016-02-23T11:08:19.000Z</updated>
     <content type="html"><![CDATA[<p>如果说数学有点用，估计大都表现在运筹学中吧。“公平”的席位分配首先本来就是不可能的，公平一般是无法达到的，我们只是尽量降低不公平度，那么我们怎么衡量不公平度呢。就像评价一个人，有不同的指标，不公平度也是一样，这里介绍一种相对合理易于接受，且好判断的方法。<br><a id="more"></a></p>
 <h3 id="u95EE_u9898_u8868_u8FF0"><a href="#u95EE_u9898_u8868_u8FF0" class="headerlink" title="问题表述"></a>问题表述</h3><p>某学校三个系部学生共200名,(甲系100,乙系60,丙系40)代表会议共20席,按比例分配三个系分别为10、6、4席。老情况变为下列情况怎样分配才是最公平的,现因学生转系三系人数为103、63、34。 </p>
 <ol>
@@ -230,6 +273,8 @@
     
     </summary>
     
+      <category term="－ 运筹学" scheme="http://dna049.com/tags/%EF%BC%8D-%E8%BF%90%E7%AD%B9%E5%AD%A6/"/>
+    
   </entry>
   
   <entry>
@@ -237,13 +282,17 @@
     <link href="http://dna049.com/2016/02/16/hdu-5628-Dirichlet%E7%A7%AF%E4%B8%8E%E5%BF%AB%E9%80%9F%E5%B9%82%E7%9A%84%E5%BA%94%E7%94%A8/"/>
     <id>http://dna049.com/2016/02/16/hdu-5628-Dirichlet积与快速幂的应用/</id>
     <published>2016-02-16T15:56:10.000Z</published>
-    <updated>2016-02-16T23:24:49.000Z</updated>
+    <updated>2016-02-23T11:07:07.000Z</updated>
     <content type="html"><![CDATA[<p>突然有点想打一场BestCoder，然后就看了看BC发现有道应用Dirichlet积的题。于是就去试了试。当然老套路还是很好过的，后来我想写的优美一点写成类的形式，不过一直出现Crash，于是跟周学长讨论了一下，外加一点看书，终于也是搞定了，就此存一下模版吧 0.0<br><a id="more"></a></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//#pragma comment(linker,"/STACK:10240000,10240000")</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bitset&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; PII;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;LL,LL&gt; PLL;</span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> clr(a,b) memset(a,b,sizeof(a))</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> MP make_pair</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> PB push_back</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> lrt rt&lt;&lt;<span class="number">1</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> rrt rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> lson l,m,lrt</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> rson m+<span class="number">1</span>,r,rrt</span></span><br><span class="line"><span class="comment">/*------------------------- template ------------------------------*/</span></span><br><span class="line"><span class="keyword">class</span> NumFun&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keyword">int</span> M = <span class="number">1000000007</span>;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">int</span> *a;</span><br><span class="line">    NumFun(<span class="keyword">int</span> _n = <span class="number">0</span>)&#123;</span><br><span class="line">        n = _n;</span><br><span class="line">        a = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    NumFun(<span class="keyword">const</span> NumFun &amp;A)&#123;</span><br><span class="line">        n = A.n;</span><br><span class="line">        a = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">            a[i]=A.a[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    NumFun &amp;<span class="keyword">operator</span>=(<span class="keyword">const</span> NumFun &amp;A)&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">this</span> != &amp;A) &#123;</span><br><span class="line">            <span class="keyword">delete</span> [] a;</span><br><span class="line">            n = A.n;</span><br><span class="line">            a = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">                a[i]=A.a[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ~NumFun()&#123;</span><br><span class="line">        <span class="keyword">delete</span> [] a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> d=<span class="number">0</span>)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">            a[i]=d;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">set</span><span class="params">(<span class="keyword">int</span> *p)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">            a[i]=p[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    NumFun <span class="keyword">operator</span>*(<span class="keyword">const</span> NumFun &amp;A)<span class="keyword">const</span>&#123;</span><br><span class="line">        <span class="function">NumFun <span class="title">R</span><span class="params">(n)</span></span>;</span><br><span class="line">        R.init(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;i*j&lt;=n;++j)&#123;</span><br><span class="line">                R.a[i*j] = (R.a[i*j] + LL(a[i])*A.a[j])%M;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> R;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;++i)&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d "</span>,a[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,a[n]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function">NumFun <span class="title">pow</span><span class="params">(NumFun A,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="function">NumFun <span class="title">R</span><span class="params">(A.n)</span></span>;</span><br><span class="line">    R.init();</span><br><span class="line">    R.a[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(k)&#123;</span><br><span class="line">        <span class="keyword">if</span>(k&amp;<span class="number">1</span>) R=R*A;</span><br><span class="line">        k&gt;&gt;=<span class="number">1</span>;  A=A*A;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> R;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100005</span>;</span><br><span class="line"><span class="keyword">int</span> a[N];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="comment">//    freopen("/Users/c10110057/Desktop/AC/in","r",stdin);</span></span><br><span class="line"><span class="comment">//    freopen("/Users/c10110057/Desktop/AC/out","w",stdout);</span></span><br><span class="line">    <span class="keyword">int</span> T,n,k;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">    <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;k);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>,a+i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function">NumFun <span class="title">R</span><span class="params">(n)</span></span>;</span><br><span class="line">        R.<span class="built_in">set</span>(a);</span><br><span class="line">        <span class="function">NumFun <span class="title">ONE</span><span class="params">(n)</span></span>;</span><br><span class="line">        ONE.init(<span class="number">1</span>);</span><br><span class="line">        R = <span class="function">R*<span class="title">pow</span><span class="params">(ONE,k)</span></span>;</span><br><span class="line">        R.print();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     <summary type="html">
     <![CDATA[<p>突然有点想打一场BestCoder，然后就看了看BC发现有道应用Dirichlet积的题。于是就去试了试。当然老套路还是很好过的，后来我想写的优美一点写成类的形式，不过一直出现Crash，于是跟周学长讨论了一下，外加一点看书，终于也是搞定了，就此存一下模版吧 0.0<br>]]>
     
     </summary>
+    
+      <category term="C++" scheme="http://dna049.com/tags/C/"/>
+    
+      <category term="数论" scheme="http://dna049.com/tags/%E6%95%B0%E8%AE%BA/"/>
     
   </entry>
   
@@ -252,7 +301,7 @@
     <link href="http://dna049.com/2016/02/16/%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99%E5%92%8CGuass%E4%BA%92%E5%8F%8D%E5%BE%8B/"/>
     <id>http://dna049.com/2016/02/16/二次剩余和Guass互反律/</id>
     <published>2016-02-16T13:05:36.000Z</published>
-    <updated>2016-02-17T04:22:15.000Z</updated>
+    <updated>2016-02-23T11:08:08.000Z</updated>
     <content type="html"><![CDATA[<p>从二次剩余问题，引入Legendre符号，由此一步步导出Guass互反律，最后延伸到Jacobi符号，整个步骤确实连贯优美，脍炙人口。<br><a id="more"></a></p>
 <p>寒假回家好好调整了一下状态，回学校后感觉还不错，效率也蛮高。发现理图虽然比较破，但是还是很不错的，哈哈哈。每次读潘承洞先生的《数论基础》都觉得受益匪浅，我把自己很喜欢的部分写入到该文中。</p>
 <h3 id="u4E8C_u6B21_u5269_u4F59"><a href="#u4E8C_u6B21_u5269_u4F59" class="headerlink" title="二次剩余"></a>二次剩余</h3><p>考虑如下形式二次同余式<br>$$ x^2 = a \; (mod \; p) $$<br>其中 $p$ 是奇素数。</p>
@@ -278,6 +327,8 @@
     
     </summary>
     
+      <category term="－ 数论" scheme="http://dna049.com/tags/%EF%BC%8D-%E6%95%B0%E8%AE%BA/"/>
+    
   </entry>
   
   <entry>
@@ -285,7 +336,7 @@
     <link href="http://dna049.com/2016/01/21/%E8%87%AA%E7%84%B6%E6%95%B0%E6%96%B9%E5%B9%82%E5%92%8C%E5%85%AC%E5%BC%8F/"/>
     <id>http://dna049.com/2016/01/21/自然数方幂和公式/</id>
     <published>2016-01-21T11:16:51.000Z</published>
-    <updated>2016-01-24T08:54:42.000Z</updated>
+    <updated>2016-02-23T11:09:24.000Z</updated>
     <content type="html"><![CDATA[<p>关于自然数方幂和公式，网上的求解版本有很多种。这里介绍一种不为人知，十分简洁明了的求解方法，该公式并非原创，但是整个证明过程和方法完全原创。它的思想来源于我高中时在一本数学竞赛书中的数列例题(书名忘了…)，正因为一本本这样的书，让我大学选择了数学系，现在依然在学习数学。<br><a id="more"></a></p>
 <h3 id="u82E5__24a_n__3D_n_28n-1_29_24__u6C42_u5176_u524D__24n_24__u9879_u548C_24S_n_24"><a href="#u82E5__24a_n__3D_n_28n-1_29_24__u6C42_u5176_u524D__24n_24__u9879_u548C_24S_n_24" class="headerlink" title="若 $a_n = n(n-1)$ 求其前 $n$ 项和$S_n$"></a>若 $a_n = n(n-1)$ 求其前 $n$ 项和$S_n$</h3><span>$$a_n = n(n-1) ＝
 \frac{(n+1)n(n-1) -n(n-1)(n-2)}{3}$$</span><!-- Has MathJax -->
@@ -313,6 +364,8 @@ b_k + b_{k-1} C_k ^{k-1} + \cdots b_1 C_{k} ^1$$</span><!-- Has MathJax --><br>�
     
     </summary>
     
+      <category term="－ 数论" scheme="http://dna049.com/tags/%EF%BC%8D-%E6%95%B0%E8%AE%BA/"/>
+    
   </entry>
   
   <entry>
@@ -320,7 +373,7 @@ b_k + b_{k-1} C_k ^{k-1} + \cdots b_1 C_{k} ^1$$</span><!-- Has MathJax --><br>�
     <link href="http://dna049.com/2016/01/21/%E4%B8%A4%E7%B1%BB%E5%8F%8D%E6%BC%94%E5%85%AC%E5%BC%8F%E5%8F%8A%E5%85%B6%E7%9F%A9%E9%98%B5%E5%BD%A2%E5%BC%8F/"/>
     <id>http://dna049.com/2016/01/21/两类反演公式及其矩阵形式/</id>
     <published>2016-01-21T09:31:20.000Z</published>
-    <updated>2016-01-26T02:19:43.000Z</updated>
+    <updated>2016-02-23T11:07:50.000Z</updated>
     <content type="html"><![CDATA[<p>在上一篇<a href="http://dna049.com/2016/01/20/数论函数的Dirichlet积/">博文</a>中，介绍过数论中的 Mobius 反演公式，让我想起了另一个经典的反演公式－－－二项式反演公式。然而本质上反演公式就是矩阵求逆的过程。只是他们的逆有很简单的形式，因此就有了这样两个反演公式而已。<br><a id="more"></a></p>
 <p>Mobius 反演在上一篇博客中已经提及，现在着重提一下二项式反演公式，这个公式让我在2014年ACM－ICPC亚洲区域赛西安站拿银，当时<a href="2014acmicpc-asia-xian-regional-contest.pdf">F题</a>答案直接算需要$n^3$复杂度，而利用二项式反演公式后，可以在$n^2$复杂度内完美解决。1A过题，感觉超爽。</p>
 <h3 id="u53CD_u6F14_u516C_u5F0F_u4E0E_u5176_u77E9_u9635_u5F62_u5F0F"><a href="#u53CD_u6F14_u516C_u5F0F_u4E0E_u5176_u77E9_u9635_u5F62_u5F0F" class="headerlink" title="反演公式与其矩阵形式"></a>反演公式与其矩阵形式</h3><p>由<br><span>$$\sum _{r = 1} ^n a _{n,r} f(r) 
@@ -363,38 +416,7 @@ c _{ij} = \sum _{k=1} ^n a _{ik} b _{kj} &amp; = \sum _{k =j} ^ i \left(\begin{m
     
     </summary>
     
-  </entry>
-  
-  <entry>
-    <title><![CDATA[My Math work edited by LaTex]]></title>
-    <link href="http://dna049.com/2016/01/20/My-Math-work-edited-by-LaTex/"/>
-    <id>http://dna049.com/2016/01/20/My-Math-work-edited-by-LaTex/</id>
-    <published>2016-01-20T13:09:36.000Z</published>
-    <updated>2016-01-19T05:09:40.000Z</updated>
-    <content type="html"><![CDATA[<p>This blog makes a record of my math work and will be update frequently.Click to view or download it.</p>
-<a id="more"></a>
-<h4 id="Here_are_PDF_version_of_my_math_work"><a href="#Here_are_PDF_version_of_my_math_work" class="headerlink" title="Here are PDF version of my math work"></a>Here are PDF version of my math work</h4><p><a href="1.pdf">Config of ACM-ICPC</a></p>
-<p><a href="2.pdf">Some results about matrix</a></p>
-<p><a href="3.pdf">Decomposition of 1 by 1/n </a></p>
-<p><a href="4.pdf">Nowhere dense set and frist category set</a></p>
-<p><a href="5.pdf">Relationship between Spectral Radius ,Numerical Radius and Spectral norm</a></p>
-<p><a href="6.pdf">Some results about group</a></p>
-<p><a href="7.pdf">The inverse of I-ba and I-ab</a></p>
-<p><a href="8.pdf">example of function that only derivable on one point</a></p>
-<p><a href="0.pdf">undergraduate graduation paper</a></p>
-<h4 id="Here_are_Tex_version_of_my_math_work"><a href="#Here_are_Tex_version_of_my_math_work" class="headerlink" title="Here are Tex version of my math work"></a>Here are Tex version of my math work</h4><p><a href="1.tex">Config of ACM-ICPC.tex</a></p>
-<p><a href="2.tex">Some results about matrix.tex</a></p>
-<p><a href="3.tex">Decomposition of 1 by 1/n.tex</a></p>
-<p><a href="4.tex">Nowhere dense set and frist category set.tex</a></p>
-<p><a href="5.tex">Relationship between Spectral Radius ,Numerical Radius and Spectral norm.tex</a></p>
-<p><a href="6.tex">Some results about group.tex</a></p>
-<p><a href="7.tex">The inverse of I-ba and I-ab.tex</a></p>
-<p><a href="8.tex">example of function that only derivable on one point.tex</a></p>
-<h3 id="LaTex_is_a_wonderful_tool_for_Mathematics"><a href="#LaTex_is_a_wonderful_tool_for_Mathematics" class="headerlink" title="LaTex is a wonderful tool for Mathematics"></a>LaTex is a wonderful tool for Mathematics</h3>]]></content>
-    <summary type="html">
-    <![CDATA[<p>This blog makes a record of my math work and will be update frequently.Click to view or download it.</p>]]>
-    
-    </summary>
+      <category term="数论 - 矩阵" scheme="http://dna049.com/tags/%E6%95%B0%E8%AE%BA-%E7%9F%A9%E9%98%B5/"/>
     
   </entry>
   
@@ -403,7 +425,7 @@ c _{ij} = \sum _{k=1} ^n a _{ik} b _{kj} &amp; = \sum _{k =j} ^ i \left(\begin{m
     <link href="http://dna049.com/2016/01/20/%E6%95%B0%E8%AE%BA%E5%87%BD%E6%95%B0%E7%9A%84Dirichlet%E7%A7%AF/"/>
     <id>http://dna049.com/2016/01/20/数论函数的Dirichlet积/</id>
     <published>2016-01-20T12:09:26.000Z</published>
-    <updated>2016-01-24T08:56:27.000Z</updated>
+    <updated>2016-02-23T11:09:03.000Z</updated>
     <content type="html"><![CDATA[<p>最近重温潘承洞老先生的《数论基础》(现代数学基础丛书34)，确实是经典中的经典。以现代的眼光看数论函数，使得分析问题更加简洁本质，而这些都要归功于 Dirichlet 积的引入。<br><a id="more"></a></p>
 <h3 id="u5E38_u89C1_u6570_u8BBA_u51FD_u6570"><a href="#u5E38_u89C1_u6570_u8BBA_u51FD_u6570" class="headerlink" title="常见数论函数"></a>常见数论函数</h3><p>为了更好的介绍 Dirichlet 积，先引入一些记号，数论函数是指定义于全体正整数集上的函数。</p>
 <ol>
@@ -579,6 +601,10 @@ n^{\lambda} * \phi _{\lambda}$$</span><!-- Has MathJax --><br>可知<br><span>$$
     
     </summary>
     
+      <category term="Dirichlet" scheme="http://dna049.com/tags/Dirichlet/"/>
+    
+      <category term="数论" scheme="http://dna049.com/tags/%E6%95%B0%E8%AE%BA/"/>
+    
   </entry>
   
   <entry>
@@ -586,7 +612,7 @@ n^{\lambda} * \phi _{\lambda}$$</span><!-- Has MathJax --><br>可知<br><span>$$
     <link href="http://dna049.com/2016/01/03/Several-Algorithms-of-root-Complex/"/>
     <id>http://dna049.com/2016/01/03/Several-Algorithms-of-root-Complex/</id>
     <published>2016-01-03T07:12:12.000Z</published>
-    <updated>2016-01-21T12:36:43.000Z</updated>
+    <updated>2016-02-23T11:04:36.000Z</updated>
     <content type="html"><![CDATA[<p>I, as a ACMer, always take algorithm complexity into consideration when programming. Today, I introduce you some elegant algorithms of root Complex.</p>
 <a id="more"></a>
 <h3 id="1-__3C_21-_uFFFC5-_3E"><a href="#1-__3C_21-_uFFFC5-_3E" class="headerlink" title="1. <span>$s(n) = \sum_{i=1}^{n} \lfloor \frac{n}{i} \rfloor$</span><!-- Has MathJax -->"></a>1. <span>$s(n) = \sum_{i=1}^{n} \lfloor \frac{n}{i} \rfloor$</span><!-- Has MathJax --></h3><p>Since The range of <span>$\lfloor \frac{n}{i} \rfloor$</span><!-- Has MathJax --> contains at most $2\sqrt{n}$ . There may exist a algorithm of complexity $O(\sqrt{n})$.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">LL <span class="title">getsum</span><span class="params">(LL n)</span></span>&#123; <span class="comment">// The code is simple and easy to understand</span></span><br><span class="line">    LL sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(LL i=<span class="number">1</span>,j;i&lt;=n;i=j+<span class="number">1</span>)&#123; </span><br><span class="line">        j = n/(n/i);</span><br><span class="line">        sum += (j-i+<span class="number">1</span>)*(n/i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -639,6 +665,10 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     
     </summary>
     
+      <category term="C++" scheme="http://dna049.com/tags/C/"/>
+    
+      <category term="数论" scheme="http://dna049.com/tags/%E6%95%B0%E8%AE%BA/"/>
+    
   </entry>
   
   <entry>
@@ -646,7 +676,7 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     <link href="http://dna049.com/2016/01/03/2016%E5%8E%A6%E9%97%A8%E9%A9%AC%E6%8B%89%E6%9D%BE/"/>
     <id>http://dna049.com/2016/01/03/2016厦门马拉松/</id>
     <published>2016-01-03T06:18:20.000Z</published>
-    <updated>2016-01-03T14:07:10.000Z</updated>
+    <updated>2016-02-23T11:03:47.000Z</updated>
     <content type="html"><![CDATA[<h3 id="u7B2C_u4E00_u6B21_u5168_u7A0B_u9A6C_u62C9_u677E"><a href="#u7B2C_u4E00_u6B21_u5168_u7A0B_u9A6C_u62C9_u677E" class="headerlink" title="第一次全程马拉松"></a>第一次全程马拉松</h3><p>仅仅只参加几次10公里的我，这次想装个逼跑个全程马拉松。其实我就是这么任性，没办法。然后就BB一下此次马拉松吧。</p>
 <a id="more"></a>
 <h5 id="u5751_u7239_u7684_u7279_u6B65"><a href="#u5751_u7239_u7684_u7279_u6B65" class="headerlink" title="坑爹的特步"></a>坑爹的特步</h5><p>衣服尺码不按照官网提供的来，给我一个3XL简直都不用穿裤子了。</p>
@@ -665,6 +695,10 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     
     </summary>
     
+      <category term="个人" scheme="http://dna049.com/tags/%E4%B8%AA%E4%BA%BA/"/>
+    
+      <category term="马拉松" scheme="http://dna049.com/tags/%E9%A9%AC%E6%8B%89%E6%9D%BE/"/>
+    
   </entry>
   
   <entry>
@@ -672,7 +706,7 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     <link href="http://dna049.com/2015/12/30/%E5%A5%BD%E5%A5%BD%E5%8F%8D%E7%9C%81/"/>
     <id>http://dna049.com/2015/12/30/好好反省/</id>
     <published>2015-12-30T03:45:06.000Z</published>
-    <updated>2016-01-20T12:07:43.000Z</updated>
+    <updated>2016-02-23T11:05:07.000Z</updated>
     <content type="html"><![CDATA[<p>现在的我已经一无所有。学习，爱情，友情一无所有，大学让我成了一个目中无人自私的家伙。现在的我却成了自卑，自己都讨厌自己的人。总是想洗心革面缺总是三分钟的热血。我也不知道何时能够做回那个高中数学竞赛时的0.肆玖，但是有一种预感，他就要回来。</p>
 <p>从2015年12月23号开始走向单身生活。2012年4月，我这辈子第一次体会到被爱的感觉，我一直深深的依赖着她。分开那天在华理图书馆，她说我现在翅膀长硬了，不需要一个既当妈又当女朋友的她了。我先现在开始我要和<br>自己的内心谈一次恋爱，找回那个迷路的0.肆玖。</p>
 <p>经过了一学期的折腾我想我已经下定决心好好学代数了。我一直生活在一个极度自由的环境，给了我一颗放荡狂野的心。现在要有规律的生活，11点前睡，6点半起床，看名家原著英语，记单词养成一点不差的记住并主动使用，我想这是我写的最后一篇数学中文博文了(后来发现这并不现实)，因为我知道不具名的演员不管有没有观众。该上课上课，其它时间看代数课外书，要让以后的老师看得起。定理证明尽量自己来。英语课一定好好预习，课本每一个单词都要读到读懂。晚上回来复习一下英语。按照周计划行事。</p>
@@ -687,6 +721,8 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
 <p>从2015年12月2]]>
     </summary>
     
+      <category term="个人" scheme="http://dna049.com/tags/%E4%B8%AA%E4%BA%BA/"/>
+    
   </entry>
   
   <entry>
@@ -694,7 +730,7 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     <link href="http://dna049.com/2015/12/24/%E6%89%93%E5%9B%9E%E5%8E%9F%E5%BD%A2/"/>
     <id>http://dna049.com/2015/12/24/打回原形/</id>
     <published>2015-12-24T13:50:21.000Z</published>
-    <updated>2015-12-24T14:15:47.000Z</updated>
+    <updated>2016-02-23T11:03:42.000Z</updated>
     <content type="html"><![CDATA[<p>最近状态好差，感觉自己真的老了。好怀念初一的时候，傻的很充实。怀念大一的时候，青春有干劲。然而现在一副要死的样。我想改变，想丢掉名字性别。转土重来，一个人静静，可是一个人静静的时候却又感到空虚。</p>
 <a id="more"></a>
 <p>初一的时候什么都不多想，基本上只知道学习，学校也几乎是不放假的。那时候很静，不浮躁，一点一滴。后来却变了，我整个人成了一个吊儿郎当，浮夸，装逼的人，我内心深处并不希望这样，因为我相信人是孤独的，只有被自己肯定才是真正的自信之源。我现在不自信也是这学期碌碌无为结的果，我不想重蹈我高中的覆辙。之后高中不温不火的学习让我进了我华东理工大学。</p>
@@ -706,6 +742,8 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     
     </summary>
     
+      <category term="个人" scheme="http://dna049.com/tags/%E4%B8%AA%E4%BA%BA/"/>
+    
   </entry>
   
   <entry>
@@ -713,7 +751,7 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     <link href="http://dna049.com/2015/12/23/hexo-%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%9C%80%E7%AE%80%E5%8D%95%E6%96%B9%E5%BC%8F/"/>
     <id>http://dna049.com/2015/12/23/hexo-中插入图片最简单方式/</id>
     <published>2015-12-23T12:42:32.000Z</published>
-    <updated>2015-12-23T13:03:29.000Z</updated>
+    <updated>2016-02-23T10:59:43.000Z</updated>
     <content type="html"><![CDATA[<p>因为上一篇博文需要贴一张本地图片，奈何技术上无法解决。后来查了官方文档并且询问hexo交流群（287306637）之后，有给出解决方案（用图床）但是不是我想要的方式，最终通过<a href="https://hexo.io/docs/asset-folders.html" target="_blank" rel="external">官方文档</a>解决了此问题。</p>
 <a id="more"></a>
 <p>方法其实很简单，只需再修改 _config.yml 文件中的</p>
@@ -731,6 +769,10 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     
     </summary>
     
+      <category term="hexo" scheme="http://dna049.com/tags/hexo/"/>
+    
+      <category term="图片" scheme="http://dna049.com/tags/%E5%9B%BE%E7%89%87/"/>
+    
   </entry>
   
   <entry>
@@ -738,7 +780,7 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     <link href="http://dna049.com/2015/12/23/%E6%9C%AC%E7%A7%91%E6%95%B0%E5%AD%A6%E7%B3%BB%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E5%9B%BE/"/>
     <id>http://dna049.com/2015/12/23/本科数学系学习路线图/</id>
     <published>2015-12-23T09:52:57.000Z</published>
-    <updated>2015-12-24T13:48:53.000Z</updated>
+    <updated>2016-02-23T11:02:23.000Z</updated>
     <content type="html"><![CDATA[<p>最近在看刘培德先生的书《拓扑线性空间和算子谱理论》，简直爱不释手。而拓扑线性空间理论是在1950年左右由<a href="https://sv.wikipedia.org/wiki/Nicolas_Bourbaki" target="_blank" rel="external">Nicolas Bourbaki学派</a>建立。不禁让我回顾本科学习生涯中，从学习300年前一直到100年前的数学，现在又在学习几十年前的数学。于是就把本科学习路线总结如下图，下图由此<a href="https://www.processon.com" target="_blank" rel="external">网站</a>在线产生</p>
 <a id="more"></a>
 <p><img src="math.png" alt="图片加载中0.0"></p>
@@ -751,6 +793,8 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     
     </summary>
     
+      <category term="数学" scheme="http://dna049.com/tags/%E6%95%B0%E5%AD%A6/"/>
+    
   </entry>
   
   <entry>
@@ -758,7 +802,7 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     <link href="http://dna049.com/2015/12/20/%E6%8B%93%E6%89%91%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E5%BC%80%E9%9B%86%E5%92%8C%E9%97%AD%E9%9B%86/"/>
     <id>http://dna049.com/2015/12/20/拓扑线性空间中的开集和闭集/</id>
     <published>2015-12-20T15:13:32.000Z</published>
-    <updated>2016-01-20T12:21:57.000Z</updated>
+    <updated>2016-02-23T11:02:46.000Z</updated>
     <content type="html"><![CDATA[<p>在复习泛函分析的时候，因为很多结论可以推广到更为一般的情况，因此就看了刘培德先生编著的《拓扑线性空间与算子谱理论》这本书。然后在书中读到了有关开集和闭集的一些性质，在此总结一下，先叙述一下结论。<br>在拓扑线性空间中，</p>
 <ol>
 <li>若A是开集，B是任意集合，则A+B是开集。</li>
@@ -791,6 +835,8 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     
     </summary>
     
+      <category term="拓扑" scheme="http://dna049.com/tags/%E6%8B%93%E6%89%91/"/>
+    
   </entry>
   
   <entry>
@@ -798,7 +844,7 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     <link href="http://dna049.com/2015/12/17/Perron-Frobenius%E7%90%86%E8%AE%BA/"/>
     <id>http://dna049.com/2015/12/17/Perron-Frobenius理论/</id>
     <published>2015-12-17T02:27:18.000Z</published>
-    <updated>2015-12-18T01:26:32.000Z</updated>
+    <updated>2016-02-23T11:02:08.000Z</updated>
     <content type="html"><![CDATA[<p>1907年O.Perron发现正矩阵的谱有特别有趣的性质。G.Frobenius在1908-1912年间将Perron的工作推广到不可约非负矩阵的情形，并得到了新的进一步结果。Ferron-Frobenius理论有很多证明方式，下面介绍H.Wielandt的优美证明。<br><a id="more"></a></p>
 <p>两个矩阵X和Y称为置换相似的，若存在一个置换矩阵P满足$P^TXP=Y$。设$A\in M_n$.称A为可约的，若A置换相似于一个形如<br><span>$$\left( \begin{matrix}
 B &amp; 0\\
@@ -876,6 +922,8 @@ ry^0&gt; 0$$</span><!-- Has MathJax --><br>其中<span>$y_0 = (I+A)^{n-1}x^0 &gt
     
     </summary>
     
+      <category term="-- 矩阵" scheme="http://dna049.com/tags/%E7%9F%A9%E9%98%B5/"/>
+    
   </entry>
   
   <entry>
@@ -883,7 +931,7 @@ ry^0&gt; 0$$</span><!-- Has MathJax --><br>其中<span>$y_0 = (I+A)^{n-1}x^0 &gt
     <link href="http://dna049.com/2015/12/16/Shur%E5%AE%9A%E7%90%86/"/>
     <id>http://dna049.com/2015/12/16/Shur定理/</id>
     <published>2015-12-16T14:10:14.000Z</published>
-    <updated>2016-01-26T02:19:05.000Z</updated>
+    <updated>2016-02-23T11:01:31.000Z</updated>
     <content type="html"><![CDATA[<p>在研究一个数学对象时，我们经常会对它进行分类。比如我们通常把数分为：实数，虚数；实数又分成有理数，无理数；当然也有按照正负来分的。还有整数分成素数（也叫质数）和合数，等等。现在我们谈谈矩阵的分类，以下默认矩阵是方的。<br><a id="more"></a></p>
 <h4 id="u6570_u5B66_u4E2D_u5206_u7C7B_u4E00_u822C_u662F_u6309_u7167_u7B49_u4EF7_u5173_u7CFB_u5212_u5206_u7B49_u4EF7_u7C7B_u7684_u3002"><a href="#u6570_u5B66_u4E2D_u5206_u7C7B_u4E00_u822C_u662F_u6309_u7167_u7B49_u4EF7_u5173_u7CFB_u5212_u5206_u7B49_u4EF7_u7C7B_u7684_u3002" class="headerlink" title="数学中分类一般是按照等价关系划分等价类的。"></a>数学中分类一般是按照等价关系划分等价类的。</h4><p>所谓等价关系其实就是满足反身性，对称性，传递性的二元关系（总结一下我们等于号的全部性质就知道了）<br>矩阵中最常见的三种等价关系分别是</p>
 <ol>
@@ -980,6 +1028,8 @@ U \left( \begin{matrix}
     
     </summary>
     
+      <category term="矩阵" scheme="http://dna049.com/tags/%E7%9F%A9%E9%98%B5/"/>
+    
   </entry>
   
   <entry>
@@ -987,7 +1037,7 @@ U \left( \begin{matrix}
     <link href="http://dna049.com/2015/12/16/Cayley-Hamilton%E5%AE%9A%E7%90%86/"/>
     <id>http://dna049.com/2015/12/16/Cayley-Hamilton定理/</id>
     <published>2015-12-16T04:37:33.000Z</published>
-    <updated>2016-01-20T13:14:37.000Z</updated>
+    <updated>2016-02-23T10:57:47.000Z</updated>
     <content type="html"><![CDATA[<p>大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：</p>
 <a id="more"></a>
 <p>n阶矩阵A的特征多项式为：<br><span>$$\phi(\lambda)=det(\lambda I - A) = a_n \lambda^n +
