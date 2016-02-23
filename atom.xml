@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[0.肆玖]]></title>
-  <subtitle><![CDATA[自称数学家，半个程序员]]></subtitle>
+  <subtitle><![CDATA[自称未来数学家，半个程序员]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
   <updated>2016-02-23T00:35:12.000Z</updated>
