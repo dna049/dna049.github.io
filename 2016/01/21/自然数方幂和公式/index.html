@@ -1,8 +1,170 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 自然数方幂和公式 · 0.肆玖</title><meta name="description" content="关于自然数方幂和公式，网上的求解版本有很多种。这里介绍一种不为人知，十分简洁明了的求解方法，该公式并非原创，但是整个证明过程和方法完全原创。它的思想来源于我高中时在一本数学竞赛书中的数列例题(书名忘了…)，正因为一本本这样的书，让我大学选择了数学系，现在依然在学习数学。
-若 $a_n = n(n-1)$ 求其前 $n$ 项和$S_n$$$a_n = n(n-1) ＝
-\frac{(n+1)n(n-1) -n(n-1)(n-2)}{3}$$
-所以$$S_n =
-\frac{(n+1)n(n-1)}{3}$$&lt;!-- Has MathJa"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="https://github.com/dna049" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="http://dna049.sinaapp.com" target="_blank" class="nav-list-link">LINK</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">自然数方幂和公式</h1><div class="post-meta"><div class="post-time">2016年1月21日</div></div><div class="post-content"><p>关于自然数方幂和公式，网上的求解版本有很多种。这里介绍一种不为人知，十分简洁明了的求解方法，该公式并非原创，但是整个证明过程和方法完全原创。它的思想来源于我高中时在一本数学竞赛书中的数列例题(书名忘了…)，正因为一本本这样的书，让我大学选择了数学系，现在依然在学习数学。<br><a id="more"></a></p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>自然数方幂和公式 | 0.肆玖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="关于自然数方幂和公式，网上的求解版本有很多种。这里介绍一种不为人知，十分简洁明了的求解方法，该公式并非原创，但是整个证明过程和方法完全原创。它的思想来源于我高中时在一本数学竞赛书中的数列例题(书名忘了…)，正因为一本本这样的书，让我大学选择了数学系，现在依然在学习数学。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自然数方幂和公式">
+<meta property="og:url" content="http://yoursite.com/2016/01/21/自然数方幂和公式/index.html">
+<meta property="og:site_name" content="0.肆玖">
+<meta property="og:description" content="关于自然数方幂和公式，网上的求解版本有很多种。这里介绍一种不为人知，十分简洁明了的求解方法，该公式并非原创，但是整个证明过程和方法完全原创。它的思想来源于我高中时在一本数学竞赛书中的数列例题(书名忘了…)，正因为一本本这样的书，让我大学选择了数学系，现在依然在学习数学。">
+<meta property="og:updated_time" content="2016-01-24T08:54:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自然数方幂和公式">
+<meta name="twitter:description" content="关于自然数方幂和公式，网上的求解版本有很多种。这里介绍一种不为人知，十分简洁明了的求解方法，该公式并非原创，但是整个证明过程和方法完全原创。它的思想来源于我高中时在一本数学竞赛书中的数列例题(书名忘了…)，正因为一本本这样的书，让我大学选择了数学系，现在依然在学习数学。">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/avatar.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">dna049</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">自称数学家，半个程序员</p>
+		
+		
+		<form><input type="text" class="search" placeholder=" Search..."></form>
+				
+
+
+		
+
+		<div id="switch-area" class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives/">所有文章</a></li>
+				        
+							<li><a href="/About/">关于我</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:dna049@foxmail.com" title="Email"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/dna049/" title="GitHub"></a></li>
+					        
+								<li id="LinkedIn"><a class="LinkedIn" target="_blank" href="http://dna049.sinaapp.com" title="LinkedIn"></a></li>
+					        
+						</ul>
+					</nav>
+				</section>
+				
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">dna049</a></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img lazy-src="/img/avatar.png" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author"><a href="/" title="回到主页">dna049</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">自称数学家，半个程序员</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives/">所有文章</a></li>
+		        
+					<li><a href="/About/">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:dna049@foxmail.com" title="Email"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/dna049/" title="GitHub"></a></li>
+					        
+								<li id="LinkedIn"><a class="LinkedIn" target="_blank" href="http://dna049.sinaapp.com" title="LinkedIn"></a></li>
+					        
+						</ul>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-自然数方幂和公式" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/21/自然数方幂和公式/" class="article-date">
+  	<time datetime="2016-01-21T11:16:51.000Z" itemprop="datePublished">2016-01-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      自然数方幂和公式
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>关于自然数方幂和公式，网上的求解版本有很多种。这里介绍一种不为人知，十分简洁明了的求解方法，该公式并非原创，但是整个证明过程和方法完全原创。它的思想来源于我高中时在一本数学竞赛书中的数列例题(书名忘了…)，正因为一本本这样的书，让我大学选择了数学系，现在依然在学习数学。<br><a id="more"></a></p>
 <h3 id="u82E5__24a_n__3D_n_28n-1_29_24__u6C42_u5176_u524D__24n_24__u9879_u548C_24S_n_24"><a href="#u82E5__24a_n__3D_n_28n-1_29_24__u6C42_u5176_u524D__24n_24__u9879_u548C_24S_n_24" class="headerlink" title="若 $a_n = n(n-1)$ 求其前 $n$ 项和$S_n$"></a>若 $a_n = n(n-1)$ 求其前 $n$ 项和$S_n$</h3><span>$$a_n = n(n-1) ＝
 \frac{(n+1)n(n-1) -n(n-1)(n-2)}{3}$$</span><!-- Has MathJax -->
 <p>所以<br><span>$$S_n =
@@ -23,17 +185,204 @@ b_k + b_{k-1} C_k ^{k-1} + \cdots b_1 C_{k} ^1$$</span><!-- Has MathJax --><br>�
 <span>$$1^p+2^p+ \dots + n^p =
 \sum _{k=1} ^p \; (\; \sum_{j=1} ^ {k} (-1)^{k-j} C_k^j j^p \;) \; C _{n+1} ^{k+1}$$</span><!-- Has MathJax --> 
 <p>本博文完全由作者(dna0.49)原创于2016年1月21号，转载或引用请注明<a href="http://dna049.com" target="_blank" rel="external">http://dna049.com</a></p>
-</div></article></div></section><footer><div class="paginator"><a href="/2016/02/16/二次剩余和Guass互反律/" class="prev">上一篇</a><a href="/2016/01/21/两类反演公式及其矩阵形式/" class="next">下一篇</a></div><div data-thread-key="2016/01/21/自然数方幂和公式/" data-title="自然数方幂和公式" data-url="http://yoursite.com/2016/01/21/自然数方幂和公式/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
-(function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
 
-</script></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?e561b60b5caa17e3873a8e31c9e1f5f4";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- mathjax config similar to math.stackexchange -->
+      
+    </div>
+    
+  </div>
+  
+    
+  
+</article>
+
+<!-- 默认显示文章目录，在文章---前输入toc: false关闭目录 -->
+<!-- Show TOC and tocButton in default, Hide TOC via putting "toc: false" before "---" at [post].md -->
+<div id="toc" class="toc-article">
+<strong class="toc-title">文章目录</strong>
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#u82E5__24a_n__3D_n_28n-1_29_24__u6C42_u5176_u524D__24n_24__u9879_u548C_24S_n_24"><span class="toc-number">1.</span> <span class="toc-text">若 $a_n = n(n-1)$ 求其前 $n$ 项和$S_n$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u82E5_3C_21-_uFFFC2-_3E_uFF0C_u5219_u5176_u524D__24n_24__u9879_u548C_3C_21-_uFFFC3-_3E"><span class="toc-number">2.</span> <span class="toc-text">若$a_n = A_n ^p$，则其前 $n$ 项和$S_n ＝ \frac{ A_{n+1} ^{p+1}}{p+1}$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u6C42__241_5E2+2_5E2+__5Cdots_+_n_5E2_24"><span class="toc-number">3.</span> <span class="toc-text">求 $1^2+2^2+ \dots + n^2$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u6C42_241_5Ep+2_5Ep+__5Cdots_+_n_5Ep_24"><span class="toc-number">4.</span> <span class="toc-text">求$1^p+2^p+ \dots + n^p$</span></a></li></ol>
+</div>
+<style type="text/css">
+  .left-col .switch-btn {
+    display: none;
+  }
+  .left-col .switch-area {
+    display: none;
+  }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script type="text/javascript">
+  var toc_button= document.getElementById("tocButton");
+  var toc_div= document.getElementById("toc");
+  /* Show or hide toc when click on tocButton.
+  通过点击设置的按钮显示或者隐藏文章目录.*/
+  toc_button.onclick=function(){
+  if(toc_div.style.display=="none"){
+  toc_div.style.display="block";
+  toc_button.value="隐藏目录";
+  document.getElementById("switch-btn").style.display="none";
+  document.getElementById("switch-area").style.display="none";
+  }
+  else{
+  toc_div.style.display="none";
+  toc_button.value="显示目录";
+  document.getElementById("switch-btn").style.display="block";
+  document.getElementById("switch-area").style.display="block";
+  }
+  }
+</script>
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+  if ($(".toc").length < 1) {
+    $("#toc").css("display","none");
+    $("#tocButton").css("display","none");
+    $(".switch-btn").css("display","block");
+    $(".switch-area").css("display","block");
+  }
+</script>
+
+
+
+
+  <div class="duoshuo" id="comments">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016/01/21/自然数方幂和公式/" data-title="自然数方幂和公式" data-url="http://yoursite.com/2016/01/21/自然数方幂和公式/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"dna049"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+    <style type="text/css">
+    #scroll {
+      display: none;
+    }
+    </style>
+    <div class="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    </div>
+
+
+  
+  
+    
+    <div  class="post-nav-button">
+    <a href="/2016/02/16/二次剩余和Guass互反律/" title="上一篇: 二次剩余和Guass互反律">
+    <i class="fa fa-angle-left"></i>
+    </a>
+    <a href="/2016/01/21/两类反演公式及其矩阵形式/" title="下一篇: 两类反演公式及其矩阵形式">
+    <i class="fa fa-angle-right"></i>
+    </a>
+    </div>
+  
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+        <script>
+        var yiliaConfig = {
+        fancybox: true,
+        mathjax: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+        }
+        </script>
+     
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 dna049
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a> by MOxFIVE
+        </div>
+    </div>
+    <div class="visit">
+      <span id="busuanzi_container_site_pv" style='display:none'>
+        <span id="site-visit" >本站到访数: 
+        <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </span>
+      <span id="busuanzi_container_page_pv" style='display:none'>
+        <span id="page-visit">, 本页阅读量: 
+        <span id="busuanzi_value_page_pv"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+<script>
+  var backgroundnum = 5;
+  var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+
+  $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+</script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+<a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+<a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+<!-- mathjax config similar to math.stackexchange -->
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -63,4 +412,5 @@ b_k + b_{k-1} C_k ^{k-1} + \cdots b_1 C_{k} ^1$$</span><!-- Has MathJax --><br>�
 
 <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-</body></html>
+</body>
+</html>

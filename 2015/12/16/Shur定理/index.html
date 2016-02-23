@@ -1,8 +1,170 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Shur定理 · 0.肆玖</title><meta name="description" content="在研究一个数学对象时，我们经常会对它进行分类。比如我们通常把数分为：实数，虚数；实数又分成有理数，无理数；当然也有按照正负来分的。还有整数分成素数（也叫质数）和合数，等等。现在我们谈谈矩阵的分类，以下默认矩阵是方的。
-数学中分类一般是按照等价关系划分等价类的。所谓等价关系其实就是满足反身性，对称性，传递性的二元关系（总结一下我们等于号的全部性质就知道了）矩阵中最常见的三种等价关系分别是
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Shur定理 | 0.肆玖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在研究一个数学对象时，我们经常会对它进行分类。比如我们通常把数分为：实数，虚数；实数又分成有理数，无理数；当然也有按照正负来分的。还有整数分成素数（也叫质数）和合数，等等。现在我们谈谈矩阵的分类，以下默认矩阵是方的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shur定理">
+<meta property="og:url" content="http://yoursite.com/2015/12/16/Shur定理/index.html">
+<meta property="og:site_name" content="0.肆玖">
+<meta property="og:description" content="在研究一个数学对象时，我们经常会对它进行分类。比如我们通常把数分为：实数，虚数；实数又分成有理数，无理数；当然也有按照正负来分的。还有整数分成素数（也叫质数）和合数，等等。现在我们谈谈矩阵的分类，以下默认矩阵是方的。">
+<meta property="og:updated_time" content="2016-01-26T02:19:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Shur定理">
+<meta name="twitter:description" content="在研究一个数学对象时，我们经常会对它进行分类。比如我们通常把数分为：实数，虚数；实数又分成有理数，无理数；当然也有按照正负来分的。还有整数分成素数（也叫质数）和合数，等等。现在我们谈谈矩阵的分类，以下默认矩阵是方的。">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/avatar.png" class="js-avatar">
+			
+		</a>
 
-相抵等价—初等变换
-合同等价—合同变"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="https://github.com/dna049" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="http://dna049.sinaapp.com" target="_blank" class="nav-list-link">LINK</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Shur定理</h1><div class="post-meta"><div class="post-time">2015年12月16日</div></div><div class="post-content"><p>在研究一个数学对象时，我们经常会对它进行分类。比如我们通常把数分为：实数，虚数；实数又分成有理数，无理数；当然也有按照正负来分的。还有整数分成素数（也叫质数）和合数，等等。现在我们谈谈矩阵的分类，以下默认矩阵是方的。<br><a id="more"></a></p>
+		<hgroup>
+		  <h1 class="header-author"><a href="/">dna049</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">自称数学家，半个程序员</p>
+		
+		
+		<form><input type="text" class="search" placeholder=" Search..."></form>
+				
+
+
+		
+
+		<div id="switch-area" class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives/">所有文章</a></li>
+				        
+							<li><a href="/About/">关于我</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:dna049@foxmail.com" title="Email"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/dna049/" title="GitHub"></a></li>
+					        
+								<li id="LinkedIn"><a class="LinkedIn" target="_blank" href="http://dna049.sinaapp.com" title="LinkedIn"></a></li>
+					        
+						</ul>
+					</nav>
+				</section>
+				
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">dna049</a></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img lazy-src="/img/avatar.png" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author"><a href="/" title="回到主页">dna049</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">自称数学家，半个程序员</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives/">所有文章</a></li>
+		        
+					<li><a href="/About/">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:dna049@foxmail.com" title="Email"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/dna049/" title="GitHub"></a></li>
+					        
+								<li id="LinkedIn"><a class="LinkedIn" target="_blank" href="http://dna049.sinaapp.com" title="LinkedIn"></a></li>
+					        
+						</ul>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Shur定理" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/16/Shur定理/" class="article-date">
+  	<time datetime="2015-12-16T14:10:14.000Z" itemprop="datePublished">2015-12-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Shur定理
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>在研究一个数学对象时，我们经常会对它进行分类。比如我们通常把数分为：实数，虚数；实数又分成有理数，无理数；当然也有按照正负来分的。还有整数分成素数（也叫质数）和合数，等等。现在我们谈谈矩阵的分类，以下默认矩阵是方的。<br><a id="more"></a></p>
 <h4 id="u6570_u5B66_u4E2D_u5206_u7C7B_u4E00_u822C_u662F_u6309_u7167_u7B49_u4EF7_u5173_u7CFB_u5212_u5206_u7B49_u4EF7_u7C7B_u7684_u3002"><a href="#u6570_u5B66_u4E2D_u5206_u7C7B_u4E00_u822C_u662F_u6309_u7167_u7B49_u4EF7_u5173_u7CFB_u5212_u5206_u7B49_u4EF7_u7C7B_u7684_u3002" class="headerlink" title="数学中分类一般是按照等价关系划分等价类的。"></a>数学中分类一般是按照等价关系划分等价类的。</h4><p>所谓等价关系其实就是满足反身性，对称性，传递性的二元关系（总结一下我们等于号的全部性质就知道了）<br>矩阵中最常见的三种等价关系分别是</p>
 <ol>
 <li>相抵等价—初等变换</li>
@@ -92,17 +254,204 @@ U \left( \begin{matrix}
  &amp; &amp; &amp;  \lambda_n
 \end{matrix} \right)$$</span><!-- Has MathJax --><br>的第一行的非对角元绝对值之平方和，因此由$ \sigma^2 $可知上三角矩阵的第一行非对角元全为0，类似的考察矩阵两端(2,2)的位置，一直到(n,n)的位置即可知道上面矩阵是对角阵，证毕。</p>
 <p>上述定理给出了酉相似于对角型的充分必要条件，而且条件十分易于判断。整个过程简洁优美。另外由于酉矩阵条件数恒定为1，有其数值稳定性，因此经常用于实际计算中，例如QR方法涉及的两个矩阵变换Househoulder变换和Givens变换都是酉变换。</p>
-</div></article></div></section><footer><div class="paginator"><a href="/2015/12/17/Perron-Frobenius理论/" class="prev">上一篇</a><a href="/2015/12/16/Cayley-Hamilton定理/" class="next">下一篇</a></div><div data-thread-key="2015/12/16/Shur定理/" data-title="Shur定理" data-url="http://yoursite.com/2015/12/16/Shur定理/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
-(function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
 
-</script></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?e561b60b5caa17e3873a8e31c9e1f5f4";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- mathjax config similar to math.stackexchange -->
+      
+    </div>
+    
+  </div>
+  
+    
+  
+</article>
+
+<!-- 默认显示文章目录，在文章---前输入toc: false关闭目录 -->
+<!-- Show TOC and tocButton in default, Hide TOC via putting "toc: false" before "---" at [post].md -->
+<div id="toc" class="toc-article">
+<strong class="toc-title">文章目录</strong>
+<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#u6570_u5B66_u4E2D_u5206_u7C7B_u4E00_u822C_u662F_u6309_u7167_u7B49_u4EF7_u5173_u7CFB_u5212_u5206_u7B49_u4EF7_u7C7B_u7684_u3002"><span class="toc-number">1.</span> <span class="toc-text">数学中分类一般是按照等价关系划分等价类的。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u4EFB_u610F_u590D_u65B9_u9635_u9149_u76F8_u4F3C_u4E8E_u4E0A_u4E09_u89D2_u77E9_u9635"><span class="toc-number">2.</span> <span class="toc-text">任意复方阵酉相似于上三角矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#u9149_u77E9_u9635_u548C_u9149_u76F8_u4F3C"><span class="toc-number">2.0.1.</span> <span class="toc-text">酉矩阵和酉相似</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#u5B9A_u74061-__u5BF9_u4EFB_u610F_u590D_u65B9_u9635A_uFF0C_u5B58_u5728_u9149_u77E9_u9635U_u4F7F_u5F97"><span class="toc-number">2.0.2.</span> <span class="toc-text">定理1. 对任意复方阵A，存在酉矩阵U使得</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u77E9_u9635_u9149_u76F8_u4F3C_u4E8E_u5BF9_u89D2_u9635_u5F53_u4E14_u4EC5_u5F53_u5B83_u662F_u6B63_u89C4_u77E9_u9635"><span class="toc-number">3.</span> <span class="toc-text">矩阵酉相似于对角阵当且仅当它是正规矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#u6B63_u89C4_u77E9_u9635"><span class="toc-number">3.0.1.</span> <span class="toc-text">正规矩阵</span></a></li></ol></li></ol></li></ol>
+</div>
+<style type="text/css">
+  .left-col .switch-btn {
+    display: none;
+  }
+  .left-col .switch-area {
+    display: none;
+  }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script type="text/javascript">
+  var toc_button= document.getElementById("tocButton");
+  var toc_div= document.getElementById("toc");
+  /* Show or hide toc when click on tocButton.
+  通过点击设置的按钮显示或者隐藏文章目录.*/
+  toc_button.onclick=function(){
+  if(toc_div.style.display=="none"){
+  toc_div.style.display="block";
+  toc_button.value="隐藏目录";
+  document.getElementById("switch-btn").style.display="none";
+  document.getElementById("switch-area").style.display="none";
+  }
+  else{
+  toc_div.style.display="none";
+  toc_button.value="显示目录";
+  document.getElementById("switch-btn").style.display="block";
+  document.getElementById("switch-area").style.display="block";
+  }
+  }
+</script>
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+  if ($(".toc").length < 1) {
+    $("#toc").css("display","none");
+    $("#tocButton").css("display","none");
+    $(".switch-btn").css("display","block");
+    $(".switch-area").css("display","block");
+  }
+</script>
+
+
+
+
+  <div class="duoshuo" id="comments">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2015/12/16/Shur定理/" data-title="Shur定理" data-url="http://yoursite.com/2015/12/16/Shur定理/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"dna049"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+    <style type="text/css">
+    #scroll {
+      display: none;
+    }
+    </style>
+    <div class="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    </div>
+
+
+  
+  
+    
+    <div  class="post-nav-button">
+    <a href="/2015/12/17/Perron-Frobenius理论/" title="上一篇: Perron-Frobenius理论">
+    <i class="fa fa-angle-left"></i>
+    </a>
+    <a href="/2015/12/16/Cayley-Hamilton定理/" title="下一篇: Cayley-Hamilton定理">
+    <i class="fa fa-angle-right"></i>
+    </a>
+    </div>
+  
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+        <script>
+        var yiliaConfig = {
+        fancybox: true,
+        mathjax: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+        }
+        </script>
+     
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 dna049
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a> by MOxFIVE
+        </div>
+    </div>
+    <div class="visit">
+      <span id="busuanzi_container_site_pv" style='display:none'>
+        <span id="site-visit" >本站到访数: 
+        <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </span>
+      <span id="busuanzi_container_page_pv" style='display:none'>
+        <span id="page-visit">, 本页阅读量: 
+        <span id="busuanzi_value_page_pv"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+<script>
+  var backgroundnum = 5;
+  var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+
+  $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+</script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+<a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+<a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+<!-- mathjax config similar to math.stackexchange -->
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -132,4 +481,5 @@ U \left( \begin{matrix}
 
 <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-</body></html>
+</body>
+</html>
