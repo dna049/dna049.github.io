@@ -338,7 +338,7 @@
     <link href="http://dna049.com/2016/01/21/%E8%87%AA%E7%84%B6%E6%95%B0%E6%96%B9%E5%B9%82%E5%92%8C%E5%85%AC%E5%BC%8F/"/>
     <id>http://dna049.com/2016/01/21/自然数方幂和公式/</id>
     <published>2016-01-21T11:16:51.000Z</published>
-    <updated>2016-02-23T11:09:24.000Z</updated>
+    <updated>2016-02-23T11:37:37.000Z</updated>
     <content type="html"><![CDATA[<p>关于自然数方幂和公式，网上的求解版本有很多种。这里介绍一种不为人知，十分简洁明了的求解方法，该公式并非原创，但是整个证明过程和方法完全原创。它的思想来源于我高中时在一本数学竞赛书中的数列例题(书名忘了…)，正因为一本本这样的书，让我大学选择了数学系，现在依然在学习数学。<br><a id="more"></a></p>
 <h3 id="u82E5__24a_n__3D_n_28n-1_29_24__u6C42_u5176_u524D__24n_24__u9879_u548C_24S_n_24"><a href="#u82E5__24a_n__3D_n_28n-1_29_24__u6C42_u5176_u524D__24n_24__u9879_u548C_24S_n_24" class="headerlink" title="若 $a_n = n(n-1)$ 求其前 $n$ 项和$S_n$"></a>若 $a_n = n(n-1)$ 求其前 $n$ 项和$S_n$</h3><span>$$a_n = n(n-1) ＝
 \frac{(n+1)n(n-1) -n(n-1)(n-2)}{3}$$</span><!-- Has MathJax -->
@@ -366,7 +366,7 @@ b_k + b_{k-1} C_k ^{k-1} + \cdots b_1 C_{k} ^1$$</span><!-- Has MathJax --><br>�
     
     </summary>
     
-      <category term="－ 数论" scheme="http://dna049.com/tags/%EF%BC%8D-%E6%95%B0%E8%AE%BA/"/>
+      <category term="数论" scheme="http://dna049.com/tags/%E6%95%B0%E8%AE%BA/"/>
     
   </entry>
   
@@ -848,7 +848,7 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     <link href="http://dna049.com/2015/12/17/Perron-Frobenius%E7%90%86%E8%AE%BA/"/>
     <id>http://dna049.com/2015/12/17/Perron-Frobenius理论/</id>
     <published>2015-12-17T02:27:18.000Z</published>
-    <updated>2016-02-23T11:02:08.000Z</updated>
+    <updated>2016-02-23T11:34:51.000Z</updated>
     <content type="html"><![CDATA[<p>1907年O.Perron发现正矩阵的谱有特别有趣的性质。G.Frobenius在1908-1912年间将Perron的工作推广到不可约非负矩阵的情形，并得到了新的进一步结果。Ferron-Frobenius理论有很多证明方式，下面介绍H.Wielandt的优美证明。<br><a id="more"></a></p>
 <p>两个矩阵X和Y称为置换相似的，若存在一个置换矩阵P满足$P^TXP=Y$。设$A\in M_n$.称A为可约的，若A置换相似于一个形如<br><span>$$\left( \begin{matrix}
 B &amp; 0\\
@@ -926,7 +926,7 @@ ry^0&gt; 0$$</span><!-- Has MathJax --><br>其中<span>$y_0 = (I+A)^{n-1}x^0 &gt
     
     </summary>
     
-      <category term="-- 矩阵" scheme="http://dna049.com/tags/%E7%9F%A9%E9%98%B5/"/>
+      <category term="矩阵" scheme="http://dna049.com/tags/%E7%9F%A9%E9%98%B5/"/>
     
   </entry>
   
