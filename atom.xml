@@ -755,7 +755,7 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     <link href="http://dna049.com/2015/12/23/hexo-%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%9C%80%E7%AE%80%E5%8D%95%E6%96%B9%E5%BC%8F/"/>
     <id>http://dna049.com/2015/12/23/hexo-中插入图片最简单方式/</id>
     <published>2015-12-23T12:42:32.000Z</published>
-    <updated>2016-02-23T10:59:43.000Z</updated>
+    <updated>2016-02-23T11:18:25.000Z</updated>
     <content type="html"><![CDATA[<p>因为上一篇博文需要贴一张本地图片，奈何技术上无法解决。后来查了官方文档并且询问hexo交流群（287306637）之后，有给出解决方案（用图床）但是不是我想要的方式，最终通过<a href="https://hexo.io/docs/asset-folders.html" target="_blank" rel="external">官方文档</a>解决了此问题。</p>
 <a id="more"></a>
 <p>方法其实很简单，只需再修改 _config.yml 文件中的</p>
@@ -1041,7 +1041,7 @@ U \left( \begin{matrix}
     <link href="http://dna049.com/2015/12/16/Cayley-Hamilton%E5%AE%9A%E7%90%86/"/>
     <id>http://dna049.com/2015/12/16/Cayley-Hamilton定理/</id>
     <published>2015-12-16T04:37:33.000Z</published>
-    <updated>2016-02-23T10:57:47.000Z</updated>
+    <updated>2016-02-23T11:17:53.000Z</updated>
     <content type="html"><![CDATA[<p>大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：</p>
 <a id="more"></a>
 <p>n阶矩阵A的特征多项式为：<br><span>$$\phi(\lambda)=det(\lambda I - A) = a_n \lambda^n +

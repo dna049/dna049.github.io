@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Cayley-Hamilton定理 | 0.肆玖</title>
+  <title>tags | 0.肆玖</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Cayley-Hamilton定理">
-<meta property="og:url" content="http://dna049.com/2015/12/16/Cayley-Hamilton定理/index.html">
+  <meta name="description" content="blog of dna049 | math | C++ | hexo">
+<meta property="og:type" content="website">
+<meta property="og:title" content="tags">
+<meta property="og:url" content="http://dna049.com/tags/index.html">
 <meta property="og:site_name" content="0.肆玖">
-<meta property="og:description" content="大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：">
-<meta property="og:updated_time" content="2016-02-23T11:17:53.000Z">
+<meta property="og:description" content="blog of dna049 | math | C++ | hexo">
+<meta property="og:updated_time" content="2016-02-23T11:23:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cayley-Hamilton定理">
-<meta name="twitter:description" content="大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：">
+<meta name="twitter:title" content="tags">
+<meta name="twitter:description" content="blog of dna049 | math | C++ | hexo">
   
     <link rel="alternative" href="/atom.xml" title="0.肆玖" type="application/atom+xml">
   
@@ -39,7 +39,7 @@
           fancybox: true,
           animate: true,
           isHome: false,
-          isPost: true,
+          isPost: false,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -174,11 +174,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Cayley-Hamilton定理" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/16/Cayley-Hamilton定理/" class="article-date">
-      <time datetime="2015-12-16T04:37:33.000Z" itemprop="datePublished">2015-12-16</time>
+      <a href="/tags/index.html" class="article-date">
+      <time datetime="2016-02-23T11:23:11.000Z" itemprop="datePublished">2016-02-23</time>
 </a>
     </div>
   
@@ -191,7 +191,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Cayley-Hamilton定理
+      tags
     </h1>
   
 
@@ -208,35 +208,110 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：</p>
-<a id="more"></a>
-<p>n阶矩阵A的特征多项式为：<br><span>$$\phi(\lambda)=det(\lambda I - A) = a_n \lambda^n +
-a_{n-1} \lambda^{n-1} + \cdots + a_1 \lambda + a_0$$</span><!-- Has MathJax --></p>
-<p>设$\lambda I - A$的伴随矩阵为B，则B中元素为关于$\lambda$的次数小于n的多项式，不妨设<br><span>$$B = \lambda^{n-1} B_ {n-1} + \lambda^{n-2} B_ {n-2}
-+ \cdots + \lambda B_1 + B_0$$</span><!-- Has MathJax --></p>
-<p>所以<br><span>$$(\lambda I - A)B = \lambda^n B_ {n-1} + \lambda^{n-1} (B_ {n-2} - AB_ {n-1})
-+ \cdots + \lambda (B_0 - AB_1) - AB_0$$</span><!-- Has MathJax --><br>又因为B是A的伴随矩阵，我们有<span>$(\lambda I - A)B = det(\lambda I - A) I$</span><!-- Has MathJax --></p>
-<p>比较系数得到<br><span>$$\left\{ 
-\begin{array}{l} 
-B_ {n-1} = a_n I \\
-B_ {n-2} - AB_ {n-1} = a_{n-1} I \\
-\cdots \\
-B_0 - AB_1 = a_1 I \\
--AB_0 = a_0 I
-\end{array} \right.$$</span><!-- Has MathJax --><br>对上式分别左乘<span>$A^n,A^{n-1},\cdots,A,I$</span><!-- Has MathJax -->得到：</p>
-<span>$$\left\{ 
-\begin{array}{l} 
-A^n B_ {n-1} = a_n A^n \\
-A^{n-1} B_ {n-2} - A^n B_ {n-1} = a_{n-1} A^{n-1} \\
-\cdots \\
-A B_0 - A^2 B_1 = a_1 A \\
--AB_0 = a_0 I
-\end{array} \right.$$</span><!-- Has MathJax -->
-<p>再将上式相加得到最终结果</p>
-<span>$$\phi(A)= a_ n A^n + a_{n-1} A^{n-1} + \cdots + a_1 A +
-a_0 I = \mathbf{0}$$</span><!-- Has MathJax -->
-<p>上述定理优美在于从形式上，<span>$\phi(\lambda)=det(\lambda I - A)$</span><!-- Has MathJax -->取 <span>$\lambda = A$</span><!-- Has MathJax -->带入恰好也是0（注意数字0和零矩阵的差别），虽然说这样做是完全没有道理。作为直接推论我们知道，一个n阶方阵的任何次方都可以被它的不超过n次的幂线性表出。</p>
+              <style>
+    .article-meta {
+        display: none;
+    }
+    #container .article .article-title {
+        padding-right: 0;
+    }
+    .article-header {
+        padding: 0;
+        padding-top: 26px;
+        border-left: none;
+        text-align: center;
+    }
+    .article-header:hover {
+        border-left: none;
+    }
+    .article-title {
+        font-size: 1.6em
+    }
+    .article-meta {
+        display: none;
+    }
+    .article-entry hr {
+        margin: 0;
+    }
+    #container .article-info-post.article-info {
+      display: none;
+      }
+    #container .article .article-title {
+    padding: 0;
+    }
+</style>
 
+
+    <!-- Tag Cloud Page -->
+    <hr>
+    <br>
+    
+
+    <p class="count"></p>
+
+    <div class="tags">
+        <a href="/tags/矩阵/" style="font-size: 16px; color: #808080">-- 矩阵</a> <a href="/tags/C/" style="font-size: 30.25px; color: #202020">C++</a> <a href="/tags/Dirichlet/" style="font-size: 16px; color: #808080">Dirichlet</a> <a href="/tags/Tex/" style="font-size: 16px; color: #808080">Tex</a> <a href="/tags/hexo/" style="font-size: 20.75px; color: #606060">hexo</a> <a href="/tags/mathjax/" style="font-size: 16px; color: #808080">mathjax</a> <a href="/tags/个人/" style="font-size: 25.5px; color: #404040">个人</a> <a href="/tags/图片/" style="font-size: 16px; color: #808080">图片</a> <a href="/tags/微积分/" style="font-size: 16px; color: #808080">微积分</a> <a href="/tags/拓扑/" style="font-size: 20.75px; color: #606060">拓扑</a> <a href="/tags/数学/" style="font-size: 20.75px; color: #606060">数学</a> <a href="/tags/数论/" style="font-size: 35px; color: #000">数论</a> <a href="/tags/泛函分析/" style="font-size: 20.75px; color: #606060">泛函分析</a> <a href="/tags/矩阵/" style="font-size: 20.75px; color: #606060">矩阵</a> <a href="/tags/素数/" style="font-size: 16px; color: #808080">素数</a> <a href="/tags/计算器/" style="font-size: 16px; color: #808080">计算器</a> <a href="/tags/运筹学/" style="font-size: 16px; color: #808080">运筹学</a> <a href="/tags/连续/" style="font-size: 16px; color: #808080">连续</a> <a href="/tags/马拉松/" style="font-size: 16px; color: #808080">马拉松</a> <a href="/tags/－-C/" style="font-size: 16px; color: #808080">－ C++</a> <a href="/tags/－-数论/" style="font-size: 16px; color: #808080">－ 数论</a>
+    </div>
+    <style>
+        .category-list li{
+            display: inline-block;
+            margin: 0 1em .5em 0;
+            padding: 4px;
+            border: 1px solid lightgray;
+            font-size: 1.2em;
+        }
+        .category-list a {
+            color: gray;
+        }
+        .category-list-item:hover a {
+            color: gray;
+            text-decoration: none;
+        }
+        .category-list-count {
+            margin-left: 2px;
+            font-size: .9em;
+        }
+        .article-entry ul li:before{
+            display: none;
+        }
+        .article-inner  {
+            text-align: center;
+        }
+        .tags {
+            max-width: 40em;
+            margin: 2em auto;
+            margin-top: 0em;
+        }
+        .tags a {
+            margin-right: 1em;
+            line-height: 65px;
+            border-bottom: 1px solid gray;
+            white-space: nowrap;
+        }
+        .tags a:hover {
+            border-bottom: 2px solid black;
+            text-decoration: none;
+            font-style: italic;
+        }
+        #count > span {
+            margin: auto .2em;
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- Count tags and categories -->
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <p id="count">
+            已有<span><script>document.write($(".category-list-item").length)</script></span>个分类，
+            共计<span><script>document.write($(".tags > a").length)</script></span>个标签。
+    </p>
+    <script>
+        $('#count').appendTo('.count');
+    </script>
+
+
+          
+        
       
     </div>
     
@@ -245,70 +320,8 @@ a_0 I = \mathbf{0}$$</span><!-- Has MathJax -->
     
 
 
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2015/12/16/Shur定理/">
-                    Shur定理
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2015/12/16/仅在一点连续的函数例子/">
-                    仅在一点连续的函数例子
-                </a>
-            </div>
-        
-    </nav>
-
   
 </article>
-
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    
-</div>
-<style>
-    .left-col .switch-btn {
-        display: none;
-    }
-    .left-col .switch-area {
-        display: none;
-    }
-</style>
-
-<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
-<script>
-    var valueHide = "隐藏目录";
-    var valueShow = "显示目录";
-
-    if ($(".left-col").is(":hidden")) {
-        $("#tocButton").attr("value", valueShow);
-    }
-
-    $("#tocButton").click(function() {
-        if ($("#toc").is(":hidden")) {
-            $("#tocButton").attr("value", valueHide);
-            $("#toc").slideDown(320);
-            $(".switch-btn, .switch-area").fadeOut(300);
-        }
-        else {
-            $("#tocButton").attr("value", valueShow);
-            $("#toc").slideUp(350);
-            $(".switch-btn, .switch-area").fadeIn(500);
-        }
-    })
-
-    if ($(".toc").length < 1) {
-        $("#toc, #tocButton").hide();
-        $(".switch-btn, .switch-area").show();
-    }
-</script>
-
-
 
 
     <div class="share">
@@ -331,7 +344,7 @@ a_0 I = \mathbf{0}$$</span><!-- Has MathJax -->
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2015/12/16/Cayley-Hamilton定理/" data-title="Cayley-Hamilton定理" data-url="http://dna049.com/2015/12/16/Cayley-Hamilton定理/"></div>
+    <div class="ds-thread" data-thread-key="tags/index.html" data-title="tags" data-url="http://dna049.com/tags/index.html"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -350,46 +363,6 @@ a_0 I = \mathbf{0}$$</span><!-- Has MathJax -->
 
     
 
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2015/12/16/Shur定理/" title="上一篇: Shur定理">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2015/12/16/仅在一点连续的函数例子/" title="下一篇: 仅在一点连续的函数例子">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/02/23/My-Math-work-edited-by-LaTex/">My Math work edited by LaTex</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/22/整数集上的一种奇特拓扑/">整数集上的一种奇特拓扑</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/19/Hahn-Banach-延拓定理/">Hahn-Banach 延拓定理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/18/拓扑线性空间的若干基本定理/">拓扑线性空间的若干基本定理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/17/公平的席位分配/">“公平”的席位分配</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/16/hdu-5628-Dirichlet积与快速幂的应用/">hdu 5628 (Dirichlet积与快速幂的应用)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/16/二次剩余和Guass互反律/">二次剩余和Guass互反律</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/21/自然数方幂和公式/">自然数方幂和公式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/21/两类反演公式及其矩阵形式/">两类反演公式及其矩阵形式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/20/数论函数的Dirichlet积/">数论函数的 Dirichlet 积</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/03/Several-Algorithms-of-root-Complex/">Several Algorithms of root Complex</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/03/2016厦门马拉松/">2016厦门马拉松</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/30/好好反省/">好好反省</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/24/打回原形/">打回原形</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/23/hexo-中插入图片最简单方式/">hexo 中插入图片最简单方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/23/本科数学系学习路线图/">本科数学系学习路线图</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/20/拓扑线性空间中的开集和闭集/">拓扑线性空间中的开集和闭集</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/17/Perron-Frobenius理论/">Perron-Frobenius理论</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/Shur定理/">Shur定理</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/Cayley-Hamilton定理/">Cayley-Hamilton定理</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/仅在一点连续的函数例子/">仅在一点连续的函数例子</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/15/计算器程序/">计算器程序</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/15/产生520的复杂代码/">产生520的复杂代码</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/15/素数筛选/">素数筛选</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/15/hello-world/">Hello World</a></li></ul>
-    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-    <script>
-        $(".post-list").addClass("toc-article");
-        $(".post-list-item a").attr("target","_blank");
-        $("#post-nav-button > a:nth-child(2)").click(function() {
-            $(".fa-bars, .fa-times").toggle();
-            $(".post-list").toggle(300);
-            if ($(".toc").length > 0) {
-                $("#toc, #tocButton").toggle(200, function() {
-                    if ($(".switch-area").is(":visible")) {
-                        $("#toc, .switch-btn, .switch-area").toggle();
-                        $("#tocButton").attr("value", valueHide);
-                        }
-                    })
-            }
-            else {
-                $(".switch-btn, .switch-area").fadeToggle(300);
-            }
-        })
-    </script>
 
 
 
