@@ -28,6 +28,8 @@ ps:最处想做这件事的原因是：我在大学想写一个带GUI界面的�
     <link rel="icon" href="/favicon.png">
   
   
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" type="text/css">
+  
   
       <link href="//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css" rel="stylesheet">
   
@@ -41,7 +43,7 @@ ps:最处想做这件事的原因是：我在大学想写一个带GUI界面的�
   <script>
       var yiliaConfig = {
           fancybox: true,
-          animate: false,
+          animate: true,
           isHome: false,
           isPost: true,
           isArchive: false,
@@ -70,7 +72,7 @@ ps:最处想做这件事的原因是：我在大学想写一个带GUI界面的�
     <header id="header" class="inner">
         <a href="/" class="profilepic">
             
-            <img src="/img/avatar.png" class="js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+            <img lazy-src="/img/avatar.png" class="js-avatar">
             
         </a>
 
@@ -139,7 +141,7 @@ ps:最处想做这件事的原因是：我在大学想写一个带GUI界面的�
         <header id="header" class="inner">
             <a href="/" class="profilepic">
                 
-                    <img src="/img/avatar.png" class="js-avatar" style="width: 100%; height: 100%; opacity: 1;">
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
                 
             </a>
             <hgroup>
