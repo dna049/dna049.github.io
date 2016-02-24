@@ -4,7 +4,7 @@
   <subtitle><![CDATA[自称未来数学家，半个程序员]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dna049.com/"/>
-  <updated>2016-02-24T15:43:08.000Z</updated>
+  <updated>2016-02-24T15:45:47.000Z</updated>
   <id>http://dna049.com/</id>
   
   <author>
@@ -19,9 +19,9 @@
     <link href="http://dna049.com/2016/02/24/%E8%87%AA%E7%84%B6%E5%BA%95%E6%95%B0e%E7%9A%84%E7%94%B1%E6%9D%A5/"/>
     <id>http://dna049.com/2016/02/24/自然底数e的由来/</id>
     <published>2016-02-24T15:26:27.000Z</published>
-    <updated>2016-02-24T15:43:08.000Z</updated>
+    <updated>2016-02-24T15:45:47.000Z</updated>
     <content type="html"><![CDATA[<p>自然底数 $e$ 之所以重要，我想很大程度上是因为，指数函数 $f(x)=e^x$ 是“唯一”(在常数倍意义下)满足导数等于本身的函数。因此 $e$ 被叫做自然底数。<br><a id="more"></a></p>
-<p>然而，$e$ 的定义可以由一个常见的重要数列极限来定义。即<br>$$ e \equiv \lim _{n \to \infty}(1+\frac{1}{n})^n $$<br>那么为什么右边有极限呢，我们来仔细分析。<br>令<br>$$ a_n = (1+\frac{1}{n})^n ,\; b_n =(1+\frac{1}{n})^{n+1} $$<br>则,由<a href="">均值不等式</a>易知<br>$$ a_n = (1+\frac{1}{n})^n \cdot 1 \leq [\frac{n(1+\frac{1}{n})+1}{n+1}]^{n+1} =a_{n+1} $$<br>且<br>$$ \frac{1}{b_n} = (\frac{n}{n+1})^n \cdot 1 \leq [\frac{(n+1)\frac{n}{n+1}+1}{n+2}]^{n+1} = \frac{1}{b_{n+1}} $$<br>因此 $2 = a_1 \leq a_n \leq b_n \leq b_1 = 4$。由于单调有界序列必有极限，不妨把这个极限记作 $e$ 且由上面推理知 $2 &lt; e &lt; 4$。</p>
+<p>然而，$e$ 的定义可以由一个常见的重要数列极限来定义。即<br>$$ e \equiv \lim _{n \to \infty}(1+\frac{1}{n})^n $$<br>那么为什么右边有极限呢，我们来仔细分析。<br>令<br>$$ a_n = (1+\frac{1}{n})^n ,\; b_n =(1+\frac{1}{n})^{n+1} $$<br>则,由<a href="http://dna049.com/2016/02/24/均值不等式/">均值不等式</a>易知<br>$$ a_n = (1+\frac{1}{n})^n \cdot 1 \leq [\frac{n(1+\frac{1}{n})+1}{n+1}]^{n+1} =a_{n+1} $$<br>且<br>$$ \frac{1}{b_n} = (\frac{n}{n+1})^n \cdot 1 \leq [\frac{(n+1)\frac{n}{n+1}+1}{n+2}]^{n+2} = \frac{1}{b_{n+1}} $$<br>因此 $2 = a_1 \leq a_n \leq b_n \leq b_1 = 4$。由于单调有界序列必有极限，不妨把这个极限记作 $e$ 且由上面推理知 $2 &lt; e &lt; 4$。</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>自然底数 $e$ 之所以重要，我想很大程度上是因为，指数函数 $f(x)=e^x$ 是“唯一”(在常数倍意义下)满足导数等于本身的函数。因此 $e$ 被叫做自然底数。<br>]]>
