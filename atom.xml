@@ -4,7 +4,7 @@
   <subtitle><![CDATA[自称未来数学家，半个程序员]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dna049.com/"/>
-  <updated>2016-02-23T11:17:02.000Z</updated>
+  <updated>2016-02-24T14:32:52.000Z</updated>
   <id>http://dna049.com/</id>
   
   <author>
@@ -13,6 +13,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[最强装逼题目0.0]]></title>
+    <link href="http://dna049.com/2016/02/24/%E6%9C%80%E5%BC%BA%E8%A3%85%E9%80%BC%E9%A2%98%E7%9B%AE0-0/"/>
+    <id>http://dna049.com/2016/02/24/最强装逼题目0-0/</id>
+    <published>2016-02-24T13:50:13.000Z</published>
+    <updated>2016-02-24T14:32:52.000Z</updated>
+    <content type="html"><![CDATA[<p>数学老师想好了两个自然数 $m,n$ 满足 $2 \leq m \leq n \leq 100$ ,他把 $m,n$ 的和$s$告诉了 $S$ 同学，把 $m,n$ 的积$p$告诉了 $P$ 同学，他们都是聪明诚实的学生。进行了下面对话<br>$S$: 我不知道 $m,n$ 的值，但我知道你也不知道。<br>$P$: 现在我知道了。<br>$S$: 现在我也知道了。<br>请问 $m,n$ 的值。<br><a id="more"></a></p>
+<ol>
+<li>由第一句话，我们知道 $s \geq 6$,且 $p$ 中无 大于或者等于 53 的质因数。但是 $S$ 是如何知道的呢，可见 $s \leq 54$。对 $6 ~ 54$逐一检查发现，除了$A = \lbrace 11,17,23,27,29,35,37,41,47,51,53 \rbrace$的其他元素外，其余每个数都可以表示成两个素数的和，因此从第一句话知道，$ s \in A$。</li>
+<li>刚刚推理 $P$ 同学当然也能完成。由于 $A$ 中的元素全是奇数，因此，若 $p = 2^k \cdot (2v+1), k \geq 0, v \geq 0$ 或者 $p = 2^k \cdot (2v+1)(2j+1), k \geq 0, v \geq 0, j geq 0$ 则 $P$ 同学就能确定的知道答案。</li>
+<li>$S$ 同学最后也知道了 $m,n$ 的值，说明在 $s$ 所有分解 $s = m+ n, 2 \leq m \leq n \leq 100$ 中，且有一种满足 $xy = 2^k v$ 检查<br>$$ 11 = 4+7 = 3+8,\; 23 = 4 + 19 = 7+16,\;27 = 4+23 = 8+19,\; 35=4+31=16+19 $$</li>
+</ol>
+<p>$$ 37 = 8+29 = 5+32\;  47= 4 + 43 = 16+31,\;51 = 4+47 = 8+43 $$<br>又因为<br>$$ 29 = 4 + 25 = 13 +16,\; 41 = 4+37 = 16 + 25,\; 53 = 16 +37 = 21 + 32 $$。<br>其中<br>$$ 4 \times 25 = 100 = 20 \times 5 , 20+5 =25 \notin A $$<br>$$ 16 \times 25 = 400 = 80 \times 5 , 80+5 =85 \notin A $$<br>$$ 21 \times 32 = 672 = 7 \times 96 , 7+96 =103 \notin A $$<br>因此，只可能 $s=17$<br>$$ 17 = 2+15 = 3+14 = 4+13 = 5+12 = 6+11 = 7 +10 = 8+9 $$<br>其中只有 $4 + 13$ 满足 $P$ 的断言，因此 $m = 4,n=13$。</p>
+<pre><code>此题是我高三（2011年）在《奥赛金牌之路》中所见，实在很吊，一直铭记于心。
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>数学老师想好了两个自然数 $m,n$ 满足 $2 \leq m \leq n \leq 100$ ,他把 $m,n$ 的和$s$告诉了 $S$ 同学，把 $m,n$ 的积$p$告诉了 $P$ 同学，他们都是聪明诚实的学生。进行了下面对话<br>$S$: 我不知道 $m,n$ 的值，但我知道你也不知道。<br>$P$: 现在我知道了。<br>$S$: 现在我也知道了。<br>请问 $m,n$ 的值。<br>]]>
+    
+    </summary>
+    
+      <category term="初等数学" scheme="http://dna049.com/tags/%E5%88%9D%E7%AD%89%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[My Math work edited by LaTex]]></title>
@@ -56,7 +80,7 @@
     <link href="http://dna049.com/2016/02/22/%E6%95%B4%E6%95%B0%E9%9B%86%E4%B8%8A%E7%9A%84%E4%B8%80%E7%A7%8D%E5%A5%87%E7%89%B9%E6%8B%93%E6%89%91/"/>
     <id>http://dna049.com/2016/02/22/整数集上的一种奇特拓扑/</id>
     <published>2016-02-22T13:41:23.000Z</published>
-    <updated>2016-02-23T11:16:33.000Z</updated>
+    <updated>2016-02-23T11:34:31.000Z</updated>
     <content type="html"><![CDATA[<p>在《Proofs from THE BOOK》里素数无限的六种证明的第五种讲到了一种用点集拓扑学知识证明的方法，其中引入了整数集上的一种奇特拓扑。<br><a id="more"></a></p>
 <p>对 $a,b \in \mathbb{Z},b&gt;0$，令<br>$$ N_{a,b} = \lbrace a + nb \colon n \in \mathbb{Z} \rbrace $$<br>我们称集合 $O \subset \mathbb{Z}$ 是开集，若$O = \emptyset$，或者 $ \forall a \in O,\exists b&gt;0,st. N_{a,b} \subset O$,容易验证这样定义的开集族全体构成了 $\mathbb{Z}$ 上的拓扑。<br>并且每个$N_{a,b}$ 都是既开又闭的。这是由于<br>$$ N_{a,b} = \mathbb{Z} \setminus \cup_{i-1}^{b-1} N_{a+i,b}$$</p>
 <p>又由<br>$$ \mathbb{Z} \setminus \lbrace -1,1 \rbrace = \cup_{p \in P} N_{0,p} $$<br>若素数只有有限个，则$P$是有限集，从而$\lbrace -1,1 \rbrace$是开集，矛盾。</p>
@@ -78,7 +102,7 @@
     <link href="http://dna049.com/2016/02/19/Hahn-Banach-%E5%BB%B6%E6%8B%93%E5%AE%9A%E7%90%86/"/>
     <id>http://dna049.com/2016/02/19/Hahn-Banach-延拓定理/</id>
     <published>2016-02-19T00:26:38.000Z</published>
-    <updated>2016-02-23T11:16:29.000Z</updated>
+    <updated>2016-02-23T11:34:40.000Z</updated>
     <content type="html"><![CDATA[<p>Hahn-Banach 延拓定理通常分为分析和几何的形式，其中几何形式通常称为凸集分离性定理。<br><a id="more"></a></p>
 <h3 id="Hahn-Banach__u5EF6_u62D3_u5B9A_u7406_u7684_u5206_u6790_u5F62_u5F0F"><a href="#Hahn-Banach__u5EF6_u62D3_u5B9A_u7406_u7684_u5206_u6790_u5F62_u5F0F" class="headerlink" title="Hahn-Banach 延拓定理的分析形式"></a>Hahn-Banach 延拓定理的分析形式</h3><p><strong>定义1</strong> 设 $X$ 是线性空间，$p \colon X \to \mathbb{R}$ 是一个泛函，若 $p$ 满足</p>
 <ol>
@@ -338,7 +362,7 @@
     <link href="http://dna049.com/2016/01/21/%E8%87%AA%E7%84%B6%E6%95%B0%E6%96%B9%E5%B9%82%E5%92%8C%E5%85%AC%E5%BC%8F/"/>
     <id>http://dna049.com/2016/01/21/自然数方幂和公式/</id>
     <published>2016-01-21T11:16:51.000Z</published>
-    <updated>2016-02-23T11:37:37.000Z</updated>
+    <updated>2016-02-24T13:57:25.000Z</updated>
     <content type="html"><![CDATA[<p>关于自然数方幂和公式，网上的求解版本有很多种。这里介绍一种不为人知，十分简洁明了的求解方法，该公式并非原创，但是整个证明过程和方法完全原创。它的思想来源于我高中时在一本数学竞赛书中的数列例题(书名忘了…)，正因为一本本这样的书，让我大学选择了数学系，现在依然在学习数学。<br><a id="more"></a></p>
 <h3 id="u82E5__24a_n__3D_n_28n-1_29_24__u6C42_u5176_u524D__24n_24__u9879_u548C_24S_n_24"><a href="#u82E5__24a_n__3D_n_28n-1_29_24__u6C42_u5176_u524D__24n_24__u9879_u548C_24S_n_24" class="headerlink" title="若 $a_n = n(n-1)$ 求其前 $n$ 项和$S_n$"></a>若 $a_n = n(n-1)$ 求其前 $n$ 项和$S_n$</h3><span>$$a_n = n(n-1) ＝
 \frac{(n+1)n(n-1) -n(n-1)(n-2)}{3}$$</span><!-- Has MathJax -->
@@ -365,6 +389,8 @@ b_k + b_{k-1} C_k ^{k-1} + \cdots b_1 C_{k} ^1$$</span><!-- Has MathJax --><br>�
     <![CDATA[<p>关于自然数方幂和公式，网上的求解版本有很多种。这里介绍一种不为人知，十分简洁明了的求解方法，该公式并非原创，但是整个证明过程和方法完全原创。它的思想来源于我高中时在一本数学竞赛书中的数列例题(书名忘了…)，正因为一本本这样的书，让我大学选择了数学系，现在依然在学习数学。<br>]]>
     
     </summary>
+    
+      <category term="初等数学" scheme="http://dna049.com/tags/%E5%88%9D%E7%AD%89%E6%95%B0%E5%AD%A6/"/>
     
       <category term="数论" scheme="http://dna049.com/tags/%E6%95%B0%E8%AE%BA/"/>
     
@@ -848,7 +874,7 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     <link href="http://dna049.com/2015/12/17/Perron-Frobenius%E7%90%86%E8%AE%BA/"/>
     <id>http://dna049.com/2015/12/17/Perron-Frobenius理论/</id>
     <published>2015-12-17T02:27:18.000Z</published>
-    <updated>2016-02-23T11:34:51.000Z</updated>
+    <updated>2016-02-23T11:45:24.000Z</updated>
     <content type="html"><![CDATA[<p>1907年O.Perron发现正矩阵的谱有特别有趣的性质。G.Frobenius在1908-1912年间将Perron的工作推广到不可约非负矩阵的情形，并得到了新的进一步结果。Ferron-Frobenius理论有很多证明方式，下面介绍H.Wielandt的优美证明。<br><a id="more"></a></p>
 <p>两个矩阵X和Y称为置换相似的，若存在一个置换矩阵P满足$P^TXP=Y$。设$A\in M_n$.称A为可约的，若A置换相似于一个形如<br><span>$$\left( \begin{matrix}
 B &amp; 0\\
@@ -1033,48 +1059,6 @@ U \left( \begin{matrix}
     </summary>
     
       <category term="矩阵" scheme="http://dna049.com/tags/%E7%9F%A9%E9%98%B5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Cayley-Hamilton定理]]></title>
-    <link href="http://dna049.com/2015/12/16/Cayley-Hamilton%E5%AE%9A%E7%90%86/"/>
-    <id>http://dna049.com/2015/12/16/Cayley-Hamilton定理/</id>
-    <published>2015-12-16T04:37:33.000Z</published>
-    <updated>2016-02-23T11:17:53.000Z</updated>
-    <content type="html"><![CDATA[<p>大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：</p>
-<a id="more"></a>
-<p>n阶矩阵A的特征多项式为：<br><span>$$\phi(\lambda)=det(\lambda I - A) = a_n \lambda^n +
-a_{n-1} \lambda^{n-1} + \cdots + a_1 \lambda + a_0$$</span><!-- Has MathJax --></p>
-<p>设$\lambda I - A$的伴随矩阵为B，则B中元素为关于$\lambda$的次数小于n的多项式，不妨设<br><span>$$B = \lambda^{n-1} B_ {n-1} + \lambda^{n-2} B_ {n-2}
-+ \cdots + \lambda B_1 + B_0$$</span><!-- Has MathJax --></p>
-<p>所以<br><span>$$(\lambda I - A)B = \lambda^n B_ {n-1} + \lambda^{n-1} (B_ {n-2} - AB_ {n-1})
-+ \cdots + \lambda (B_0 - AB_1) - AB_0$$</span><!-- Has MathJax --><br>又因为B是A的伴随矩阵，我们有<span>$(\lambda I - A)B = det(\lambda I - A) I$</span><!-- Has MathJax --></p>
-<p>比较系数得到<br><span>$$\left\{ 
-\begin{array}{l} 
-B_ {n-1} = a_n I \\
-B_ {n-2} - AB_ {n-1} = a_{n-1} I \\
-\cdots \\
-B_0 - AB_1 = a_1 I \\
--AB_0 = a_0 I
-\end{array} \right.$$</span><!-- Has MathJax --><br>对上式分别左乘<span>$A^n,A^{n-1},\cdots,A,I$</span><!-- Has MathJax -->得到：</p>
-<span>$$\left\{ 
-\begin{array}{l} 
-A^n B_ {n-1} = a_n A^n \\
-A^{n-1} B_ {n-2} - A^n B_ {n-1} = a_{n-1} A^{n-1} \\
-\cdots \\
-A B_0 - A^2 B_1 = a_1 A \\
--AB_0 = a_0 I
-\end{array} \right.$$</span><!-- Has MathJax -->
-<p>再将上式相加得到最终结果</p>
-<span>$$\phi(A)= a_ n A^n + a_{n-1} A^{n-1} + \cdots + a_1 A +
-a_0 I = \mathbf{0}$$</span><!-- Has MathJax -->
-<p>上述定理优美在于从形式上，<span>$\phi(\lambda)=det(\lambda I - A)$</span><!-- Has MathJax -->取 <span>$\lambda = A$</span><!-- Has MathJax -->带入恰好也是0（注意数字0和零矩阵的差别），虽然说这样做是完全没有道理。作为直接推论我们知道，一个n阶方阵的任何次方都可以被它的不超过n次的幂线性表出。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：</p>]]>
-    
-    </summary>
     
   </entry>
   
