@@ -3,30 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>仅在一点连续的函数例子 | 0.肆玖</title>
+  <title>矩阵快速幂的应用 hdu 1588 | 0.肆玖</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在一元微积分中，有一个广为人知的结论：一元函数在一点可导，必在该点连续，即可导必连续。
-自然会有这样一个问题：
-一元函数在一点可导能否推出它在该点的一个小邻域连续呢？
-这个想法是很自然的，不严格的思考可能会认为应该是对的,但是它并不成立。下面给出一个反例：
-\[ f(x) = x^2 D(x) = \left\{\begin{array}{ll}0 &amp;amp; x \in \mathbb{Q} \">
+  <meta name="description" content="在一个半群中，$a^n$ 的运算可以使用快速幂，即在不超过 $2log_2(n)$ 的运算下完成计算。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="仅在一点连续的函数例子">
-<meta property="og:url" content="http://dna049.com/2015/12/16/仅在一点连续的函数例子/index.html">
+<meta property="og:title" content="矩阵快速幂的应用 hdu 1588">
+<meta property="og:url" content="http://dna049.com/2016/03/05/矩阵快速幂的应用-hdu-1588/index.html">
 <meta property="og:site_name" content="0.肆玖">
-<meta property="og:description" content="在一元微积分中，有一个广为人知的结论：一元函数在一点可导，必在该点连续，即可导必连续。
-自然会有这样一个问题：
-一元函数在一点可导能否推出它在该点的一个小邻域连续呢？
-这个想法是很自然的，不严格的思考可能会认为应该是对的,但是它并不成立。下面给出一个反例：
-\[ f(x) = x^2 D(x) = \left\{\begin{array}{ll}0 &amp;amp; x \in \mathbb{Q} \">
-<meta property="og:updated_time" content="2016-02-23T10:59:17.000Z">
+<meta property="og:description" content="在一个半群中，$a^n$ 的运算可以使用快速幂，即在不超过 $2log_2(n)$ 的运算下完成计算。">
+<meta property="og:updated_time" content="2016-03-05T15:31:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="仅在一点连续的函数例子">
-<meta name="twitter:description" content="在一元微积分中，有一个广为人知的结论：一元函数在一点可导，必在该点连续，即可导必连续。
-自然会有这样一个问题：
-一元函数在一点可导能否推出它在该点的一个小邻域连续呢？
-这个想法是很自然的，不严格的思考可能会认为应该是对的,但是它并不成立。下面给出一个反例：
-\[ f(x) = x^2 D(x) = \left\{\begin{array}{ll}0 &amp;amp; x \in \mathbb{Q} \">
+<meta name="twitter:title" content="矩阵快速幂的应用 hdu 1588">
+<meta name="twitter:description" content="在一个半群中，$a^n$ 的运算可以使用快速幂，即在不超过 $2log_2(n)$ 的运算下完成计算。">
   
     <link rel="alternative" href="/atom.xml" title="0.肆玖" type="application/atom+xml">
   
@@ -186,11 +174,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-仅在一点连续的函数例子" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-矩阵快速幂的应用-hdu-1588" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/16/仅在一点连续的函数例子/" class="article-date">
-      <time datetime="2015-12-15T16:26:38.000Z" itemprop="datePublished">2015-12-16</time>
+      <a href="/2016/03/05/矩阵快速幂的应用-hdu-1588/" class="article-date">
+      <time datetime="2016-03-05T14:12:33.000Z" itemprop="datePublished">2016-03-05</time>
 </a>
     </div>
   
@@ -203,7 +191,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      仅在一点连续的函数例子
+      矩阵快速幂的应用 hdu 1588
     </h1>
   
 
@@ -214,7 +202,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微积分/">微积分</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/连续/">连续</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/矩阵/">矩阵</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -224,13 +212,17 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>在一元微积分中，有一个广为人知的结论：一元函数在一点可导，必在该点连续，即可导必连续。</p>
-<p>自然会有这样一个问题：</p>
-<pre><code>一元函数在一点可导能否推出它在该点的一个小邻域连续呢？
-</code></pre><p>这个想法是很自然的，不严格的思考可能会认为应该是对的,但是它并不成立。下面给出一个反例：</p>
-<p>\[ f(x) = x^2 D(x) = \left\{<br>\begin{array}{ll}<br>0 &amp; x \in \mathbb{Q} \\<br>x^2 &amp; x \notin \mathbb{Q}<br>\end{array} \right. \]</p>
-<p>其中$D(x)$为Dirichlet函数。<br><a id="more"></a><br>容易验证函数$f(x)$在$x=0$处可导，但在$x \neq 0$处不连续。即否定了上述问题。</p>
-<p>最后，类似地，我们还可以通过Dirichlet函数构造$\mathbb{R}$上一些仅在有限个点连续的函数。也可以通过周期函数构造仅在所有整数点连续的函数。但是由Baire纲定理可以证明，不存在在所有有理数点连续，无理点间断的函数。最后Riemann函数给出了一个在所有有理数点间断，无理点连续的函数。这些反例使得人们对函数连续的概念有了更感性的认识。</p>
+        <p>在一个半群中，$a^n$ 的运算可以使用快速幂，即在不超过 $2log_2(n)$ 的运算下完成计算。<br><a id="more"></a></p>
+<p>直接用一个实例<a href="http://acm.hdu.edu.cn/showproblem.php?pid=1588" target="_blank" rel="external">hdu1588 Gauss Fibonacci</a>即可体现其思想。</p>
+<p>设 f 是 Fibonacci 是满足：</p>
+<ol>
+<li>$f(0)=0$</li>
+<li>$f(1)=1$</li>
+<li>$f(n)=f(n-1)+f(n-2) ,\; n \geq 2$</li>
+</ol>
+<p>求 Gauss Fibonacci 问题<br>$$ \sum_{i=0}^{n-1} f(k*i+b) $$</p>
+<h3 id="u95EE_u9898_u8F6C_u5316_u6210_u77E9_u9635_u6C42_u89E3"><a href="#u95EE_u9898_u8F6C_u5316_u6210_u77E9_u9635_u6C42_u89E3" class="headerlink" title="问题转化成矩阵求解"></a>问题转化成矩阵求解</h3><p>令 $ A = \left[ \begin{matrix} 1 &amp; 1 \\ 1 &amp; 0 \end{matrix} \right] $ 则<br>$$ \left( \begin{matrix} f(n+1) \\ f(n) \end{matrix} \right) = A \left( \begin{matrix} f(n) \\ f(n-1) \end{matrix} \right) = A^n \left( \begin{matrix} 1 \\ 0 \end{matrix} \right) $$<br>于是求解 $f(n)$ 可转化为求解 $A^n$ 另外 Gauss Fibonacci 问题可转化为求解<br>$$ A^b \cdot \sum_{i=0}^{n-1} A^{ki} $$</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//#pragma comment(linker,&#34;/STACK:10240000,10240000&#34;)&#10;#include &#60;cstring&#62;&#10;#include &#60;cstdio&#62;&#10;#include &#60;cstdlib&#62;&#10;#include &#60;ctime&#62;&#10;#include &#60;cmath&#62;&#10;#include &#60;iostream&#62;&#10;#include &#60;algorithm&#62;&#10;#include &#60;vector&#62;&#10;#include &#60;map&#62;&#10;#include &#60;set&#62;&#10;#include &#60;queue&#62;&#10;#include &#60;stack&#62;&#10;#include &#60;string&#62;&#10;#include &#60;bitset&#62;&#10;using namespace std;&#10;typedef long long LL;&#10;typedef pair&#60;int,int&#62; PII;&#10;typedef pair&#60;LL,LL&#62; PLL;&#10;#define clr(a,b) memset(a,b,sizeof(a))&#10;#define MP make_pair&#10;#define PB push_back&#10;#define lrt rt&#60;&#60;1&#10;#define rrt rt&#60;&#60;1|1&#10;#define lson l,m,lrt&#10;#define rson m+1,r,rrt&#10;/*------------------------- template ------------------------------*/&#10;LL mod;&#10;class Matrix&#123;&#10;public:&#10;    const static int N = 2; //col&#10;    LL a[N][N];&#10;    Matrix(int a00=0,int a01=0, int a10=0,int a11=0)&#123;&#10;        a[0][0]=a00;a[0][1]=a01;&#10;        a[1][0]=a10;a[1][1]=a11;&#10;    &#125;&#10;    Matrix operator+(const Matrix&#38; A)const&#123;&#10;        Matrix R;&#10;        for(int i=0;i&#60;N;++i)&#123;&#10;            for(int j=0;j&#60;N;++j)&#123;&#10;                R.a[i][j]=a[i][j]+A.a[i][j];&#10;                if(R.a[i][j]&#62;=mod)   R.a[i][j]-=mod;&#10;            &#125;&#10;        &#125;&#10;        return R;&#10;    &#125;&#10;    Matrix operator*(const Matrix&#38; A)const&#123;&#10;        Matrix R;&#10;        for(int i=0;i&#60;N;++i)&#123;&#10;            for(int k=0;k&#60;N;++k)&#123;&#10;                for(int j=0;j&#60;N;++j)&#123;&#10;                    R.a[i][j] = (R.a[i][j]+a[i][k]*A.a[k][j])%mod;&#10;                &#125;&#10;            &#125;&#10;        &#125;&#10;        return R;&#10;    &#125;&#10;&#125;;&#10;&#10;Matrix pow(Matrix A,int n)&#123;&#10;    Matrix R(1,0,0,1);&#10;    while(n)&#123;&#10;        if(n&#38;1) R=R*A;&#10;        n&#62;&#62;=1;  A=A*A;&#10;    &#125;&#10;    return R;&#10;&#125;&#10;Matrix getsum(Matrix A,int n)&#123;&#10;    Matrix R(1,0,0,1),X(1,0,0,1);&#10;    while(n)&#123;&#10;        if(n&#38;1) R=(R+X*pow(A,n));&#10;        n&#62;&#62;=1;  X=X*(Matrix(1,0,0,1)+pow(A,n));&#10;    &#125;&#10;    return R;&#10;&#125;&#10;int main()&#123;&#10;//    freopen(&#34;/Users/dna049/Desktop/AC/in&#34;,&#34;r&#34;,stdin);&#10;//    freopen(&#34;/Users/dna049/Desktop/AC/out&#34;,&#34;w&#34;,stdout);&#10;    int k,b,n,m;&#10;    while(~scanf(&#34;%d%d%d%d&#34;,&#38;k,&#38;b,&#38;n,&#38;m))&#123;&#10;        mod = m;&#10;        Matrix A(1,1,1,0);&#10;        Matrix R = pow(A,b)*getsum(pow(A,k),n-1);&#10;        cout&#60;&#60;R.a[1][0]&#60;&#60;endl;&#10;    &#125;&#10;    return 0;&#10;&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -242,16 +234,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2015/12/16/Cayley-Hamilton定理/">
-                    Cayley-Hamilton定理
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2015/12/15/计算器程序/">
-                    计算器程序
+                <a href="/2016/02/24/自然底数e的由来/">
+                    自然底数e的由来
                 </a>
             </div>
         
@@ -281,7 +267,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2015/12/16/仅在一点连续的函数例子/" data-title="仅在一点连续的函数例子" data-url="http://dna049.com/2015/12/16/仅在一点连续的函数例子/"></div>
+    <div class="ds-thread" data-thread-key="2016/03/05/矩阵快速幂的应用-hdu-1588/" data-title="矩阵快速幂的应用 hdu 1588" data-url="http://dna049.com/2016/03/05/矩阵快速幂的应用-hdu-1588/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -305,15 +291,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2015/12/16/Cayley-Hamilton定理/" title="上一篇: Cayley-Hamilton定理">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2015/12/15/计算器程序/" title="下一篇: 计算器程序">
+            <a href="/2016/02/24/自然底数e的由来/" title="下一篇: 自然底数e的由来">
                 <i class="fa fa-angle-right"></i>
             </a>
         

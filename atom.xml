@@ -4,7 +4,7 @@
   <subtitle><![CDATA[努力认识自己是傻逼ing]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dna049.com/"/>
-  <updated>2016-02-24T15:45:47.000Z</updated>
+  <updated>2016-03-05T15:31:25.000Z</updated>
   <id>http://dna049.com/</id>
   
   <author>
@@ -13,6 +13,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[矩阵快速幂的应用 hdu 1588]]></title>
+    <link href="http://dna049.com/2016/03/05/%E7%9F%A9%E9%98%B5%E5%BF%AB%E9%80%9F%E5%B9%82%E7%9A%84%E5%BA%94%E7%94%A8-hdu-1588/"/>
+    <id>http://dna049.com/2016/03/05/矩阵快速幂的应用-hdu-1588/</id>
+    <published>2016-03-05T14:12:33.000Z</published>
+    <updated>2016-03-05T15:31:25.000Z</updated>
+    <content type="html"><![CDATA[<p>在一个半群中，$a^n$ 的运算可以使用快速幂，即在不超过 $2log_2(n)$ 的运算下完成计算。<br><a id="more"></a></p>
+<p>直接用一个实例<a href="http://acm.hdu.edu.cn/showproblem.php?pid=1588" target="_blank" rel="external">hdu1588 Gauss Fibonacci</a>即可体现其思想。</p>
+<p>设 f 是 Fibonacci 是满足：</p>
+<ol>
+<li>$f(0)=0$</li>
+<li>$f(1)=1$</li>
+<li>$f(n)=f(n-1)+f(n-2) ,\; n \geq 2$</li>
+</ol>
+<p>求 Gauss Fibonacci 问题<br>$$ \sum_{i=0}^{n-1} f(k*i+b) $$</p>
+<h3 id="u95EE_u9898_u8F6C_u5316_u6210_u77E9_u9635_u6C42_u89E3"><a href="#u95EE_u9898_u8F6C_u5316_u6210_u77E9_u9635_u6C42_u89E3" class="headerlink" title="问题转化成矩阵求解"></a>问题转化成矩阵求解</h3><p>令 $ A = \left[ \begin{matrix} 1 &amp; 1 \\ 1 &amp; 0 \end{matrix} \right] $ 则<br>$$ \left( \begin{matrix} f(n+1) \\ f(n) \end{matrix} \right) = A \left( \begin{matrix} f(n) \\ f(n-1) \end{matrix} \right) = A^n \left( \begin{matrix} 1 \\ 0 \end{matrix} \right) $$<br>于是求解 $f(n)$ 可转化为求解 $A^n$ 另外 Gauss Fibonacci 问题可转化为求解<br>$$ A^b \cdot \sum_{i=0}^{n-1} A^{ki} $$</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//#pragma comment(linker,&#34;/STACK:10240000,10240000&#34;)&#10;#include &#60;cstring&#62;&#10;#include &#60;cstdio&#62;&#10;#include &#60;cstdlib&#62;&#10;#include &#60;ctime&#62;&#10;#include &#60;cmath&#62;&#10;#include &#60;iostream&#62;&#10;#include &#60;algorithm&#62;&#10;#include &#60;vector&#62;&#10;#include &#60;map&#62;&#10;#include &#60;set&#62;&#10;#include &#60;queue&#62;&#10;#include &#60;stack&#62;&#10;#include &#60;string&#62;&#10;#include &#60;bitset&#62;&#10;using namespace std;&#10;typedef long long LL;&#10;typedef pair&#60;int,int&#62; PII;&#10;typedef pair&#60;LL,LL&#62; PLL;&#10;#define clr(a,b) memset(a,b,sizeof(a))&#10;#define MP make_pair&#10;#define PB push_back&#10;#define lrt rt&#60;&#60;1&#10;#define rrt rt&#60;&#60;1|1&#10;#define lson l,m,lrt&#10;#define rson m+1,r,rrt&#10;/*------------------------- template ------------------------------*/&#10;LL mod;&#10;class Matrix&#123;&#10;public:&#10;    const static int N = 2; //col&#10;    LL a[N][N];&#10;    Matrix(int a00=0,int a01=0, int a10=0,int a11=0)&#123;&#10;        a[0][0]=a00;a[0][1]=a01;&#10;        a[1][0]=a10;a[1][1]=a11;&#10;    &#125;&#10;    Matrix operator+(const Matrix&#38; A)const&#123;&#10;        Matrix R;&#10;        for(int i=0;i&#60;N;++i)&#123;&#10;            for(int j=0;j&#60;N;++j)&#123;&#10;                R.a[i][j]=a[i][j]+A.a[i][j];&#10;                if(R.a[i][j]&#62;=mod)   R.a[i][j]-=mod;&#10;            &#125;&#10;        &#125;&#10;        return R;&#10;    &#125;&#10;    Matrix operator*(const Matrix&#38; A)const&#123;&#10;        Matrix R;&#10;        for(int i=0;i&#60;N;++i)&#123;&#10;            for(int k=0;k&#60;N;++k)&#123;&#10;                for(int j=0;j&#60;N;++j)&#123;&#10;                    R.a[i][j] = (R.a[i][j]+a[i][k]*A.a[k][j])%mod;&#10;                &#125;&#10;            &#125;&#10;        &#125;&#10;        return R;&#10;    &#125;&#10;&#125;;&#10;&#10;Matrix pow(Matrix A,int n)&#123;&#10;    Matrix R(1,0,0,1);&#10;    while(n)&#123;&#10;        if(n&#38;1) R=R*A;&#10;        n&#62;&#62;=1;  A=A*A;&#10;    &#125;&#10;    return R;&#10;&#125;&#10;Matrix getsum(Matrix A,int n)&#123;&#10;    Matrix R(1,0,0,1),X(1,0,0,1);&#10;    while(n)&#123;&#10;        if(n&#38;1) R=(R+X*pow(A,n));&#10;        n&#62;&#62;=1;  X=X*(Matrix(1,0,0,1)+pow(A,n));&#10;    &#125;&#10;    return R;&#10;&#125;&#10;int main()&#123;&#10;//    freopen(&#34;/Users/dna049/Desktop/AC/in&#34;,&#34;r&#34;,stdin);&#10;//    freopen(&#34;/Users/dna049/Desktop/AC/out&#34;,&#34;w&#34;,stdout);&#10;    int k,b,n,m;&#10;    while(~scanf(&#34;%d%d%d%d&#34;,&#38;k,&#38;b,&#38;n,&#38;m))&#123;&#10;        mod = m;&#10;        Matrix A(1,1,1,0);&#10;        Matrix R = pow(A,b)*getsum(pow(A,k),n-1);&#10;        cout&#60;&#60;R.a[1][0]&#60;&#60;endl;&#10;    &#125;&#10;    return 0;&#10;&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在一个半群中，$a^n$ 的运算可以使用快速幂，即在不超过 $2log_2(n)$ 的运算下完成计算。<br>]]>
+    
+    </summary>
+    
+      <category term="矩阵" scheme="http://dna049.com/tags/%E7%9F%A9%E9%98%B5/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[自然底数e的由来]]></title>
@@ -860,48 +887,6 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
     </summary>
     
       <category term="数学" scheme="http://dna049.com/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[拓扑线性空间中的开集和闭集]]></title>
-    <link href="http://dna049.com/2015/12/20/%E6%8B%93%E6%89%91%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E5%BC%80%E9%9B%86%E5%92%8C%E9%97%AD%E9%9B%86/"/>
-    <id>http://dna049.com/2015/12/20/拓扑线性空间中的开集和闭集/</id>
-    <published>2015-12-20T15:13:32.000Z</published>
-    <updated>2016-02-23T11:02:46.000Z</updated>
-    <content type="html"><![CDATA[<p>在复习泛函分析的时候，因为很多结论可以推广到更为一般的情况，因此就看了刘培德先生编著的《拓扑线性空间与算子谱理论》这本书。然后在书中读到了有关开集和闭集的一些性质，在此总结一下，先叙述一下结论。<br>在拓扑线性空间中，</p>
-<ol>
-<li>若A是开集，B是任意集合，则A+B是开集。</li>
-<li>若A是闭集，B是闭集，则A+B不一定为闭集。</li>
-<li>若A是紧集，B是闭集，则A+B是闭集。<a id="more"></a>
-</li>
-</ol>
-<h4 id="u62D3_u6251_u7EBF_u6027_u7A7A_u95F4"><a href="#u62D3_u6251_u7EBF_u6027_u7A7A_u95F4" class="headerlink" title="拓扑线性空间"></a>拓扑线性空间</h4><p>拓扑线性空间是一类其线性结构与最一般的拓扑结构有机结合的集合。它作为泛函分析的分支产生于20世纪40到50年代，至今仍然是现代数学乃至自然科学中讨论有关问题和相关理论的最为广泛的框架。它的产生很大直接或间接来自数学上赫赫有名的<a href="https://en.wikipedia.org/wiki/Nicolas_Bourbaki" target="_blank" rel="external">Nicolas Bourbaki学派</a>。</p>
-<h5 id="u62D3_u6251_u7EBF_u6027_u7A7A_u95F4_u7684_u5B9A_u4E49"><a href="#u62D3_u6251_u7EBF_u6027_u7A7A_u95F4_u7684_u5B9A_u4E49" class="headerlink" title="拓扑线性空间的定义"></a>拓扑线性空间的定义</h5><p>设X是标量域K(实数域或复数域)上的拓扑线性空间，$\tau$是X上的拓扑，若</p>
-<ol>
-<li>对于每一点$x \in X$，单点集$\lbrace x \rbrace$是X中的闭集。</li>
-<li>线性空间的加法和数乘关于$\tau$连续。</li>
-</ol>
-<p>则称X是拓扑线性空间（TLS）<br>注：至于线性空间和拓扑的定义是很容易查到。上面条件1说明TLS必然是T1空间，但是经过推理可知TLS是T3空间，因而必然是Hausdorff的。拓扑线性空间的拓扑有很多很好的性质，这里不再多说了。</p>
-<h5 id="u7ED3_u8BBA_u7684_u8BC1_u660E"><a href="#u7ED3_u8BBA_u7684_u8BC1_u660E" class="headerlink" title="结论的证明"></a>结论的证明</h5><p>首先，开集，闭集，紧集这些概念完全是依赖拓扑的。具体可查熊金城《点集拓扑学讲义》，线性空间可以查任何一本线性代数或者高等代数的书。<br>Proof：<br>(i) 若A是开集，B是任意集合，则A+B是开集。<br>因为<span>$A+B = \cup _ {y \in B} A+y$</span><!-- Has MathJax -->是开集，证毕。<br>(ii) 若A是闭集，B是闭集，则A+B不一定为闭集。<br>不妨设<span>$A＝\lbrace (x,y) \;|\; x&gt;0,xy \geq 1 \rbrace ,B＝\lbrace (x,y) \;|\; x&gt;0,xy \leq -1 \rbrace$</span><!-- Has MathJax -->则显然A、B是闭集，但是<span>$A+B =\lbrace (x,y) \;|\; x&gt;0 \rbrace$</span><!-- Has MathJax -->是开集且不是闭集。<br>(iii) 若A是紧集，B是闭集，则A+B是闭集。<br>这里的证明需要用到拓扑的两个结论</p>
-<ol>
-<li>$x \in \overline{A}$当且仅当A中有网（<span>$x _ {\lambda}, \lambda \in \Lambda,x _ \lambda \to x$</span><!-- Has MathJax -->)</li>
-<li>A紧当且仅当A中每一个网 <span>$x _ {\lambda}, \lambda \in \Lambda$</span><!-- Has MathJax -->都有极限点（即有收敛子网）</li>
-</ol>
-<p>若$c \in \overline{A+B}$，则存在网（<span>$c _ {\lambda}= a _ {\lambda} +b _ {\lambda}, \lambda \in \Lambda$</span><!-- Has MathJax -->）使得<span>$c _ {\lambda} \to c$</span><!-- Has MathJax -->,这里<span>$a _ {\lambda} \in A , b _ {\lambda} \in B$</span><!-- Has MathJax -->。由于A紧，于是有子网<span>$a _ {\lambda&apos;} , \lambda&apos; \in \Lambda&apos; \subset \Lambda$</span><!-- Has MathJax -->）使得<span>$a _ {\lambda&apos;} \to a$</span><!-- Has MathJax -->此时<span>$b _ {\lambda&apos;} = c _ {\lambda&apos;} - a _ {\lambda&apos;} \to c-a = b$</span><!-- Has MathJax -->，由于B是闭集，故$b \in B$。于是$c = a + b \in A+B$，即$\overline{A+B} ＝ A+B$，所以A+B是闭的。</p>
-<h5 id="u540E_u8BB0"><a href="#u540E_u8BB0" class="headerlink" title="后记"></a>后记</h5><p>其实现代数学最大的问题，不是不知道怎么处理问题，而是根本不懂问题在说什么。</p>
-<p>我们要相当的努力才能认识到自己是傻逼的事实。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>在复习泛函分析的时候，因为很多结论可以推广到更为一般的情况，因此就看了刘培德先生编著的《拓扑线性空间与算子谱理论》这本书。然后在书中读到了有关开集和闭集的一些性质，在此总结一下，先叙述一下结论。<br>在拓扑线性空间中，</p>
-<ol>
-<li>若A是开集，B是任意集合，则A+B是开集。</li>
-<li>若A是闭集，B是闭集，则A+B不一定为闭集。</li>
-<li>若A是紧集，B是闭集，则A+B是闭集。]]>
-    
-    </summary>
-    
-      <category term="拓扑" scheme="http://dna049.com/tags/%E6%8B%93%E6%89%91/"/>
     
   </entry>
   
