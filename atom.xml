@@ -4,7 +4,7 @@
   <subtitle><![CDATA[努力认识自己是傻逼ing]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dna049.com/"/>
-  <updated>2016-03-08T12:01:11.000Z</updated>
+  <updated>2016-03-08T12:23:56.000Z</updated>
   <id>http://dna049.com/</id>
   
   <author>
@@ -19,8 +19,10 @@
     <link href="http://dna049.com/2016/03/08/Fermat%E5%B9%B3%E6%96%B9%E5%92%8C%E5%AE%9A%E7%90%86/"/>
     <id>http://dna049.com/2016/03/08/Fermat平方和定理/</id>
     <published>2016-03-08T11:04:45.000Z</published>
-    <updated>2016-03-08T12:01:11.000Z</updated>
-    <content type="html"><![CDATA[<p>Fermat平方和定理的表述为：奇质数能表示为两个平方数之和的充分必要条件是该质数被4除余1。这个结论首次由 Euler 在 1747年给出证明。详细叙述如下：<br><a id="more"></a><br>为方便起见,记<br>$$ A = \lbrace a^2 + b^2 \;|\; a,b \in \mathbb{Z} \rbrace $$</p>
+    <updated>2016-03-08T12:23:56.000Z</updated>
+    <content type="html"><![CDATA[<p>Fermat平方和定理的表述为：奇质数能表示为两个平方数之和的充分必要条件是该质数被4除余1。这个结论首次由 Euler 在 1747年给出证明。详细叙述如下：</p>
+<a id="more"></a>
+<p>为方便起见,记<br>$$ A = \lbrace a^2 + b^2 \;|\; a,b \in \mathbb{Z} \rbrace $$</p>
 <p>证明分五步完成</p>
 <ol>
 <li>$(a^2+b^2)(c^2+d^2)=(ac \pm bd)^2 +(ad \mp bc)^2 $<br>proof: 计算即知。</li>
@@ -32,9 +34,11 @@
 <p>当然上述定理也可以利用<br>$$ \mathbb{Z}[i] \simeq \mathbb{Z}[x]/(x^2+1) $$ 转化到 $F_p$ 域上的不可约问题解决。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Fermat平方和定理的表述为：奇质数能表示为两个平方数之和的充分必要条件是该质数被4除余1。这个结论首次由 Euler 在 1747年给出证明。详细叙述如下：<br>]]>
+    <![CDATA[<p>Fermat平方和定理的表述为：奇质数能表示为两个平方数之和的充分必要条件是该质数被4除余1。这个结论首次由 Euler 在 1747年给出证明。详细叙述如下：</p>]]>
     
     </summary>
+    
+      <category term="数论" scheme="http://dna049.com/tags/%E6%95%B0%E8%AE%BA/"/>
     
   </entry>
   
