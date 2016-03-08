@@ -4,7 +4,7 @@
   <subtitle><![CDATA[努力认识自己是傻逼ing]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dna049.com/"/>
-  <updated>2016-03-06T02:55:57.000Z</updated>
+  <updated>2016-03-08T12:01:11.000Z</updated>
   <id>http://dna049.com/</id>
   
   <author>
@@ -15,11 +15,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Fermat平方和定理]]></title>
+    <link href="http://dna049.com/2016/03/08/Fermat%E5%B9%B3%E6%96%B9%E5%92%8C%E5%AE%9A%E7%90%86/"/>
+    <id>http://dna049.com/2016/03/08/Fermat平方和定理/</id>
+    <published>2016-03-08T11:04:45.000Z</published>
+    <updated>2016-03-08T12:01:11.000Z</updated>
+    <content type="html"><![CDATA[<p>Fermat平方和定理的表述为：奇质数能表示为两个平方数之和的充分必要条件是该质数被4除余1。这个结论首次由 Euler 在 1747年给出证明。详细叙述如下：<br><a id="more"></a><br>为方便起见,记<br>$$ A = \lbrace a^2 + b^2 \;|\; a,b \in \mathbb{Z} \rbrace $$</p>
+<p>证明分五步完成</p>
+<ol>
+<li>$(a^2+b^2)(c^2+d^2)=(ac \pm bd)^2 +(ad \mp bc)^2 $<br>proof: 计算即知。</li>
+<li>$a^2+b^2 \;|\; c^2+d^2$, $a^2+b^2$ 为素数，<br> $$ \frac{c^2+d^2}{a^2+b^2} \in A$$<br>proof: 由于$(ac-bd)(ac+bd) = (a^2+b^2)c^2-(c^2+d^2)b^2$<br>因此 $(a^2+b^2) \;|\; (ac-bd)(ac+bd)$ 而$(c^2+d^2)$ 是素数，因此必然整除其中一个, 假设$(a^2+b^2)|(ac-bd)$,则由1知 $(a^2+b^2)｜(ad+bc)$ 因此<br>$$ \frac{c^2+d^2}{a^2+b^2}=(\frac{ac - bd}{a^2+b^2})^2 +(\frac{ad + bc}{a^2+b^2})^2 $$<br>类似的，假设$(a^2+b^2)|(ac＋bd)$ 则有<br>$$ \frac{c^2+d^2}{a^2+b^2}=(\frac{ac + bd}{a^2+b^2})^2 +(\frac{ad - bc}{a^2+b^2})^2 $$</li>
+<li>$x \;|\; a^2+b^2,x \notin A$，则$\exists y| \frac{a^2+b^2}{x}$ 使得 $y \notin A$<br>反证：设 $ a^2+b^2 = x p_1 p_2 \cdots p_n$ 则，若 则$ \forall y| \frac{a^2+b^2}{x},y \in A$ 则由2，经过 $n$ 次除法，最终 $x \in A$ 矛盾。</li>
+<li>若 $(a,b)=1$ 则 $\forall x| a^2+b^2 ,x \in A$<br>假设 $\exists x| a^2+b^2,x \notin A$ 则，我们设<br>$a = mx + c,b = mx + d$,其中$|c|&lt;x,|d| &lt;x$。则<br>$a^2+b^2=(mx+c)^2+(mx+d)^2=tx+(c^2+d^2)$，因此$x \;|\; c^2+d^2$。又 $(a,b)=1$ ，因此 $((c,d),x)=1$。因此不妨设 $(c,d)=1$ 则 $\exists z, zx = c^2+d^2 \leq \frac{x^2}{2}$。即 $z\leq \frac{x}{2}$。由引理3知道 $z$ 有一个因子 $w \notin A$。即我们由 $ x \;|\; a^2+b^2,x \notin A$ 得到了 $ w \;|\; c^2+d^2, w \notin A ,w \leq  \frac{x}{2} $ 这样一直下去必然会在有限步结束，矛盾。</li>
+<li>若素数$p=4n+1$，则 $p\in A$。<br>由Fermat小定理知$1,2^{4n},\cdots,(4n)^{4n}$除以 $p$ 模1.<br>因此$2^{4n}－1,3^{4n}－2^{4n},\cdots,(4n)^{4n}-(4n-1)^{4n}$都是 $p$ 的倍数。这些差都有分解<br>$$a^{4n} - b^{4n} = (a^{2n}+b^{2n})(a^{2n}-b^{2n})$$<br>由于上述 $a,b$ 相差为1，必然互素，因此若 $p|a^{2n}+b^{2n}$ 则由4命题得证。否则$2^{2n}－1,3^{2n}－2^{2n},\cdots,(2n)^{2n}-(2n-1)^{2n}$都是 $p$ 的倍数。因此 1.对上面式子做$2n$阶差得到 $(2n)!$ 是p的倍数，显然是不可能的。或者2.由于上面序列的前 $d$ 项和 $d^{2n}-1$是$p$的倍数，因此素数 $p$ 无原根，矛盾与原根存在定理。</li>
+</ol>
+<p>当然上述定理也可以利用<br>$$ \mathbb{Z}[i] \simeq \mathbb{Z}[x]/(x^2+1) $$ 转化到 $F_p$ 域上的不可约问题解决。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Fermat平方和定理的表述为：奇质数能表示为两个平方数之和的充分必要条件是该质数被4除余1。这个结论首次由 Euler 在 1747年给出证明。详细叙述如下：<br>]]>
+    
+    </summary>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[矩阵快速幂的应用 hdu 1588]]></title>
     <link href="http://dna049.com/2016/03/05/%E7%9F%A9%E9%98%B5%E5%BF%AB%E9%80%9F%E5%B9%82%E7%9A%84%E5%BA%94%E7%94%A8-hdu-1588/"/>
     <id>http://dna049.com/2016/03/05/矩阵快速幂的应用-hdu-1588/</id>
     <published>2016-03-05T14:12:33.000Z</published>
-    <updated>2016-03-06T02:55:57.000Z</updated>
+    <updated>2016-03-06T02:57:38.000Z</updated>
     <content type="html"><![CDATA[<p>在一个半群中，$a^n$ 的运算可以使用快速幂，即在不超过 $2log_2(n)$ 的运算下完成计算。<br><a id="more"></a></p>
 <p>直接用一个实例 <a href="http://acm.hdu.edu.cn/showproblem.php?pid=1588" target="_blank" rel="external">hdu1588 Gauss Fibonacci</a> 即可体现其思想。</p>
 <h3 id="u95EE_u9898"><a href="#u95EE_u9898" class="headerlink" title="问题"></a>问题</h3><p>设 f 是 Fibonacci 数列满足：</p>
@@ -868,28 +892,6 @@ f(i) \; mod \; 10^9+7$$</span><!-- Has MathJax --></p>
       <category term="hexo" scheme="http://dna049.com/tags/hexo/"/>
     
       <category term="图片" scheme="http://dna049.com/tags/%E5%9B%BE%E7%89%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[本科数学系学习路线图]]></title>
-    <link href="http://dna049.com/2015/12/23/%E6%9C%AC%E7%A7%91%E6%95%B0%E5%AD%A6%E7%B3%BB%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E5%9B%BE/"/>
-    <id>http://dna049.com/2015/12/23/本科数学系学习路线图/</id>
-    <published>2015-12-23T09:52:57.000Z</published>
-    <updated>2016-02-23T11:02:23.000Z</updated>
-    <content type="html"><![CDATA[<p>最近在看刘培德先生的书《拓扑线性空间和算子谱理论》，简直爱不释手。而拓扑线性空间理论是在1950年左右由<a href="https://sv.wikipedia.org/wiki/Nicolas_Bourbaki" target="_blank" rel="external">Nicolas Bourbaki学派</a>建立。不禁让我回顾本科学习生涯中，从学习300年前一直到100年前的数学，现在又在学习几十年前的数学。于是就把本科学习路线总结如下图，下图由此<a href="https://www.processon.com" target="_blank" rel="external">网站</a>在线产生</p>
-<a id="more"></a>
-<p><img src="math.png" alt="图片加载中0.0"></p>
-<p>上图中颜色代表了一定的重要性，而尺寸大的代表其基础重要性。</p>
-<h3 id="u63A8_u8350_u7684_u4E66"><a href="#u63A8_u8350_u7684_u4E66" class="headerlink" title="推荐的书"></a>推荐的书</h3><p>由于本人阅历有限，仅给出自己看过比较好的书。<br>       数学分析: 陈纪修<br>    高等代数：北京大学**小组<br>    数论基础：潘承洞<br>    线性代数：李炯生<br>    实变函数：胡适耕<br>    泛函分析：北师大<br>    点集拓扑学：熊金城<br>    近世代数：冯克勤<br>    矩阵论：詹兴致</p>
-<p>不求高逼格，只求有益于心。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>最近在看刘培德先生的书《拓扑线性空间和算子谱理论》，简直爱不释手。而拓扑线性空间理论是在1950年左右由<a href="https://sv.wikipedia.org/wiki/Nicolas_Bourbaki">Nicolas Bourbaki学派</a>建立。不禁让我回顾本科学习生涯中，从学习300年前一直到100年前的数学，现在又在学习几十年前的数学。于是就把本科学习路线总结如下图，下图由此<a href="https://www.processon.com">网站</a>在线产生</p>]]>
-    
-    </summary>
-    
-      <category term="数学" scheme="http://dna049.com/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
