@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Cayley-Hamilton定理 | 0.肆玖</title>
+  <title>几个有技巧的初等结论 | 0.肆玖</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：">
+  <meta name="description" content="In a Monoid, if an element is left and right invertible, then it is invertible.Proof: By hypothesis we have$$ a b = ca = 1 $$hence we have$$ a = cab = c$$therefore $a$ us invertible.
+Definition: In a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Cayley-Hamilton定理">
-<meta property="og:url" content="http://dna049.com/2015/12/16/Cayley-Hamilton定理/index.html">
+<meta property="og:title" content="几个有技巧的初等结论">
+<meta property="og:url" content="http://dna049.com/2016/03/14/几个有技巧的初等结论/index.html">
 <meta property="og:site_name" content="0.肆玖">
-<meta property="og:description" content="大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：">
-<meta property="og:updated_time" content="2016-02-23T11:17:53.000Z">
+<meta property="og:description" content="In a Monoid, if an element is left and right invertible, then it is invertible.Proof: By hypothesis we have$$ a b = ca = 1 $$hence we have$$ a = cab = c$$therefore $a$ us invertible.
+Definition: In a">
+<meta property="og:updated_time" content="2016-03-14T15:51:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cayley-Hamilton定理">
-<meta name="twitter:description" content="大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：">
+<meta name="twitter:title" content="几个有技巧的初等结论">
+<meta name="twitter:description" content="In a Monoid, if an element is left and right invertible, then it is invertible.Proof: By hypothesis we have$$ a b = ca = 1 $$hence we have$$ a = cab = c$$therefore $a$ us invertible.
+Definition: In a">
   
     <link rel="alternative" href="/atom.xml" title="0.肆玖" type="application/atom+xml">
   
@@ -174,11 +177,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Cayley-Hamilton定理" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-几个有技巧的初等结论" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/16/Cayley-Hamilton定理/" class="article-date">
-      <time datetime="2015-12-16T04:37:33.000Z" itemprop="datePublished">2015-12-16</time>
+      <a href="/2016/03/14/几个有技巧的初等结论/" class="article-date">
+      <time datetime="2016-03-14T15:12:35.000Z" itemprop="datePublished">2016-03-14</time>
 </a>
     </div>
   
@@ -191,7 +194,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Cayley-Hamilton定理
+      几个有技巧的初等结论
     </h1>
   
 
@@ -201,6 +204,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代数/">代数</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -208,35 +215,16 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：</p>
-<a id="more"></a>
-<p>n阶矩阵A的特征多项式为：<br><span>$$\phi(\lambda)=det(\lambda I - A) = a_n \lambda^n +
-a_{n-1} \lambda^{n-1} + \cdots + a_1 \lambda + a_0$$</span><!-- Has MathJax --></p>
-<p>设$\lambda I - A$的伴随矩阵为B，则B中元素为关于$\lambda$的次数小于n的多项式，不妨设<br><span>$$B = \lambda^{n-1} B_ {n-1} + \lambda^{n-2} B_ {n-2}
-+ \cdots + \lambda B_1 + B_0$$</span><!-- Has MathJax --></p>
-<p>所以<br><span>$$(\lambda I - A)B = \lambda^n B_ {n-1} + \lambda^{n-1} (B_ {n-2} - AB_ {n-1})
-+ \cdots + \lambda (B_0 - AB_1) - AB_0$$</span><!-- Has MathJax --><br>又因为B是A的伴随矩阵，我们有<span>$(\lambda I - A)B = det(\lambda I - A) I$</span><!-- Has MathJax --></p>
-<p>比较系数得到<br><span>$$\left\{ 
-\begin{array}{l} 
-B_ {n-1} = a_n I \\
-B_ {n-2} - AB_ {n-1} = a_{n-1} I \\
-\cdots \\
-B_0 - AB_1 = a_1 I \\
--AB_0 = a_0 I
-\end{array} \right.$$</span><!-- Has MathJax --><br>对上式分别左乘<span>$A^n,A^{n-1},\cdots,A,I$</span><!-- Has MathJax -->得到：</p>
-<span>$$\left\{ 
-\begin{array}{l} 
-A^n B_ {n-1} = a_n A^n \\
-A^{n-1} B_ {n-2} - A^n B_ {n-1} = a_{n-1} A^{n-1} \\
-\cdots \\
-A B_0 - A^2 B_1 = a_1 A \\
--AB_0 = a_0 I
-\end{array} \right.$$</span><!-- Has MathJax -->
-<p>再将上式相加得到最终结果</p>
-<span>$$\phi(A)= a_ n A^n + a_{n-1} A^{n-1} + \cdots + a_1 A +
-a_0 I = \mathbf{0}$$</span><!-- Has MathJax -->
-<p>上述定理优美在于从形式上，<span>$\phi(\lambda)=det(\lambda I - A)$</span><!-- Has MathJax -->取 <span>$\lambda = A$</span><!-- Has MathJax -->带入恰好也是0（注意数字0和零矩阵的差别），虽然说这样做是完全没有道理。作为直接推论我们知道，一个n阶方阵的任何次方都可以被它的不超过n次的幂线性表出。</p>
-
+        <h5 id="In_a_Monoid_2C_if_an_element_is_left_and_right_invertible_2C_then_it_is_invertible"><a href="#In_a_Monoid_2C_if_an_element_is_left_and_right_invertible_2C_then_it_is_invertible" class="headerlink" title="In a Monoid, if an element is left and right invertible, then it is invertible."></a>In a Monoid, if an element is left and right invertible, then it is invertible.</h5><p>Proof: By hypothesis we have<br>$$ a b = ca = 1 $$<br>hence we have<br>$$ a = cab = c$$<br>therefore $a$ us invertible.</p>
+<p><em>Definition</em>: In a semi-group $A$, $z$ is called left(right) quasi-regular if there exists an element $z’$ such that $z’oz \equiv z’+z-z’z = 0\;(z o z’=0 )$.</p>
+<p>If A is a Monoid,actually,$z$ is called left(right) quasi-regular if and only if $1-z$ is left invertible.</p>
+<h5 id="In_a_semi-group_2C_if__24z_u2019oz__3D_0_24_and__24z_u2019_u2019oz_u2019__3D_0_24_then__24z_u2019_u2019_3Dz_24_2C_thus_both__24z_24_and__24z_u2019_24_are_quasi-regular"><a href="#In_a_semi-group_2C_if__24z_u2019oz__3D_0_24_and__24z_u2019_u2019oz_u2019__3D_0_24_then__24z_u2019_u2019_3Dz_24_2C_thus_both__24z_24_and__24z_u2019_24_are_quasi-regular" class="headerlink" title="In a semi-group, if $z’oz = 0$ and $z’’oz’ = 0$ then $z’’=z$, thus both $z$ and $z’$ are quasi-regular."></a>In a semi-group, if $z’oz = 0$ and $z’’oz’ = 0$ then $z’’=z$, thus both $z$ and $z’$ are quasi-regular.</h5><p>Proof: It is obvious right in a Monoid. Some trick occur while proving it.<br>$$ z’’ = z’’z’-z’ = z’’(z’z-z)-z’ = (z’’z’-z’’)z-z’=z’z-z = z $$<br>end the proof.</p>
+<h3 id="In_a_Monoid_2C_241-az_24_is_invertible_if_and_only_if__241-za_24_is_invertible"><a href="#In_a_Monoid_2C_241-az_24_is_invertible_if_and_only_if__241-za_24_is_invertible" class="headerlink" title="In a Monoid,$1-az$ is invertible if and only if $1-za$ is invertible."></a>In a Monoid,$1-az$ is invertible if and only if $1-za$ is invertible.</h3><p>Proof: In fact we have<br>$$ (1-az)^{-1} = 1+a(1-za)^{-1}z$$</p>
+<h5 id="In_a_Monoid__24M_24_2C__24z__5Cin_M_24-_If__24_5Cforall_a__5Cin_M_2C_5C_3B_1-az_24_is_left_invertible_2C_then__241-az_24_is_invertible_2Cso_is__241-za_24_why_foregoing_conclusion"><a href="#In_a_Monoid__24M_24_2C__24z__5Cin_M_24-_If__24_5Cforall_a__5Cin_M_2C_5C_3B_1-az_24_is_left_invertible_2C_then__241-az_24_is_invertible_2Cso_is__241-za_24_why_foregoing_conclusion" class="headerlink" title="In a Monoid $M$, $z \in M$. If $\forall a \in M,\; 1-az$ is left invertible, then $1-az$ is invertible,so is $1-za$ why foregoing conclusion."></a>In a Monoid $M$, $z \in M$. If $\forall a \in M,\; 1-az$ is left invertible, then $1-az$ is invertible,so is $1-za$ why foregoing conclusion.</h5><p>Proof: $\forall a \in M$,$1-az$ is left invertible.thus there exists $1-y$ such that<br>$$ (1-y)(1-az) = 1 $$<br>hence $y = (ya-a)z$ is left invertible. hence by forgoing conclusion $1-az$ is invertible,and so is $1-za$.</p>
+<p>Note that:</p>
+<pre><code>A semi-group is a set which is closed under an associative multiplication.
+A Monoid is a semi-group contain an identity element.
+</code></pre>
       
     </div>
     
@@ -247,16 +235,10 @@ a_0 I = \mathbf{0}$$</span><!-- Has MathJax -->
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2015/12/16/Shur定理/">
-                    Shur定理
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2015/12/16/仅在一点连续的函数例子/">
-                    仅在一点连续的函数例子
+                <a href="/2016/03/13/gcd经典推导hdu-5382/">
+                    gcd经典推导 hdu 5382
                 </a>
             </div>
         
@@ -286,7 +268,7 @@ a_0 I = \mathbf{0}$$</span><!-- Has MathJax -->
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2015/12/16/Cayley-Hamilton定理/" data-title="Cayley-Hamilton定理" data-url="http://dna049.com/2015/12/16/Cayley-Hamilton定理/"></div>
+    <div class="ds-thread" data-thread-key="2016/03/14/几个有技巧的初等结论/" data-title="几个有技巧的初等结论" data-url="http://dna049.com/2016/03/14/几个有技巧的初等结论/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -310,15 +292,13 @@ a_0 I = \mathbf{0}$$</span><!-- Has MathJax -->
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2015/12/16/Shur定理/" title="上一篇: Shur定理">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2015/12/16/仅在一点连续的函数例子/" title="下一篇: 仅在一点连续的函数例子">
+            <a href="/2016/03/13/gcd经典推导hdu-5382/" title="下一篇: gcd经典推导 hdu 5382">
                 <i class="fa fa-angle-right"></i>
             </a>
         
