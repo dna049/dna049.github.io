@@ -1,5 +1,7 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{amsmath}
+\newtheorem{Proof}{\hskip 2em Proof}
+
 
 \author{Chenzhipeng}
 \title{Some results about group}
@@ -18,19 +20,19 @@ $ ab=ca=1 $
 $aba = a, ab^2a = 1$
 \end{enumerate}
 can conclude that $a$ is invertible with b as inverse.\\
-\textit{prove:}
+
 \begin{enumerate}
 \item
+\textit{proof:} 
 if $ ab=ca=1 $ then,
 \[ b = 1 \cdot b = cab = c \cdot 1 = c \]
 thus 
 \[ ab=ba=1 \]
-end the prove.
 \item
 if $aba = a, ab^2a = 1$ then,
 \[ 1 = ab^2a = abab^2a = ab \]
 \[ 1 = ab^2a = abba = ba \]
-end the prove.
+end the proof.
 \end{enumerate}
 
 \section{Semigroup with some properities}
@@ -43,7 +45,7 @@ $G$ contains right unit $1_r$,thus $\forall a \in G, a1_r=a$ \\
 $\forall a \in G$ have a right inverse to $1_r$ $(ab=1_r)$. \\
 \end{description}
 then $G$ is a group.\\
-\textit{prove:} 
+\textit{proof:} 
 $\forall a \in G$ we have $b \in G$ such thar 
 \[ ab = 1_r \]
 then there exists $c \in G$ that
@@ -56,16 +58,15 @@ thus $1_r$ is the unit in $G$ and G is a monoid.Using conclusion in previous cha
 
 \section{Semigroup with solvable system}
 $G$ is a monoid,if the equation $ax=b$ and $ya=b$ is solvable for any $a,b \in G$ then $G$ is a group.\\
-\textit{prove:} \\
-we random choose $b \in G$ and we have $x_0$ such that
-\[ bx_0=b \]
+\textit{proof:} \\
+we random choose $a_0 \in G$ and we have $x_0$ such that
+\[ a_0x_0=a_0 \]
 $\forall a \in G$ we have
-\[ a = yb = ybx_0 = ax_0 \]
-\[ a = x_0 b = x_0 x_0 b = x_0 a\]
-hence we have $G$ have a unit $1=x_0$.\\
-$\forall a \in G$ there exists $x,y$ such that
-\[ ax=ya=1 \]
-we know $a$ is invertible from first chapter.End our prove.
+\[ a = ya_0 = ya_0x_0 = ax_0 \]
+
+and $\forall a \in G$ there exist a $b$ such that
+\[ ab = x_0 \].
+end our prove by foregoing conclusion.
 
 \section{Finite semigroup with cancellation law}
 Let $G$ donate a finite semigroup, is G satisfies
@@ -73,7 +74,7 @@ Let $G$ donate a finite semigroup, is G satisfies
 and
 \[ xa=ya \Rightarrow x=y \]
 G is a group.\\
-\textit{prove:} 
+\textit{proof:} 
 $\forall a \in G$ we consider a map $L_a \colon G \to G$
 \[ L_a(g) = ag \mbox{ for all } g \in G \]
 since $ ax=ay \Rightarrow x=y $
