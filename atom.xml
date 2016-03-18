@@ -39,12 +39,12 @@
   </entry>
   
   <entry>
-    <title><![CDATA[几个有技巧的初等结论]]></title>
-    <link href="http://dna049.com/2016/03/14/%E5%87%A0%E4%B8%AA%E6%9C%89%E6%8A%80%E5%B7%A7%E7%9A%84%E5%88%9D%E7%AD%89%E7%BB%93%E8%AE%BA/"/>
-    <id>http://dna049.com/2016/03/14/几个有技巧的初等结论/</id>
+    <title><![CDATA[Several trick elementary conclusion]]></title>
+    <link href="http://dna049.com/2016/03/14/Several-trick-elementary-conclusion/"/>
+    <id>http://dna049.com/2016/03/14/Several-trick-elementary-conclusion/</id>
     <published>2016-03-14T15:12:35.000Z</published>
-    <updated>2016-03-14T16:39:05.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="In_a_Monoid_2C_if_an_element_is_left_and_right_invertible_2C_then_it_is_invertible"><a href="#In_a_Monoid_2C_if_an_element_is_left_and_right_invertible_2C_then_it_is_invertible" class="headerlink" title="In a Monoid, if an element is left and right invertible, then it is invertible."></a>In a Monoid, if an element is left and right invertible, then it is invertible.</h3><p>Proof: By hypothesis we have<br>$$ a b = ca = 1 $$<br>hence we have<br>$$ a = cab = c$$<br>therefore $a$ is invertible.</p>
+    <updated>2016-03-18T03:37:13.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="In_a_Monoid_2C_if_an_element_is_left_and_right_invertible_2C_then_it_is_invertible"><a href="#In_a_Monoid_2C_if_an_element_is_left_and_right_invertible_2C_then_it_is_invertible" class="headerlink" title="In a Monoid, if an element is left and right invertible, then it is invertible."></a>In a Monoid, if an element is left and right invertible, then it is invertible.</h3><p>Proof: By hypothesis we have<br>$$ a b = ca = 1 $$<br>hence we have<br>$$ b = cab = c$$<br>therefore $a$ is invertible.</p>
 <a id="more"></a>
 <p><em>Definition</em>: In a semi-group $A$, $z$ is called left(right) quasi-regular if there exists an element $z’$ such that $z’o z \equiv z’+z-z’z = 0\;(z o z’=0 )$.</p>
 <p>If A is a Monoid, actually, $z$ is called left(right) quasi-regular if and only if $1-z$ is left invertible.</p>
@@ -56,7 +56,7 @@
 A Monoid is a semi-group contain an identity element.
 </code></pre>]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="In_a_Monoid_2C_if_an_element_is_left_and_right_invertible_2C_then_it_is_invertible"><a href="#In_a_Monoid_2C_if_an_element_is_left_and_right_invertible_2C_then_it_is_invertible" class="headerlink" title="In a Monoid, if an element is left and right invertible, then it is invertible."></a>In a Monoid, if an element is left and right invertible, then it is invertible.</h3><p>Proof: By hypothesis we have<br>$$ a b = ca = 1 $$<br>hence we have<br>$$ a = cab = c$$<br>therefore $a$ is invertible.</p>]]>
+    <![CDATA[<h3 id="In_a_Monoid_2C_if_an_element_is_left_and_right_invertible_2C_then_it_is_invertible"><a href="#In_a_Monoid_2C_if_an_element_is_left_and_right_invertible_2C_then_it_is_invertible" class="headerlink" title="In a Monoid, if an element is left and right invertible, then it is invertible."></a>In a Monoid, if an element is left and right invertible, then it is invertible.</h3><p>Proof: By hypothesis we have<br>$$ a b = ca = 1 $$<br>hence we have<br>$$ b = cab = c$$<br>therefore $a$ is invertible.</p>]]>
     
     </summary>
     
