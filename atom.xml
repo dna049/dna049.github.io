@@ -4,7 +4,7 @@
   <subtitle><![CDATA[原谅我一生放荡不羁是傻逼]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dna049.com/"/>
-  <updated>2016-03-19T16:01:19.000Z</updated>
+  <updated>2016-03-20T00:16:58.000Z</updated>
   <id>http://dna049.com/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://dna049.com/2016/03/19/%E8%87%AA%E7%84%B6%E6%95%B0%E7%9A%84Peano%E5%85%AC%E7%90%86/"/>
     <id>http://dna049.com/2016/03/19/自然数的Peano公理/</id>
     <published>2016-03-19T10:58:25.000Z</published>
-    <updated>2016-03-19T16:01:19.000Z</updated>
-    <content type="html"><![CDATA[<p>虽然我们从小学就开始学习自然数，但是自然数的真正严格1889年<a href="https://en.wikipedia.org/wiki/Giuseppe_Peano" target="_blank" rel="external">Giuseppe Peano</a> 的工作。介绍如下:<br><a id="more"></a></p>
+    <updated>2016-03-20T00:16:58.000Z</updated>
+    <content type="html"><![CDATA[<p>虽然我们从小学就开始学习自然数，但是自然数的真正严格的定义归功于1889年<a href="https://en.wikipedia.org/wiki/Giuseppe_Peano" target="_blank" rel="external">Giuseppe Peano</a> 的工作。介绍如下:<br><a id="more"></a></p>
 <h3 id="u81EA_u7136_u6570_u7684_u5B9A_u4E49"><a href="#u81EA_u7136_u6570_u7684_u5B9A_u4E49" class="headerlink" title="自然数的定义"></a>自然数的定义</h3><p>我们把满足如下公理的集合叫做自然数 $\mathbb{N}$。<br>$\mathbb{N}$ 中包含一个特殊元素记作 $0$, 以及一个 $\mathbb{N}$ 到自身的映射 $a \mapsto a^+$，称为后继映射。<br>满足如下 Peano 公理:</p>
 <ol>
 <li>$0 \notin a^+$ 对任意 $a \in \mathbb{N}$ ；</li>
@@ -45,11 +45,11 @@
 <li>$\forall (x,y) \in \mathbb{N} \times \mathbb{N}$ $x \geq y$ 和 $y \geq x$ 至少有一个成立。<br>因此上述定义，定义了一个自然数集上的良序关系。另外自然数关于这种序关系有一个广为人知的结论。</li>
 </ol>
 <h3 id="u6700_u5C0F_u5143_u6027_u8D28"><a href="#u6700_u5C0F_u5143_u6027_u8D28" class="headerlink" title="最小元性质"></a>最小元性质</h3><p>$\mathbb{N}$ 的任何非空子集 $S$ 存在最小值。即 $\exists l \in S$ 使得 $\forall s\in S, s \geq l$。<br><strong>证明</strong>：设 $M = \lbrace m in \mathbb{N} \;|\; \forall s \in S, s \geq m \rbrace$ 。则 $0 \in M$ 且若 $s_0 \in S$ 则 $s_0^+ \notin M$。因此 $M \neq \mathbb{N}$. 因此由归纳法，存在 $s \in M, s^+ \notin M$ 上述 $s$ 即为所求。</p>
-<p>按照公理化定义的自然数的性质验算其实还是很有意思的，虽然验算了也并没有什么屌用。另外知道了自然数的公理化体系也并没有什么屌用0.0 </p>
+<p>按照公理化定义的自然数的性质验算其实还是很有意思的，虽然验算了也并没有什么屌用。另外知道了自然数的公理化体系也并没有什么屌用0.0<br>另外也有人将自然数写成<br>$$ 0 \equiv \emptyset, 1 equiv \lbrace \lbrace \emptyset \rbrace \emptyset \rbrace,\cdots n^+ \equiv  \lbrace \lbrace \emptyset \rbrace \emptyset \rbrace $$</p>
 <p>以上内容来自 Nathan Jacobson 《Basic Algebra》。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>虽然我们从小学就开始学习自然数，但是自然数的真正严格1889年<a href="https://en.wikipedia.org/wiki/Giuseppe_Peano">Giuseppe Peano</a> 的工作。介绍如下:<br>]]>
+    <![CDATA[<p>虽然我们从小学就开始学习自然数，但是自然数的真正严格的定义归功于1889年<a href="https://en.wikipedia.org/wiki/Giuseppe_Peano">Giuseppe Peano</a> 的工作。介绍如下:<br>]]>
     
     </summary>
     
