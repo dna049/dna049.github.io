@@ -46,7 +46,7 @@
     <link href="http://dna049.com/2016/03/22/%E5%8D%8E%E7%BD%97%E5%BA%9A%E6%81%92%E7%AD%89%E5%BC%8F/"/>
     <id>http://dna049.com/2016/03/22/华罗庚恒等式/</id>
     <published>2016-03-22T04:06:31.000Z</published>
-    <updated>2016-03-23T14:23:10.000Z</updated>
+    <updated>2016-03-23T15:28:03.000Z</updated>
     <content type="html"><![CDATA[<p>华罗庚恒等式有两个，都看似奇怪但都有其深刻的应用(数学内部的)</p>
 <ol>
 <li>若在一个环中 $a,b,1-ab$ 都可逆，则<br>$$<br>\left( (a-b^{-1})^{-1} - a^{-1} \right)^{-1} = aba - a<br>$$</li>
@@ -79,7 +79,7 @@
     
     </summary>
     
-      <category term="代数" scheme="http://dna049.com/tags/%E4%BB%A3%E6%95%B0/"/>
+      <category term="Algebra" scheme="http://dna049.com/tags/Algebra/"/>
     
   </entry>
   
