@@ -4,7 +4,7 @@
   <subtitle><![CDATA[原谅我一生放荡不羁是傻逼]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dna049.com/"/>
-  <updated>2016-03-23T15:32:09.000Z</updated>
+  <updated>2016-03-27T00:54:40.000Z</updated>
   <id>http://dna049.com/</id>
   
   <author>
@@ -13,6 +13,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[代数知识点]]></title>
+    <link href="http://dna049.com/2016/03/27/%E4%BB%A3%E6%95%B0%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    <id>http://dna049.com/2016/03/27/代数知识点/</id>
+    <published>2016-03-27T00:54:40.000Z</published>
+    <updated>2016-03-27T00:54:40.000Z</updated>
+    <content type="html"><![CDATA[<p>最近在读 Nathan Jacobson《Basic Algebra I》，理一下知识点。长期更新<br><a id="more"></a></p>
+<h3 id="u96C6_u5408_Set"><a href="#u96C6_u5408_Set" class="headerlink" title="集合 Set"></a>集合 Set</h3><ol>
+<li>一个集合 $A$ 幂集 $\mathbb{P} A$ 为所有 $A$ 的子集构成的集合，$A$ 有限时，元素个数为 $2^|A|$ 。</li>
+<li>一个映射自然的诱导了一个等价关系（“根据值是否相同确立”）。并由此，可以将一个映射自然地写成一个满射和一个单射的复合。</li>
+<li>自然数的 Peano 公理。</li>
+</ol>
+<h3 id="u7FA4_Group"><a href="#u7FA4_Group" class="headerlink" title="群 Group"></a>群 Group</h3><ol>
+<li>Monoid 和 Group 的定义，以及对应地考虑 Monoid 和 Group 之间的同态，这是范畴（Category）的思想。另外一切数学中的子，商概念都是一致的，子概念一般是继承原运算，并保持封闭即可。商概念就是除掉子的并且能保证定义合理即可。由于在群和环中作商并不能对任意子群做，把那些可以做的叫做正规子群(normal group)</li>
+<li>群有很多等价定义。</li>
+<li>一个群不能写成两（有限）个真子群的并。</li>
+<li>Cayley 定理：任意有限群，同构于一个对称群（ $S_n$ ）的子群。</li>
+<li>任意置换可以写成不相交轮换的复合。</li>
+<li>偶置换全体构成了交错群 $A_n$ 是 $S_n$ 的 normal subgroup。</li>
+<li>陪集分解和 Lagrange 定理：子群的阶是原有限群的因子。自然推论，元素的阶是群的因子。</li>
+<li>Monoid 和 Group 的同态及其同态基本定理，这是范畴的框架。</li>
+<li>循环群，Abel 群，自由群，自由 Monoid。</li>
+<li>群在集合上的作用，轨道公式和 Burnside 引理，特别的是作用在群的陪集上会产生丰富的结论，例如关于群的中心的一些结论，包含于一个子群的最大 normal subgroup 以及使得该子群称为 normal group 的最大的子群。</li>
+<li>Sylow 定理考察的是 Lagrange 的反问题。是群在集合上的作用的完美应用。</li>
+</ol>
+<h3 id="u73AF_Ring"><a href="#u73AF_Ring" class="headerlink" title="环 Ring"></a>环 Ring</h3><ol>
+<li>环的定义，其中加法群中要求的 Abel 群可以由其他公理推出。</li>
+<li>环的分类，交换环，整环，UFP，PID，UD，除环，域等等。</li>
+<li>矩阵环，其中矩阵中的元素属于同一环即可。基本运算都有意义。若要求定义行列式，则元素所在的环需要是交换环。在此情况下，矩阵可逆当且仅当其行列式可逆。</li>
+<li>一个非交换环的例子就是四元数（Quaternion），很多时候一个环上可以定义范数，会让一些操作更加容易。</li>
+<li>理想，商环，素理想，极大理想，生成理想，左理想，右理想，环的单位构成乘法群，素环。</li>
+<li>环的同态及其同态基本定理。</li>
+<li>反同构，一个重要的例子就是矩阵的转置。</li>
+<li>交换整环的分式域，可以推广到交换环的局部化，也能推广到环的 Ore 局部化。</li>
+<li>多项式环，代数数，超越数。多项式环的余数定理，域上多项式环是PID，多项式环根的个数，有限域的乘法群是循环群。域中所有非零元之积为－1。</li>
+<li>Monoid 和 Ring 的分解，唯一分解中的因子链条件，不可约元是素元的条件，以及 gcd 存在条件。Field 是 ED 是 PID 是 UFD。$D$ 是UFD 则 $D[x]$ 也是。若 $D[x]$ 是PID,则 $D$ 是域。</li>
+<li>有限整环是除环是域。</li>
+<li>Rng 可以嵌入到 Ring 中。</li>
+</ol>
+<h3 id="u6A21_Module_over_PID"><a href="#u6A21_Module_over_PID" class="headerlink" title="模 Module over PID"></a>模 Module over PID</h3><ol>
+<li>类似于对称群 $S_n$，一个 Abel 群 M 上的自同态全体构成了一个环 End M。任何环都同构于一个 End M 的子环。</li>
+<li>一个环 $R$ 到 End M 上的环同态，定义了一个 $R$ 上的模。当然还有一种等价的模仿线性空间的定义方法。特别地，一个 Abel 群可以看做是一个 $\mathbb{Z}$模，一个环的理想可以看做该环上的模， $F$上的线性空间外加一个线性变换可以看做 $F[\lambda]$模。</li>
+<li>子模，商模，模同态及其同态基本定理。</li>
+<li>循环模，零化子，循环模的同构。 </li>
+<li>自由模，$R$ 交换时的自由模同构定理。</li>
+<li>模的直和，以及线性相关，线性无关。</li>
+<li>若 $D$ 是 PID，$D^(n)$ 是 $D$ 上秩为 $n$ 的自由模，则 $D^(n)$ 的子模都是自由模，且秩不超过 $n$.并且这个子模可以用 $D$ 上矩阵来刻画。</li>
+<li>PID 上的矩阵可以相抵等价于对角矩阵,且每一个元素都是后一项的因子。</li>
+<li>PID 上有限生成模同构于某个自由模的商模，且可以写成循环模的直和。并且上述分解长度唯一，在同构的意义下唯一。</li>
+<li>扭子模以及扭子模可以分解成一些初等循环模的直和。</li>
+<li>将上述 $PID$ 上模的结论应用于 Abel 群以及域 $F$ 上线性空间，可以得到一系列结论。</li>
+<li>每一个有限生成 Abel 群都是一个有限群和自由群的直和。每个有限 Abel 群都是一些素数幂阶循环群的直和。</li>
+<li>域上矩阵环都有有理标准型，并且在代数闭域中有 Jordan 标准型。 </li>
+</ol>
+<h3 id="To_be_Continue"><a href="#To_be_Continue" class="headerlink" title="To be Continue"></a>To be Continue</h3>]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近在读 Nathan Jacobson《Basic Algebra I》，理一下知识点。长期更新<br>]]>
+    
+    </summary>
+    
+      <category term="Algebra" scheme="http://dna049.com/tags/Algebra/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Cartan-Brauer-Hua Theorem]]></title>
@@ -651,45 +715,6 @@ A Monoid is a semi-group contain an identity element.
     <![CDATA[<p>从二次剩余问题，引入Legendre符号，由此一步步导出Guass互反律，最后延伸到Jacobi符号，整个步骤确实连贯优美，脍炙人口。<br>]]>
     
     </summary>
-    
-      <category term="数论" scheme="http://dna049.com/tags/%E6%95%B0%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[自然数方幂和公式]]></title>
-    <link href="http://dna049.com/2016/01/21/%E8%87%AA%E7%84%B6%E6%95%B0%E6%96%B9%E5%B9%82%E5%92%8C%E5%85%AC%E5%BC%8F/"/>
-    <id>http://dna049.com/2016/01/21/自然数方幂和公式/</id>
-    <published>2016-01-21T11:16:51.000Z</published>
-    <updated>2016-02-24T13:57:25.000Z</updated>
-    <content type="html"><![CDATA[<p>关于自然数方幂和公式，网上的求解版本有很多种。这里介绍一种不为人知，十分简洁明了的求解方法，该公式并非原创，但是整个证明过程和方法完全原创。它的思想来源于我高中时在一本数学竞赛书中的数列例题(书名忘了…)，正因为一本本这样的书，让我大学选择了数学系，现在依然在学习数学。<br><a id="more"></a></p>
-<h3 id="u82E5__24a_n__3D_n_28n-1_29_24__u6C42_u5176_u524D__24n_24__u9879_u548C_24S_n_24"><a href="#u82E5__24a_n__3D_n_28n-1_29_24__u6C42_u5176_u524D__24n_24__u9879_u548C_24S_n_24" class="headerlink" title="若 $a_n = n(n-1)$ 求其前 $n$ 项和$S_n$"></a>若 $a_n = n(n-1)$ 求其前 $n$ 项和$S_n$</h3><span>$$a_n = n(n-1) ＝
-\frac{(n+1)n(n-1) -n(n-1)(n-2)}{3}$$</span><!-- Has MathJax -->
-<p>所以<br><span>$$S_n =
-\frac{(n+1)n(n-1)}{3}$$</span><!-- Has MathJax --></p>
-<h3 id="u82E5_3C_21-_uFFFC2-_3E_uFF0C_u5219_u5176_u524D__24n_24__u9879_u548C_3C_21-_uFFFC3-_3E"><a href="#u82E5_3C_21-_uFFFC2-_3E_uFF0C_u5219_u5176_u524D__24n_24__u9879_u548C_3C_21-_uFFFC3-_3E" class="headerlink" title="若<span>$a_n = A_n ^p$</span><!-- Has MathJax -->，则其前 $n$ 项和<span>$S_n ＝ \frac{ A_{n+1} ^{p+1}}{p+1}$</span><!-- Has MathJax -->"></a>若<span>$a_n = A_n ^p$</span><!-- Has MathJax -->，则其前 $n$ 项和<span>$S_n ＝ \frac{ A_{n+1} ^{p+1}}{p+1}$</span><!-- Has MathJax --></h3><span>$$a_n = A_n ^p ＝
-\frac{A_{n+1} ^{p+1} -A_n ^{p+1}}{p+1}$$</span><!-- Has MathJax -->
-<p>所以<br><span>$$S_n =
-\frac{A_{n+1} ^{p+1}}{p+1}$$</span><!-- Has MathJax --></p>
-<p>由上面的结论下面我们来直对主题。</p>
-<h3 id="u6C42__241_5E2+2_5E2+__5Cdots_+_n_5E2_24"><a href="#u6C42__241_5E2+2_5E2+__5Cdots_+_n_5E2_24" class="headerlink" title="求 $1^2+2^2+ \dots + n^2$"></a>求 $1^2+2^2+ \dots + n^2$</h3><p>由<br>$$ n^2 = n(n-1) + n $$<br>知<br>$$1^2+2^2+ \dots + n^2 = \frac{(n+1)n(n-1)}{3} + \frac{(n+1)n}{2} = \frac{n(n+1)(2n+1)}{6}$$</p>
-<h3 id="u6C42_241_5Ep+2_5Ep+__5Cdots_+_n_5Ep_24"><a href="#u6C42_241_5Ep+2_5Ep+__5Cdots_+_n_5Ep_24" class="headerlink" title="求$1^p+2^p+ \dots + n^p$"></a>求$1^p+2^p+ \dots + n^p$</h3><p>设<br><span>$$n^p =
-a_p A_n ^p + a_{p-1} A_n ^{p-1} + a_{p-2} A_n ^{p-2} + \cdots + a_1 A_n ^1$$</span><!-- Has MathJax --><br>则<br><span>$$1^p+2^p+ \dots + n^p =
-\frac{a_p A_{n+1} ^{p+1}}{p+1} + \frac{a_{p-1} A_{n+1} ^{p}}{p} + \cdots + \frac{a_1 A_{n+1} ^2}{2}$$</span><!-- Has MathJax --><br>因此问题的关键就转化成如何求解数组 $a_k ,k=1,2,\cdots,p$<br>我们发现当 $n＝k$ 时成立<br><span>$$k^p =
-a_k A_k ^k + a_{k-1} A_k ^{k-1} + \cdots a_1 A_{k} ^1$$</span><!-- Has MathJax --><br>令 $b_k = k! \cdot a_k$ 则<br><span>$$k^p = 
-b_k + b_{k-1} C_k ^{k-1} + \cdots b_1 C_{k} ^1$$</span><!-- Has MathJax --><br>即<br><span>$$k^p = 
-\sum _{j=1} ^k b_j C _{k} ^j$$</span><!-- Has MathJax --><br>应用二项式反演知(可参考<a href="http://dna049.com/2016/01/21/两类反演公式及其矩阵形式/">我的博文</a>)<br><span>$$b_k = 
-\sum _{j=1} ^k (-1)^{k-j} C _{k} ^j k^p$$</span><!-- Has MathJax --><br>因此最终,我们有公式</p>
-<span>$$1^p+2^p+ \dots + n^p =
-\sum _{k=1} ^p \; (\; \sum_{j=1} ^ {k} (-1)^{k-j} C_k^j j^p \;) \; C _{n+1} ^{k+1}$$</span><!-- Has MathJax --> 
-<p>本博文完全由作者(dna0.49)原创于2016年1月21号，转载或引用请注明<a href="http://dna049.com">http://dna049.com</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>关于自然数方幂和公式，网上的求解版本有很多种。这里介绍一种不为人知，十分简洁明了的求解方法，该公式并非原创，但是整个证明过程和方法完全原创。它的思想来源于我高中时在一本数学竞赛书中的数列例题(书名忘了…)，正因为一本本这样的书，让我大学选择了数学系，现在依然在学习数学。<br>]]>
-    
-    </summary>
-    
-      <category term="初等数学" scheme="http://dna049.com/tags/%E5%88%9D%E7%AD%89%E6%95%B0%E5%AD%A6/"/>
     
       <category term="数论" scheme="http://dna049.com/tags/%E6%95%B0%E8%AE%BA/"/>
     
