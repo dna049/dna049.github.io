@@ -4,7 +4,7 @@
   <subtitle><![CDATA[原谅我一生放荡不羁是傻逼]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dna049.com/"/>
-  <updated>2016-03-27T01:01:29.000Z</updated>
+  <updated>2016-03-27T03:01:27.000Z</updated>
   <id>http://dna049.com/</id>
   
   <author>
@@ -18,8 +18,8 @@
     <title><![CDATA[代数知识点]]></title>
     <link href="http://dna049.com/2016/03/27/%E4%BB%A3%E6%95%B0%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     <id>http://dna049.com/2016/03/27/代数知识点/</id>
-    <published>2016-03-27T01:01:29.000Z</published>
-    <updated>2016-03-27T01:01:29.000Z</updated>
+    <published>2016-03-27T03:01:27.000Z</published>
+    <updated>2016-03-27T03:01:27.000Z</updated>
     <content type="html"><![CDATA[<p>最近在读 Nathan Jacobson《Basic Algebra I》，理一下知识点。长期更新<br><a id="more"></a></p>
 <h3 id="u96C6_u5408_Set"><a href="#u96C6_u5408_Set" class="headerlink" title="集合 Set"></a>集合 Set</h3><ol>
 <li>一个集合 $A$ 的幂集 $\mathbb{P}(A)$ 为所有 $A$ 的子集构成的集合，$A$ 有限时，元素个数为 $2^{|A|}$ 。</li>
@@ -41,7 +41,7 @@
 </ol>
 <h3 id="u73AF_Ring"><a href="#u73AF_Ring" class="headerlink" title="环 Ring"></a>环 Ring</h3><ol>
 <li>环的定义，其中加法群中要求的 Abel 群可以由其他公理推出。</li>
-<li>环的分类，交换环，整环，UFP，PID，UD，除环，域等等。</li>
+<li>环的分类，局部环，交换环，整环，UFP，PID，UD，除环，域等等。</li>
 <li>矩阵环，其中矩阵中的元素属于同一环即可。基本运算都有意义。若要求定义行列式，则元素所在的环需要是交换环。在此情况下，矩阵可逆当且仅当其行列式可逆。</li>
 <li>一个非交换环的例子就是四元数（Quaternion），很多时候一个环上可以定义范数，会让一些操作更加容易。</li>
 <li>理想，商环，素理想，极大理想，生成理想，左理想，右理想，环的单位构成乘法群，素环。</li>
@@ -49,7 +49,7 @@
 <li>反同构，一个重要的例子就是矩阵的转置。</li>
 <li>交换整环的分式域，可以推广到交换环的局部化，也能推广到环的 Ore 局部化。</li>
 <li>多项式环，代数数，超越数。多项式环的余数定理，域上多项式环是PID，多项式环根的个数，有限域的乘法群是循环群。域中所有非零元之积为－1。</li>
-<li>Monoid 和 Ring 的分解，唯一分解中的因子链条件，不可约元是素元的条件，以及 gcd 存在条件。Field 是 ED 是 PID 是 UFD。$D$ 是UFD 则 $D[x]$ 也是。若 $D[x]$ 是PID,则 $D$ 是域。</li>
+<li>Monoid 和 Ring 的分解，唯一分解中的因子链条件，不可约元是素元的条件，以及 gcd 存在条件。Field 是 ED 是 PID 是 UFD。$D$ 是UFD 则 $D[x]$ 也是。$F[x]$ 是 ED。若 $D[x]$ 是 PID,则 $D$ 是域。</li>
 <li>有限整环是除环是域。</li>
 <li>Rng 可以嵌入到 Ring 中。</li>
 </ol>
@@ -67,6 +67,9 @@
 <li>将上述 $PID$ 上模的结论应用于 Abel 群以及域 $F$ 上线性空间，可以得到一系列结论。</li>
 <li>每一个有限生成 Abel 群都是一个有限群和自由群的直和。每个有限 Abel 群都是一些素数幂阶循环群的直和。</li>
 <li>域上矩阵环都有有理标准型，并且在代数闭域中有 Jordan 标准型。 </li>
+<li>对于 PID 上有限生成模 $M$ 的自同态全体 End $M$ 反同构于一个两个 PID 上矩阵子环的的商。</li>
+<li>应用到域上的线性空间可以得到与一个矩阵交换的矩阵全体的维数定理，自然推论是如果一个线性变换是循环的，那么与之交换的变换是它的多项式。</li>
+<li>对于 PID 上有限生成模 $M$ 的自同态全体 End $M$，它的中心<br>是 scale transformation。</li>
 </ol>
 <h3 id="To_be_Continue"><a href="#To_be_Continue" class="headerlink" title="To be Continue"></a>To be Continue</h3>]]></content>
     <summary type="html">
