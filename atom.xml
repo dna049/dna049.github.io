@@ -4,7 +4,7 @@
   <subtitle><![CDATA[原谅我一生放荡不羁是傻逼]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dna049.com/"/>
-  <updated>2016-03-27T16:04:02.000Z</updated>
+  <updated>2016-03-28T09:23:17.000Z</updated>
   <id>http://dna049.com/</id>
   
   <author>
@@ -19,17 +19,22 @@
     <link href="http://dna049.com/2016/03/27/%E6%9C%89%E9%99%90%E6%95%B4%E7%8E%AF%E6%98%AF%E5%9F%9F/"/>
     <id>http://dna049.com/2016/03/27/有限整环是域/</id>
     <published>2016-03-27T14:45:40.000Z</published>
-    <updated>2016-03-27T16:04:02.000Z</updated>
-    <content type="html"><![CDATA[<p>有限整环是域，这是一个相当深刻的结论，该定理这叫 Wedderburn’s little theorem。介绍如下。</p>
+    <updated>2016-03-28T09:23:17.000Z</updated>
+    <content type="html"><![CDATA[<p>有限整环是域，这是一个相当深刻的结论，该定理这叫 Wedderburn’s little theorem。介绍如下。<br><a id="more"></a></p>
 <h3 id="u6709_u9650_u6574_u73AF_u662F_u4F53"><a href="#u6709_u9650_u6574_u73AF_u662F_u4F53" class="headerlink" title="有限整环是体"></a>有限整环是体</h3><p>设 $D$ 是有限整环（不要求交换），下证 $D$ 是体。<br>证明：对任意 $0 \neq a \in D$，考虑 $a,a^2,a^3,..,a^n,…$ 由于 $D$ 是有限环，因此存在 $n,r &gt; 0$ 使得 $a^{n+r} = a^n$ 即 $a^n(a^r-1)=0$ 由于 $D$ 是整环，$a \neq 0$，因此 $a^r =1$ 因此 $a$ 可逆，证毕。</p>
-<h3 id="u6709_u9650_u4F53_u662F_u57DF"><a href="#u6709_u9650_u4F53_u662F_u57DF" class="headerlink" title="有限体是域"></a>有限体是域</h3><p>设 $K$ 是有限体。$Z$ 是它的中心，即<br>$$ Z = \lbrace z \in K \;|\; \forall x \in K, xz = zx \rbrace $$<br>则，$Z$ 是域。令 $|Z|=q$，则 $K$ 是 $q$ 元域上的有限维向量空间，设维数为 $n$，则 $|K|=q^n$。我们需要证明 $K=Z$, 即证明 $n=1$。<br>对任意 $a \in K$，令 $N(a) = \lbrace x \in K \;|\; ax = xa \rbrace$ ，这显然是 $K$ 的一个子体。并且包含 $Z$。因此 $N(a)$ 也是 $Z$ 上的有限维向量空间。从而 $N(a)=q^{n(a)},n(a) \geq 1$。由于 $K^ <em>$ 为 $q^n-1$ 阶乘法群，$N(a)^ </em>$ 为 $K^ <em>$ 的 $q^{n(a)}-1$ 阶子群，因此 $q^{n(a)}-1 \;|\; q^n-1$，因此 $n(a)|n$。<br>将乘法群 $K^ </em>$ 中的元素分成共轭类，从群论的角度，与 $a \in K^ <em>$ 共轭的元素有 $[K^ </em> :N(a)^ *] = \frac{q^n-1}{q^{n(a)}-1}$，从而每个共轭类取一次，我们有<br>$$ q^n - 1 = q-1 + \sum_{n(a)|n ,n(a)\neq n} \frac{q^n-1}{q^{n(a)}-1} $$<br>我们需要证明的是当 $n&gt;1$ 时上式不成立。为此我们先介绍分圆多项式的知识。<br>$$ P_n(x) = \prod_{1 \leq r \leq n,(r,n)=1} (x-e^{\frac{2 \pi i r}{n}}) $$<br>即 $P<em>n(x)$ 是以全部 $n$ 次本原单位复根（共 $\phi(n)$ 个）为根的首一多项式。易知<br>$$ x^n -1 = \prod\</em>{d|n} P_d(n) $$<br>取 ln 再由数论函数的<a href="http://dna049.com/2016/01/20/数论函数的Dirichlet积/">Mobius 变换</a>，再取指数即可知道<br>$$ P_n(x) = \prod_{d|n} (x^d-1)^{\mu(n/d)} $$ 于是 $P_n(x)=f(x)/g(x)$ 其中 $f(x),g(x)$ 都为 $\mathbb{Z}[x]$ 中的首一多项式。另一方面，按照定义，$P_n(x) \in \mathbb{C}[x]$ ，从而在 $\mathbb{C}[x]$ 中 $g(x) \;|\; f(x)$。因此在 $\mathbb{C}[x][x]$ 中 $g(x) \;|\; f(x)$, 而且 $P_n(x)$ 为 $\mathbb{Z}[x]$ 中首一多项式。<br>因为对任意 $d \;|\; n,0 &lt; d <n$, $p_n(x)$="" 的每个根都是="" $x^n-1$="" 的根，但不是="" $x^d-1$="" 的根，从而="" $$="" p_n(x)|\frac{x^n-1}{x^d-1}="" 因此="" $p_n(q)\;|\;q-1$,="" 但当$n="">1$时，$|P_n(q))| &gt; (q-1)^{\phi(n)}$ 矛盾。证毕。</n$,></p>
+<h3 id="u6709_u9650_u4F53_u662F_u57DF"><a href="#u6709_u9650_u4F53_u662F_u57DF" class="headerlink" title="有限体是域"></a>有限体是域</h3><p>设 $K$ 是有限体。$Z$ 是它的中心，即<br>$$ Z = \lbrace z \in K \;|\; \forall x \in K, xz = zx \rbrace $$<br>则，$Z$ 是域。令 $|Z|=q$，则 $K$ 是 $q$ 元域上的有限维向量空间，设维数为 $n$，则 $|K|=q^n$。我们需要证明 $K=Z$, 即证明 $n=1$。<br>对任意 $a \in K$，令 $N(a) = \lbrace x \in K \;|\; ax = xa \rbrace$ ，这显然是 $K$ 的一个子体。并且包含 $Z$。因此 $N(a)$ 也是 $Z$ 上的有限维向量空间。从而 $N(a)=q^{n(a)},n(a) \geq 1$。由于 $K^{*}$ 为 $q^n-1$ 阶乘法群，$N(a)^{*}$ 为 $K^{*}$ 的 $q^{n(a)}-1$ 阶子群，因此 $q^{n(a)}-1 \;|\; q^n-1$，因此 $n(a)|n$。<br>将乘法群 $K^{*}$ 中的元素分成共轭类，从群论的角度，与 $a \in K^{*}$ 共轭的元素有 $[K^{*} :N(a)^{*}] = \frac{q^n-1}{q^{n(a)}-1}$，从而每个共轭类取一次，我们有</p>
+<p>$$ q^n - 1 = q-1 + \sum_{n(a)|n ,n(a)\neq n} \frac{q^n-1}{q^{n(a)}-1} $$</p>
+<p>我们需要证明的是当 $n&gt;1$ 时上式不成立。为此我们先介绍分圆多项式的知识。<br>$$ P_n(x) = \prod_{1 \leq r \leq n,(r,n)=1} (x-e^{\frac{2 \pi i r}{n}}) $$<br>即 $P_n(x)$ 是以全部 $n$ 次本原单位复根（共 $\phi(n)$ 个）为根的首一多项式。易知<br>$$ x^n -1 = \prod_{d|n} P_d(n) $$<br>由数论函数的<a href="http://dna049.com/2016/01/20/数论函数的Dirichlet积/">Mobius 变换</a>，再取指数即可知<br>$$ P_n(x) = \prod_{d|n} (x^d-1)^{\mu(n/d)} $$ 于是 $P_n(x)=f(x)/g(x)$ 其中 $f(x),g(x)$ 都为 $\mathbb{Z}[x]$ 中的首一多项式。另一方面，按照定义，$P_n(x) \in \mathbb{C}[x]$ ，从而在 $\mathbb{C}[x]$ 中 $g(x) \;|\; f(x)$。比较系数易知，$P_n(x)$ 为 $\mathbb{Z}[x]$ 中首一多项式。</p>
+<p>因为对任意 $d\;|\;n,0&lt;d&lt;n,P_n(x)$ 的每个根都是 $x^n-1$ 的根，但不是 $x^d-1$ 的根，从而 </p>
+<p>$$ P_n(x)|\frac{x^n-1}{x^d-1} $$</p>
+<p>因此 $P_n(q)\;|\;q-1$, 但当 $n&gt;1$ 时，<br>$$|P_n(q))| &gt; (q-1)^{\phi(n)} \geq q-1 $$<br>矛盾，证毕。</p>
 <blockquote>
 <p>上面定理是极其深刻的，这个定理也可以这么表达，一个有限环，如果它不是域，那么它必然存在零因子。</p>
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>有限整环是域，这是一个相当深刻的结论，该定理这叫 Wedderburn’s little theorem。介绍如下。</p>
-<h3 id="u6709_u9650_u6574_u73AF_u662F_u4F53"><a href="#u6709_u9650_u6574_u]]>
+    <![CDATA[<p>有限整环是域，这是一个相当深刻的结论，该定理这叫 Wedderburn’s little theorem。介绍如下。<br>]]>
+    
     </summary>
     
       <category term="Algebra" scheme="http://dna049.com/tags/Algebra/"/>
