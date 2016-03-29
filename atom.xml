@@ -4,7 +4,7 @@
   <subtitle><![CDATA[原谅我一生放荡不羁是傻逼]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dna049.com/"/>
-  <updated>2016-03-28T09:55:05.000Z</updated>
+  <updated>2016-03-29T13:41:24.000Z</updated>
   <id>http://dna049.com/</id>
   
   <author>
@@ -15,38 +15,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[有限整环是域]]></title>
-    <link href="http://dna049.com/2016/03/27/%E6%9C%89%E9%99%90%E6%95%B4%E7%8E%AF%E6%98%AF%E5%9F%9F/"/>
-    <id>http://dna049.com/2016/03/27/有限整环是域/</id>
-    <published>2016-03-27T14:45:40.000Z</published>
-    <updated>2016-03-28T09:55:05.000Z</updated>
-    <content type="html"><![CDATA[<p>有限整环是域，这是一个相当深刻的结论，该定理这叫 Wedderburn’s little theorem。介绍如下。<br><a id="more"></a></p>
-<h3 id="u6709_u9650_u6574_u73AF_u662F_u4F53"><a href="#u6709_u9650_u6574_u73AF_u662F_u4F53" class="headerlink" title="有限整环是体"></a>有限整环是体</h3><p>设 $D$ 是有限整环（不要求交换），下证 $D$ 是体。<br>证明：对任意 $0 \neq a \in D$，考虑 $a,a^2,a^3,..,a^n,…$ 由于 $D$ 是有限环，因此存在 $n,r &gt; 0$ 使得 $a^{n+r} = a^n$ 即 $a^n(a^r-1)=0$ 由于 $D$ 是整环，$a \neq 0$，因此 $a^r =1$ ，所以 $a$ 可逆，证毕。</p>
-<h3 id="u6709_u9650_u4F53_u662F_u57DF"><a href="#u6709_u9650_u4F53_u662F_u57DF" class="headerlink" title="有限体是域"></a>有限体是域</h3><p>设 $K$ 是有限体。$Z$ 是它的中心，即<br>$$ Z = \lbrace z \in K \;|\; \forall x \in K, xz = zx \rbrace $$<br>则，$Z$ 是域。令 $|Z|=q$，则 $K$ 是 $q$ 元域上的有限维向量空间，设维数为 $n$，则 $|K|=q^n$。我们需要证明 $K=Z$, 即证明 $n=1$。<br>对任意 $a \in K$，令 $N(a) = \lbrace x \in K \;|\; ax = xa \rbrace$ ，这显然是 $K$ 的一个子体。并且包含 $Z$。因此 $N(a)$ 也是 $Z$ 上的有限维向量空间。从而 $N(a)=q^{n(a)},n(a) \geq 1$。由于 $K^{*}$ 为 $q^n-1$ 阶乘法群，$N(a)^{*}$ 为 $K^{*}$ 的 $q^{n(a)}-1$ 阶子群，因此 $q^{n(a)}-1 \;|\; q^n-1$，因此 $n(a)|n$。<br>将乘法群 $K^{*}$ 中的元素分成共轭类，从群论的角度，与 $a \in K^{*}$ 共轭的元素有 $[K^{*} :N(a)^{*}] = \frac{q^n-1}{q^{n(a)}-1}$，从而每个共轭类取一次，我们有</p>
-<p>$$ q^n - 1 = q-1 + \sum_{n(a)|n ,n(a)\neq n} \frac{q^n-1}{q^{n(a)}-1} $$</p>
-<p>我们需要证明的是当 $n&gt;1$ 时上式不成立。为此我们先介绍分圆多项式的知识。<br>$$ P_n(x) = \prod_{1 \leq r \leq n,(r,n)=1} (x-e^{\frac{2 \pi i r}{n}}) $$<br>即 $P_n(x)$ 是以全部 $n$ 次本原单位复根（共 $\phi(n)$ 个）为根的首一多项式。易知<br>$$ x^n -1 = \prod_{d|n} P_d(n) $$<br>由数论函数的<a href="http://dna049.com/2016/01/20/数论函数的Dirichlet积/">Mobius 变换</a>，再取指数即可知<br>$$ P_n(x) = \prod_{d|n} (x^d-1)^{\mu(n/d)} $$ 于是 $P_n(x)=f(x)/g(x)$ 其中 $f(x),g(x)$ 都为 $\mathbb{Z}[x]$ 中的首一多项式。另一方面，按照定义，$P_n(x) \in \mathbb{C}[x]$ ，从而在 $\mathbb{C}[x]$ 中 $g(x) \;|\; f(x)$。比较系数易知，$P_n(x)$ 为 $\mathbb{Z}[x]$ 中首一多项式。</p>
-<p>因为对任意 $d\;|\;n,0&lt;d&lt;n,P_n(x)$ 的每个根都是 $x^n-1$ 的根，但不是 $x^d-1$ 的根，从而 </p>
-<p>$$ P_n(x)|\frac{x^n-1}{x^d-1} $$</p>
-<p>因此 $P_n(q)\;|\;q-1$, 但当 $n&gt;1$ 时，<br>$$|P_n(q))| &gt; (q-1)^{\phi(n)} \geq q-1 $$<br>矛盾，证毕。</p>
-<blockquote>
-<p>上面定理是极其深刻的，这个定理也可以这么表达，一个有限环，如果它不是域，那么它必然存在零因子。</p>
-</blockquote>
-]]></content>
+    <title><![CDATA[格点多边形面积公式 Pick's Theorem]]></title>
+    <link href="http://dna049.com/2016/03/29/%E6%A0%BC%E7%82%B9%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF%E5%85%AC%E5%BC%8F-Pick-s-Theorem/"/>
+    <id>http://dna049.com/2016/03/29/格点多边形面积公式-Pick-s-Theorem/</id>
+    <published>2016-03-29T13:00:30.000Z</published>
+    <updated>2016-03-29T13:41:24.000Z</updated>
+    <content type="html"><![CDATA[<p>Pick 定理是说：顶点在格点上的简单多边形面积公式：<br>$$ S=i+\frac{j}{2}-1 $$<br>其中 $i$ 表示多边形内部的点数，$j$ 表示多边形边界上的点数，$S$ 表示多边形的面积。下面给出清晰明了的证明方法。<br><a id="more"></a></p>
+<h3 id="u4E0E_u5750_u6807_u8F74_u5E73_u884C_u7684_u77E9_u5F62_uFF08_u957F_u65B9_u5F62_uFF09"><a href="#u4E0E_u5750_u6807_u8F74_u5E73_u884C_u7684_u77E9_u5F62_uFF08_u957F_u65B9_u5F62_uFF09" class="headerlink" title="与坐标轴平行的矩形（长方形）"></a>与坐标轴平行的矩形（长方形）</h3><p>不妨设矩形边长为 $a,b$。因此面积 $S = ab$。内部格点个数 $i=(a-1)(b-1)$。边界格点个数为 $j=2(a+b)$，因此显然结论成立。</p>
+<h3 id="u76F4_u89D2_u8FB9_u4E0E_u5750_u6807_u8F74_u5E73_u884C_u7684_u76F4_u89D2_u4E09_u89D2_u5F62"><a href="#u76F4_u89D2_u8FB9_u4E0E_u5750_u6807_u8F74_u5E73_u884C_u7684_u76F4_u89D2_u4E09_u89D2_u5F62" class="headerlink" title="直角边与坐标轴平行的直角三角形"></a>直角边与坐标轴平行的直角三角形</h3><p>不妨设直角三角形的直角边分别为 $a,b$，面积 $S=\frac{ab}{2}$。将其补成一个矩形，则两个直角三角形全等，设公共边的格点个数为 $e$,内部格点数 $ i=\frac{(a-1)(b-1)-(e-2)}$, 边界总格点数为 $j =e+a-1+b-1$,因此<br>$$ i+ \frac{j}{2} - 1 = (a-1)(b-1)/2 - (e-2) + \frac{e+a-1+b-1}{2} -1 =  \frac{ab}{2}$$</p>
+<h3 id="u4E00_u4E2A_u7B80_u5355_u591A_u8FB9_u5F62_u62C6_u9664_u4E24_u4E2A_u7B80_u5355_u591A_u8FB9_u5F62"><a href="#u4E00_u4E2A_u7B80_u5355_u591A_u8FB9_u5F62_u62C6_u9664_u4E24_u4E2A_u7B80_u5355_u591A_u8FB9_u5F62" class="headerlink" title="一个简单多边形拆除两个简单多边形"></a>一个简单多边形拆除两个简单多边形</h3><p>若这两个简单多边形公共边上有 $c$ 个顶点,分别满足 Pick 定理。<br>设 $P$ 的面积为 $P_i + \frac{P_j}{2} - 1$<br>设 $T$ 的面积为 $T_i + \frac{T_j}{2} - 1$<br>则 $PT$ 的面积为:<br>$$ (T_i+P_i+c-2) + \frac{P_j-c+bp-c+2}{2} - 1$$<br>也满足 Pick 定理。<br>类似地，若 $P,PT$ 满足 Pick 定理，$T$ 也满足。</p>
+<h3 id="u4E09_u89D2_u5F62"><a href="#u4E09_u89D2_u5F62" class="headerlink" title="三角形"></a>三角形</h3><p>对于一般三角形ABC，我们可以将其补在一个与坐标轴平行的矩阵(边长设为 $a,b$)中（如下图）<br><img src="pick.png" alt="pick&#39;s Theorem"><br>根据上面的结论，容易知道对于一般三角形，结论也成立。</p>
+<h3 id="u7B80_u5355_u591A_u8FB9_u5F62"><a href="#u7B80_u5355_u591A_u8FB9_u5F62" class="headerlink" title="简单多边形"></a>简单多边形</h3><p>需要说明的简单多边形是指，平面上边不相交的多边形。由于每个 $n$ 边形，都可以拆成一个 $n-1$ 边形和一个三角形，因此易用数学归纳法证明结论对简单多边形成立。</p>
+<pre><code>传说中这个定理和有关Farey序列。
+</code></pre>]]></content>
     <summary type="html">
-    <![CDATA[<p>有限整环是域，这是一个相当深刻的结论，该定理这叫 Wedderburn’s little theorem。介绍如下。<br>]]>
+    <![CDATA[<p>Pick 定理是说：顶点在格点上的简单多边形面积公式：<br>$$ S=i+\frac{j}{2}-1 $$<br>其中 $i$ 表示多边形内部的点数，$j$ 表示多边形边界上的点数，$S$ 表示多边形的面积。下面给出清晰明了的证明方法。<br>]]>
     
     </summary>
     
-      <category term="Algebra" scheme="http://dna049.com/tags/Algebra/"/>
+      <category term="初等数学" scheme="http://dna049.com/tags/%E5%88%9D%E7%AD%89%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[代数知识点]]></title>
-    <link href="http://dna049.com/2016/03/27/%E4%BB%A3%E6%95%B0%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
-    <id>http://dna049.com/2016/03/27/代数知识点/</id>
-    <published>2016-03-27T03:01:27.000Z</published>
-    <updated>2016-03-27T03:01:27.000Z</updated>
+    <link href="http://dna049.com/2016/03/29/%E4%BB%A3%E6%95%B0%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    <id>http://dna049.com/2016/03/29/代数知识点/</id>
+    <published>2016-03-29T10:34:43.000Z</published>
+    <updated>2016-03-29T10:34:43.000Z</updated>
     <content type="html"><![CDATA[<p>最近在读 Nathan Jacobson《Basic Algebra I》，理一下知识点。长期更新<br><a id="more"></a></p>
 <h3 id="u96C6_u5408_Set"><a href="#u96C6_u5408_Set" class="headerlink" title="集合 Set"></a>集合 Set</h3><ol>
 <li>一个集合 $A$ 的幂集 $\mathbb{P}(A)$ 为所有 $A$ 的子集构成的集合，$A$ 有限时，元素个数为 $2^{|A|}$ 。</li>
@@ -91,16 +87,44 @@
 <li>PID 上的矩阵可以相抵等价于对角矩阵,且每一个元素都是后一项的因子。</li>
 <li>PID 上有限生成模同构于某个自由模的商模，且可以写成循环模的直和。并且上述分解长度唯一，在同构的意义下唯一。</li>
 <li>扭子模以及扭子模可以分解成一些初等循环模的直和。</li>
-<li>将上述 $PID$ 上模的结论应用于 Abel 群以及域 $F$ 上线性空间，可以得到一系列结论。</li>
+<li>将上述 PID 上模的结论应用于 Abel 群以及域 $F$ 上线性空间，可以得到一系列结论。</li>
 <li>每一个有限生成 Abel 群都是一个有限群和自由群的直和。每个有限 Abel 群都是一些素数幂阶循环群的直和。</li>
 <li>域上矩阵环都有有理标准型，并且在代数闭域中有 Jordan 标准型。 </li>
 <li>对于 PID 上有限生成模 $M$ 的自同态全体 End $M$ 反同构于一个两个 PID 上矩阵子环的的商。</li>
 <li>应用到域上的线性空间可以得到与一个矩阵交换的矩阵全体的维数定理，自然推论是如果一个线性变换是循环的，那么与之交换的变换是它的多项式。</li>
-<li>对于 PID 上有限生成模 $M$ 的自同态全体 End $M$，它的中心<br>是 scale transformation。</li>
+<li>对于 PID 上有限生成模 $M$ 的自同态全体 End $M$，它的中心是 scale transformation。</li>
+<li>一个域上的向量空间加上一个线性变换可以看做是 $F[\lambda]$ 模。</li>
 </ol>
 <h3 id="To_be_Continue"><a href="#To_be_Continue" class="headerlink" title="To be Continue"></a>To be Continue</h3>]]></content>
     <summary type="html">
     <![CDATA[<p>最近在读 Nathan Jacobson《Basic Algebra I》，理一下知识点。长期更新<br>]]>
+    
+    </summary>
+    
+      <category term="Algebra" scheme="http://dna049.com/tags/Algebra/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[有限整环是域]]></title>
+    <link href="http://dna049.com/2016/03/27/%E6%9C%89%E9%99%90%E6%95%B4%E7%8E%AF%E6%98%AF%E5%9F%9F/"/>
+    <id>http://dna049.com/2016/03/27/有限整环是域/</id>
+    <published>2016-03-27T14:45:40.000Z</published>
+    <updated>2016-03-28T09:55:05.000Z</updated>
+    <content type="html"><![CDATA[<p>有限整环是域，这是一个相当深刻的结论，该定理这叫 Wedderburn’s little theorem。介绍如下。<br><a id="more"></a></p>
+<h3 id="u6709_u9650_u6574_u73AF_u662F_u4F53"><a href="#u6709_u9650_u6574_u73AF_u662F_u4F53" class="headerlink" title="有限整环是体"></a>有限整环是体</h3><p>设 $D$ 是有限整环（不要求交换），下证 $D$ 是体。<br>证明：对任意 $0 \neq a \in D$，考虑 $a,a^2,a^3,..,a^n,…$ 由于 $D$ 是有限环，因此存在 $n,r &gt; 0$ 使得 $a^{n+r} = a^n$ 即 $a^n(a^r-1)=0$ 由于 $D$ 是整环，$a \neq 0$，因此 $a^r =1$ ，所以 $a$ 可逆，证毕。</p>
+<h3 id="u6709_u9650_u4F53_u662F_u57DF"><a href="#u6709_u9650_u4F53_u662F_u57DF" class="headerlink" title="有限体是域"></a>有限体是域</h3><p>设 $K$ 是有限体。$Z$ 是它的中心，即<br>$$ Z = \lbrace z \in K \;|\; \forall x \in K, xz = zx \rbrace $$<br>则，$Z$ 是域。令 $|Z|=q$，则 $K$ 是 $q$ 元域上的有限维向量空间，设维数为 $n$，则 $|K|=q^n$。我们需要证明 $K=Z$, 即证明 $n=1$。<br>对任意 $a \in K$，令 $N(a) = \lbrace x \in K \;|\; ax = xa \rbrace$ ，这显然是 $K$ 的一个子体。并且包含 $Z$。因此 $N(a)$ 也是 $Z$ 上的有限维向量空间。从而 $N(a)=q^{n(a)},n(a) \geq 1$。由于 $K^{*}$ 为 $q^n-1$ 阶乘法群，$N(a)^{*}$ 为 $K^{*}$ 的 $q^{n(a)}-1$ 阶子群，因此 $q^{n(a)}-1 \;|\; q^n-1$，因此 $n(a)|n$。<br>将乘法群 $K^{*}$ 中的元素分成共轭类，从群论的角度，与 $a \in K^{*}$ 共轭的元素有 $[K^{*} :N(a)^{*}] = \frac{q^n-1}{q^{n(a)}-1}$，从而每个共轭类取一次，我们有</p>
+<p>$$ q^n - 1 = q-1 + \sum_{n(a)|n ,n(a)\neq n} \frac{q^n-1}{q^{n(a)}-1} $$</p>
+<p>我们需要证明的是当 $n&gt;1$ 时上式不成立。为此我们先介绍分圆多项式的知识。<br>$$ P_n(x) = \prod_{1 \leq r \leq n,(r,n)=1} (x-e^{\frac{2 \pi i r}{n}}) $$<br>即 $P_n(x)$ 是以全部 $n$ 次本原单位复根（共 $\phi(n)$ 个）为根的首一多项式。易知<br>$$ x^n -1 = \prod_{d|n} P_d(n) $$<br>由数论函数的<a href="http://dna049.com/2016/01/20/数论函数的Dirichlet积/">Mobius 变换</a>，再取指数即可知<br>$$ P_n(x) = \prod_{d|n} (x^d-1)^{\mu(n/d)} $$ 于是 $P_n(x)=f(x)/g(x)$ 其中 $f(x),g(x)$ 都为 $\mathbb{Z}[x]$ 中的首一多项式。另一方面，按照定义，$P_n(x) \in \mathbb{C}[x]$ ，从而在 $\mathbb{C}[x]$ 中 $g(x) \;|\; f(x)$。比较系数易知，$P_n(x)$ 为 $\mathbb{Z}[x]$ 中首一多项式。</p>
+<p>因为对任意 $d\;|\;n,0&lt;d&lt;n,P_n(x)$ 的每个根都是 $x^n-1$ 的根，但不是 $x^d-1$ 的根，从而 </p>
+<p>$$ P_n(x)|\frac{x^n-1}{x^d-1} $$</p>
+<p>因此 $P_n(q)\;|\;q-1$, 但当 $n&gt;1$ 时，<br>$$|P_n(q))| &gt; (q-1)^{\phi(n)} \geq q-1 $$<br>矛盾，证毕。</p>
+<blockquote>
+<p>上面定理是极其深刻的，这个定理也可以这么表达，一个有限环，如果它不是域，那么它必然存在零因子。</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>有限整环是域，这是一个相当深刻的结论，该定理这叫 Wedderburn’s little theorem。介绍如下。<br>]]>
     
     </summary>
     
@@ -693,25 +717,6 @@ A Monoid is a semi-group contain an identity element.
     </summary>
     
       <category term="运筹学" scheme="http://dna049.com/tags/%E8%BF%90%E7%AD%B9%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[hdu 5628 (Dirichlet积与快速幂的应用)]]></title>
-    <link href="http://dna049.com/2016/02/16/hdu-5628-Dirichlet%E7%A7%AF%E4%B8%8E%E5%BF%AB%E9%80%9F%E5%B9%82%E7%9A%84%E5%BA%94%E7%94%A8/"/>
-    <id>http://dna049.com/2016/02/16/hdu-5628-Dirichlet积与快速幂的应用/</id>
-    <published>2016-02-16T15:56:10.000Z</published>
-    <updated>2016-03-06T02:37:56.000Z</updated>
-    <content type="html"><![CDATA[<p>突然有点想打一场BestCoder，然后就看了看BC发现有道应用Dirichlet积的题。于是就去试了试。当然老套路还是很好过的，后来我想写的优美一点写成类的形式，不过一直出现Crash，于是跟周学长讨论了一下，外加一点看书，终于也是搞定了，就此存一下模版吧 0.0<br><a id="more"></a></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//#pragma comment(linker,"/STACK:10240000,10240000")</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bitset&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; PII;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;LL,LL&gt; PLL;</span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> clr(a,b) memset(a,b,sizeof(a))</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> MP make_pair</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> PB push_back</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> lrt rt&lt;&lt;<span class="number">1</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> rrt rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> lson l,m,lrt</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> rson m+<span class="number">1</span>,r,rrt</span></span><br><span class="line"><span class="comment">/*------------------------- template ------------------------------*/</span></span><br><span class="line"><span class="keyword">class</span> NumFun&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keyword">int</span> M = <span class="number">1000000007</span>;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">int</span> *a;</span><br><span class="line">    NumFun(<span class="keyword">int</span> _n = <span class="number">0</span>)&#123;</span><br><span class="line">        n = _n;</span><br><span class="line">        a = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    NumFun(<span class="keyword">const</span> NumFun &amp;A)&#123;</span><br><span class="line">        n = A.n;</span><br><span class="line">        a = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">            a[i]=A.a[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    NumFun &amp;<span class="keyword">operator</span>=(<span class="keyword">const</span> NumFun &amp;A)&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">this</span> != &amp;A) &#123;</span><br><span class="line">            <span class="keyword">delete</span> [] a;</span><br><span class="line">            n = A.n;</span><br><span class="line">            a = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">                a[i]=A.a[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ~NumFun()&#123;</span><br><span class="line">        <span class="keyword">delete</span> [] a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> d=<span class="number">0</span>)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">            a[i]=d;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">set</span><span class="params">(<span class="keyword">int</span> *p)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">            a[i]=p[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    NumFun <span class="keyword">operator</span>*(<span class="keyword">const</span> NumFun &amp;A)<span class="keyword">const</span>&#123;</span><br><span class="line">        <span class="function">NumFun <span class="title">R</span><span class="params">(n)</span></span>;</span><br><span class="line">        R.init(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;i*j&lt;=n;++j)&#123;</span><br><span class="line">                R.a[i*j] = (R.a[i*j] + LL(a[i])*A.a[j])%M;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> R;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;++i)&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d "</span>,a[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,a[n]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function">NumFun <span class="title">pow</span><span class="params">(NumFun A,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="function">NumFun <span class="title">R</span><span class="params">(A.n)</span></span>;</span><br><span class="line">    R.init();</span><br><span class="line">    R.a[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(k)&#123;</span><br><span class="line">        <span class="keyword">if</span>(k&amp;<span class="number">1</span>) R=R*A;</span><br><span class="line">        k&gt;&gt;=<span class="number">1</span>;  A=A*A;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> R;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100005</span>;</span><br><span class="line"><span class="keyword">int</span> a[N];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="comment">//    freopen("/Users/c10110057/Desktop/AC/in","r",stdin);</span></span><br><span class="line"><span class="comment">//    freopen("/Users/c10110057/Desktop/AC/out","w",stdout);</span></span><br><span class="line">    <span class="keyword">int</span> T,n,k;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">    <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;k);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>,a+i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function">NumFun <span class="title">R</span><span class="params">(n)</span></span>;</span><br><span class="line">        R.<span class="built_in">set</span>(a);</span><br><span class="line">        <span class="function">NumFun <span class="title">ONE</span><span class="params">(n)</span></span>;</span><br><span class="line">        ONE.init(<span class="number">1</span>);</span><br><span class="line">        R = <span class="function">R*<span class="title">pow</span><span class="params">(ONE,k)</span></span>;</span><br><span class="line">        R.print();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    <summary type="html">
-    <![CDATA[<p>突然有点想打一场BestCoder，然后就看了看BC发现有道应用Dirichlet积的题。于是就去试了试。当然老套路还是很好过的，后来我想写的优美一点写成类的形式，不过一直出现Crash，于是跟周学长讨论了一下，外加一点看书，终于也是搞定了，就此存一下模版吧 0.0<br>]]>
-    
-    </summary>
-    
-      <category term="C++" scheme="http://dna049.com/tags/C/"/>
-    
-      <category term="数论" scheme="http://dna049.com/tags/%E6%95%B0%E8%AE%BA/"/>
     
   </entry>
   
