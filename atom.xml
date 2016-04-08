@@ -4,7 +4,7 @@
   <subtitle><![CDATA[原谅我一生放荡不羁是傻逼]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dna049.com/"/>
-  <updated>2016-04-08T13:29:34.000Z</updated>
+  <updated>2016-04-08T13:38:36.000Z</updated>
   <id>http://dna049.com/</id>
   
   <author>
@@ -18,15 +18,15 @@
     <title><![CDATA[Lie Algebra]]></title>
     <link href="http://dna049.com/2016/04/08/Lie-Algebra/"/>
     <id>http://dna049.com/2016/04/08/Lie-Algebra/</id>
-    <published>2016-04-08T13:29:34.000Z</published>
-    <updated>2016-04-08T13:29:34.000Z</updated>
-    <content type="html"><![CDATA[<p>近期在整理 Lie Algebra 课的笔记，还是很喜欢这门课的，主要是本科时候矩阵玩的特别6，然后 Lie Algebra 可以认为是矩阵的推广版本。里面的证明技巧性相当强。我之所以喜欢数学很大程度与数学技巧有很大的关系。但是我的导师说，这些虽然很有技巧，但是你花一些时间都是可以处理的，这个世界会技巧没什么了不起，脑袋稍微好一点就能做这种事，长期技巧的训练其实意义并不大，更应该关注数学内部的东西，具体说就是一个代数对象的结构，分类，寻找不变量，对象之间的同构。一个概念有哪些等价形式，与其它概念之间的关系，搞清楚这些更为重要，它们的证明只要大致知道怎么过来的就行。我们并不要把证明的细节放在心中，因为我们已经经过了多年的训练，相信我们通过大致步骤就能给出详细的证明，只是花的时间多少罢了。当然初学一个东西，去抠它的细节是无可厚非的。<br>以上纯属废话 0.0<br><a id="more"></a> </p>
-<h3 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a>定义</h3><p>交换环 $K$ 上的模 $L$，以及一个运算 $L \times L \to L,(x,y) \maps [x,y]$ 称为 $x,y$ 的 Lie 括号，或交换子，称 $L$ 是 $K$ 上的 <a href="https://en.wikipedia.org/wiki/Lie_algebra" target="_blank" rel="external">Lie Algebra</a> 如果满足如下公理。<br>L1. $[\cdot,\cdot]$ 是双线性的；<br>L2. $[x,x]=0$ 对任意 $x \in L$ 成立；<br>L3. $[x,[y,z]]+[y,[z,x]]+[z,[x,y]]=0$ (Jacobi 恒等式)</p>
+    <published>2016-04-08T13:38:36.000Z</published>
+    <updated>2016-04-08T13:38:36.000Z</updated>
+    <content type="html"><![CDATA[<p>近期在整理 Lie Algebra 课的笔记，还是很喜欢这门课的，主要是本科时候矩阵玩的特别6，然后 Lie Algebra 可以认为是矩阵的推广版本。里面的证明技巧性相当强。我之所以喜欢数学很大程度与数学技巧有关。但是我的导师说，这些虽然很有技巧，但是你花时间都是可以处理的，会技巧没什么了不起，脑袋稍微好一点就能做这种事，长期技巧的训练其实意义并不大，应该更关注数学内部的东西，具体说就是一个代数对象的结构，分类，不变量，对象之间的同构。一个概念有哪些等价形式，与其它概念之间的关系，搞清楚这些更为重要，它们的证明只要大致知道怎么过来的就行。我们并不要把证明的细节放在心中，因为我们已经经过了多年的训练，相信我们通过大致步骤就能给出详细的证明，只是花的时间多少罢了。当然初学一个东西，去抠它的细节是无可厚非的。<br>以上纯属废话 0.0<br><a id="more"></a> </p>
+<h3 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a>定义</h3><p>交换环 $K$ 上的模 $L$，以及一个运算 $L \times L \to L,(x,y) \mapsto [x,y]$ 称为 $x,y$ 的 Lie 括号，或交换子，称 $L$ 是 $K$ 上的 <a href="https://en.wikipedia.org/wiki/Lie_algebra" target="_blank" rel="external">Lie Algebra</a> 如果满足如下公理。<br>L1. $[\cdot,\cdot]$ 是双线性的；<br>L2. $[x,x]=0$ 对任意 $x \in L$ 成立；<br>L3. $[x,[y,z]]+[y,[z,x]]+[z,[x,y]]=0$ (Jacobi 恒等式)</p>
 <p>若$[L,L]=0$ 则上面结论显然成立，此时称为 Abelian Lie Algebra。令 $Z(L) = \lbrace x \in L \;|\; [x,L] = 0 \rbrace$</p>
 <p>我们通常并不考虑如此一般情形下的 Lie 代数，一般我们令交换环 $K$ 是域 $F$，并且域 $F$ 很多时候要求是代数闭域，且特征为0。另外我们大多考虑 $L$ 是 $F$ 上的有限维线性空间。</p>
 <p>子，理想，商，同态，表示等一系列的概念和其它代数结构几乎一致。基本上可以划入范畴中。另外单，半单，Radical等这些概念也于环里面的类似。</p>
-<h3 id="u6A21_u7248_Lie_Algebra"><a href="#u6A21_u7248_Lie_Algebra" class="headerlink" title="模版 Lie Algebra"></a>模版 Lie Algebra</h3><p>对于 $V$ 是 $F$ 上有限维线性空间，用 $End V$ 表示 $V$ 到 $V$ 的线性变换全体按照元素的复合构成了 $F$ 上的线性空间且$dim End V = (dim V)^2$。也构成了 $End V$ 是一个结合F-代数。而任何结合代数都可以诱导一个 Lie 代数。定义 $[x,y]=xy-yx$ 即可。为了跟原来的代数区别，我们用 $\mathbb{gl}(V)$ 代替 $End V$，称为 general linear algebra。它在 $Lie$ 代数中充当的角色很类似于置换群在群中的角色。我们知道半单Lie代数同构于$\mathbb{gl}(V)$ 的一个子Lie代数。</p>
-<h3 id="u5BFC_u5B50_u548C_u4F34_u968F_u8868_u793A"><a href="#u5BFC_u5B50_u548C_u4F34_u968F_u8868_u793A" class="headerlink" title="导子和伴随表示"></a>导子和伴随表示</h3><p>我们称一个 $F-$代数 $A$（可以结合）也可以借助导子(derivation)诱导一个Lie代数，称一个导子是指一个线性映射 $\delta: A \to A$ 满足 $\delta(ab)=\delta(a)b+a\delta(b)$。易知导子 $Der A$ 全体构成了 $End A$ 的一个子空间，由于 $[\delta,\delta’] \in Der A$，因此 $Der A$ 构成了 $\mathbb{gl}(V)$的一个子Lie代数。<br>由于Lie代数 $L$ 也是 $F-$代数,因此我们也可以定义 $Der L$。这是的导子本质上就是Jacobi恒等式的变形。<br>定义 $ad_x: L \to L,y \maps [x,y]$，实际上 $ad_x \in Der L$。$L \to Der L,x \maps ad_x$ 称为 $L$ 的伴随表示(adiont representation)。</p>
+<h3 id="u6837_u677F_Lie_Algebra"><a href="#u6837_u677F_Lie_Algebra" class="headerlink" title="样板 Lie Algebra"></a>样板 Lie Algebra</h3><p>对于 $V$ 是 $F$ 上有限维线性空间，用 $End V$ 表示 $V$ 到 $V$ 的线性变换全体按照元素的复合构成了 $F$ 上的线性空间且$dim End V = (dim V)^2$。也构成了 $End V$ 是一个结合F-代数。而任何结合代数都可以诱导一个 Lie 代数。定义 $[x,y]=xy-yx$ 即可。为了跟原来的代数区别，我们用 $\mathbb{gl}(V)$ 代替 $End V$，称为 general linear algebra。它在 $Lie$ 代数中充当的角色很类似于置换群在群中的角色。我们知道半单Lie代数同构于$\mathbb{gl}(V)$ 的一个子Lie代数。</p>
+<h3 id="u5BFC_u5B50_u548C_u4F34_u968F_u8868_u793A"><a href="#u5BFC_u5B50_u548C_u4F34_u968F_u8868_u793A" class="headerlink" title="导子和伴随表示"></a>导子和伴随表示</h3><p>我们称一个 $F-$代数 $A$（可以非结合）也可以借助导子(derivation)诱导一个Lie代数，称一个导子是指一个线性映射 $\delta: A \to A$ 满足 $\delta(ab)=\delta(a)b+a\delta(b)$。易知导子 $Der A$ 全体构成了 $End A$ 的一个子空间，由于 $[\delta,\delta’] \in Der A$，因此 $Der A$ 构成了 $\mathbb{gl}(V)$的一个子Lie代数。<br>由于Lie代数 $L$ 也是 $F-$代数,因此我们也可以定义 $Der L$。这是的导子本质上就是Jacobi恒等式的变形。<br>定义 $ad_x: L \to L,y \mapsto [x,y]$，实际上 $ad_x \in Der L$。$L \to Der L,x \mapsto ad_x$ 称为 $L$ 的伴随表示(adiont representation)。</p>
 <h3 id="u53EF_u89E3_u548C_u5E42_u96F6"><a href="#u53EF_u89E3_u548C_u5E42_u96F6" class="headerlink" title="可解和幂零"></a>可解和幂零</h3><p>对于给定Lie代数 $L$，我们有理想降链<br>$L^{(0)} = L,L^{(1)}=[L^{(0)},L^{(0)}],\cdots,L^{(i)}=[L^{(i-1)},L^{(i-1)}],\cdots$。若存在 $n$ 使得 $L^{(n)} = 0$ 则称 $L$ 可解(slovable)。</p>
 <ol>
 <li>若$L$ 可解，$L$ 的子代数和同态像可解</li>
@@ -34,7 +34,7 @@
 <li>$I,J$ 是 $J$ 的可解理想，则 $I+J$ 也是。</li>
 </ol>
 <p>由上述性质可知，$L$ 有唯一的极大可解理想。即为 $Rad L$,若 $Rad L =0$ 则称之为<strong>半单</strong>的，等价于 $L$ 无非零abelian理想。另外 我们称 $x \in End V$ 半单，若 $x$ 的极小多项式无重根。</p>
-<p>对于给定Lie代数 $L$，我们有理想降链<br>$L^0 = L,L^1=[L^0},L^0],\cdots,L^i=[L^{i-1},L^{i-1}],\cdots$。若存在 $n$ 使得 $L^{n} = 0$ 则称 $L$ 幂零(nilpotent)。</p>
+<p>对于给定Lie代数 $L$，我们有理想降链<br>$L^0 = L,L^1=[L^0,L^0],\cdots,L^i=[L^{i-1},L^{i-1}],\cdots $。若存在 $n$ 使得 $L^{n} = 0$ 则称 $L$ 幂零(nilpotent)。</p>
 <ol>
 <li>若$L$ 幂零，$L$ 的子代数和同态像幂零。</li>
 <li>若 $L/Z(L)$ 幂零。则 $L$ 幂零。</li>
@@ -55,7 +55,7 @@
 <p><strong>THM9</strong> 若 $L$ 是半单的，则 $L$ 可唯一写成单子理想的直和且$L=[L,L],Z(L)=0$ 且 $L$ 的理想和同态像都是半单的。</p>
 <h3 id="To_be_continue"><a href="#To_be_continue" class="headerlink" title="To be continue"></a>To be continue</h3>]]></content>
     <summary type="html">
-    <![CDATA[<p>近期在整理 Lie Algebra 课的笔记，还是很喜欢这门课的，主要是本科时候矩阵玩的特别6，然后 Lie Algebra 可以认为是矩阵的推广版本。里面的证明技巧性相当强。我之所以喜欢数学很大程度与数学技巧有很大的关系。但是我的导师说，这些虽然很有技巧，但是你花一些时间都是可以处理的，这个世界会技巧没什么了不起，脑袋稍微好一点就能做这种事，长期技巧的训练其实意义并不大，更应该关注数学内部的东西，具体说就是一个代数对象的结构，分类，寻找不变量，对象之间的同构。一个概念有哪些等价形式，与其它概念之间的关系，搞清楚这些更为重要，它们的证明只要大致知道怎么过来的就行。我们并不要把证明的细节放在心中，因为我们已经经过了多年的训练，相信我们通过大致步骤就能给出详细的证明，只是花的时间多少罢了。当然初学一个东西，去抠它的细节是无可厚非的。<br>以上纯属废话 0.0<br>]]>
+    <![CDATA[<p>近期在整理 Lie Algebra 课的笔记，还是很喜欢这门课的，主要是本科时候矩阵玩的特别6，然后 Lie Algebra 可以认为是矩阵的推广版本。里面的证明技巧性相当强。我之所以喜欢数学很大程度与数学技巧有关。但是我的导师说，这些虽然很有技巧，但是你花时间都是可以处理的，会技巧没什么了不起，脑袋稍微好一点就能做这种事，长期技巧的训练其实意义并不大，应该更关注数学内部的东西，具体说就是一个代数对象的结构，分类，不变量，对象之间的同构。一个概念有哪些等价形式，与其它概念之间的关系，搞清楚这些更为重要，它们的证明只要大致知道怎么过来的就行。我们并不要把证明的细节放在心中，因为我们已经经过了多年的训练，相信我们通过大致步骤就能给出详细的证明，只是花的时间多少罢了。当然初学一个东西，去抠它的细节是无可厚非的。<br>以上纯属废话 0.0<br>]]>
     
     </summary>
     
