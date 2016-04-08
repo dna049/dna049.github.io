@@ -4,7 +4,7 @@
   <subtitle><![CDATA[原谅我一生放荡不羁是傻逼]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dna049.com/"/>
-  <updated>2016-04-08T10:07:25.000Z</updated>
+  <updated>2016-04-08T13:29:34.000Z</updated>
   <id>http://dna049.com/</id>
   
   <author>
@@ -15,11 +15,60 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Lie Algebra]]></title>
+    <link href="http://dna049.com/2016/04/08/Lie-Algebra/"/>
+    <id>http://dna049.com/2016/04/08/Lie-Algebra/</id>
+    <published>2016-04-08T13:29:34.000Z</published>
+    <updated>2016-04-08T13:29:34.000Z</updated>
+    <content type="html"><![CDATA[<p>近期在整理 Lie Algebra 课的笔记，还是很喜欢这门课的，主要是本科时候矩阵玩的特别6，然后 Lie Algebra 可以认为是矩阵的推广版本。里面的证明技巧性相当强。我之所以喜欢数学很大程度与数学技巧有很大的关系。但是我的导师说，这些虽然很有技巧，但是你花一些时间都是可以处理的，这个世界会技巧没什么了不起，脑袋稍微好一点就能做这种事，长期技巧的训练其实意义并不大，更应该关注数学内部的东西，具体说就是一个代数对象的结构，分类，寻找不变量，对象之间的同构。一个概念有哪些等价形式，与其它概念之间的关系，搞清楚这些更为重要，它们的证明只要大致知道怎么过来的就行。我们并不要把证明的细节放在心中，因为我们已经经过了多年的训练，相信我们通过大致步骤就能给出详细的证明，只是花的时间多少罢了。当然初学一个东西，去抠它的细节是无可厚非的。<br>以上纯属废话 0.0<br><a id="more"></a> </p>
+<h3 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a>定义</h3><p>交换环 $K$ 上的模 $L$，以及一个运算 $L \times L \to L,(x,y) \maps [x,y]$ 称为 $x,y$ 的 Lie 括号，或交换子，称 $L$ 是 $K$ 上的 <a href="https://en.wikipedia.org/wiki/Lie_algebra" target="_blank" rel="external">Lie Algebra</a> 如果满足如下公理。<br>L1. $[\cdot,\cdot]$ 是双线性的；<br>L2. $[x,x]=0$ 对任意 $x \in L$ 成立；<br>L3. $[x,[y,z]]+[y,[z,x]]+[z,[x,y]]=0$ (Jacobi 恒等式)</p>
+<p>若$[L,L]=0$ 则上面结论显然成立，此时称为 Abelian Lie Algebra。令 $Z(L) = \lbrace x \in L \;|\; [x,L] = 0 \rbrace$</p>
+<p>我们通常并不考虑如此一般情形下的 Lie 代数，一般我们令交换环 $K$ 是域 $F$，并且域 $F$ 很多时候要求是代数闭域，且特征为0。另外我们大多考虑 $L$ 是 $F$ 上的有限维线性空间。</p>
+<p>子，理想，商，同态，表示等一系列的概念和其它代数结构几乎一致。基本上可以划入范畴中。另外单，半单，Radical等这些概念也于环里面的类似。</p>
+<h3 id="u6A21_u7248_Lie_Algebra"><a href="#u6A21_u7248_Lie_Algebra" class="headerlink" title="模版 Lie Algebra"></a>模版 Lie Algebra</h3><p>对于 $V$ 是 $F$ 上有限维线性空间，用 $End V$ 表示 $V$ 到 $V$ 的线性变换全体按照元素的复合构成了 $F$ 上的线性空间且$dim End V = (dim V)^2$。也构成了 $End V$ 是一个结合F-代数。而任何结合代数都可以诱导一个 Lie 代数。定义 $[x,y]=xy-yx$ 即可。为了跟原来的代数区别，我们用 $\mathbb{gl}(V)$ 代替 $End V$，称为 general linear algebra。它在 $Lie$ 代数中充当的角色很类似于置换群在群中的角色。我们知道半单Lie代数同构于$\mathbb{gl}(V)$ 的一个子Lie代数。</p>
+<h3 id="u5BFC_u5B50_u548C_u4F34_u968F_u8868_u793A"><a href="#u5BFC_u5B50_u548C_u4F34_u968F_u8868_u793A" class="headerlink" title="导子和伴随表示"></a>导子和伴随表示</h3><p>我们称一个 $F-$代数 $A$（可以结合）也可以借助导子(derivation)诱导一个Lie代数，称一个导子是指一个线性映射 $\delta: A \to A$ 满足 $\delta(ab)=\delta(a)b+a\delta(b)$。易知导子 $Der A$ 全体构成了 $End A$ 的一个子空间，由于 $[\delta,\delta’] \in Der A$，因此 $Der A$ 构成了 $\mathbb{gl}(V)$的一个子Lie代数。<br>由于Lie代数 $L$ 也是 $F-$代数,因此我们也可以定义 $Der L$。这是的导子本质上就是Jacobi恒等式的变形。<br>定义 $ad_x: L \to L,y \maps [x,y]$，实际上 $ad_x \in Der L$。$L \to Der L,x \maps ad_x$ 称为 $L$ 的伴随表示(adiont representation)。</p>
+<h3 id="u53EF_u89E3_u548C_u5E42_u96F6"><a href="#u53EF_u89E3_u548C_u5E42_u96F6" class="headerlink" title="可解和幂零"></a>可解和幂零</h3><p>对于给定Lie代数 $L$，我们有理想降链<br>$L^{(0)} = L,L^{(1)}=[L^{(0)},L^{(0)}],\cdots,L^{(i)}=[L^{(i-1)},L^{(i-1)}],\cdots$。若存在 $n$ 使得 $L^{(n)} = 0$ 则称 $L$ 可解(slovable)。</p>
+<ol>
+<li>若$L$ 可解，$L$ 的子代数和同态像可解</li>
+<li>$I$ 是 $L$ 的可解理想，若 $L/I$ 可解，则 $L$ 可解。</li>
+<li>$I,J$ 是 $J$ 的可解理想，则 $I+J$ 也是。</li>
+</ol>
+<p>由上述性质可知，$L$ 有唯一的极大可解理想。即为 $Rad L$,若 $Rad L =0$ 则称之为<strong>半单</strong>的，等价于 $L$ 无非零abelian理想。另外 我们称 $x \in End V$ 半单，若 $x$ 的极小多项式无重根。</p>
+<p>对于给定Lie代数 $L$，我们有理想降链<br>$L^0 = L,L^1=[L^0},L^0],\cdots,L^i=[L^{i-1},L^{i-1}],\cdots$。若存在 $n$ 使得 $L^{n} = 0$ 则称 $L$ 幂零(nilpotent)。</p>
+<ol>
+<li>若$L$ 幂零，$L$ 的子代数和同态像幂零。</li>
+<li>若 $L/Z(L)$ 幂零。则 $L$ 幂零。</li>
+<li>若 $L$ 幂零且非0，则 $Z(L) \neq 0$。</li>
+</ol>
+<p>显然由于 $L^{(i)} \subset L^i$ 因此幂零一定可解，但是反之则不尽然，例如 $\mathbb{gl}(V)$ 中对应的上三角矩阵全体构成的Lie代数。由Lie定理的推论知：<br>$L$ 可解的充要条件是 $[L,L]$ 幂零。</p>
+<h3 id="ad-nilpotent"><a href="#ad-nilpotent" class="headerlink" title="ad-nilpotent"></a>ad-nilpotent</h3><p>$L$ 是一个Lie代数，$x \in L$, 称 $x$ ad-nilpotent 是指 $ad_x$ 幂零。<br>易知若 $x$ 幂零，则 $ad_x$ 幂零，但是反之不尽然。然而我们有Engel 定理：<br>$L$幂零当且仅当$ad L$ 幂零。</p>
+<h3 id="u4E00_u4E9B_u91CD_u8981_u7ED3_u679C"><a href="#u4E00_u4E9B_u91CD_u8981_u7ED3_u679C" class="headerlink" title="一些重要结果"></a>一些重要结果</h3><p>这里罗列一些定理实际上就是搞清楚 Lie 代数中的一些问题和一些好的性质。</p>
+<p><strong>THM1</strong>. 设 $L$ 是 $\mathbb{gl}(V)$ 的子代数($L$ 中的元素可理解为矩阵)，$V$ 是有限维的，若 $L$ 中元素都幂零，则存在 $v \in V$ 使得 $L(v) = 0$.<br>上面结果是讲，$L$中元素都幂零，则 $L$ 有公共的$0$ 特征向量。证明是很有技巧性的。构造一个 codemension 为1的子代数，并证明它是 $L$ 不变子空间。然后数学归纳法完成证明。上面定理还说明我们可以取定一组基使 $L$ 同时严格上三角。</p>
+<p><strong>THM2</strong>. 若 $L$ 幂零，$K$ 是 $L$ 的非零理想,则 $K \cap Z(L) \neq 0$</p>
+<p><strong>THM3</strong>. 设 $L$ 是 $\mathbb{gl}(V)$ 可解子代数，$V$ 是有限维的，则存在 $L$ 存在公共特征向量。</p>
+<p>上面定理还说明我们可以取定一组基使得 $L$ 同时上三角。</p>
+<p><strong>THM4</strong>. 若 $x \in EndV$，则存在唯一的分解 $x = x_s+x_n$，其中 $x_s$ 是半单的， $x_n$ 是幂零的，且 $x_s,x_n$ 都能表示成 $x$ 的无常数项的多项式。将其称之为 Jordan-Chevally 分解。</p>
+<p><strong>THM5</strong>. 若 $x$ 半单，则 $ad_x$ 半单。若 $x=x_s+x_n$是Jordan-Chevally 分解，则 $ad<em>x = ad</em> {x<em>s} + ad</em> {x_n}$  也是。$Der A$ 包含其元素的 半单部分和幂零部分。</p>
+<p><strong>THM6</strong>. $A \subset B \subset End V $，令 $M = \lbrace x \in \mathbb{gl}(V) \;|\; [x,B] \subset A\rbrace$。若 $x \in M$ 满足，$Tr(xy)=0$ 对任意 $y\in M$ 成立，则 $x$ 幂零。</p>
+<p><strong>THM7</strong> $L \subset \mathbb{gl}(V)$，$V$ 是有限维的, 则 对任意 $x \in [L,L],\;y \in L$ 有 $Tr(xy)=0$ 当且仅当 $L$ 可解。</p>
+<p><strong>THM8</strong> 设 $L$ 是Lie代数，对任意 $x \in [L,L],\;y \in L$ 有 $Tr(ad_x ad_y)=0$ 则 $L$ 可解。</p>
+<p><strong>THM9</strong> 若 $L$ 是半单的，则 $L$ 可唯一写成单子理想的直和且$L=[L,L],Z(L)=0$ 且 $L$ 的理想和同态像都是半单的。</p>
+<h3 id="To_be_continue"><a href="#To_be_continue" class="headerlink" title="To be continue"></a>To be continue</h3>]]></content>
+    <summary type="html">
+    <![CDATA[<p>近期在整理 Lie Algebra 课的笔记，还是很喜欢这门课的，主要是本科时候矩阵玩的特别6，然后 Lie Algebra 可以认为是矩阵的推广版本。里面的证明技巧性相当强。我之所以喜欢数学很大程度与数学技巧有很大的关系。但是我的导师说，这些虽然很有技巧，但是你花一些时间都是可以处理的，这个世界会技巧没什么了不起，脑袋稍微好一点就能做这种事，长期技巧的训练其实意义并不大，更应该关注数学内部的东西，具体说就是一个代数对象的结构，分类，寻找不变量，对象之间的同构。一个概念有哪些等价形式，与其它概念之间的关系，搞清楚这些更为重要，它们的证明只要大致知道怎么过来的就行。我们并不要把证明的细节放在心中，因为我们已经经过了多年的训练，相信我们通过大致步骤就能给出详细的证明，只是花的时间多少罢了。当然初学一个东西，去抠它的细节是无可厚非的。<br>以上纯属废话 0.0<br>]]>
+    
+    </summary>
+    
+      <category term="Algebra" scheme="http://dna049.com/tags/Algebra/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[矩阵的Jordan分解]]></title>
     <link href="http://dna049.com/2016/04/08/%E7%9F%A9%E9%98%B5%E7%9A%84Jordan%E5%88%86%E8%A7%A3/"/>
     <id>http://dna049.com/2016/04/08/矩阵的Jordan分解/</id>
     <published>2016-04-08T08:20:49.000Z</published>
-    <updated>2016-04-08T10:07:25.000Z</updated>
+    <updated>2016-04-08T10:14:16.000Z</updated>
     <content type="html"><![CDATA[<p>最近在整理 Lie Algebra 内容时，里面提到了Jordan分解，这里就详细介绍并证明几个相关结果。</p>
 <ol>
 <li>若矩阵 $A,B$ 可交换，则它们有公共特征向量。</li>
@@ -49,6 +98,8 @@ B_1 \\  &amp; B_2 \\ &amp; &amp; \ddots \\ &amp; &amp; &amp; B_s
 </ol>]]>
     
     </summary>
+    
+      <category term="Algebra" scheme="http://dna049.com/tags/Algebra/"/>
     
       <category term="矩阵" scheme="http://dna049.com/tags/%E7%9F%A9%E9%98%B5/"/>
     
@@ -596,67 +647,6 @@ A Monoid is a semi-group contain an identity element.
 ]]></content>
     <summary type="html">
     <![CDATA[<p>Hahn-Banach 延拓定理通常分为分析和几何的形式，其中几何形式通常称为凸集分离性定理。<br>]]>
-    
-    </summary>
-    
-      <category term="泛函分析" scheme="http://dna049.com/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[拓扑线性空间的若干基本定理]]></title>
-    <link href="http://dna049.com/2016/02/18/%E6%8B%93%E6%89%91%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E8%8B%A5%E5%B9%B2%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86/"/>
-    <id>http://dna049.com/2016/02/18/拓扑线性空间的若干基本定理/</id>
-    <published>2016-02-18T08:02:15.000Z</published>
-    <updated>2016-02-23T11:16:57.000Z</updated>
-    <content type="html"><![CDATA[<p>在泛函分析中几个基本重要的定理：一致有界原理，开映射定理，闭图像定理等都可以相应的推广到拓扑线性空间中。以下内容来自刘培德《拓扑线性空间与算子谱理论》第二章。<br><a id="more"></a></p>
-<p>设 $X,Y$ 是拓扑线性空间，记$L(X,Y)$ 是 $X$ 到 $Y$ 的线性算子全体，而$\mathscr{L}(X,Y)$ 是 $X$ 到 $Y$ 的连续线性算子全体。$N_X(x)$ 表示 $x \in X$ 的邻域全体。除非特别声明，以下$X,Y$都是拓扑线性空间</p>
-<h3 id="u7B49_u5EA6_u8FDE_u7EED_u548C_u4E00_u81F4_u6709_u754C"><a href="#u7B49_u5EA6_u8FDE_u7EED_u548C_u4E00_u81F4_u6709_u754C" class="headerlink" title="等度连续和一致有界"></a>等度连续和一致有界</h3><p>等度连续: 称算子族 $\mathscr{H} \subset L(X,Y)$ 是等度连续的，若 $\forall U \in N_Y(0), V \in N_X(0)$ 使得<br><span>$$T(V) \subset U, \; \forall T \in \mathscr{H}
- \; \Leftrightarrow \;
-\cup_{T \in \mathscr{H} } T(V) \subset U$$</span><!-- Has MathJax --></p>
-<p>一致有界: 称算子族 $\mathscr{H} \subset L(X,Y)$ 是一致有界的，若对 $X$ 中任一有界集 $E$ , $\cup_{T \in \mathscr{H}} T(E)$ 是有界.</p>
-<p><strong>定理1</strong> 设 $\mathscr{H}$ 是 $L(X,Y)$ 中的一族算子。</p>
-<ol>
-<li>若 $\mathscr{H}$ 是等度连续的，则 $\mathscr{H}$ 是一致有界的。</li>
-<li>若 $X$ 是可度量化的，$\mathscr{H}$ 是一致有界的，则 $\mathscr{H}$ 是等度连续的</li>
-</ol>
-<p>证明：</p>
-<ol>
-<li>若 $\mathscr{H}$ 是等度连续的，则$\forall U \in N_Y(0), \exists V \in N_X(0)$ 使得 $T(V) \subset U, \; \forall T \in \mathscr{H}$ .对 $X$ 中任一有界集 $E$，则 $\exists t &gt; 0$ 使得 $s&gt;t$ 时，$E \subset sV$,于是<span>$$T(E) \subset T(sV) = sT(V) \subset sU , \;
-\forall T \in \mathscr{H}$$</span><!-- Has MathJax -->
-从而 $\cup _ {T \in \mathscr{H} } T(V) \subset U$ , $\mathscr{H}$ 是一致有界的。</li>
-<li>反证，设 $U \in N_Y(0)$ ,若不存在 $V$ 使得 $\cup_{T \in \mathscr{H} } T(V) \subset U$ ,则可取 $T_n \in \mathscr{H},x_n \in X, x_n \to 0$ 但 $Tx_n \notin U$.由于 $d(x_n,0) \to 0$ ,存在 $r_n \to \infty$ 使得 $r_n x_n \to 0$ . $r_n x_n$ 是有界的，从而 $\cup_{T \in \mathscr{H}} T(r_n x_n)$ 有界。但是<br>$$ r_n ^{-1} T(r_n x_n) = T(x_n) \notin U $$<br>矛盾与有界性的等价条件。</li>
-</ol>
-<h3 id="u4E00_u81F4_u6709_u754C_u6027_u539F_u7406"><a href="#u4E00_u81F4_u6709_u754C_u6027_u539F_u7406" class="headerlink" title="一致有界性原理"></a>一致有界性原理</h3><p><strong>定理2</strong> 设 $\mathscr{H} \subset \mathscr{L}(X,Y)$ , 记$E$为使 $\lbrace Tx:T \in \mathscr{H} \rbrace$ 的点 $x$ 全体。若 $E$ 是第二纲集，则 $\mathscr{H}$ 等度连续，此时必有 $E=X$.</p>
-<p>证明：设 $W \in N_Y(0)$ ，取0点的平衡邻域 $U$ 使得 $ \overline{U} + \overline{U} \subset W$ 。记 $B = \cap_{T \in \mathscr{H} } T^{-1} (\overline{U})$，有 $T$ 的连续性知 $B$ 是闭集。$\forall x \in E, \lbrace Tx, T \in mathscr{H} \rbrace$ 有界。因此，$\exists n$ 使得 $Tx \in nU \forall T \in \mathscr{H} $，即 $\frac{x}{n} \in T^{-1} (U) \in T^{-1} (\overline{U})$ 。于是 $x \in nB,E \subset \cup_{n=1}^{\infty} nB$。$E$ 是第二纲集，因此有某个 $(nB)^{o} \neq \emptyset $,从而 $(B)^{o} \neq \emptyset $.<br>设 $x \in B^{o}$,记 $V = x-B^{o}$ ,则 $V \in N_X(0)$.注意到 $T(B) \in \overline{U} ,\forall T \in \mathscr{H} $。因此<br>$$ T(V) \subset Tx - T(B) \subset \overline{U} - \overline{U} \in W ,\forall T \in \mathscr{H} $$<br>这说明 $\mathscr{H}$ 是等度连续的。<br>由定理1知，此时 $\mathscr{H}$ 是一致有界的，又单点集 ${x}$ 有界，因此 $\lbrace Tx:T \in \mathscr{H} \rbrace$ 有界，所以 $E=X$。</p>
-<p>定理3 (Banach-Steinhaus) 设 $ T_n\in \mathscr{L}(X,Y)$ , 记$E$为使 $\lim_{n \to \infty} T_n x $ 存在的 $x$ 全体。若 $E$ 是第二纲集，则$E=X$.<br>证明：由于收敛序列是有界的，因此根据定理2，上述结论显然。</p>
-<h3 id="u5F00_u6620_u5C04_u5B9A_u7406"><a href="#u5F00_u6620_u5C04_u5B9A_u7406" class="headerlink" title="开映射定理"></a>开映射定理</h3><p>从 $X$ 到 $Y$ 的线性算子称为开算子，如果它把 $X$ 中的每一个开集映成 $Y$ 中的开集。</p>
-<p><strong>定理4</strong> (开映射定理) 若 $X,Y$ 是 $F$ 空间(完备的赋准范空间)，$T \in \mathscr{L}(X,Y),T(X)$ 是 $Y$ 中的第二纲集，则 $T$ 是开算子，且此时$Y=T(X)$。</p>
-<p>为证明开映射定理，先证明三个引理。</p>
-<p><strong>引理1</strong> 设 $T:X \to Y$ 是线性算子，则 $T$ 是开映射，当且仅当 $\forall V \in N_X(0)$,$0 \in Y$ 是 $T(V)$ 的内点。</p>
-<p>证明：若$T$ 是开算子，$V \in N_X(0)$,则 $T(V)$开，又 $T0=0$ ,故 $0 \in Y$ 是 $T(V)$ 的内点。<br>反之，若 $T$ 将0点的邻域映成以0为内点的集合。则对每个开集 $B \subset X$ ,$B$ 可以写成 $B = \cup_{x \in B } (x+V_x) $ 于是<br>$$ T(B) = \cup_{x \in B} T(x+V_x) = \cup_{x \in B}(Tx - T(V_x)) $$<br>由于 $T(V_x)$ 是以0为内点，上式表明 $Tx$ 是 $T(B)$ 的内点,从而 $T(B)$ 是 $Y$ 中的开集。</p>
-<p><strong>引理2</strong> 设 $T:X \to Y$ 是线性算子，则 $T$ 是开映射，则 $T$ 是到上(满)的。</p>
-<p>证明: 若 $T$ 是开映射，则 $\forall V \in X$, $T(V)$ 是 $Y$ 中的开集，$V,T(V)$都是吸收的，所以<br>$$ Y = \cup_{n=1}^{\infty} nT(V) = T(\cup_{n=1}^{\infty} nV) = T(X) $$</p>
-<p><strong>引理3</strong> 设 $T:X \to Y$ 是线性算子，若 $T(X)$ 是 $Y$ 中的第二纲集，则 $\forall U \in N_X(0),\exists B \in N_Y(0)$ 使得 $B \in \overline{T(U)}$</p>
-<p>证明: $\forall U \in N_X(0)$ ,取 $\forall V \in N_X(0)$ 使得 $V$ 是平衡的且 $V-V \subset U$.<br>$$ T(X) = T(\cup_{n=1}^{\infty} nV) = \cup_{n=1}^{\infty} nT(V)$$ 是第二纲的，所以 $\exists n$ 使得 $\overline{nT(V)}^{o} \neq \emptyset$，因此 $\overline{T(V)}^{o} \neq \emptyset$. 于是存在开集 $B \in N_X(0)$ 使得<br>$$B \subset \overline{T(V)} - \overline{T(V)} \subset \overline{T(V-V)} \subset \overline{T(U)} $$ </p>
-<p>开映射定理证明: 设 $p,q$ 分别是 $X,Y$ 上的准范数，取<br>$$ U=\lbrace x \colon p(x)&lt;r \rbrace ,\quad U_n = \lbrace x \colon q(x) &lt; \frac{r}{2^n} \rbrace $$<br>由引理3知，存在$B_n \in N_Y(0)$ 使得 $B_n \subset \overline{T(U_n)}$.由引理1知，我们只需证明 $B_1 \subset U$.记<br>$$ O_n = \lbrace y \in Y \colon q(y) &lt; \frac{1}{n} \rbrace $$<br>任取 $y_1 \in B_1 \subset \overline{T(U_1)}$, 于是 $\exists x_1 \in U_1$ 使得 $y_2 = y_1 - Tx_1 \in B_2 \cap O_2$,类似地做，$\exists x_n \in U_n$ 使得 $y_{n+1} = y_n - Tx_n \in B_{n+1} \cap O_{n+1}$<br>此时<br>$$ y_{n+1} = y_1 -T(\sum_{i=1}^n x_i)$$<br>由于<br>$$ p(\sum_{i=1}^n x_i) \leq \sum_{i=1}^n p(x_i) &lt; \sum_{i=1}^n \frac{r}{2^n} &lt; r $$<br>并且由于 $\lbrace \sum_{i=1}^n x_i \rbrace$ 是Cauchy列，$\exists x_0 \in X, \sum_{i=1}^n x_i \to x_0$ 并且 $p(x_0) &lt; r$,从而 $x_0 \in U$。<br>注意到 $y_n \in O_n$, $y_n \to 0$。由 $T$ 的连续性<br>$$ 0 = \lim_{n \to \infty} y_{n+1} = y_1 - \lim_{n \to \infty} T(\sum_{i=1}^n x_i) = y_1 - Tx_0 $$<br>即 $y_1 = Tx_0 \in T(U)$,故$B \in T(U)$,证毕。</p>
-<p><strong>推论1</strong> (Banach逆算子定理的推广) 从 $F$ 空间到　$F$ 空间上的每一个连续线性满算子 $T$ 的开算子，若 $T$ 还是一一的，则 $T$ 是同胚映射。<br><strong>推论2</strong> (范数等价定理的推广) 设 $X$ 上有两种拓扑 $\tau_1,\tau_2$,并且$\tau_1,\tau_2$ 都使 $X$ 成为 $F$ 空间，若$\tau_1,\tau_2$ 是可比较的，则$\tau_1 ＝ \tau_2$ 。</p>
-<h3 id="u95ED_u56FE_u50CF_u5B9A_u7406"><a href="#u95ED_u56FE_u50CF_u5B9A_u7406" class="headerlink" title="闭图像定理"></a>闭图像定理</h3><p>设 $X,Y$ 是拓扑线性空间，$X \times Y$ 是乘积空间，$T \colon X \to Y$ 是线性算子，称 $T$ 是闭算子，若 $T$ 的图像 $\mathscr{G}(T) = \lbrace (x,Tx) \colon \forall x \in X \rbrace$ 是 $X \times Y$ 中的闭集。</p>
-<p><strong>定理5</strong> 设 $X,Y$ 是拓扑线性空间，$T \colon X \to Y$ 是线性算子</p>
-<ol>
-<li>若 $T$ 是连续的，则 $T$ 是闭算子</li>
-<li>(闭图像定理)若 $T$ 是闭算子，并且 $X,Y$ 都是 $F$ 空间，则 $T$ 是连续的。</li>
-</ol>
-<p>证明:</p>
-<ol>
-<li>设$T \colon X \to Y$ 连续，$(x_{\lambda},\lambda \in \Lambda)$ 是 $X$ 中的网，$x_{\lambda} \to x ,Tx_{\lambda} \to y$,则<br>$$ y = \lim_{\lambda \in \Lambda} Tx_{\lambda} =  T(\lim_{\lambda \in \Lambda} x_{\lambda}) = Tx$$<br>因此 $(x,y) \in \mathscr{G}(T)$,因此 $T$ 是闭算子。</li>
-<li>注意到此时 $X \times Y$ 也是 $F$ 空间，由于 $\mathscr{G}(T)$ 是 $X \times Y$ 的线性子空间，若 $\mathscr{G}(T)$ 在 $X \times Y$ 中闭，$\mathscr{G}(T)$ 也是 $F$ 空间。由乘积拓扑的定义，两投影<br>$$ \pi_1 \colon \mathscr{G}(T) \to X, (x,Tx) \mapsto x, $$<br>$$ \pi_2 \colon \mathscr{G}(T) \to X, (x,Tx) \mapsto Tx $$<br>都是连续的。特别的 $\pi_1$ 是一一到上的，由推论1知，$\pi_1^{-1} \colon X \to \mathscr{G}(T)$ 连续，此时<br>$$ Tx = \pi_2(x,Tx) = \pi_2 \circ \pi_1^{-1} x,\forall x \in X $$<br>从而$T=\pi_2 \circ \pi_1^{-1}$</li>
-</ol>
-<pre><code>我发现我喜欢在此记录我学习的东西，反正这里也很少会有人来看，写出来很大的目的是让我自己走一遍过程，写总比看来的深刻。
-</code></pre><p>欢迎访问0.0 <a href="http://dna049.com">http://dna049.com</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>在泛函分析中几个基本重要的定理：一致有界原理，开映射定理，闭图像定理等都可以相应的推广到拓扑线性空间中。以下内容来自刘培德《拓扑线性空间与算子谱理论》第二章。<br>]]>
     
     </summary>
     
