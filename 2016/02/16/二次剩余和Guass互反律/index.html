@@ -1,157 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Head tag -->
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--Description-->
-    
-        <meta name="description" content="dna049 | math | C++ | hexo">
-    
-
-    <!--Author-->
-    
-        <meta name="author" content="dna049">
-    
-
-    <!--Open Graph Title-->
-    
-        <meta property="og:title" content="二次剩余和Guass互反律"/>
-    
-
-    <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="0.肆玖"/>
-
-    <!--Page Cover-->
-    
-        <meta property="og:image" content="undefined"/>
-    
-
-    <!-- Title -->
-    
-    <title>二次剩余和Guass互反律 - 0.肆玖</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" type="text/css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
-
-    <!-- Custom Fonts -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Gallery -->
-    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
-
-    <!-- Google Analytics -->
-    
-
-
-</head>
-
-<body>
-
-    <!-- Menu -->
-    <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Configurable Title</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                
-                    <li>
-                        <a href="/archives">Archives</a>
-                    </li>
-                
-                    <li>
-                        <a href="/About">About</a>
-                    </li>
-                
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-
-    <!-- Main Content -->
-    <!-- Page Header -->
-<!-- Set your background image for this header in your post front-matter: cover -->
-
-<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <h1>二次剩余和Guass互反律</h1>
-                    
-                    <span class="meta">
-                        <!-- Date and Author -->
-                        
-                        2016-02-16
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-
-            <!-- Tags and categories -->
-           
-                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
-                    
-                        
-
-
-<a href="/tags/数论/">#数论</a>
-
-
-                    
-                </div>
-                <div class="col-lg-4 col-md-5 post-categories">
-                    
-                </div>
-            
-
-            <!-- Gallery -->
-            
-
-            <!-- Post Main Content -->
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>从二次剩余问题，引入Legendre符号，由此一步步导出Guass互反律，最后延伸到Jacobi符号，整个步骤确实连贯优美，脍炙人口。<br><a id="more"></a></p>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 二次剩余和Guass互反律 · 0.肆玖</title><meta name="description" content="从二次剩余问题，引入Legendre符号，由此一步步导出Guass互反律，最后延伸到Jacobi符号，整个步骤确实连贯优美，脍炙人口。
+寒假回家好好调整了一下状态，回学校后感觉还不错，效率也蛮高。发现理图虽然比较破，但是还是很不错的，哈哈哈。每次读潘承洞先生的《数论基础》都觉得受益匪浅，我把自己很喜欢的部分写入到该文中。
+二次剩余考虑如下形式二次同余式$$ x^2 = a \; (mod \; p) $$其中 $p$ 是奇素数。
+经过简单推理很容易发现，在模 $p$ 的简化系中，二次剩余与二次非剩余各占一半。且容易知道，$1^2,2^2,\cdots,(\frac{p-1}{2})^2$ 都是二次剩余。
+Legendre 符号&lt;span"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="https://github.com/dna049" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">二次剩余和Guass互反律</h1><div class="post-meta"><div class="post-time">2016年2月16日</div></div><div class="post-content"><p>从二次剩余问题，引入Legendre符号，由此一步步导出Guass互反律，最后延伸到Jacobi符号，整个步骤确实连贯优美，脍炙人口。<br><a id="more"></a></p>
 <p>寒假回家好好调整了一下状态，回学校后感觉还不错，效率也蛮高。发现理图虽然比较破，但是还是很不错的，哈哈哈。每次读潘承洞先生的《数论基础》都觉得受益匪浅，我把自己很喜欢的部分写入到该文中。</p>
 <h3 id="u4E8C_u6B21_u5269_u4F59"><a href="#u4E8C_u6B21_u5269_u4F59" class="headerlink" title="二次剩余"></a>二次剩余</h3><p>考虑如下形式二次同余式<br>$$ x^2 = a \; (mod \; p) $$<br>其中 $p$ 是奇素数。</p>
 <p>经过简单推理很容易发现，在模 $p$ 的简化系中，二次剩余与二次非剩余各占一半。且容易知道，$1^2,2^2,\cdots,(\frac{p-1}{2})^2$ 都是二次剩余。</p>
@@ -170,94 +21,17 @@
 <p>这里只是简介的纪录一下比较简洁精彩的部分。更多数论的内容还是很推荐潘承洞先生的书的。另外指数原根等一些知识也讲的特别简洁明了。下面给出我写的求原根的MATLAB代码。<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">d</span> = <span class="title">zhi_shu</span><span class="params">(g,n)</span></span></span><br><span class="line"><span class="comment">%---------------------------------------</span></span><br><span class="line"><span class="comment">% 输入：底数g和模n</span></span><br><span class="line"><span class="comment">% 输出：其指数</span></span><br><span class="line"><span class="comment">% 2016-2-16 in FDU by dna049</span></span><br><span class="line"><span class="comment">%---------------------------------------</span></span><br><span class="line">r = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> d = <span class="number">1</span>:n</span><br><span class="line">    r = <span class="built_in">mod</span>(r*g,n);</span><br><span class="line">    <span class="keyword">if</span> r == <span class="number">1</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">x</span> = <span class="title">phi_euler</span><span class="params">(n)</span></span></span><br><span class="line"><span class="comment">%---------------------------------------</span></span><br><span class="line"><span class="comment">% Euler function in number theory</span></span><br><span class="line"><span class="comment">% 2016-2-16 in FDU by dna049</span></span><br><span class="line"><span class="comment">%---------------------------------------</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">isprime</span>(n)</span><br><span class="line">        x = n-<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        pn = <span class="built_in">primes</span>(n);</span><br><span class="line">        x = n;</span><br><span class="line">        <span class="keyword">for</span> <span class="built_in">i</span> = pn</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">mod</span>(n,<span class="built_in">i</span>) == <span class="number">0</span></span><br><span class="line">                n = n/<span class="built_in">i</span>;</span><br><span class="line">                <span class="keyword">while</span> <span class="built_in">mod</span>(n,<span class="built_in">i</span>) == <span class="number">0</span></span><br><span class="line">                    n = n/<span class="built_in">i</span>;</span><br><span class="line">                <span class="keyword">end</span></span><br><span class="line">                x = x/<span class="built_in">i</span>*(<span class="built_in">i</span>-<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">i</span>&gt;n</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">d</span> = <span class="title">yuan_gen_s</span><span class="params">(p)</span></span></span><br><span class="line"><span class="comment">%---------------------------------------</span></span><br><span class="line"><span class="comment">% 输入：素数p</span></span><br><span class="line"><span class="comment">% 输出：所有原根</span></span><br><span class="line"><span class="comment">% 2016-2-16 in FDU by dna049</span></span><br><span class="line"><span class="comment">%---------------------------------------</span></span><br><span class="line">d_now = p-<span class="number">1</span>;</span><br><span class="line">v = <span class="built_in">ones</span>(<span class="number">1</span>,p);</span><br><span class="line">v(<span class="number">1</span>) = <span class="number">0</span>;</span><br><span class="line">v(p) = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">2</span>:p-<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> v(<span class="built_in">i</span>) == <span class="number">1</span></span><br><span class="line">        td = zhi_shu(<span class="built_in">i</span>,p);</span><br><span class="line">        <span class="keyword">if</span> td ~= p-<span class="number">1</span></span><br><span class="line">            tp = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> <span class="built_in">j</span> = <span class="number">1</span>:td</span><br><span class="line">                tp = <span class="built_in">mod</span>(tp*<span class="built_in">i</span>-<span class="number">1</span>,p)+<span class="number">1</span>;</span><br><span class="line">                v(tp) = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">d = <span class="number">1</span>:p;</span><br><span class="line">d = d(v==<span class="number">1</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+</div></article></div></section><footer><div class="paginator"><a href="/2016/02/16/hdu-5628-Dirichlet积与快速幂的应用/" class="prev">上一篇</a><a href="/2016/01/21/自然数方幂和公式/" class="next">下一篇</a></div><div data-thread-key="2016/02/16/二次剩余和Guass互反律/" data-title="二次剩余和Guass互反律" data-url="http://dna049.com/2016/02/16/二次剩余和Guass互反律/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
 
-            </div>
-
-            <!-- Comments -->
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                
-    <hr />
-    <h3>留言:</h3>
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
-
-
-            </div>
-        </div>
-    </div>
-</article>
-
-    <!-- Footer -->
-    <hr />
-
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    <li>
-                        <a href="" target="_blank">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" target="_blank">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/dna049" target="_blank">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
-                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
-    <!-- After footer scripts -->
-    
-<!-- jQuery -->
-<script src="/js/jquery.min.js" type="text/javascript"></script>
-
-<!-- Bootstrap -->
-<script src="/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-
-<!-- Gallery -->
-<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Disqus Comments -->
-
-<script type="text/javascript">
-    var disqus_shortname = 'dna049';
-
-    (function(){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
-
-
-<!-- mathjax config similar to math.stackexchange -->
+</script></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?e561b60b5caa17e3873a8e31c9e1f5f4";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- mathjax config similar to math.stackexchange -->
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -287,6 +61,4 @@
 
 <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-</body>
-
-</html>
+</body></html>
