@@ -4,7 +4,7 @@
   <subtitle><![CDATA[原谅我一生放荡不羁是傻逼]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dna049.com/"/>
-  <updated>2016-03-29T13:52:02.000Z</updated>
+  <updated>2016-04-08T09:46:20.000Z</updated>
   <id>http://dna049.com/</id>
   
   <author>
@@ -13,6 +13,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[矩阵的Jordan分解]]></title>
+    <link href="http://dna049.com/2016/04/08/%E7%9F%A9%E9%98%B5%E7%9A%84Jordan%E5%88%86%E8%A7%A3/"/>
+    <id>http://dna049.com/2016/04/08/矩阵的Jordan分解/</id>
+    <published>2016-04-08T08:20:49.000Z</published>
+    <updated>2016-04-08T09:46:20.000Z</updated>
+    <content type="html"><![CDATA[<p>最近在整理 Lie Algebra 内容时，里面提到了Jordan分解，这里就详细介绍并证明几个相关结果。</p>
+<ol>
+<li>若矩阵 $AB＝BA$，则它们有公共特征向量。</li>
+<li>若矩阵 $A,B$ 可以对角化，则它们可以同时对角化，当且仅当 $A,B$ 交换</li>
+<li>每一个矩阵 $A$ 都可以唯一分解成 $A=B+C$, 其中 $B$ 可对角化，$C$ 幂零。且 $B,C$ 都可以写成 $A$ 的无常数项的多项式。</li>
+</ol>
+<a id="more"></a>
+<p>下面逐一证明这三个结果并给出说明其意义。</p>
+<h3 id="u82E5_u77E9_u9635__24AB_uFF1DBA_24_uFF0C_u5219_u5B83_u4EEC_u6709_u516C_u5171_u7279_u5F81_u5411_u91CF_u3002"><a href="#u82E5_u77E9_u9635__24AB_uFF1DBA_24_uFF0C_u5219_u5B83_u4EEC_u6709_u516C_u5171_u7279_u5F81_u5411_u91CF_u3002" class="headerlink" title="若矩阵 $AB＝BA$，则它们有公共特征向量。"></a>若矩阵 $AB＝BA$，则它们有公共特征向量。</h3><p><strong>证明</strong>：我们设 $V$ 为 $n$ 阶列向量全体。设 $\lambda$ 为 $B$ 的一个特征值。设 $W = \lbrace x \in V \;|\; Bx = \lambda x \rbrace$, 则对任意 $x \in W$, $B(Ax) = A(Bx)=A(\lambda x)=\lambda(Ax)$，即 $Ax \in W$。即 $W$ 是 $A$ 的不变子空间，因此，$A$ 在 $W$ 中有特征值 $\mu$ 对应的特征向量 $v$ 即为所求。</p>
+<h3 id="u82E5_u77E9_u9635__24A_2CB_24__u53EF_u4EE5_u5BF9_u89D2_u5316_uFF0C_u5219_u5B83_u4EEC_u53EF_u4EE5_u540C_u65F6_u5BF9_u89D2_u5316_uFF0C_u5F53_u4E14_u4EC5_u5F53__24A_2CB_24__u4EA4_u6362"><a href="#u82E5_u77E9_u9635__24A_2CB_24__u53EF_u4EE5_u5BF9_u89D2_u5316_uFF0C_u5219_u5B83_u4EEC_u53EF_u4EE5_u540C_u65F6_u5BF9_u89D2_u5316_uFF0C_u5F53_u4E14_u4EC5_u5F53__24A_2CB_24__u4EA4_u6362" class="headerlink" title="若矩阵 $A,B$ 可以对角化，则它们可以同时对角化，当且仅当 $A,B$ 交换."></a>若矩阵 $A,B$ 可以对角化，则它们可以同时对角化，当且仅当 $A,B$ 交换.</h3><p><strong>证明</strong>：$\Arrow$ 是显然的。若 $A,B$ 交换。<br>由条件知，存在可逆矩阵 $P$ 使得 $P^{-1}AP = diag(a_1 E_{n_1},\cdots,a_s E_{n_s})$。由 $A,B$ 交换知，$P^{-1}AP P^{-1}BP = P^{-1}BP P^{-1}AP$。因此<br>$$ P^{-1}BP = \left(\begin{matrix} B_1 \\  &amp; B_2 \\ &amp; &amp; \ddots \\ &amp; &amp; &amp; B_s \end{matrix}\right) $$<br>因为 $B$ 可对角化，因此 $B$ 的最小多项式无重根。所以 $B_i$ 的最小多项式也无重根。因此 $B_i$ 可对角化，存在可逆矩阵 $Q_i$ 使得 $Q_i^{-1}B_iQ_i$ 为对角阵。令 $Q = diag(Q_1,\cdots,Q_s)$ ，T=PQ，则 $T^{-1}BT$ 为对角阵。$T^{-1}AT = diag(Q_1^{-1},\cdots,Q_s^{-1})diag(a_1 E_{n_1},\cdots,a_s E_{n_s}) diag(Q_1,\cdots,Q_s) = diag(a_1 E_{n_1},\cdots,a_s E_{n_s})$.即 $T$ 即为所求。</p>
+<h3 id="Jodan_u5206_u89E3"><a href="#Jodan_u5206_u89E3" class="headerlink" title="Jodan分解"></a>Jodan分解</h3><p>每一个矩阵 $A$ 都可以唯一分解成 $A=B+C$, 其中 $B$ 可对角化，$C$ 幂零。且 $B,C$ 都可以写成 $A$ 的无常数项的多项式。<br>证明：首先对任意矩阵，我们有Jordan标准型：对任意矩阵 $A$，存在可逆矩阵 $P$ 使得<br>$$ P^{-1} A P = \left(\begin{matrix} J_1(\lambda_1) \\  &amp; J_2(\lambda_2) \\ &amp; &amp; \ddots \\ &amp; &amp; &amp; J_s(\lambda_s) \end{matrix}\right) = \left(\begin{matrix} \lambda<em>1 E\</em>{n_1} \\  &amp; \lambda<em>2 E\</em>{n_2} \\ &amp; &amp; \ddots \\ &amp; &amp; &amp; \lambda<em>s E\</em>{n_s} \end{matrix}\right) + \left(\begin{matrix} J_1(0) \\  &amp; J_2(0) \\ &amp; &amp; \ddots \\ &amp; &amp; &amp; J_s(0) \end{matrix}\right)$$<br>由于 $ J_i(\lambda_i) $ 的化零多项式为 $f_i(\lambda) = |\lambda -  J_1(\lambda_1)|$。由中国剩余定理知。存在多项式 $f(\lambda)$ 满足 $f = \lambda_i (mod \; f_i),i=1,\cots,s$ 且 $f= 0 (mod \lambda)$。此时<br>$$ P^{-1} A P = \left(\begin{matrix} \lambda<em>1 E\</em>{n_1} \\  &amp; \lambda<em>2 E\</em>{n_2} \\ &amp; &amp; \ddots \\ &amp; &amp; &amp; \lambda<em>s E\</em>{n_s} \end{matrix}\right) $$<br>令 $$B = P \left(\begin{matrix} \lambda<em>1 E\</em>{n_1} \\  &amp; \lambda<em>2 E\</em>{n_2} \\ &amp; &amp; \ddots \\ &amp; &amp; &amp; \lambda<em>s E\</em>{n_s} \end{matrix}\right) P^{-1}$$, 则 $B=f(A)，C=A-B$ 即为所求。上面的$B,C$ 是唯一的，因为，若存在$B_1,C_1$ 也满足上述条件，则 $A,B,C,B_1,C_1$彼此交换，$B-B_1 = C_1 - C$ 是幂零的，因此 $B=B_1,C=C_1$。</p>
+<p>Jordan 标准型将矩阵化成简单形式使得我们考虑很多问题都只需在标准型的情形分析。很多不明显的结论都能很清楚的给出答案。<br>对于Jordan分解，我们可以将一个矩阵分为所谓的半单部分和幂零部分，而由第二条结论知道，如果 $A_1,A_2$ 可交换，那么$A_1+A_2$ 的半单部分即为 $B_1+B_2$。这是很好的性质。或者说的更明了一点就是，如果 $A,B$ 可交换，且可以对角化，则$A+B$ 也可以对角化。</p>
+<blockquote>
+<p>想到写这些完全是因为 Lie Algebra 忘掉李括号本身就是一个线性空间。</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近在整理 Lie Algebra 内容时，里面提到了Jordan分解，这里就详细介绍并证明几个相关结果。</p>
+<ol>
+<li>若矩阵 $AB＝BA$，则它们有公共特征向量。</li>
+<li>若矩阵 $A,B$ 可以对角化，则它们可以同时对角化，当且仅当 $A,B$ 交换</li>
+<li>每一个矩阵 $A$ 都可以唯一分解成 $A=B+C$, 其中 $B$ 可对角化，$C$ 幂零。且 $B,C$ 都可以写成 $A$ 的无常数项的多项式。</li>
+</ol>]]>
+    
+    </summary>
+    
+      <category term="矩阵" scheme="http://dna049.com/tags/%E7%9F%A9%E9%98%B5/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[格点多边形面积公式 Pick's Theorem]]></title>
@@ -621,102 +657,6 @@ A Monoid is a semi-group contain an identity element.
     </summary>
     
       <category term="泛函分析" scheme="http://dna049.com/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[“公平”的席位分配]]></title>
-    <link href="http://dna049.com/2016/02/17/%E5%85%AC%E5%B9%B3%E7%9A%84%E5%B8%AD%E4%BD%8D%E5%88%86%E9%85%8D/"/>
-    <id>http://dna049.com/2016/02/17/公平的席位分配/</id>
-    <published>2016-02-17T04:23:42.000Z</published>
-    <updated>2016-02-23T11:16:53.000Z</updated>
-    <content type="html"><![CDATA[<p>如果说数学有点用，估计大都表现在运筹学中吧。“公平”的席位分配首先本来就是不可能的，公平一般是无法达到的，我们只是尽量降低不公平度，那么我们怎么衡量不公平度呢。就像评价一个人，有不同的指标，不公平度也是一样，这里介绍一种相对合理易于接受，且好判断的方法。<br><a id="more"></a></p>
-<h3 id="u95EE_u9898_u8868_u8FF0"><a href="#u95EE_u9898_u8868_u8FF0" class="headerlink" title="问题表述"></a>问题表述</h3><p>某学校三个系部学生共200名,(甲系100,乙系60,丙系40)代表会议共20席,按比例分配三个系分别为10、6、4席。老情况变为下列情况怎样分配才是最公平的,现因学生转系三系人数为103、63、34。 </p>
-<ol>
-<li>问20席该如何分配 ? </li>
-<li>若增加21席又如何分配 ?</li>
-</ol>
-<p>显然，因为无法整除无论如何分配都不公平。下面说一下几种策略。</p>
-<ol>
-<li>按班级人数比例乘以总人数，小数点大的分得多余的一个位子。</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">某校</th>
-<th style="text-align:right">甲系</th>
-<th style="text-align:right">乙系</th>
-<th style="text-align:right">丙系</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">共200人</td>
-<td style="text-align:right">103</td>
-<td style="text-align:right">63</td>
-<td style="text-align:right">34</td>
-</tr>
-<tr>
-<td style="text-align:center">人数比例</td>
-<td style="text-align:right">51.3</td>
-<td style="text-align:right">31.5</td>
-<td style="text-align:right">17</td>
-</tr>
-<tr>
-<td style="text-align:center">20席位</td>
-<td style="text-align:right">10.3</td>
-<td style="text-align:right">6.3</td>
-<td style="text-align:right">3.4</td>
-</tr>
-<tr>
-<td style="text-align:center">实际分配</td>
-<td style="text-align:right">10</td>
-<td style="text-align:right">6</td>
-<td style="text-align:right">4</td>
-</tr>
-<tr>
-<td style="text-align:center">21席位</td>
-<td style="text-align:right">10.82</td>
-<td style="text-align:right">6.62</td>
-<td style="text-align:right">3.57</td>
-</tr>
-<tr>
-<td style="text-align:center">实际分配</td>
-<td style="text-align:right">11</td>
-<td style="text-align:right">7</td>
-<td style="text-align:right">3</td>
-</tr>
-</tbody>
-</table>
-<p>按照上述方法，会出现席位增多而丙系的席位却减少了一个的不合理现象，说明此方法并不合理。</p>
-<h3 id="u6A21_u578B_u5EFA_u7ACB"><a href="#u6A21_u578B_u5EFA_u7ACB" class="headerlink" title="模型建立"></a>模型建立</h3><p>假设由A、B两个单位公平分配席位的情况，设两方人数$p_1,p_2$ ,分配到的席位为 $n_1,n_2$。</p>
-<ol>
-<li>$\frac{p_1}{n_1} = \frac{p_2}{n_2}$ 公平，但是一般是不满足的。</li>
-<li>$\frac{p_1}{n_1} &gt; \frac{p_2}{n_2}$ 对A不公平。</li>
-<li>$\frac{p_1}{n_1} &lt; \frac{p_2}{n_2}$ 对B不公平。</li>
-</ol>
-<p>绝对不公平度为<br>$$ d = \left| \frac{p_1}{n_1} - \frac{p_2}{n_2} \right| $$<br>但这样做还是有不足，例如<br>某两个单位的人数和席位为 $n_1=n_2=10,p_1=120,p_2=100$ 算得  $d=2$.<br>另两个单位的人数和席位为 $n_1=n_2=10,p_1=1020,p_2=1000$ 算得 $d=2$。<br>但是显然，后一种方案，更公平。</p>
-<p>因此，我们引入相对不公平度</p>
-<ol>
-<li>若 $\frac{p_1}{n_1} &gt; \frac{p_2}{n_2}$ 则<br>$$ r_A(n_1,n_2) = \frac{ \frac{p_1}{n_1} - \frac{p_2}{n_2} }{ \frac{p_2}{n_2} }$$</li>
-<li>若 $\frac{p_1}{n_1} &lt; \frac{p_2}{n_2}$<br>$$ r_B(n_1,n_2) =  \frac{\frac{p_2}{n_2} - \frac{p_1}{n_1} }{\frac{p_1}{n_1}}$$<br>我们的目标是让$r_A,r_B$(每种分配只会有一个)最小。</li>
-</ol>
-<h5 id="u786E_u5B9A_u5206_u914D_u65B9_u6848"><a href="#u786E_u5B9A_u5206_u914D_u65B9_u6848" class="headerlink" title="确定分配方案"></a>确定分配方案</h5><p>假设当前 $\frac{p_1}{n_1} &gt; \frac{p_2}{n_2}$ 对A不公平。新增了一个席位。</p>
-<ol>
-<li>若 $\frac{p_1}{n_1+1} &gt; \frac{p_2}{n_2}$ 则A加1席</li>
-<li>若 $\frac{p_1}{n_1+1} &lt; \frac{p_2}{n_2}$<br>若分配给A，则对B的不公平值(相对):<br>$$ r_B(n_1+1,n_2) = \frac{p_2(n_1+1)}{p_1 n_2} -1 $$<br>若分配给B，则对A的不公平值(相对):<br>$$ r_A(n_1,n_2+1) = \frac{p_1(n_2+1)}{p_2 n_1} -1 $$</li>
-</ol>
-<p>若$r_A(n_1,n_2+1)&lt;r_B(n_1+1,n_2)$则席位分配给B，反之给A。<br>即令<br>$$ Q_i = \frac{p_i ^2}{n_i(n_i+1)}$$<br>将席位分配给 $Q$ 值较大者。</p>
-<h3 id="u6A21_u578B_u6C42_u89E3"><a href="#u6A21_u578B_u6C42_u89E3" class="headerlink" title="模型求解"></a>模型求解</h3><p>先按照平均原则取整之后。分出了19席：$n_1=10,n_2=6,n_3=3$<br>第20席:<br>$$ Q_1 = \frac{103^2}{10 \times 11 } = 96.4 \; , \;Q_2 = \frac{63^2}{6 \times 7} = 94.5 \; , \;Q_3 = \frac{34^2}{3 \times 4} = 96.3 $$<br>则分配：$n_1=11,n_2=6,n_3=3$<br>第21席：$Q_1=80.4, Q_2 = 94.5, Q_3 = 96.3$<br>则分配：$n_1=11,n_2=6,n_3=4$.</p>
-<p>本文参考<a href="http://wenku.baidu.com/view/396d4f6aaf1ffc4ffe47ac52.html?re=view" target="_blank" rel="external">文库1</a>和<a href="http://wenku.baidu.com/view/312ef3274b35eefdc9d33304.html?re=view" target="_blank" rel="external">文库2</a>。修改了其中的错误，由于席位分配问题确实是一个经典问题，故在此记录。</p>
-<p>欢迎访问<a href="http://dna049.com">http://dna049.com</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>如果说数学有点用，估计大都表现在运筹学中吧。“公平”的席位分配首先本来就是不可能的，公平一般是无法达到的，我们只是尽量降低不公平度，那么我们怎么衡量不公平度呢。就像评价一个人，有不同的指标，不公平度也是一样，这里介绍一种相对合理易于接受，且好判断的方法。<br>]]>
-    
-    </summary>
-    
-      <category term="运筹学" scheme="http://dna049.com/tags/%E8%BF%90%E7%AD%B9%E5%AD%A6/"/>
     
   </entry>
   
