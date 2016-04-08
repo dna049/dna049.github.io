@@ -6,7 +6,7 @@
 
 
 下面逐一证明这三个结果并给出说明其意义。
-&lt;a href=&quot;#u82E5_u77E9_u9635__24A_2CB_24__u53EF_u4EA4_u6362_uFF0C_u5219_u5B83_u4EEC_u6709_u516C_u5171_u7279_u5F81_u5411_u91CF_u3002&quot; class=&quot;headerlink&quot; title=&quot;若矩阵 $A,B$ 可交换，则它们有公共特征向量"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="http://weibo.com/sunchongsheng" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li><li class="nav-list-item"><a href="https://github.com/pinggod" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">矩阵的Jordan分解</h1><div class="post-meta"><div class="post-time">2016年4月8日</div></div><div class="post-content"><p>最近在整理 Lie Algebra 内容时，里面提到了Jordan分解，这里就详细介绍并证明几个相关结果。</p>
+&lt;a href=&quot;#u82E5_u77E9_u9635__24A_2CB_24__u53EF_u4EA4_u6362_uFF0C_u5219_u5B83_u4EEC_u6709_u516C_u5171_u7279_u5F81_u5411_u91CF_u3002&quot; class=&quot;headerlink&quot; title=&quot;若矩阵 $A,B$ 可交换，则它们有公共特征向量"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="https://github.com/dna049" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="http://dna049.sinaapp.com" target="_blank" class="nav-list-link">LINK</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">矩阵的Jordan分解</h1><div class="post-meta"><div class="post-time">2016年4月8日</div></div><div class="post-content"><p>最近在整理 Lie Algebra 内容时，里面提到了Jordan分解，这里就详细介绍并证明几个相关结果。</p>
 <ol>
 <li>若矩阵 $A,B$ 可交换，则它们有公共特征向量。</li>
 <li>若矩阵 $A,B$ 可以对角化，则它们可以同时对角化，当且仅当 $A,B$ 交换</li>
@@ -25,7 +25,17 @@ B_1 \\  &amp; B_2 \\ &amp; &amp; \ddots \\ &amp; &amp; &amp; B_s
 <blockquote>
 <p>想到写这些完全是因为 Lie Algebra 忘掉 Lie 括号本身就是一个线性空间。</p>
 </blockquote>
-</div></article></div></section><footer><div class="paginator"><a href="/2016/04/08/Lie-Algebra/" class="prev">上一篇</a><a href="/2016/03/29/格点多边形面积公式-Pick-s-Theorem/" class="next">下一篇</a></div></footer><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?a36e15d9e2adec9a21fcdd9f686b1ed2";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- mathjax config similar to math.stackexchange -->
+</div></article></div></section><footer><div class="paginator"><a href="/2016/04/08/Lie-Algebra/" class="prev">上一篇</a><a href="/2016/03/29/格点多边形面积公式-Pick-s-Theorem/" class="next">下一篇</a></div><div data-thread-key="2016/04/08/矩阵的Jordan分解/" data-title="矩阵的Jordan分解" data-url="http://dna049.com/2016/04/08/矩阵的Jordan分解/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?e561b60b5caa17e3873a8e31c9e1f5f4";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- mathjax config similar to math.stackexchange -->
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({

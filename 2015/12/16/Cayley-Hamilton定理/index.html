@@ -5,7 +5,7 @@ a_{n-1} \lambda^{n-1} + \cdots + a_1 \lambda + a_0$$
 设$\lambda I - A$的伴随矩阵为B，则B中元素为关于$\lambda$的次数小于n的多项式，不妨设$$B = \lambda^{n-1} B_ {n-1} + \lambda^{n-2} B_ {n-2}
 + \cdots + \lambda B_1 + B_0$$
 所以$$(\lambda I - A)B = \lambda^n B_ {n-1} + \lambda^{n-1} (B_ {n-2} - AB_ {n-1})
-+ "><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="http://weibo.com/sunchongsheng" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li><li class="nav-list-item"><a href="https://github.com/pinggod" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Cayley-Hamilton定理</h1><div class="post-meta"><div class="post-time">2015年12月16日</div></div><div class="post-content"><p>大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：</p>
++ "><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="https://github.com/dna049" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="http://dna049.sinaapp.com" target="_blank" class="nav-list-link">LINK</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Cayley-Hamilton定理</h1><div class="post-meta"><div class="post-time">2015年12月16日</div></div><div class="post-content"><p>大一学了矩阵之后,一直很喜欢它，因为它形式简洁优美，又不缺乏技巧，是抽象和具体的桥梁，又有其实用性，成为现代数学最基础的工具之一。个人认为，矩阵中最优美的定理非Cayley-Hamilton定理（矩阵的特征多项式是它的一个化零多项式）莫属了。详细表述和证明如下：</p>
 <a id="more"></a>
 <p>n阶矩阵A的特征多项式为：<br><span>$$\phi(\lambda)=det(\lambda I - A) = a_n \lambda^n +
 a_{n-1} \lambda^{n-1} + \cdots + a_1 \lambda + a_0$$</span><!-- Has MathJax --></p>
@@ -33,7 +33,17 @@ A B_0 - A^2 B_1 = a_1 A \\
 <span>$$\phi(A)= a_ n A^n + a_{n-1} A^{n-1} + \cdots + a_1 A +
 a_0 I = \mathbf{0}$$</span><!-- Has MathJax -->
 <p>上述定理优美在于从形式上，<span>$\phi(\lambda)=det(\lambda I - A)$</span><!-- Has MathJax -->取 <span>$\lambda = A$</span><!-- Has MathJax -->带入恰好也是0（注意数字0和零矩阵的差别），虽然说这样做是完全没有道理。作为直接推论我们知道，一个n阶方阵的任何次方都可以被它的不超过n次的幂线性表出。</p>
-</div></article></div></section><footer><div class="paginator"><a href="/2015/12/16/Shur定理/" class="prev">上一篇</a><a href="/2015/12/16/仅在一点连续的函数例子/" class="next">下一篇</a></div></footer><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?a36e15d9e2adec9a21fcdd9f686b1ed2";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- mathjax config similar to math.stackexchange -->
+</div></article></div></section><footer><div class="paginator"><a href="/2015/12/16/Shur定理/" class="prev">上一篇</a><a href="/2015/12/16/仅在一点连续的函数例子/" class="next">下一篇</a></div><div data-thread-key="2015/12/16/Cayley-Hamilton定理/" data-title="Cayley-Hamilton定理" data-url="http://dna049.com/2015/12/16/Cayley-Hamilton定理/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?e561b60b5caa17e3873a8e31c9e1f5f4";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- mathjax config similar to math.stackexchange -->
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
