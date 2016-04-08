@@ -68,7 +68,7 @@
     <link href="http://dna049.com/2016/04/08/%E7%9F%A9%E9%98%B5%E7%9A%84Jordan%E5%88%86%E8%A7%A3/"/>
     <id>http://dna049.com/2016/04/08/矩阵的Jordan分解/</id>
     <published>2016-04-08T08:20:49.000Z</published>
-    <updated>2016-04-08T10:14:16.000Z</updated>
+    <updated>2016-04-08T14:35:10.000Z</updated>
     <content type="html"><![CDATA[<p>最近在整理 Lie Algebra 内容时，里面提到了Jordan分解，这里就详细介绍并证明几个相关结果。</p>
 <ol>
 <li>若矩阵 $A,B$ 可交换，则它们有公共特征向量。</li>
@@ -76,7 +76,7 @@
 <li>每一个矩阵 $A$ 都可以唯一分解成 $A=B+C$, 其中 $B$ 可对角化，$C$ 幂零。且 $B,C$ 都可以写成 $A$ 的无常数项的多项式。</li>
 </ol>
 <a id="more"></a>
-<p>下面逐一证明这三个结果并给出说明其意义。</p>
+<p>下面证明这三个结果并给出说明其意义。</p>
 <h3 id="u82E5_u77E9_u9635__24A_2CB_24__u53EF_u4EA4_u6362_uFF0C_u5219_u5B83_u4EEC_u6709_u516C_u5171_u7279_u5F81_u5411_u91CF_u3002"><a href="#u82E5_u77E9_u9635__24A_2CB_24__u53EF_u4EA4_u6362_uFF0C_u5219_u5B83_u4EEC_u6709_u516C_u5171_u7279_u5F81_u5411_u91CF_u3002" class="headerlink" title="若矩阵 $A,B$ 可交换，则它们有公共特征向量。"></a>若矩阵 $A,B$ 可交换，则它们有公共特征向量。</h3><p><strong>证明</strong>：我们设 $V$ 为 $n$ 阶列向量全体。设 $\lambda$ 为 $B$ 的一个特征值。设<br>$$W = \lbrace x \in V \;|\; Bx = \lambda x \rbrace $$<br>则对任意 $x \in W$,<br>$$B(Ax) = A(Bx)=A(\lambda x)=\lambda(Ax)$$<br>即 $Ax \in W$。即 $W$ 是 $A$ 的不变子空间，因此，$A$ 在 $W$ 中有特征值 $\mu$ 对应的特征向量 $v$ 即为所求。</p>
 <h3 id="u82E5_u77E9_u9635__24A_2CB_24__u53EF_u4EE5_u5BF9_u89D2_u5316_uFF0C_u5219_u5B83_u4EEC_u53EF_u4EE5_u540C_u65F6_u5BF9_u89D2_u5316_uFF0C_u5F53_u4E14_u4EC5_u5F53__24A_2CB_24__u4EA4_u6362"><a href="#u82E5_u77E9_u9635__24A_2CB_24__u53EF_u4EE5_u5BF9_u89D2_u5316_uFF0C_u5219_u5B83_u4EEC_u53EF_u4EE5_u540C_u65F6_u5BF9_u89D2_u5316_uFF0C_u5F53_u4E14_u4EC5_u5F53__24A_2CB_24__u4EA4_u6362" class="headerlink" title="若矩阵 $A,B$ 可以对角化，则它们可以同时对角化，当且仅当 $A,B$ 交换."></a>若矩阵 $A,B$ 可以对角化，则它们可以同时对角化，当且仅当 $A,B$ 交换.</h3><p><strong>证明</strong>：$\rightarrow$ 是显然的。现证 $\leftarrow$ 若 $A,B$ 交换。<br>由条件知，存在可逆矩阵 $P$ 使得 $P^{-1}AP = diag(a_1 E_{n_1},\cdots,a_s E_{n_s})$。由 $A,B$ 交换知，$P^{-1}AP P^{-1}BP = P^{-1}BP P^{-1}AP$。因此<br><span>$$P^{-1}BP = \left(\begin{matrix} 
 B_1 \\  &amp; B_2 \\ &amp; &amp; \ddots \\ &amp; &amp; &amp; B_s 
