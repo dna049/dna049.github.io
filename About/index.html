@@ -144,7 +144,7 @@ To Myself
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: dna049,
+      userId: 0,
       author: '博主'
     }
   };
@@ -212,17 +212,21 @@ To Myself
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
-            
             首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/About" rel="section">
+            
+            關於
           </a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
             
             歸檔
           </a>
@@ -231,8 +235,6 @@ To Myself
         
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
             
             標籤
           </a>
@@ -283,6 +285,10 @@ To Myself
 
           
   <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="About/index.html"
+           data-title="欢迎来到 DNA049 的个人主页" data-url="http://dna049.com/About/index.html">
+      </div>
     
   </div>
 
@@ -463,9 +469,28 @@ To Myself
 
   
 
+  
+    
+  
 
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"dna049"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
   
+    
+  
+
+
 
 
 
@@ -496,9 +521,6 @@ To Myself
   
 
   
-<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
-</script>
-
 
 <!-- mathjax config similar to math.stackexchange -->
 

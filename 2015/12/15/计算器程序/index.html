@@ -109,7 +109,7 @@ ps:最处想做这件事的原因是：我在大学想写一个带GUI界面的�
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: dna049,
+      userId: 0,
       author: '博主'
     }
   };
@@ -171,17 +171,21 @@ ps:最处想做这件事的原因是：我在大学想写一个带GUI界面的�
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
-            
             首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/About" rel="section">
+            
+            關於
           </a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
             
             歸檔
           </a>
@@ -190,8 +194,6 @@ ps:最处想做这件事的原因是：我在大学想写一个带GUI界面的�
         
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
             
             標籤
           </a>
@@ -255,6 +257,13 @@ ps:最处想做这件事的原因是：我在大学想写一个带GUI界面的�
           
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/15/计算器程序/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/15/计算器程序/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -350,6 +359,10 @@ ps:最处想做这件事的原因是：我在大学想写一个带GUI界面的�
 
           
   <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/12/15/计算器程序/"
+           data-title="计算器程序" data-url="http://dna049.com/2015/12/15/计算器程序/">
+      </div>
     
   </div>
 
@@ -554,9 +567,28 @@ ps:最处想做这件事的原因是：我在大学想写一个带GUI界面的�
 
   
 
+  
+    
+  
 
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"dna049"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
   
+    
+  
+
+
 
 
 
@@ -587,9 +619,6 @@ ps:最处想做这件事的原因是：我在大学想写一个带GUI界面的�
   
 
   
-<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
-</script>
-
 
 <!-- mathjax config similar to math.stackexchange -->
 
