@@ -1,137 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>素数筛选 - 0.肆玖</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="判断一个数是否为素数，是一个很古老的问题，这里给出一个素数筛选的函数和调用实例。当然这里也有限制，要求数不能超过1e7。当然适当修改代码或者对于不同的需求可以相应修改达到不同目的。下面代码是提交到hdu2879上排行第一的代码：">
-<meta property="og:type" content="article">
-<meta property="og:title" content="素数筛选">
-<meta property="og:url" content="http://dna049.com/2015/12/15/素数筛选/index.html">
-<meta property="og:site_name" content="0.肆玖">
-<meta property="og:description" content="判断一个数是否为素数，是一个很古老的问题，这里给出一个素数筛选的函数和调用实例。当然这里也有限制，要求数不能超过1e7。当然适当修改代码或者对于不同的需求可以相应修改达到不同目的。下面代码是提交到hdu2879上排行第一的代码：">
-<meta property="og:updated_time" content="2016-02-23T11:40:20.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="素数筛选">
-<meta name="twitter:description" content="判断一个数是否为素数，是一个很古老的问题，这里给出一个素数筛选的函数和调用实例。当然这里也有限制，要求数不能超过1e7。当然适当修改代码或者对于不同的需求可以相应修改达到不同目的。下面代码是提交到hdu2879上排行第一的代码：">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
-  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-  
-
-</head>
-
-<body>
-  <div id="container">
-    <header id="header">
-  <div id="header-outer" class="outer">
-    <div id="header-inner" class="inner">
-      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
-      <a id="logo" class="logo" href="/"></a>
-      <nav id="main-nav">
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-          <a class="main-nav-link" href="/tags">Tags</a>
-        
-          <a class="main-nav-link" href="/About">About</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        <div id="search-form-wrap">
-          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://dna049.com"></form>
-        </div>
-      </nav>
-    </div>
-  </div>
-</header>
-    <section id="main" class="outer"><article id="post-素数筛选" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      素数筛选
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2015/12/15/素数筛选/" class="article-date">
-  <time datetime="2015-12-15T15:07:44.000Z" itemprop="datePublished">2015-12-15</time>
-</a>
-      
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>判断一个数是否为素数，是一个很古老的问题，这里给出一个素数筛选的函数和调用实例。当然这里也有限制，要求数不能超过1e7。当然适当修改代码或者对于不同的需求可以相应修改达到不同目的。下面代码是提交到hdu2879上排行第一的代码：<br><a id="more"></a></p>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 素数筛选 · 0.肆玖</title><meta name="description" content="素数筛选 - dna049"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div id="mask" style="display: none;"><img id="mask-image" src="#" style=" "></div><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/dna049" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/dna049" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="tags" target="_self" class="nav-list-link">TAGS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">素数筛选</h1><div class="post-time">2015年12月15日</div><div class="post-content"><p>判断一个数是否为素数，是一个很古老的问题，这里给出一个素数筛选的函数和调用实例。当然这里也有限制，要求数不能超过1e7。当然适当修改代码或者对于不同的需求可以相应修改达到不同目的。下面代码是提交到hdu2879上排行第一的代码：<br><a id="more"></a></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span>    //140MS	7772K</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">5000006</span>;    <span class="comment">//允许的最大数组为2500*2500</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX=<span class="number">10000007</span>;</span><br><span class="line"><span class="keyword">bool</span> temp[N];</span><br><span class="line"><span class="keyword">int</span> prim[<span class="number">700000</span>];       <span class="comment">// 10^7内的素数不超过700000</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isprime</span><span class="params">()</span></span>&#123;          <span class="comment">//可以返回小于MAX的素数个数</span></span><br><span class="line">    <span class="keyword">int</span> t=<span class="number">0</span>;</span><br><span class="line">    prim[t++]=<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">int</span> kill=<span class="keyword">int</span>(<span class="built_in">sqrt</span>(<span class="number">1.0</span>*MAX))+<span class="number">1</span>;    <span class="comment">//换时间</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">3</span>;i&lt;kill;i+=<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!temp[i&gt;&gt;<span class="number">1</span>])&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i*i;j&lt;MAX;j+=i&lt;&lt;<span class="number">1</span>)&#123;</span><br><span class="line">                temp[j&gt;&gt;<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    kill=MAX&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i!=kill;++i)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!temp[i])&#123;</span><br><span class="line">            prim[t++]=i&lt;&lt;<span class="number">1</span>|<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> t;</span><br><span class="line">&#125;</span><br><span class="line">__<span class="function">int64 <span class="title">mypow</span><span class="params">(<span class="keyword">int</span> n,__int64 m)</span></span>&#123;</span><br><span class="line">    __int64 x=<span class="number">2</span>,r=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n&amp;<span class="number">1</span>) r=r*x%m;</span><br><span class="line">        n&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">        x=x*x%m;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> r;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="comment">//printf("%d\n",isprime());</span></span><br><span class="line">    isprime();</span><br><span class="line">    <span class="keyword">int</span> T,n;</span><br><span class="line">    __int64 m;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">    <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%I64d"</span>,&amp;n,&amp;m);</span><br><span class="line">        <span class="keyword">int</span> s=<span class="number">0</span>,r=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(prim[s]&lt;=n&amp;&amp;prim[s]!=<span class="number">0</span>)&#123;</span><br><span class="line">            r+=n/prim[s++];     <span class="comment">//不会超int</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%I64d\n"</span>,mypow(r,m));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>该文最早是2014-03-02写在csdn上的，现在转移过来。</p>
+</div></article></div></section><footer><div class="paginator"><a href="/2015/12/15/产生520的复杂代码/" class="prev">上一篇</a><a href="/2015/12/15/hello-world/" class="next">下一篇</a></div><div data-thread-key="2015/12/15/素数筛选/" data-title="素数筛选" data-url="http://dna049.com/2015/12/15/素数筛选/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
 
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数论/">数论</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2015/12/15/产生520的复杂代码/" id="article-nav-newer" class="article-nav-link-wrap">
-      <div class="article-nav-title"><span>&lt;</span>&nbsp;
-        
-          产生520的复杂代码
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2015/12/15/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World&nbsp;<span>&gt;</span></div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-    <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 dna049&nbsp;
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
-    </div>
-  </div>
-</footer>
-    
-
-<script src="/js/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-
-
-<script src="/js/script.js" type="text/javascript"></script>
-  </div>
-</body>
-</html>
+</script><div class="copyright"><p>© 2015 - 2016 <a href="http://dna049.com">dna049</a>, unless otherwise noted.</p></div></footer></div><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?699b245cef6684fc1e306cd9cc1cb26a";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>

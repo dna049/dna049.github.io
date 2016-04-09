@@ -1,144 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>格点多边形面积公式 Pick&#39;s Theorem - 0.肆玖</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Pick 定理: 顶点在格点上的简单多边形面积公式为$$ S=i+\frac{j}{2}-1 $$其中 $i,j,S$ 分别表示多边形内部的点数、边界上的点数、面积。下面给出清晰明了的证明方法。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="格点多边形面积公式 Pick's Theorem">
-<meta property="og:url" content="http://dna049.com/2016/03/29/格点多边形面积公式-Pick-s-Theorem/index.html">
-<meta property="og:site_name" content="0.肆玖">
-<meta property="og:description" content="Pick 定理: 顶点在格点上的简单多边形面积公式为$$ S=i+\frac{j}{2}-1 $$其中 $i,j,S$ 分别表示多边形内部的点数、边界上的点数、面积。下面给出清晰明了的证明方法。">
-<meta property="og:image" content="http://dna049.com/pick.png">
-<meta property="og:updated_time" content="2016-03-29T13:52:02.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="格点多边形面积公式 Pick's Theorem">
-<meta name="twitter:description" content="Pick 定理: 顶点在格点上的简单多边形面积公式为$$ S=i+\frac{j}{2}-1 $$其中 $i,j,S$ 分别表示多边形内部的点数、边界上的点数、面积。下面给出清晰明了的证明方法。">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
-  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-  
-
-</head>
-
-<body>
-  <div id="container">
-    <header id="header">
-  <div id="header-outer" class="outer">
-    <div id="header-inner" class="inner">
-      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
-      <a id="logo" class="logo" href="/"></a>
-      <nav id="main-nav">
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-          <a class="main-nav-link" href="/tags">Tags</a>
-        
-          <a class="main-nav-link" href="/About">About</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        <div id="search-form-wrap">
-          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://dna049.com"></form>
-        </div>
-      </nav>
-    </div>
-  </div>
-</header>
-    <section id="main" class="outer"><article id="post-格点多边形面积公式-Pick-s-Theorem" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      格点多边形面积公式 Pick&#39;s Theorem
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2016/03/29/格点多边形面积公式-Pick-s-Theorem/" class="article-date">
-  <time datetime="2016-03-29T13:00:30.000Z" itemprop="datePublished">2016-03-29</time>
-</a>
-      
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Pick 定理: 顶点在格点上的简单多边形面积公式为<br>$$ S=i+\frac{j}{2}-1 $$<br>其中 $i,j,S$ 分别表示多边形内部的点数、边界上的点数、面积。下面给出清晰明了的证明方法。<br><a id="more"></a></p>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 格点多边形面积公式 Pick's Theorem · 0.肆玖</title><meta name="description" content="格点多边形面积公式 Pick's Theorem - dna049"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div id="mask" style="display: none;"><img id="mask-image" src="#" style=" "></div><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/dna049" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/dna049" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="tags" target="_self" class="nav-list-link">TAGS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">格点多边形面积公式 Pick's Theorem</h1><div class="post-time">2016年3月29日</div><div class="post-content"><p>Pick 定理: 顶点在格点上的简单多边形面积公式为<br>$$ S=i+\frac{j}{2}-1 $$<br>其中 $i,j,S$ 分别表示多边形内部的点数、边界上的点数、面积。下面给出清晰明了的证明方法。<br><a id="more"></a></p>
 <h3 id="u4E0E_u5750_u6807_u8F74_u5E73_u884C_u7684_u77E9_u5F62_uFF08_u957F_u65B9_u5F62_uFF09"><a href="#u4E0E_u5750_u6807_u8F74_u5E73_u884C_u7684_u77E9_u5F62_uFF08_u957F_u65B9_u5F62_uFF09" class="headerlink" title="与坐标轴平行的矩形（长方形）"></a>与坐标轴平行的矩形（长方形）</h3><p>不妨设矩形边长为 $a,b$。因此面积: $S = ab$<br>内部格点个数:<br>$$i=(a-1)(b-1)$$<br>边界格点个数为 $j=2(a+b)$, 结论成立。</p>
 <h3 id="u76F4_u89D2_u8FB9_u4E0E_u5750_u6807_u8F74_u5E73_u884C_u7684_u76F4_u89D2_u4E09_u89D2_u5F62"><a href="#u76F4_u89D2_u8FB9_u4E0E_u5750_u6807_u8F74_u5E73_u884C_u7684_u76F4_u89D2_u4E09_u89D2_u5F62" class="headerlink" title="直角边与坐标轴平行的直角三角形"></a>直角边与坐标轴平行的直角三角形</h3><p>不妨设直角三角形的直角边分别为 $a,b$，面积 $S=\frac{ab}{2}$。将其补成一个矩形，则两个直角三角形全等，设公共边的格点个数为 $e$,内部格点数 $i=\frac{(a-1)(b-1)-(e-2)}{2}$, 边界总格点数为 $j=e+a-1+b-1$,因此<br>$$ i+ \frac{j}{2} - 1 = (a-1)(b-1)/2 - (e-2) + \frac{e+a-1+b-1}{2} -1 =  \frac{ab}{2}$$</p>
 <h3 id="u4E00_u4E2A_u7B80_u5355_u591A_u8FB9_u5F62_u62C6_u9664_u4E24_u4E2A_u7B80_u5355_u591A_u8FB9_u5F62"><a href="#u4E00_u4E2A_u7B80_u5355_u591A_u8FB9_u5F62_u62C6_u9664_u4E24_u4E2A_u7B80_u5355_u591A_u8FB9_u5F62" class="headerlink" title="一个简单多边形拆除两个简单多边形"></a>一个简单多边形拆除两个简单多边形</h3><p>若这两个简单多边形公共边上有 $c$ 个顶点,分别满足 Pick 定理。<br>设 $P$ 的面积为 $P_i + \frac{P_j}{2} - 1$<br>设 $T$ 的面积为 $T_i + \frac{T_j}{2} - 1$<br>则 $PT$ 的面积为:<br>$$ (T_i+P_i+c-2) + \frac{P_j-c+T_j-c+2}{2} - 1$$<br>也满足 Pick 定理。<br>类似地，若 $P,PT$ 满足 Pick 定理，$T$ 也满足。</p>
 <h3 id="u4E09_u89D2_u5F62"><a href="#u4E09_u89D2_u5F62" class="headerlink" title="三角形"></a>三角形</h3><p>对于一般三角形ABC，我们可以将其补在一个与坐标轴平行的矩阵(边长设为 $a,b$)中（如下图）<br><img src="pick.png" alt="pick&#39;s Theorem"><br>根据上面的结论，容易知道对于一般三角形，结论也成立。</p>
 <h3 id="u7B80_u5355_u591A_u8FB9_u5F62"><a href="#u7B80_u5355_u591A_u8FB9_u5F62" class="headerlink" title="简单多边形"></a>简单多边形</h3><p>需要说明的简单多边形是指，平面上边不相交的多边形。<br>由于每个 $n$ 边形，都可以拆成一个 $n-1$ 边形和一个三角形，因此易用数学归纳法证明结论对简单多边形成立。</p>
 <pre><code>传说中这个定理和有关Farey序列。
-</code></pre>
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/初等数学/">初等数学</a></li></ul>
+</code></pre></div></article></div></section><footer><div class="paginator"><a href="/2016/04/08/矩阵的Jordan分解/" class="prev">上一篇</a><a href="/2016/03/29/代数知识点/" class="next">下一篇</a></div><div data-thread-key="2016/03/29/格点多边形面积公式-Pick-s-Theorem/" data-title="格点多边形面积公式 Pick's Theorem" data-url="http://dna049.com/2016/03/29/格点多边形面积公式-Pick-s-Theorem/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
 
-      </footer>
-    
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2016/04/08/矩阵的Jordan分解/" id="article-nav-newer" class="article-nav-link-wrap">
-      <div class="article-nav-title"><span>&lt;</span>&nbsp;
-        
-          矩阵的Jordan分解
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/03/29/代数知识点/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">代数知识点&nbsp;<span>&gt;</span></div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-    <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 dna049&nbsp;
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
-    </div>
-  </div>
-</footer>
-    
-
-<script src="/js/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-
-
-<script src="/js/script.js" type="text/javascript"></script>
-  </div>
-<!-- mathjax config similar to math.stackexchange -->
+</script><div class="copyright"><p>© 2015 - 2016 <a href="http://dna049.com">dna049</a>, unless otherwise noted.</p></div></footer></div><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?699b245cef6684fc1e306cd9cc1cb26a";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- mathjax config similar to math.stackexchange -->
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -168,5 +45,4 @@
 
 <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-</body>
-</html>
+</body></html>

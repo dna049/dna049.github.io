@@ -1,81 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>二次剩余和Guass互反律 - 0.肆玖</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="从二次剩余问题，引入Legendre符号，由此一步步导出Guass互反律，最后延伸到Jacobi符号，整个步骤确实连贯优美，脍炙人口。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="二次剩余和Guass互反律">
-<meta property="og:url" content="http://dna049.com/2016/02/16/二次剩余和Guass互反律/index.html">
-<meta property="og:site_name" content="0.肆玖">
-<meta property="og:description" content="从二次剩余问题，引入Legendre符号，由此一步步导出Guass互反律，最后延伸到Jacobi符号，整个步骤确实连贯优美，脍炙人口。">
-<meta property="og:updated_time" content="2016-02-23T11:16:43.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二次剩余和Guass互反律">
-<meta name="twitter:description" content="从二次剩余问题，引入Legendre符号，由此一步步导出Guass互反律，最后延伸到Jacobi符号，整个步骤确实连贯优美，脍炙人口。">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
-  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-  
-
-</head>
-
-<body>
-  <div id="container">
-    <header id="header">
-  <div id="header-outer" class="outer">
-    <div id="header-inner" class="inner">
-      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
-      <a id="logo" class="logo" href="/"></a>
-      <nav id="main-nav">
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-          <a class="main-nav-link" href="/tags">Tags</a>
-        
-          <a class="main-nav-link" href="/About">About</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        <div id="search-form-wrap">
-          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://dna049.com"></form>
-        </div>
-      </nav>
-    </div>
-  </div>
-</header>
-    <section id="main" class="outer"><article id="post-二次剩余和Guass互反律" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      二次剩余和Guass互反律
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2016/02/16/二次剩余和Guass互反律/" class="article-date">
-  <time datetime="2016-02-16T13:05:36.000Z" itemprop="datePublished">2016-02-16</time>
-</a>
-      
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>从二次剩余问题，引入Legendre符号，由此一步步导出Guass互反律，最后延伸到Jacobi符号，整个步骤确实连贯优美，脍炙人口。<br><a id="more"></a></p>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 二次剩余和Guass互反律 · 0.肆玖</title><meta name="description" content="二次剩余和Guass互反律 - dna049"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div id="mask" style="display: none;"><img id="mask-image" src="#" style=" "></div><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/dna049" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/dna049" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="tags" target="_self" class="nav-list-link">TAGS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">二次剩余和Guass互反律</h1><div class="post-time">2016年2月16日</div><div class="post-content"><p>从二次剩余问题，引入Legendre符号，由此一步步导出Guass互反律，最后延伸到Jacobi符号，整个步骤确实连贯优美，脍炙人口。<br><a id="more"></a></p>
 <p>寒假回家好好调整了一下状态，回学校后感觉还不错，效率也蛮高。发现理图虽然比较破，但是还是很不错的，哈哈哈。每次读潘承洞先生的《数论基础》都觉得受益匪浅，我把自己很喜欢的部分写入到该文中。</p>
 <h3 id="u4E8C_u6B21_u5269_u4F59"><a href="#u4E8C_u6B21_u5269_u4F59" class="headerlink" title="二次剩余"></a>二次剩余</h3><p>考虑如下形式二次同余式<br>$$ x^2 = a \; (mod \; p) $$<br>其中 $p$ 是奇素数。</p>
 <p>经过简单推理很容易发现，在模 $p$ 的简化系中，二次剩余与二次非剩余各占一半。且容易知道，$1^2,2^2,\cdots,(\frac{p-1}{2})^2$ 都是二次剩余。</p>
@@ -94,62 +17,17 @@
 <p>这里只是简介的纪录一下比较简洁精彩的部分。更多数论的内容还是很推荐潘承洞先生的书的。另外指数原根等一些知识也讲的特别简洁明了。下面给出我写的求原根的MATLAB代码。<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">d</span> = <span class="title">zhi_shu</span><span class="params">(g,n)</span></span></span><br><span class="line"><span class="comment">%---------------------------------------</span></span><br><span class="line"><span class="comment">% 输入：底数g和模n</span></span><br><span class="line"><span class="comment">% 输出：其指数</span></span><br><span class="line"><span class="comment">% 2016-2-16 in FDU by dna049</span></span><br><span class="line"><span class="comment">%---------------------------------------</span></span><br><span class="line">r = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> d = <span class="number">1</span>:n</span><br><span class="line">    r = <span class="built_in">mod</span>(r*g,n);</span><br><span class="line">    <span class="keyword">if</span> r == <span class="number">1</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">x</span> = <span class="title">phi_euler</span><span class="params">(n)</span></span></span><br><span class="line"><span class="comment">%---------------------------------------</span></span><br><span class="line"><span class="comment">% Euler function in number theory</span></span><br><span class="line"><span class="comment">% 2016-2-16 in FDU by dna049</span></span><br><span class="line"><span class="comment">%---------------------------------------</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">isprime</span>(n)</span><br><span class="line">        x = n-<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        pn = <span class="built_in">primes</span>(n);</span><br><span class="line">        x = n;</span><br><span class="line">        <span class="keyword">for</span> <span class="built_in">i</span> = pn</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">mod</span>(n,<span class="built_in">i</span>) == <span class="number">0</span></span><br><span class="line">                n = n/<span class="built_in">i</span>;</span><br><span class="line">                <span class="keyword">while</span> <span class="built_in">mod</span>(n,<span class="built_in">i</span>) == <span class="number">0</span></span><br><span class="line">                    n = n/<span class="built_in">i</span>;</span><br><span class="line">                <span class="keyword">end</span></span><br><span class="line">                x = x/<span class="built_in">i</span>*(<span class="built_in">i</span>-<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">i</span>&gt;n</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">d</span> = <span class="title">yuan_gen_s</span><span class="params">(p)</span></span></span><br><span class="line"><span class="comment">%---------------------------------------</span></span><br><span class="line"><span class="comment">% 输入：素数p</span></span><br><span class="line"><span class="comment">% 输出：所有原根</span></span><br><span class="line"><span class="comment">% 2016-2-16 in FDU by dna049</span></span><br><span class="line"><span class="comment">%---------------------------------------</span></span><br><span class="line">d_now = p-<span class="number">1</span>;</span><br><span class="line">v = <span class="built_in">ones</span>(<span class="number">1</span>,p);</span><br><span class="line">v(<span class="number">1</span>) = <span class="number">0</span>;</span><br><span class="line">v(p) = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">2</span>:p-<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> v(<span class="built_in">i</span>) == <span class="number">1</span></span><br><span class="line">        td = zhi_shu(<span class="built_in">i</span>,p);</span><br><span class="line">        <span class="keyword">if</span> td ~= p-<span class="number">1</span></span><br><span class="line">            tp = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> <span class="built_in">j</span> = <span class="number">1</span>:td</span><br><span class="line">                tp = <span class="built_in">mod</span>(tp*<span class="built_in">i</span>-<span class="number">1</span>,p)+<span class="number">1</span>;</span><br><span class="line">                v(tp) = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">d = <span class="number">1</span>:p;</span><br><span class="line">d = d(v==<span class="number">1</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+</div></article></div></section><footer><div class="paginator"><a href="/2016/02/16/hdu-5628-Dirichlet积与快速幂的应用/" class="prev">上一篇</a><a href="/2016/01/21/自然数方幂和公式/" class="next">下一篇</a></div><div data-thread-key="2016/02/16/二次剩余和Guass互反律/" data-title="二次剩余和Guass互反律" data-url="http://dna049.com/2016/02/16/二次剩余和Guass互反律/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
 
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数论/">数论</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2016/02/16/hdu-5628-Dirichlet积与快速幂的应用/" id="article-nav-newer" class="article-nav-link-wrap">
-      <div class="article-nav-title"><span>&lt;</span>&nbsp;
-        
-          hdu 5628 (Dirichlet积与快速幂的应用)
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/01/21/自然数方幂和公式/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">自然数方幂和公式&nbsp;<span>&gt;</span></div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-    <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 dna049&nbsp;
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
-    </div>
-  </div>
-</footer>
-    
-
-<script src="/js/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-
-
-<script src="/js/script.js" type="text/javascript"></script>
-  </div>
-<!-- mathjax config similar to math.stackexchange -->
+</script><div class="copyright"><p>© 2015 - 2016 <a href="http://dna049.com">dna049</a>, unless otherwise noted.</p></div></footer></div><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?699b245cef6684fc1e306cd9cc1cb26a";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- mathjax config similar to math.stackexchange -->
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -179,5 +57,4 @@
 
 <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-</body>
-</html>
+</body></html>

@@ -1,81 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>Hahn-Banach 延拓定理 - 0.肆玖</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hahn-Banach 延拓定理通常分为分析和几何的形式，其中几何形式通常称为凸集分离性定理。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hahn-Banach 延拓定理">
-<meta property="og:url" content="http://dna049.com/2016/02/19/Hahn-Banach-延拓定理/index.html">
-<meta property="og:site_name" content="0.肆玖">
-<meta property="og:description" content="Hahn-Banach 延拓定理通常分为分析和几何的形式，其中几何形式通常称为凸集分离性定理。">
-<meta property="og:updated_time" content="2016-02-23T11:34:40.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hahn-Banach 延拓定理">
-<meta name="twitter:description" content="Hahn-Banach 延拓定理通常分为分析和几何的形式，其中几何形式通常称为凸集分离性定理。">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
-  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-  
-
-</head>
-
-<body>
-  <div id="container">
-    <header id="header">
-  <div id="header-outer" class="outer">
-    <div id="header-inner" class="inner">
-      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
-      <a id="logo" class="logo" href="/"></a>
-      <nav id="main-nav">
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-          <a class="main-nav-link" href="/tags">Tags</a>
-        
-          <a class="main-nav-link" href="/About">About</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        <div id="search-form-wrap">
-          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://dna049.com"></form>
-        </div>
-      </nav>
-    </div>
-  </div>
-</header>
-    <section id="main" class="outer"><article id="post-Hahn-Banach-延拓定理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Hahn-Banach 延拓定理
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2016/02/19/Hahn-Banach-延拓定理/" class="article-date">
-  <time datetime="2016-02-19T00:26:38.000Z" itemprop="datePublished">2016-02-19</time>
-</a>
-      
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Hahn-Banach 延拓定理通常分为分析和几何的形式，其中几何形式通常称为凸集分离性定理。<br><a id="more"></a></p>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Hahn-Banach 延拓定理 · 0.肆玖</title><meta name="description" content="Hahn-Banach 延拓定理 - dna049"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div id="mask" style="display: none;"><img id="mask-image" src="#" style=" "></div><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/dna049" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/dna049" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="tags" target="_self" class="nav-list-link">TAGS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Hahn-Banach 延拓定理</h1><div class="post-time">2016年2月19日</div><div class="post-content"><p>Hahn-Banach 延拓定理通常分为分析和几何的形式，其中几何形式通常称为凸集分离性定理。<br><a id="more"></a></p>
 <h3 id="Hahn-Banach__u5EF6_u62D3_u5B9A_u7406_u7684_u5206_u6790_u5F62_u5F0F"><a href="#Hahn-Banach__u5EF6_u62D3_u5B9A_u7406_u7684_u5206_u6790_u5F62_u5F0F" class="headerlink" title="Hahn-Banach 延拓定理的分析形式"></a>Hahn-Banach 延拓定理的分析形式</h3><p><strong>定义1</strong> 设 $X$ 是线性空间，$p \colon X \to \mathbb{R}$ 是一个泛函，若 $p$ 满足</p>
 <ol>
 <li>$p(x+y) \leq p(x)+p(y)$ 则称 $p$ 在 $X$ 上是次可加的，若</li>
@@ -108,62 +31,17 @@
 <li>根据2，存在$f \in X^{* },r&gt;0$ 使得<br>$$ \Re f(x) &lt; r \leq \Re f(y),\; \forall x \in A,y \in B. $$<br>由于 $A$ 是平衡集，故 $x \in A$ 当且仅当 $e^{-i \theta}x \in A, \theta \in \mathbb{R}$,特别的取 $\theta = \arg f(x)$ 则<br>$$ |f(x)| = e^{-i \theta}f(x) = f(e^{i \theta}x) = \Re f(e^{i \theta}x) &lt; r $$<br>这是我们要的不等式左边，右边直接由 $\Re f(y) \leq |f(y)|$ 得到,证毕。</li>
 </ol>
 <p>欢迎访问和评论 <a href="http://dna049.com">http://dna049.com</a></p>
+</div></article></div></section><footer><div class="paginator"><a href="/2016/02/22/整数集上的一种奇特拓扑/" class="prev">上一篇</a><a href="/2016/02/18/拓扑线性空间的若干基本定理/" class="next">下一篇</a></div><div data-thread-key="2016/02/19/Hahn-Banach-延拓定理/" data-title="Hahn-Banach 延拓定理" data-url="http://dna049.com/2016/02/19/Hahn-Banach-延拓定理/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
 
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/泛函分析/">泛函分析</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2016/02/22/整数集上的一种奇特拓扑/" id="article-nav-newer" class="article-nav-link-wrap">
-      <div class="article-nav-title"><span>&lt;</span>&nbsp;
-        
-          整数集上的一种奇特拓扑
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/02/18/拓扑线性空间的若干基本定理/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">拓扑线性空间的若干基本定理&nbsp;<span>&gt;</span></div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-    <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 dna049&nbsp;
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
-    </div>
-  </div>
-</footer>
-    
-
-<script src="/js/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-
-
-<script src="/js/script.js" type="text/javascript"></script>
-  </div>
-<!-- mathjax config similar to math.stackexchange -->
+</script><div class="copyright"><p>© 2015 - 2016 <a href="http://dna049.com">dna049</a>, unless otherwise noted.</p></div></footer></div><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?699b245cef6684fc1e306cd9cc1cb26a";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- mathjax config similar to math.stackexchange -->
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -193,5 +71,4 @@
 
 <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-</body>
-</html>
+</body></html>
