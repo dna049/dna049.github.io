@@ -81,10 +81,10 @@
     <link href="http://dna049.com/2016/04/10/POJ2559-%E5%8D%95%E8%B0%83%E6%A0%88/"/>
     <id>http://dna049.com/2016/04/10/POJ2559-单调栈/</id>
     <published>2016-04-10T11:27:49.000Z</published>
-    <updated>2016-04-10T12:42:35.000Z</updated>
+    <updated>2016-04-10T12:47:36.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://poj.org/problem?id=2559" target="_blank" rel="external">POJ</a>上有一到有趣的题：求一个柱状图中面积最大的矩阵面积为多少?<br> 最暴力的方法当然0.0不值一提，下面看看如何用单调栈的方法解决<br><a id="more"></a><br><img src="poj2559.png" alt="poj2559"></p>
 <h2 id="u5355_u8C03_u6808"><a href="#u5355_u8C03_u6808" class="headerlink" title="单调栈"></a>单调栈</h2><h4 id="u7EF4_u62A4_u5355_u8C03_u6808_uFF1A"><a href="#u7EF4_u62A4_u5355_u8C03_u6808_uFF1A" class="headerlink" title="维护单调栈："></a>维护单调栈：</h4><p>进栈操作：每次入栈前先检验栈顶元素和进栈元素x的大小，如果小于x，就让x直接入栈。如果栈顶元素大于等于x,那么出栈，直到栈空或者栈顶元素小于x</p>
-<h4 id="u4F8B_u5B50"><a href="#u4F8B_u5B50" class="headerlink" title="例子"></a>例子</h4><p>$ a[] = \lbrace 1 4 5 2 0 \rbrace$</p>
+<h4 id="u4F8B_u5B50"><a href="#u4F8B_u5B50" class="headerlink" title="例子"></a>例子</h4><p>$ a[\;] = \lbrace 1, 4, 5, 2, 0 \rbrace $</p>
 <ol>
 <li>初始栈为空，进栈，栈内元素(1)</li>
 <li>4大于1，进栈。栈内元素(1,4)</li>
