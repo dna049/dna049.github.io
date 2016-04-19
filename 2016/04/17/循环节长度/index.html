@@ -6,7 +6,7 @@
 <li>$\frac{q}{p}$ 是有限小数，当且仅当 $\exists n, s.t p|10^n*q$。<br>我们把注意力放在结果是无限循环小数的情况上。</li>
 </ol>
 <h2 id="u90A3_u4E48_u4E3A_u4EC0_u4E48_u5206_u6570_u4E00_u5B9A_u53EF_u4EE5_u8868_u793A_u4E3A_u5FAA_u73AF_u5C0F_u6570_u5462_uFF1F"><a href="#u90A3_u4E48_u4E3A_u4EC0_u4E48_u5206_u6570_u4E00_u5B9A_u53EF_u4EE5_u8868_u793A_u4E3A_u5FAA_u73AF_u5C0F_u6570_u5462_uFF1F" class="headerlink" title="那么为什么分数一定可以表示为循环小数呢？"></a>那么为什么分数一定可以表示为循环小数呢？</h2><p>因为我们一直计算后余数总在 $0,p-1$ 之间，那么经过 $p$ 次计算后一定会与之前的的某一个一样，那么自此以后后来的结果自然也就一样了，也就产生了循环的现象。即我们需要找到最小的正整数 $m,n$ 使得 $10^m \equiv 10^(n+m) \mod p$。即 $10^m(10^n-1) \equiv 0 mod p$。由于 $gcd(2,10^n-1)=gcd(5,10^n-1)=1$。因此，除掉 $p$ 中包含 $2,5$ 的因子。则 $10^n-1 \equiv 0 mod p$。此方程一定有解。并且若$p$是素数，且$10$是 $p$ 的原根，则 $n=p-1$。说了这么多其实也是废话，还是看代码吧，代码里包含了所有细节。</p>
-<pre><code class="C++"><span class="function"><span class="built_in">string</span> <span class="title">rational</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m)</span></span>{
+<pre><code class="C"><span class="function"><span class="built_in">string</span> <span class="title">rational</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m)</span></span>{
     <span class="keyword">if</span>(m==<span class="number">0</span>)    <span class="keyword">return</span> <span class="string">""</span>;
     <span class="built_in">string</span> r;
     <span class="keyword">if</span>(m&lt;<span class="number">0</span>) n=-n,m=-m;
