@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 仅在一点连续的函数例子 · 0.肆玖</title><meta name="description" content="仅在一点连续的函数例子 - dna049"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div id="mask" style="display: none;"><img id="mask-image" src="#" style=" "></div><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/dna049" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/dna049" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">仅在一点连续的函数例子</h1><div class="post-time">2015年12月16日</div><div class="post-content"><p>在一元微积分中，有一个广为人知的结论：一元函数在一点可导，必在该点连续，即可导必连续。</p>
+<p>自然会有这样一个问题：</p>
+<pre><code>一元函数在一点可导能否推出它在该点的一个小邻域连续呢？
+</code></pre><p>这个想法是很自然的，不严格的思考可能会认为应该是对的,但是它并不成立。下面给出一个反例：</p>
+<p>\[ f(x) = x^2 D(x) = \left\{<br>\begin{array}{ll}<br>0 &amp; x \in \mathbb{Q} \\<br>x^2 &amp; x \notin \mathbb{Q}<br>\end{array} \right. \]</p>
+<p>其中$D(x)$为Dirichlet函数。<br><a id="more"></a><br>容易验证函数$f(x)$在$x=0$处可导，但在$x \neq 0$处不连续。即否定了上述问题。</p>
+<p>最后，类似地，我们还可以通过Dirichlet函数构造$\mathbb{R}$上一些仅在有限个点连续的函数。也可以通过周期函数构造仅在所有整数点连续的函数。但是由Baire纲定理可以证明，不存在在所有有理数点连续，无理点间断的函数。最后Riemann函数给出了一个在所有有理数点间断，无理点连续的函数。这些反例使得人们对函数连续的概念有了更感性的认识。</p>
+</div></article></div></section><footer><div class="paginator"><a href="/2015/12/16/Cayley-Hamilton Theorem/" class="prev">PREV</a><a href="/2015/12/15/Calculater program/" class="next">NEXT</a></div><div data-thread-key="2015/12/16/Example of function only continue in a point/" data-title="仅在一点连续的函数例子" data-url="http://dna049.com/2015/12/16/Example of function only continue in a point/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div class="copyright"><p>© 2015 - 2016 <a href="http://dna049.com">dna049</a>, unless otherwise noted.</p></div></footer></div><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?699b245cef6684fc1e306cd9cc1cb26a";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body></html>

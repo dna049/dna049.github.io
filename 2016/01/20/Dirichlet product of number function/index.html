@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 数论函数的 Dirichlet 积 · 0.肆玖</title><meta name="description" content="数论函数的 Dirichlet 积 - dna049"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div id="mask" style="display: none;"><img id="mask-image" src="#" style=" "></div><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/dna049" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/dna049" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">数论函数的 Dirichlet 积</h1><div class="post-time">2016年1月20日</div><div class="post-content"><p>最近重温潘承洞老先生的《数论基础》(现代数学基础丛书34)，确实是经典中的经典。以现代的眼光看数论函数，使得分析问题更加简洁本质，而这些都要归功于 Dirichlet 积的引入。<br><a id="more"></a></p>
+<h3 id="u5E38_u89C1_u6570_u8BBA_u51FD_u6570"><a href="#u5E38_u89C1_u6570_u8BBA_u51FD_u6570" class="headerlink" title="常见数论函数"></a>常见数论函数</h3><p>为了更好的介绍 Dirichlet 积，先引入一些记号，数论函数是指定义于全体正整数集上的函数。</p>
+<ol>
+<li>$u(n) \equiv 1$ </li>
+<li>$e(n) = n$</li>
+<li><span>$I(n) = \left\{\begin{array}{ll} 1, &amp; n=1, \\ 0, &amp; n&gt;1. \end{array} \right.$</span><!-- Has MathJax --></li>
+<li>n的所有正除数的个数 $d(n)$.<br>$$ d(n)= \sum_{d|n} 1 = (a_1+1)(a_2+1) \cdots (a_n+1), \; n=p_1^{a_1} \cdots p_s^{a_s} $$</li>
+<li>n的全部素因子的个数（按重数计）$ \Omega(n) $<span>$$\begin{array}{ll} \Omega(1)=0 &amp; \\
+\Omega(n) = a_1 + a_2+ \cdots a_n, &amp; n=p_1^{a_1} \cdots p_s^{a_s} \end{array}$$</span><!-- Has MathJax --></li>
+<li>n的不同素因子的个数 $\omega(n)$  <span>$$\begin{array}{ll} \omega(1)=0 &amp; \\
+\omega(n) = s, &amp; n=p_1^{a_1} \cdots p_s^{a_s} \end{array}$$</span><!-- Has MathJax --></li>
+<li>n的正除数的幂和函数 $\sigma_{\lambda}(n)$,<span>$$\sigma_{\lambda}(n) = \sum_{d|n}
+d^{\lambda}$$</span><!-- Has MathJax --></li>
+<li>所有不超过n且和n互素的正整数的个数 $\phi(n)$<span>$$\phi(n) = \sum_{ \begin{array}{c} 1 \leq d \leq n \\
+(d,n)=1 \end{array} } 1$$</span><!-- Has MathJax -->
+$\phi(n)$ 称之为Euler函数。</li>
+<li>Mobius 函数 $\mu(n)$<span>$$\mu(n) = \left\{\begin{array}{ll} 1, &amp; n=1, \\ (-1)^s, &amp; n=p_1p_2 \cdots p_s, \; p_1 &lt; p_2&lt; \cdots &lt; p_s. \\
+0, &amp; else. \end{array} \right.$$</span><!-- Has MathJax --></li>
+<li>Mangoldt函数 $\Lambda(n)$<span>$$\Lambda(n) = \left\{\begin{array}{ll} \log p, &amp; n= p^k, k \geq 1\\
+0, &amp; else. \end{array} \right.$$</span><!-- Has MathJax --></li>
+<li>Liouville 函数 $\lambda(n)$<br>$$ \lambda(n) = (-1)^{\Omega(n)} $$</li>
+<li>Euler函数的推广(自创 dna0.49 ) $ \phi _{\lambda}(n)$<span>$$\phi _{\lambda} (n) = \sum_{ \begin{array}{c} 1 \leq d \leq n \\
+(d,n)=1 \end{array} } d^{\lambda}$$</span><!-- Has MathJax -->
+当 $\lambda = 0$ 时即为Euler函数。</li>
+</ol>
+<p>用下面的 Dirichlet 积的概念，大家就会对上面常见的数论函数有更深刻的认识。</p>
+<h3 id="Dirichlet__u79EF"><a href="#Dirichlet__u79EF" class="headerlink" title="Dirichlet 积"></a>Dirichlet 积</h3><p>设$f(n)$,$g(n)$是两个数论函数，则<br>$$ h(n) = \sum_{d|n} f(d)g(\frac{n}{d}) $$<br>称为$f(n)$和$g(n)$的 Dirichlet 积,记作$h=f*g$.</p>
+<h5 id="u5B9A_u7406_u4E00_Dirichlet__u79EF_u6EE1_u8DB3_u4EA4_u6362_u5F8B_u548C_u7ED3_u5408_u5F8B_u5373"><a href="#u5B9A_u7406_u4E00_Dirichlet__u79EF_u6EE1_u8DB3_u4EA4_u6362_u5F8B_u548C_u7ED3_u5408_u5F8B_u5373" class="headerlink" title="定理一 Dirichlet 积满足交换律和结合律即"></a>定理一 Dirichlet 积满足交换律和结合律即</h5><span>$$f * g = 
+g * f$$</span><!-- Has MathJax -->
+<span>$$(f*g)*h = 
+f*(g*h)$$</span><!-- Has MathJax -->
+<p>由定义上式显然。</p>
+<h5 id="u5B9A_u7406_u4E8C_Dirichlet__u79EF_u7684_u5E7A_u5143_u5B58_u5728_u4E3A__24I_28n_29_24"><a href="#u5B9A_u7406_u4E8C_Dirichlet__u79EF_u7684_u5E7A_u5143_u5B58_u5728_u4E3A__24I_28n_29_24" class="headerlink" title="定理二 Dirichlet 积的幺元存在为 $I(n)$"></a>定理二 Dirichlet 积的幺元存在为 $I(n)$</h5><p>直接计算验算即知。</p>
+<ul>
+<li>由定理一和二知。数论函数全体关于 Dirichlet 积构成了一个含幺交换半群(Commutative Monoid) </li>
+<li>由抽象代数的基本知识知道 Monoid 中的元如果存在逆元必然唯一，证明也是显然的 </li>
+<li>现在的问题就是这个 Monoid 那些元有逆元( Dirichlet 逆，以下简称逆)。或者说一个数论函数可逆的充要条件是什么。</li>
+</ul>
+<p>实际上，我们有如下结论</p>
+<h5 id="u5B9A_u7406_u4E09__u6570_u8BBA_u51FD_u6570__24f_24__u53EF_u9006_u7684_u5145_u8981_u6761_u4EF6_u662F__24f_281_29__5Cneq_0_24-_u6B64_u65F6_u5B83_u7684_u9006_u5143_u4E3A"><a href="#u5B9A_u7406_u4E09__u6570_u8BBA_u51FD_u6570__24f_24__u53EF_u9006_u7684_u5145_u8981_u6761_u4EF6_u662F__24f_281_29__5Cneq_0_24-_u6B64_u65F6_u5B83_u7684_u9006_u5143_u4E3A" class="headerlink" title="定理三 数论函数 $f$ 可逆的充要条件是 $f(1) \neq 0$.此时它的逆元为"></a>定理三 数论函数 $f$ 可逆的充要条件是 $f(1) \neq 0$.此时它的逆元为</h5><span>$$f^{-1} (1) = \frac{1}{f(1)},\quad
+f^{-1} (n) = \frac{-1}{f(1)} \sum _{d|n,\, d&lt;n} f(\frac{n}{d})f^{-1}(d),\; n&gt;1$$</span><!-- Has MathJax -->
+<p>证明是显然的，验算即知。</p>
+<ul>
+<li>至此从抽象的层次已经对数论函数的 Dirichlet 积有了一个清晰的认识，下面用这套语言考虑我们的常见函数 </li>
+</ul>
+<h5 id="u5B9A_u7406_u56DB_Mobius__u51FD_u6570__24_5Cmu_28n_29_24__u662F__24u_28n_29_24__u7684_u9006_u3002"><a href="#u5B9A_u7406_u56DB_Mobius__u51FD_u6570__24_5Cmu_28n_29_24__u662F__24u_28n_29_24__u7684_u9006_u3002" class="headerlink" title="定理四 Mobius 函数 $\mu(n)$ 是 $u(n)$ 的逆。"></a>定理四 Mobius 函数 $\mu(n)$ 是 $u(n)$ 的逆。</h5><p>即<br><span>$$\sum_{ d|n } \mu(n) = \left\{ \begin{array}{ll}  1, &amp; n=1, \\
+0, &amp; n&gt;1. \end{array} \right.$$</span><!-- Has MathJax --></p>
+<p>$n=1$ 时显然，不妨设 $n = p_1^{a_1} p_2^{a_2} \cdots p_s^{a_s}$ 则由 $\mu(n)$ 的定义<br><span>$$\begin{align}
+\sum_{ d|n } \mu(n) &amp; = \mu(1) + \mu(p_1) + \mu(p_2) + \cdots +\mu(p_s) + \cdots + \mu(p_1 p_2) + \cdots \\
+&amp; \quad + \mu(p_{s-1}p_s) + \cdots \mu(p_1 p_2 \cdots p_s) \\
+&amp; =  1 + \begin{matrix} s \\ 1\end{matrix} (-1) + \begin{matrix} s \\ 2\end{matrix} (-1)^2 + \cdots + \begin{matrix} s \\ s\end{matrix} (-1)^s = (1-1)^s = 0 \end{align}$$</span><!-- Has MathJax --></p>
+<ul>
+<li>由此可见，原来看上去复杂的不知所以然的 Mobius 函数本质上是恒为1的函数的 Dirichlet 逆元。</li>
+</ul>
+<h5 id="u5B9A_u4E49_u4E94__u82E5__24F_3Df*u_24__u5219_u79F0_24F_24__u662F_24f_24__u7684_Mobius__u53D8_u6362_uFF0C_u5373"><a href="#u5B9A_u4E49_u4E94__u82E5__24F_3Df*u_24__u5219_u79F0_24F_24__u662F_24f_24__u7684_Mobius__u53D8_u6362_uFF0C_u5373" class="headerlink" title="定义五 若 $F=f*u$ 则称$F$ 是$f$ 的 Mobius 变换，即"></a>定义五 若 $F=f*u$ 则称$F$ 是$f$ 的 Mobius 变换，即</h5><p>$$ F(n) = \sum_{d|n} f(d) $$</p>
+<p>显然此时我们有 $ f=F * \mu $,称$f$ 是$F$ 的 Mobius 反变换。<br>实际上，这就是我们常说的 Mobius 反演公式。<br><span>$$F(n) = \sum_{d|n} f(d) \Longleftrightarrow f(n) =
+\sum_{d|n} F(d) \mu(\frac{n}{d})$$</span><!-- Has MathJax --></p>
+<p>Mobius 变换的例子</p>
+<ol>
+<li>$I(n)$ 是 $\mu(n)$ 的 Mobius 变换</li>
+<li>$d(n)$ 是 $u(n)$ 的 Mobius 变换</li>
+<li>$e(n)$ 是 $\phi(n)$ 的 Mobius 变换</li>
+<li>$\log n$ 是 $\Lambda(n)$ 的 Mobius 变换</li>
+</ol>
+<p>前两个是显然的，后面两个证明如下。</p>
+<span>$$n = \sum _{i=1} ^n 1 = 
+\sum _{d|n} \sum_{(n,i) = d} 1 =
+\sum _{d|n} \sum_{(\frac{n}{d},k)=1} 1 =
+\sum _{d|n} \phi(\frac{n}{d}) = \sum _{d|n} \phi(d)$$</span><!-- Has MathJax -->
+<p>因此<br><span>$$\phi(n) = \sum _{d|n} \mu(d) \frac{n}{d} =
+n \sum _{d|n} \frac{\mu(d)}{d}$$</span><!-- Has MathJax --><br>另外我们还有一个证明方式</p>
+<span>$$\phi(n) = \sum_{ \begin{array}{c} 1 \leq d \leq n \\
+(d,n)=1 \end{array} } 1 ＝ \sum_{1 \leq d \leq n} \sum_ {l|(d,n)} \mu(l) = \sum _{l|n} \mu(l) \sum _{1 \leq d \leq n , l|d} 1 = \sum _{l|n} \mu(l) \frac{n}{l}$$</span><!-- Has MathJax -->
+<ul>
+<li>上述两种证明都是两种常用处理数论函数的技术手段。</li>
+</ul>
+<p>至于 $\log n$ 是 $\Lambda(n)$ 的 Mobius 变换的证明只需验算即知。</p>
+<p>用上面所说的技术，我们来考虑一下推广的Euler函数 $\phi _{\lambda}$</p>
+<span>$$\sum _{i=1} ^n i^{\lambda} = 
+\sum _{d|n} \sum_{(n,i) = d} i^{\lambda}  =
+\sum _{d|n} d^{\lambda} \sum_{(\frac{n}{d},k)=1} k^{\lambda}  = 
+\sum _{d|n} d^{\lambda} \phi _{\lambda} (\frac{n}{d}) = 
+n^{\lambda} * \phi _{\lambda}$$</span><!-- Has MathJax -->
+<h5 id="u53EF_u4E58_u51FD_u6570"><a href="#u53EF_u4E58_u51FD_u6570" class="headerlink" title="可乘函数"></a>可乘函数</h5><p>寻找不变量一直是数学关心的问题，变化中的不变量，可以大大简化运算，并且反过来刻画了变化。具体说，寻找 Dirichlet 积不变量一方面对于那些不变量，可以简化它们操作，另一方面，由于 Dirichlet 积保持这些性质也就刻画了 Dirichlet 本身。其中这样的一个不变量就是可乘函数。</p>
+<p>设 $f(n)$ 是定义在全体自然数上不恒为0的数论函数，若它满足条件<br>$$ f(mn) = f(m) f(n), \quad (m,n)=1 $$<br>则称之为可乘函数。若对任意正整数 $m,n$ 恒有<br>$$ f(mn) = f(m) f(n) $$<br>则称之为完全可乘函数。</p>
+<p>可乘函数例子：    $\mu(n)$, $d(n)$.<br>完全可乘函数例子：    $n^{\lambda}$, $I(n)$.</p>
+<ul>
+<li>显然(完全)可乘函数的的积，倒数(如果有意义的话)都是(完全)可乘函数。</li>
+</ul>
+<h5 id="u5B9A_u7406_u516D__u53EF_u4E58_u51FD_u6570__24f_28n_29_24__u6709_u5982_u4E0B_u6027_u8D28_uFF1A"><a href="#u5B9A_u7406_u516D__u53EF_u4E58_u51FD_u6570__24f_28n_29_24__u6709_u5982_u4E0B_u6027_u8D28_uFF1A" class="headerlink" title="定理六 可乘函数 $f(n)$ 有如下性质："></a>定理六 可乘函数 $f(n)$ 有如下性质：</h5><ol>
+<li>$f(1)=1$</li>
+<li>$f(n)=f(p_1^{a_1}) f(p_2)^{a_2} \cdots f(p_s)^{a_s}, \quad n = p_1^{a_1} p_2^{a_2} \cdots p_s^{a_s}$</li>
+<li>$f(n)$ 为完全可乘的充要条件是对任意的 $p$ 和 $k \geq 1$ 恒有<br> $$ f(p^k) = f ^k (p) $$</li>
+<li>$f((m,n)[m,n])=f(m)f(n)$</li>
+<li>$f$的逆元必然存在(形式上更加简单)</li>
+</ol>
+<p>上述定理的证明是显然的，结论是重要的。</p>
+<h5 id="u5B9A_u7406_u4E03_Dirchlet__u79EF__u4FDD_u6301_u53EF_u4E58_u6027"><a href="#u5B9A_u7406_u4E03_Dirchlet__u79EF__u4FDD_u6301_u53EF_u4E58_u6027" class="headerlink" title="定理七 Dirchlet 积 保持可乘性"></a>定理七 Dirchlet 积 保持可乘性</h5><ol>
+<li>若 $f$ 可乘, $g$ 可乘, 则 <span>$h=f*g$</span><!-- Has MathJax --> 可乘;</li>
+<li>若 $g$ 可乘, <span>$h=f*g$</span><!-- Has MathJax --> 可乘，则 $f$ 可乘.</li>
+</ol>
+<p>Proof: </p>
+<ol>
+<li><p>若 $f$ 可乘, $g$ 可乘, 则对任意满足 $(m,n)=1$ 的正整数 $m,n$,对于 $mn$ 的每一个正因子 $d$ 可以分解为 $d=d_1 d_2$ 的形式, 其中$(d_1,d_2)=1,d_1|m,d_2|n$ </p>
+<span>$$h(mn) = \sum _{d|mn} f(d)g(\frac{mn}{d}) =
+\sum _{d_1|m} f(d_1)g(\frac{m}{d_1}) \sum _{d_2|n} f(d_2)g(\frac{n}{d_2}) = h(m)h(n)$$</span><!-- Has MathJax -->
+</li>
+<li><p>反证，若$f$不可乘，则可以推出$h$不可乘即可。若$f$不可乘,则必存在$m,n$,$(m,n)=1$ 但是<br>$$ f(mn) \neq f(m)f(n) $$<br>若 $mn=1$ , 则 $f(1) \neq f(1) f(1)$ 知 $f(1) \neq 1$. 因此 $h(1)=f(1)g(1)=f(1) \neq 1$ 矛盾于$h$可乘。<br>我们选取满足上述性质的最小正整数$mn$,即当$d_1d_2&lt;mn$是恒有<br>$$ f(d_1d_2) = f(d_1)f(d_2),\quad (d_1,d_2)=1 $$<br>由$h$的定义</p>
+<span>$$\begin{align}
+h(mn) = \sum _{d|mn} f(d) g(\frac{mn}{d}) &amp; = 
+\sum _{d_1|m} f(d_1) g(\frac{m}{d_1}) \sum _{d_2|m} f(d_2)g(\frac{n}{d_2})-f(m)f(n) +f(mn) \\
+&amp; = h(m)h(n) -f(m)f(n) + f(mn) \neq h(m)h(n)
+\end{align}$$</span><!-- Has MathJax -->
+<p>证毕。</p>
+</li>
+</ol>
+<ul>
+<li>Dirichlet 积一般不保持完全可乘性。</li>
+</ul>
+<p>由定理六和七，我们有如下推论: 若 $F$ 是 $f$ 的 Mobius 变换，则</p>
+<ol>
+<li>$f$ 可乘 $\Longleftrightarrow$ $F$ 可乘</li>
+<li>$f$ 可乘，则<span>$$F(n) = \sum_{d|n} f(d) = 
+\prod _{p^a || n} (1+ f(p)+\cdots f(p^a))$$</span><!-- Has MathJax --></li>
+<li>$f$ 可乘，则 <span>$$\sum _{d|n} \mu(d) f(d) = 
+\prod _{p | n} (1 - f(p))$$</span><!-- Has MathJax -->
+</li>
+</ol>
+<ul>
+<li>上面1是定理7.1的直接推论，2可由定理6.2的直接推论，3是2的直接推论。由3我们可以得到著名的欧拉公式：<span>$$\phi(n) = n \sum _{d|n} \frac{\mu(d)}{d} ＝ 
+n \prod _{p|n} (1-\frac{1}{p})$$</span><!-- Has MathJax -->
+</li>
+</ul>
+<h4 id="u5B8C_u5168_u53EF_u4E58_u7684_u9006"><a href="#u5B8C_u5168_u53EF_u4E58_u7684_u9006" class="headerlink" title="完全可乘的逆"></a>完全可乘的逆</h4><p>由于可乘函数满足 $f(1)=1$ 因此可乘函数的逆相对而言更加简单，并且它的逆也是可乘函数。但是计算逆的过程仍然很复杂，但是完全可乘函数的逆却特别简单。</p>
+<h5 id="u5B9A_u7406_u516B__u8BBE__24f_24__u53EF_u4E58_uFF0C_u5219_24f_24__u5B8C_u5168_u53EF_u4E58_u7684_u5145_u8981_u6761_u4EF6_u662F"><a href="#u5B9A_u7406_u516B__u8BBE__24f_24__u53EF_u4E58_uFF0C_u5219_24f_24__u5B8C_u5168_u53EF_u4E58_u7684_u5145_u8981_u6761_u4EF6_u662F" class="headerlink" title="定理八 设 $f$ 可乘，则$f$ 完全可乘的充要条件是"></a>定理八 设 $f$ 可乘，则$f$ 完全可乘的充要条件是</h5><p>$$ f^{-1}(n) = \mu(n)f(n) $$<br>应用定理6.3验证即知。</p>
+<h5 id="u63A8_u5E7F_u7684Mobius_u53CD_u6F14_u516C_u5F0F"><a href="#u63A8_u5E7F_u7684Mobius_u53CD_u6F14_u516C_u5F0F" class="headerlink" title="推广的Mobius反演公式"></a>推广的Mobius反演公式</h5><p>设 $g$ 完全可乘, <span>$h= f * g$</span><!-- Has MathJax --> ,则<span>$f= h * \mu g$</span><!-- Has MathJax --> ,即<br><span>$$h(n) = \sum _{d|n} f(d)g(\frac{n}{d})
+\quad \Longleftrightarrow \quad f(n) = \sum _{d|n} h(d)
+\mu(\frac{n}{d})g(\frac{n}{d})$$</span><!-- Has MathJax --></p>
+<p>另上式中 $g=u$ ，上式就变成了Mobius反演公式。<br>由推广的Mobius反演公式，我们由<br><span>$$\sum _{i=1} ^n i^{\lambda} = 
+n^{\lambda} * \phi _{\lambda}$$</span><!-- Has MathJax --><br>可知<br><span>$$\phi _{\lambda}(n) =
+\sum _{i=1} ^n i^{\lambda} * \mu(n) n^{\lambda}$$</span><!-- Has MathJax -->  </p>
+<h2 id="u5E7F_u4E49Dirichlet_u79EF"><a href="#u5E7F_u4E49Dirichlet_u79EF" class="headerlink" title="广义Dirichlet积"></a>广义Dirichlet积</h2><p>考虑和式<br>$$ G(x) = \sum_{n \leq x} f(n)H(\frac{x}{n}) $$<br>其中 $f(n)$ 是数论函数，$H(x)$ 是 $(0,\infty)$上的函数。<br>我们记 $G = f o H$。特别的若$H(x)$在所有非整数点取值为$0$，则此时就是通常的Dirichlet积。<br>我们有以下性质：<br>$$f o (g o H) = (f*g) o H$$<br>若 $G = f o H$ 则 $H = f^{-1} o G$。<br>特别的，若 $G(x) = \sum_{n \leq x} H(\frac{x}{n})$, 则我们有 $H(x) = \sum_{n \leq x} \mu(n) G(\frac{x}{n})$。</p>
+<h3 id="u4E09_u4E2A_u4F18_u7F8E_u516C_u5F0F"><a href="#u4E09_u4E2A_u4F18_u7F8E_u516C_u5F0F" class="headerlink" title="三个优美公式"></a>三个优美公式</h3><p>最后我用三个我很喜欢的公式结束这篇博文。</p>
+<ol>
+<li><span>$\sum _{n \leq x} d(n) = \sum _{n \leq x} \lfloor \frac{x}{n} \rfloor$</span><!-- Has MathJax -->
+</li>
+</ol>
+<span>$$\sum _{n \leq x} \lfloor \frac{x}{n} \rfloor = 
+\sum _{n \leq x} \sum _{l \leq x,\; n|l} 1 = 
+\sum _{l \leq x} \sum _{n|l} 1 =
+\sum _{l \leq x} d(l) =
+\sum _{n \leq x} d(n)$$</span><!-- Has MathJax -->
+<ol>
+<li><span>$\sum _{n \leq x} \mu(n) \lfloor \frac{x}{n} \rfloor = 1$</span><!-- Has MathJax -->
+</li>
+</ol>
+<span>$$\sum _{n \leq x} \mu(n) \lfloor \frac{x}{n} \rfloor =
+\sum _{n \leq x} \mu(n) \sum _{l \leq x,\; n|l} 1 =
+\sum _{l \leq x} \sum _{n|l} \mu(n) = \sum _{l \leq x} I(n) =
+= 1$$</span><!-- Has MathJax -->
+<ol>
+<li><span>$\sum _{n=1} ^{\infty} \frac{\mu(n)}{n^2} = \frac{6}{\pi^2}$</span><!-- Has MathJax -->
+</li>
+</ol>
+<span>$$\sum _{n=1} ^{\infty} \frac{1}{n^2} \sum _{n=1} ^{\infty} \frac{\mu(n)}{n^2} =
+\sum _{n=1} ^{\infty} \frac{a_n}{n^2}$$</span><!-- Has MathJax -->
+<p>其中<br><span>$$a_n = 
+\sum _{d|n} \mu(d) = I(n)$$</span><!-- Has MathJax --><br>又由<br><span>$$\sum _{n=1} ^{\infty} \frac{1}{n^2} = 
+\frac{\pi^2}{6}$$</span><!-- Has MathJax --><br>结论显然。</p>
+<p>该博文大多资料来自 潘承洞《数论基础》，转载请注明<a href="http://dna049.com">http://dna049.com</a></p>
+</div></article></div></section><footer><div class="paginator"><a href="/2016/01/21/Two inversion formula and its matrix form/" class="prev">PREV</a><a href="/2016/01/03/Several-Algorithms-of-root-Complex/" class="next">NEXT</a></div><div data-thread-key="2016/01/20/Dirichlet product of number function/" data-title="数论函数的 Dirichlet 积" data-url="http://dna049.com/2016/01/20/Dirichlet product of number function/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div class="copyright"><p>© 2015 - 2016 <a href="http://dna049.com">dna049</a>, unless otherwise noted.</p></div></footer></div><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?699b245cef6684fc1e306cd9cc1cb26a";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body></html>
