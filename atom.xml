@@ -446,7 +446,7 @@
     <link href="http://dna049.com/2016/04/08/Lie-Algebra/"/>
     <id>http://dna049.com/2016/04/08/Lie-Algebra/</id>
     <published>2016-04-08T10:13:00.000Z</published>
-    <updated>2016-04-25T04:32:34.000Z</updated>
+    <updated>2016-05-02T08:55:11.000Z</updated>
     <content type="html"><![CDATA[<p>近期在整理 Lie Algebra 课的笔记，还是很喜欢这门课的，主要是本科时候矩阵玩的特别6，然后 Lie Algebra 可以认为是矩阵的推广版本。里面的证明技巧性相当强。我之所以喜欢数学很大程度与数学技巧有关。但是我的导师说，这些虽然很有技巧，但是你花时间都是可以处理的，会技巧没什么了不起，脑袋稍微好一点就能做这种事，长期技巧的训练其实意义并不大，应该更关注数学内部的东西，具体说就是一个代数对象的结构，分类，不变量，对象之间的同构。一个概念有哪些等价形式，与其它概念之间的关系，搞清楚这些更为重要，它们的证明只要大致知道怎么过来的就行。我们并不要把证明的细节放在心中，因为我们已经经过了多年的训练，相信我们通过大致步骤就能给出详细的证明，只是花的时间多少罢了。当然初学一个东西，去抠它的细节是无可厚非的。<br>以上纯属废话 0.0<br><a id="more"></a> </p>
 <h3 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a>定义</h3><p>交换环 $K$ 上的模 $L$，以及一个运算 $L \times L \to L,(x,y) \mapsto [x,y]$ 称为 $x,y$ 的 Lie 括号，或交换子，称 $L$ 是 $K$ 上的 <a href="https://en.wikipedia.org/wiki/Lie_algebra" target="_blank" rel="external">Lie Algebra</a> 如果满足如下公理。<br>L1. $[\cdot,\cdot]$ 是双线性的；<br>L2. $[x,x]=0$ 对任意 $x \in L$ 成立；<br>L3. $[x,[y,z]]+[y,[z,x]]+[z,[x,y]]=0$ (Jacobi 恒等式)</p>
 <p>若$[L,L]=0$ 则上面结论显然成立，此时称为 Abelian Lie Algebra。令 $Z(L) = \lbrace x \in L \;|\; [x,L] = 0 \rbrace$</p>
@@ -460,7 +460,7 @@
 <li>$I$ 是 $L$ 的可解理想，若 $L/I$ 可解，则 $L$ 可解。</li>
 <li>$I,J$ 是 $J$ 的可解理想，则 $I+J$ 也是。</li>
 </ol>
-<p>由上述性质可知，$L$ 有唯一的极大可解理想。即为 $Rad L$,若 $Rad L =0$ 则称之为<strong>半单</strong>的，等价于 $L$ 无非零abelian理想。另外 我们称 $x \in End V$ 半单，若 $x$ 的极小多项式无重根。</p>
+<p>由上述性质可知，$L$ 有唯一的极大可解理想。即为 $Rad L$,若 $Rad L =0$ 则称之为<strong>半单</strong>的，等价于 $L$ 无非零abelian理想(充分性显然，必要性是因为 $Rad L$ 可解，考虑最后一个非0项必然是abelian理想矛盾)。另外 我们称 $x \in End V$ 半单，若 $x$ 的极小多项式无重根。</p>
 <p>对于给定Lie代数 $L$，我们有理想降链<br>$L^0 = L,L^1=[L^0,L^0],\cdots,L^i=[L^{i-1},L^{i-1}],\cdots $。若存在 $n$ 使得 $L^{n} = 0$ 则称 $L$ 幂零(nilpotent)。</p>
 <ol>
 <li>若$L$ 幂零，$L$ 的子代数和同态像幂零。</li>
@@ -480,6 +480,7 @@
 <p><strong>THM7</strong> $L \subset \mathbb{gl}(V)$，$V$ 是有限维的, 则 对任意 $x \in [L,L],\;y \in L$ 有 $Tr(xy)=0$ 当且仅当 $L$ 可解。</p>
 <p><strong>THM8</strong> 设 $L$ 是Lie代数，对任意 $x \in [L,L],\;y \in L$ 有 $Tr(ad_x ad_y)=0$ 则 $L$ 可解。</p>
 <p><strong>THM9</strong> 若 $L$ 是半单的，则 $L$ 可唯一写成单子理想的直和且$L=[L,L],Z(L)=0$ 且 $L$ 的理想和同态像都是半单的。</p>
+<p><strong>THM10</strong> $ad L$ 是 $Der L$ 的理想，且若 $L$ 是半单的，则 $ad L = Der L$。</p>
 <h3 id="To_be_continue"><a href="#To_be_continue" class="headerlink" title="To be continue"></a>To be continue</h3>]]></content>
     <summary type="html">
     <![CDATA[<p>近期在整理 Lie Algebra 课的笔记，还是很喜欢这门课的，主要是本科时候矩阵玩的特别6，然后 Lie Algebra 可以认为是矩阵的推广版本。里面的证明技巧性相当强。我之所以喜欢数学很大程度与数学技巧有关。但是我的导师说，这些虽然很有技巧，但是你花时间都是可以处理的，会技巧没什么了不起，脑袋稍微好一点就能做这种事，长期技巧的训练其实意义并不大，应该更关注数学内部的东西，具体说就是一个代数对象的结构，分类，不变量，对象之间的同构。一个概念有哪些等价形式，与其它概念之间的关系，搞清楚这些更为重要，它们的证明只要大致知道怎么过来的就行。我们并不要把证明的细节放在心中，因为我们已经经过了多年的训练，相信我们通过大致步骤就能给出详细的证明，只是花的时间多少罢了。当然初学一个东西，去抠它的细节是无可厚非的。<br>以上纯属废话 0.0<br>]]>
