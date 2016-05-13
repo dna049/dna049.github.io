@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dna049.com/About/index.html</loc>
+    <lastmod>2016-05-13T06:51:16.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://dna049.com/Solution-of-BestCoder84.html</loc>
     <lastmod>2016-05-13T06:13:16.000Z</lastmod>
   </url>
@@ -44,11 +49,6 @@
   <url>
     <loc>http://dna049.com/2016/05/08/nondecrase-subsequence/</loc>
     <lastmod>2016-05-09T15:08:42.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://dna049.com/About/index.html</loc>
-    <lastmod>2016-05-08T16:57:20.000Z</lastmod>
   </url>
   
   <url>
