@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dna049.com/2016/04/23/Lucas-Theorem-and-its-Application-in-array/</loc>
+    <lastmod>2016-05-15T11:34:49.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://dna049.com/2016/05/15/mod%20period-of-Linear-recurrence-relations-of-order-two/</loc>
     <lastmod>2016-05-15T11:21:35.000Z</lastmod>
   </url>
@@ -44,11 +49,6 @@
   <url>
     <loc>http://dna049.com/2016/05/11/scanf-and-printf-in-C/</loc>
     <lastmod>2016-05-11T05:50:05.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://dna049.com/2016/04/23/Lucas-Theorem-and-its-Application-in-array/</loc>
-    <lastmod>2016-05-10T09:17:07.000Z</lastmod>
   </url>
   
   <url>
