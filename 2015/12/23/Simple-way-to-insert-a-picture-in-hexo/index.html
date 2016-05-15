@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> hexo 中插入图片最简单方式 · 0.肆玖</title><meta name="description" content="hexo 中插入图片最简单方式 - dna049"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div id="mask" style="display: none;"><img id="mask-image" src="#" style=" "></div><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">hexo 中插入图片最简单方式</h1><div class="post-time">2015年12月23日</div><div class="post-content"><p>因为上一篇博文需要贴一张本地图片，奈何技术上无法解决。后来查了官方文档并且询问hexo交流群（287306637）之后，有给出解决方案（用图床）但是不是我想要的方式，最终通过<a href="https://hexo.io/docs/asset-folders.html" target="_blank" rel="external">官方文档</a>解决了此问题。</p>
+<a id="more"></a>
+<p>方法其实很简单，只需再修改 _config.yml 文件中的</p>
+<pre><code>post_asset_folder: false
+</code></pre><p>改成</p>
+<pre><code>post_asset_folder: true
+</code></pre><p>然后举个例子大家就明白了。</p>
+<pre><code>hexo new &quot;example&quot;
+</code></pre><p>经过上面设置之后，source 目录下会多出一个 example 的目录。在这个example目录下放一张 math.png 的图片，然后在 example.md 中加入 </p>
+<pre><code>![图片加载中](math.png)
+</code></pre><p>即可。就是这么简单。<br><img src="example.png" alt="Loading"></p>
+</div></article></div></section><footer><div class="paginator"><a href="/2016/01/03/2016xiamenmarathon/" class="prev">上一篇</a><a href="/2015/12/23/Learning-map-for-undergraduate-math-student/" class="next">下一篇</a></div><div data-thread-key="2015/12/23/Simple-way-to-insert-a-picture-in-hexo/" data-title="hexo 中插入图片最简单方式" data-url="http://dna049.com/2015/12/23/Simple-way-to-insert-a-picture-in-hexo/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div class="copyright"><p>© 2015 - 2016 <a href="http://dna049.com">dna049</a>, unless otherwise noted.</p></div></footer></div><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?699b245cef6684fc1e306cd9cc1cb26a";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>

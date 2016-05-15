@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Several trick elementary conclusions · 0.肆玖</title><meta name="description" content="Several trick elementary conclusions - dna049"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div id="mask" style="display: none;"><img id="mask-image" src="#" style=" "></div><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Several trick elementary conclusions</h1><div class="post-time">2016年3月14日</div><div class="post-content"><h3 id="In_a_Monoid_2C_if_an_element_is_left_and_right_invertible_2C_then_it_is_invertible"><a href="#In_a_Monoid_2C_if_an_element_is_left_and_right_invertible_2C_then_it_is_invertible" class="headerlink" title="In a Monoid, if an element is left and right invertible, then it is invertible."></a>In a Monoid, if an element is left and right invertible, then it is invertible.</h3><p>Proof: By hypothesis we have<br>$$ a b = ca = 1 $$<br>hence we have<br>$$ b = cab = c$$<br>therefore $a$ is invertible.</p>
+<a id="more"></a>
+<p><em>Definition</em>: In a Rng $A$, $z$ is called left(right) quasi-regular if there exists an element $z’$ such that $z’o z \equiv z’+z-z’z = 0\;(z o z’=0 )$.</p>
+<p>If A is a Monoid, actually, $z$ is called left(right) quasi-regular if and only if $1-z$ is left invertible.</p>
+<h3 id="In_a_Rng_2C_if__24z_u2019oz__3D_0_24_and__24z_u2019_u2019oz_u2019__3D_0_24_then__24z_u2019_u2019_3Dz_24_2C_thus_both__24z_24_and__24z_u2019_24_are_quasi-regular"><a href="#In_a_Rng_2C_if__24z_u2019oz__3D_0_24_and__24z_u2019_u2019oz_u2019__3D_0_24_then__24z_u2019_u2019_3Dz_24_2C_thus_both__24z_24_and__24z_u2019_24_are_quasi-regular" class="headerlink" title="In a Rng, if $z’oz = 0$ and $z’’oz’ = 0$ then $z’’=z$, thus both $z$ and $z’$ are quasi-regular."></a>In a Rng, if $z’oz = 0$ and $z’’oz’ = 0$ then $z’’=z$, thus both $z$ and $z’$ are quasi-regular.</h3><p>Proof: It is obvious right in a Monoid. Some trick occur while proving it.<br>$$ z’’ = z’’z’-z’ = z’’(z’z-z)-z’ = (z’’z’-z’’)z-z’=z’z-z = z $$<br>end the proof.</p>
+<h3 id="In_a_Ring_2C_241-az_24_is_invertible_if_and_only_if__241-za_24_is_invertible"><a href="#In_a_Ring_2C_241-az_24_is_invertible_if_and_only_if__241-za_24_is_invertible" class="headerlink" title="In a Ring,$1-az$ is invertible if and only if $1-za$ is invertible."></a>In a Ring,$1-az$ is invertible if and only if $1-za$ is invertible.</h3><p>Proof: In fact, we have<br>$$ (1-az)^{-1} = 1+a(1-za)^{-1}z$$</p>
+<h3 id="In_a_Ring__24M_24_2C__24z__5Cin_M_24-_If__24_5Cforall_a__5Cin_M_2C_5C_3B_1-az_24_is_left_invertible_2C_then__241-az_24_is_invertible_2Cso_is__241-za_24_why_foregoing_conclusion"><a href="#In_a_Ring__24M_24_2C__24z__5Cin_M_24-_If__24_5Cforall_a__5Cin_M_2C_5C_3B_1-az_24_is_left_invertible_2C_then__241-az_24_is_invertible_2Cso_is__241-za_24_why_foregoing_conclusion" class="headerlink" title="In a Ring $M$, $z \in M$. If $\forall a \in M,\; 1-az$ is left invertible, then $1-az$ is invertible,so is $1-za$ why foregoing conclusion."></a>In a Ring $M$, $z \in M$. If $\forall a \in M,\; 1-az$ is left invertible, then $1-az$ is invertible,so is $1-za$ why foregoing conclusion.</h3><p>Proof: $\forall a \in M$,$1-az$ is left invertible.thus there exists $1-y$ such that<br>$$ (1-y)(1-az) = 1 $$<br>hence $y = (ya-a)z$ is left invertible.<br>Hence by forgoing conclusion $1-az$ is invertible,and so is $1-za$.</p>
+<p>Note that:</p>
+<pre><code>A Monoid is a a set which is closed under an associative multiplication and contains an identity element.
+</code></pre></div></article></div></section><footer><div class="paginator"><a href="/2016/03/15/A-note-about-equal-distance-point-set/" class="prev">上一篇</a><a href="/2016/03/13/gcd-classic-inference-hdu-5382/" class="next">下一篇</a></div><div data-thread-key="2016/03/14/Several-trick-elementary-conclusions/" data-title="Several trick elementary conclusions" data-url="http://dna049.com/2016/03/14/Several-trick-elementary-conclusions/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div class="copyright"><p>© 2015 - 2016 <a href="http://dna049.com">dna049</a>, unless otherwise noted.</p></div></footer></div><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?699b245cef6684fc1e306cd9cc1cb26a";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body></html>
