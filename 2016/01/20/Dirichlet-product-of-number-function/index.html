@@ -23,6 +23,7 @@ $\phi(n)$ 称之为Euler函数。</li>
 (d,n)=1 \end{array} } d^{\lambda}$$</span><!-- Has MathJax -->
 当 $\lambda = 0$ 时即为Euler函数。</li>
 <li>$M(n)=\sum_{i=1}^n \mu(i)$，则我们有 $\sum_{i=1} ^n M(\lfloor \frac{n}{i} \rfloor) = 1$</li>
+<li>$N(n)=\sum_{i=1}^n \phi(i)$，我们有<br>$$ \sum_{i=1} ^n N(\lfloor \frac{n}{i} \rfloor) = \frac{n(n+1)}{2} $$</li>
 </ol>
 <p>用下面的 Dirichlet 积的概念，大家就会对上面常见的数论函数有更深刻的认识。</p>
 <h3 id="Dirichlet__u79EF"><a href="#Dirichlet__u79EF" class="headerlink" title="Dirichlet 积"></a>Dirichlet 积</h3><p>设$f(n)$,$g(n)$是两个数论函数，则<br>$$ h(n) = \sum_{d|n} f(d)g(\frac{n}{d}) $$<br>称为$f(n)$和$g(n)$的 Dirichlet 积,记作$h=f*g$.</p>
