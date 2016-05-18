@@ -142,33 +142,24 @@ n \prod _{p|n} (1-\frac{1}{p})$$</span><!-- Has MathJax -->
 n^{\lambda} * \phi _{\lambda}$$</span><!-- Has MathJax --><br>可知<br><span>$$\phi _{\lambda}(n) =
 \sum _{i=1} ^n i^{\lambda} * \mu(n) n^{\lambda}$$</span><!-- Has MathJax -->  </p>
 <h2 id="u5E7F_u4E49Dirichlet_u79EF"><a href="#u5E7F_u4E49Dirichlet_u79EF" class="headerlink" title="广义Dirichlet积"></a>广义Dirichlet积</h2><p>考虑和式<br>$$ G(x) = \sum_{n \leq x} f(n)H(\frac{x}{n}) $$<br>其中 $f(n)$ 是数论函数，$H(x)$ 是 $(0,\infty)$上的函数。<br>我们记 $G = f o H$。特别的若$H(x)$在所有非整数点取值为$0$，则此时就是通常的Dirichlet积。<br>我们有以下性质：<br>$$f o (g o H) = (f*g) o H$$<br>若 $G = f o H$ 则 $H = f^{-1} o G$。<br>特别的，若 $G(x) = \sum_{n \leq x} H(\frac{x}{n})$, 则我们有 $H(x) = \sum_{n \leq x} \mu(n) G(\frac{x}{n})$。</p>
-<h3 id="u4E09_u4E2A_u4F18_u7F8E_u516C_u5F0F"><a href="#u4E09_u4E2A_u4F18_u7F8E_u516C_u5F0F" class="headerlink" title="三个优美公式"></a>三个优美公式</h3><p>最后我用三个我很喜欢的公式结束这篇博文。</p>
-<ol>
-<li><span>$\sum _{n \leq x} d(n) = \sum _{n \leq x} \lfloor \frac{x}{n} \rfloor$</span><!-- Has MathJax -->
-</li>
-</ol>
+<h3 id="u4E09_u4E2A_u4F18_u7F8E_u516C_u5F0F"><a href="#u4E09_u4E2A_u4F18_u7F8E_u516C_u5F0F" class="headerlink" title="三个优美公式"></a>三个优美公式</h3><p>最后我用三个我很喜欢的公式结束这篇博文。<br><span>$\sum _{n \leq x} d(n) = \sum _{n \leq x} \lfloor \frac{x}{n} \rfloor$</span><!-- Has MathJax -->
 <span>$$\sum _{n \leq x} \lfloor \frac{x}{n} \rfloor = 
 \sum _{n \leq x} \sum _{l \leq x,\; n|l} 1 = 
 \sum _{l \leq x} \sum _{n|l} 1 =
 \sum _{l \leq x} d(l) =
-\sum _{n \leq x} d(n)$$</span><!-- Has MathJax -->
-<ol>
-<li><span>$\sum _{n \leq x} \mu(n) \lfloor \frac{x}{n} \rfloor = 1$</span><!-- Has MathJax -->
-</li>
-</ol>
+\sum _{n \leq x} d(n)$$</span><!-- Has MathJax --></p>
+<span>$\sum _{n \leq x} \mu(n) \lfloor \frac{x}{n} \rfloor = 1$</span><!-- Has MathJax -->
 <span>$$\sum _{n \leq x} \mu(n) \lfloor \frac{x}{n} \rfloor =
 \sum _{n \leq x} \mu(n) \sum _{l \leq x,\; n|l} 1 =
 \sum _{l \leq x} \sum _{n|l} \mu(n) = \sum _{l \leq x} I(n) =
 = 1$$</span><!-- Has MathJax -->
-<ol>
-<li><span>$\sum _{n=1} ^{\infty} \frac{\mu(n)}{n^2} = \frac{6}{\pi^2}$</span><!-- Has MathJax -->
-</li>
-</ol>
+<span>$\sum _{n=1} ^{\infty} \frac{\mu(n)}{n^2} = \frac{6}{\pi^2}$</span><!-- Has MathJax -->
 <span>$$\sum _{n=1} ^{\infty} \frac{1}{n^2} \sum _{n=1} ^{\infty} \frac{\mu(n)}{n^2} =
 \sum _{n=1} ^{\infty} \frac{a_n}{n^2}$$</span><!-- Has MathJax -->
 <p>其中<br><span>$$a_n = 
 \sum _{d|n} \mu(d) = I(n)$$</span><!-- Has MathJax --><br>又由<br><span>$$\sum _{n=1} ^{\infty} \frac{1}{n^2} = 
 \frac{\pi^2}{6}$$</span><!-- Has MathJax --><br>结论显然。</p>
+<h4 id="u4E00_u4E2A_u6280_u5DE7_u76F8_u5F53_u5F3A_u5927_u7684_u516C_u5F0F__24Q_28x_29_3D_5Csum__7Bn__5Cleq_x_7D__7C_5Cmu_28n_29_7C_24_uFF0C_u663E_u7136_u8868_u793A_u4E0D_u8D85_u8FC7__24x_24__u7684_u65E0_u5E73_u65B9_u56E0_u5B50_u7684_u6B63_u6574_u6570_u4E2A_u6570_uFF0C_u5219"><a href="#u4E00_u4E2A_u6280_u5DE7_u76F8_u5F53_u5F3A_u5927_u7684_u516C_u5F0F__24Q_28x_29_3D_5Csum__7Bn__5Cleq_x_7D__7C_5Cmu_28n_29_7C_24_uFF0C_u663E_u7136_u8868_u793A_u4E0D_u8D85_u8FC7__24x_24__u7684_u65E0_u5E73_u65B9_u56E0_u5B50_u7684_u6B63_u6574_u6570_u4E2A_u6570_uFF0C_u5219" class="headerlink" title="一个技巧相当强大的公式 $Q(x)=\sum_{n \leq x} |\mu(n)|$，显然表示不超过 $x$ 的无平方因子的正整数个数，则"></a>一个技巧相当强大的公式 $Q(x)=\sum_{n \leq x} |\mu(n)|$，显然表示不超过 $x$ 的无平方因子的正整数个数，则</h4><p>$$ Q(x) = \frac{6}{\pi^2} x + O(\sqrt{x}) $$<br>Proof: 显然我们有<br>$$ \lfloor x \rfloor = \sum_{k \leq \sqrt{x}} Q(\frac{x}{k^2})$$<br>另一方面<br>$$ Q(x) = \sum_{n \leq \sqrt{x}} Q(\frac{x}{n^2}) \sum_{d \mid n} \mu(d) =  \sum_{d \leq \sqrt{x}} \mu(d) \sum_{ k \leq \sqrt{\frac{x}{d^2}} } Q(\frac{x}{d^2k^2}) $$<br>所以<br>$$ \sum_{n \leq x} |\mu(n)| =  Q(x) =  \sum_{d \leq \sqrt{x}} \mu(d) \lfloor \frac{x}{d^2} \rfloor $$<br>根据上式<br>$$ Q(x) = x \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} +O(\sqrt{x}) = \frac{6}{\pi^2} x + O(\sqrt{x}) $$</p>
 <p>该博文大多资料来自 潘承洞《数论基础》，转载请注明<a href="http://dna049.com">http://dna049.com</a></p>
 </div></article></div></section><footer><div class="paginator"><a href="/2016/01/21/Two-inversion-formula-and-its-matrix-form/" class="prev">PREV</a><a href="/2016/01/19/My-Math-work-edited-by-LaTex/" class="next">NEXT</a></div><div data-thread-key="2016/01/20/Dirichlet-product-of-number-function/" data-title="数论函数的 Dirichlet 积" data-url="http://dna049.com/2016/01/20/Dirichlet-product-of-number-function/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
 (function() {
