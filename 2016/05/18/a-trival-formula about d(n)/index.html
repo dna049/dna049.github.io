@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 正约数 $d(n)$ 的一个公式 · 0.肆玖</title><meta name="description" content="正约数 $d(n)$ 的一个公式 - dna049"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div id="mask" style="display: none;"><img id="mask-image" src="#" style=" "></div><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">正约数 $d(n)$ 的一个公式</h1><div class="post-time">2016年5月18日</div><div class="post-content"><p>codeforce 上有<a href="http://codeforces.com/contest/235/problem/E" target="_blank" rel="external">一道题</a> 。 rng_58 用一个奇妙的公式解决了这个问题。并且给出了公式的证明，这里给出另一个比较好的证明。<br><a id="more"></a></p>
+<h4 id="24d_28n_29_24__u7684_u4E00_u4E2A_u516C_u5F0F"><a href="#24d_28n_29_24__u7684_u4E00_u4E2A_u516C_u5F0F" class="headerlink" title="$d(n)$ 的一个公式"></a>$d(n)$ 的一个公式</h4><p>按照公式，我们有 $d(n) = \sum_{i \mid n} 1$。其实这个公式可以推广成</p>
+<p>$$ d(n_1,\cdots,n_m) = \sum_{i_1 \mid n_1} \cdots \sum_{i_m \mid n_m} 1, \; gcd(i_s,i_t)=1,1 \leq  s &lt; t \leq m$$</p>
+<p>Proof： 数学归纳法证明：$m=1$ 时结论显然。<br>设结论对 $m-1$ 成立。<br>$$ \begin{aligned}<br>d(n_1,\cdots,n_m) &amp;= \sum_{i \mid n_1,\cdots,n_m} 1 =  \sum_{d \mid n_m} \sum_{i \mid n_1,\cdots,n_m , gcd(i,n_m)=d} 1 \\<br>&amp;= \sum_{d \mid n_m} \sum_{\frac{i}{d} \mid n_1,\cdots,n_{m-1} , gcd(\frac{i}{d},\frac{n_m}{d})=1} 1 \\<br>&amp;= \sum_{d \mid n_m} \sum_{i \mid n_1,\cdots,n_{m-1} , gcd(i,d)=1} 1<br>\end{aligned} $$<br>由数学归纳法知，原结论成立。</p>
+<h4 id="u4E0A_u9762_u516C_u5F0F_u7684_u4E00_u4E2A_u5E94_u7528"><a href="#u4E0A_u9762_u516C_u5F0F_u7684_u4E00_u4E2A_u5E94_u7528" class="headerlink" title="上面公式的一个应用"></a>上面公式的一个应用</h4><p>$$ \sum_{i_1 = 1} ^{n_1} \cdots \sum_{i_m = 1} ^{n_m} d(n_1,\cdots,n_m) = \sum_{gcd(i_s,i_t)=1,1 \leq  s &lt; t \leq m } \lfloor \frac{n_1}{i_1} \rfloor \cdots  \lfloor \frac{n_m}{i_m} \rfloor $$</p>
+<h4 id="24m_3D2_24__u7684_u53E6_u4E00_u4E2A_u516C_u5F0F"><a href="#24m_3D2_24__u7684_u53E6_u4E00_u4E2A_u516C_u5F0F" class="headerlink" title="$m=2$ 的另一个公式"></a>$m=2$ 的另一个公式</h4><p>令 $F(n) = \sum_{i=1} ^n \lfloor \frac{n}{i} \rfloor $，则显然<br>$$ \begin{aligned}<br>\sum_{i=1} ^n \sum_{j=1,gcd(i,j)=1} ^m \lfloor \frac{n}{i} \rfloor \lfloor \frac{m}{j} \rfloor &amp;= \sum_{i=1} ^n \lfloor \frac{n}{i} \rfloor \sum_{t \mid i} \mu(t) \sum_{1 \leq j \leq m, t \mid j} \lfloor \frac{m}{j} \rfloor \\<br>&amp;= \sum_{i=1} ^n \lfloor \frac{n}{i} \rfloor \sum_{t \mid i} \mu(t) F(\lfloor \frac{m}{t} \rfloor) \\<br>&amp;= \sum_{t} \mu(t) F(\lfloor \frac{m}{t} \rfloor) \sum_{1 \leq i \leq n, t \mid i} \lfloor \frac{n}{i} \rfloor \\<br>&amp;= \sum_{t} \mu(t) F(\lfloor \frac{m}{t} \rfloor) F(\lfloor \frac{n}{t} \rfloor)<br>\end{aligned} $$<br>即<br>$$ \sum_{i=1} ^n \sum_{j=1} ^m gcd(ij) =  \sum_{t} \mu(t) F(\lfloor \frac{m}{t} \rfloor) F(\lfloor \frac{n}{t} \rfloor) $$</p>
+<p>可是 $m&gt;2$ 就比较麻烦了。</p>
+</div></article></div></section><footer><div class="paginator"><a href="/2020/02/02/Recommended-Site/" class="prev">上一篇</a><a href="/2016/05/15/mod period-of-Linear-recurrence-relations-of-order-two/" class="next">下一篇</a></div><div data-thread-key="2016/05/18/a-trival-formula about d(n)/" data-title="正约数 $d(n)$ 的一个公式" data-url="http://dna049.com/2016/05/18/a-trival-formula about d(n)/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div class="copyright"><p>© 2015 - 2016 <a href="http://dna049.com">dna049</a>, unless otherwise noted.</p></div></footer></div><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?699b245cef6684fc1e306cd9cc1cb26a";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body></html>

@@ -166,6 +166,29 @@
   </entry>
   
   <entry>
+    <title><![CDATA[正约数 $d(n)$ 的一个公式]]></title>
+    <link href="http://dna049.com/2016/05/18/a-trival-formula%20about%20d(n)/"/>
+    <id>http://dna049.com/2016/05/18/a-trival-formula about d(n)/</id>
+    <published>2016-05-18T06:49:51.000Z</published>
+    <updated>2016-05-18T09:41:35.000Z</updated>
+    <content type="html"><![CDATA[<p>codeforce 上有<a href="http://codeforces.com/contest/235/problem/E" target="_blank" rel="external">一道题</a> 。 rng_58 用一个奇妙的公式解决了这个问题。并且给出了公式的证明，这里给出另一个比较好的证明。<br><a id="more"></a></p>
+<h4 id="24d_28n_29_24__u7684_u4E00_u4E2A_u516C_u5F0F"><a href="#24d_28n_29_24__u7684_u4E00_u4E2A_u516C_u5F0F" class="headerlink" title="$d(n)$ 的一个公式"></a>$d(n)$ 的一个公式</h4><p>按照公式，我们有 $d(n) = \sum_{i \mid n} 1$。其实这个公式可以推广成</p>
+<p>$$ d(n_1,\cdots,n_m) = \sum_{i_1 \mid n_1} \cdots \sum_{i_m \mid n_m} 1, \; gcd(i_s,i_t)=1,1 \leq  s &lt; t \leq m$$</p>
+<p>Proof： 数学归纳法证明：$m=1$ 时结论显然。<br>设结论对 $m-1$ 成立。<br>$$ \begin{aligned}<br>d(n_1,\cdots,n_m) &amp;= \sum_{i \mid n_1,\cdots,n_m} 1 =  \sum_{d \mid n_m} \sum_{i \mid n_1,\cdots,n_m , gcd(i,n_m)=d} 1 \\<br>&amp;= \sum_{d \mid n_m} \sum_{\frac{i}{d} \mid n_1,\cdots,n_{m-1} , gcd(\frac{i}{d},\frac{n_m}{d})=1} 1 \\<br>&amp;= \sum_{d \mid n_m} \sum_{i \mid n_1,\cdots,n_{m-1} , gcd(i,d)=1} 1<br>\end{aligned} $$<br>由数学归纳法知，原结论成立。</p>
+<h4 id="u4E0A_u9762_u516C_u5F0F_u7684_u4E00_u4E2A_u5E94_u7528"><a href="#u4E0A_u9762_u516C_u5F0F_u7684_u4E00_u4E2A_u5E94_u7528" class="headerlink" title="上面公式的一个应用"></a>上面公式的一个应用</h4><p>$$ \sum_{i_1 = 1} ^{n_1} \cdots \sum_{i_m = 1} ^{n_m} d(n_1,\cdots,n_m) = \sum_{gcd(i_s,i_t)=1,1 \leq  s &lt; t \leq m } \lfloor \frac{n_1}{i_1} \rfloor \cdots  \lfloor \frac{n_m}{i_m} \rfloor $$</p>
+<h4 id="24m_3D2_24__u7684_u53E6_u4E00_u4E2A_u516C_u5F0F"><a href="#24m_3D2_24__u7684_u53E6_u4E00_u4E2A_u516C_u5F0F" class="headerlink" title="$m=2$ 的另一个公式"></a>$m=2$ 的另一个公式</h4><p>令 $F(n) = \sum_{i=1} ^n \lfloor \frac{n}{i} \rfloor $，则显然<br>$$ \begin{aligned}<br>\sum_{i=1} ^n \sum_{j=1,gcd(i,j)=1} ^m \lfloor \frac{n}{i} \rfloor \lfloor \frac{m}{j} \rfloor &amp;= \sum_{i=1} ^n \lfloor \frac{n}{i} \rfloor \sum_{t \mid i} \mu(t) \sum_{1 \leq j \leq m, t \mid j} \lfloor \frac{m}{j} \rfloor \\<br>&amp;= \sum_{i=1} ^n \lfloor \frac{n}{i} \rfloor \sum_{t \mid i} \mu(t) F(\lfloor \frac{m}{t} \rfloor) \\<br>&amp;= \sum_{t} \mu(t) F(\lfloor \frac{m}{t} \rfloor) \sum_{1 \leq i \leq n, t \mid i} \lfloor \frac{n}{i} \rfloor \\<br>&amp;= \sum_{t} \mu(t) F(\lfloor \frac{m}{t} \rfloor) F(\lfloor \frac{n}{t} \rfloor)<br>\end{aligned} $$<br>即<br>$$ \sum_{i=1} ^n \sum_{j=1} ^m gcd(ij) =  \sum_{t} \mu(t) F(\lfloor \frac{m}{t} \rfloor) F(\lfloor \frac{n}{t} \rfloor) $$</p>
+<p>可是 $m&gt;2$ 就比较麻烦了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>codeforce 上有<a href="http://codeforces.com/contest/235/problem/E">一道题</a> 。 rng_58 用一个奇妙的公式解决了这个问题。并且给出了公式的证明，这里给出另一个比较好的证明。<br>]]>
+    
+    </summary>
+    
+      <category term="C++" scheme="http://dna049.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[二阶线性递推关系模素数的周期]]></title>
     <link href="http://dna049.com/2016/05/15/mod%20period-of-Linear-recurrence-relations-of-order-two/"/>
     <id>http://dna049.com/2016/05/15/mod period-of-Linear-recurrence-relations-of-order-two/</id>
@@ -768,74 +791,6 @@ B_1 \\  &amp; B_2 \\ &amp; &amp; \ddots \\ &amp; &amp; &amp; B_s
 ]]></content>
     <summary type="html">
     <![CDATA[<p>有限整环是域，这是一个相当深刻的结论，该定理这叫 Wedderburn’s little theorem。介绍如下。<br>]]>
-    
-    </summary>
-    
-      <category term="Algebra" scheme="http://dna049.com/tags/Algebra/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[代数知识点]]></title>
-    <link href="http://dna049.com/2016/03/26/Knowledge-of-Algebra/"/>
-    <id>http://dna049.com/2016/03/26/Knowledge-of-Algebra/</id>
-    <published>2016-03-26T12:48:00.000Z</published>
-    <updated>2016-04-25T04:32:50.000Z</updated>
-    <content type="html"><![CDATA[<p>最近在读 Nathan Jacobson《Basic Algebra I》，理一下知识点。长期更新<br><a id="more"></a></p>
-<h3 id="u96C6_u5408_Set"><a href="#u96C6_u5408_Set" class="headerlink" title="集合 Set"></a>集合 Set</h3><ol>
-<li>一个集合 $A$ 的幂集 $\mathbb{P}(A)$ 为所有 $A$ 的子集构成的集合，$A$ 有限时，元素个数为 $2^{|A|}$ 。</li>
-<li>一个映射自然的诱导了一个等价关系（“根据值是否相同”）。并由此，可以将一个映射自然地写成一个满射和一个单射的复合。</li>
-<li>自然数的 Peano 公理。</li>
-</ol>
-<h3 id="u7FA4_Group"><a href="#u7FA4_Group" class="headerlink" title="群 Group"></a>群 Group</h3><ol>
-<li>Monoid 和 Group 的定义，以及对应地考虑 Monoid 和 Group 之间的同态，这是范畴（Category）的思想。另外一切数学中的子、商概念都是一致的，子概念一般是继承原运算，并保持封闭即可。商概念就是除掉子的并且能保证定义合理即可。由于在群和环中作商并不能对任意子群做，把那些可以做的叫做正规子群(normal group)</li>
-<li>群有很多等价定义。</li>
-<li>一个群不能写成两（有限）个真子群的并。</li>
-<li>Cayley 定理：任意有限群，同构于一个对称群（ $S_n$ ）的子群。</li>
-<li>任意置换可以写成不相交轮换的复合。</li>
-<li>偶置换全体构成了交错群 $A_n$ 是 $S_n$ 的 normal subgroup。</li>
-<li>陪集分解和 Lagrange 定理：子群的阶是原有限群的因子。自然推论，元素的阶是群的因子。</li>
-<li>Monoid 和 Group 的同态及其同态基本定理，这是范畴的框架。</li>
-<li>循环群，Abel 群，自由群，自由 Monoid。</li>
-<li>群在集合上的作用，轨道公式和 Burnside 引理，特别的是作用在群的陪集上会产生丰富的结论，例如关于群的中心的一些结论，包含于一个子群的最大 normal subgroup 以及使得该子群称为 normal group 的最大的子群。</li>
-<li>Sylow 定理考察的是 Lagrange 的反问题。是群在集合上的作用的完美应用。</li>
-</ol>
-<h3 id="u73AF_Ring"><a href="#u73AF_Ring" class="headerlink" title="环 Ring"></a>环 Ring</h3><ol>
-<li>环的定义，其中加法群中要求的 Abel 群可以由其他公理推出。</li>
-<li>环的分类，局部环，交换环，整环，UFP，PID，UD，除环，域等等。</li>
-<li>矩阵环，其中矩阵中的元素属于同一环即可。基本运算都有意义。若要求定义行列式，则元素所在的环需要是交换环。在此情况下，矩阵可逆当且仅当其行列式可逆。</li>
-<li>一个非交换环的例子就是四元数（Quaternion），很多时候一个环上可以定义范数，会让一些操作更加容易。</li>
-<li>理想，商环，素理想，极大理想，生成理想，左理想，右理想，环的单位构成乘法群，素环。</li>
-<li>环的同态及其同态基本定理。</li>
-<li>反同构，一个重要的例子就是矩阵的转置。</li>
-<li>交换整环的分式域，可以推广到交换环的局部化，也能推广到环的 Ore 局部化。</li>
-<li>多项式环，代数数，超越数。多项式环的余数定理，域上多项式环是PID，多项式环根的个数，有限域的乘法群是循环群。域中所有非零元之积为－1。</li>
-<li>Monoid 和 Ring 的分解，唯一分解中的因子链条件，不可约元是素元的条件，以及 gcd 存在条件。Field 是 ED 是 PID 是 UFD。$D$ 是UFD 则 $D[x]$ 也是。$F[x]$ 是 ED。若 $D[x]$ 是 PID,则 $D$ 是域。</li>
-<li>有限整环是除环是域。</li>
-<li>Rng 可以嵌入到 Ring 中。</li>
-</ol>
-<h3 id="u6A21_Module_over_PID"><a href="#u6A21_Module_over_PID" class="headerlink" title="模 Module over PID"></a>模 Module over PID</h3><ol>
-<li>类似于对称群 $S_n$，一个 Abel 群 M 上的自同态全体构成了一个环 End M。任何环都同构于一个 End M 的子环。</li>
-<li>一个环 $R$ 到 End M 上的环同态，定义了一个 $R$ 上的模。当然还有一种等价的模仿线性空间的定义方法。特别地，一个 Abel 群可以看做是一个 $\mathbb{Z}$模，一个环的理想可以看做该环上的模， $F$上的线性空间外加一个线性变换可以看做 $F[\lambda]$模。</li>
-<li>子模，商模，模同态及其同态基本定理。</li>
-<li>循环模，零化子，循环模的同构。 </li>
-<li>自由模，$R$ 交换时的自由模同构定理。</li>
-<li>模的直和，以及线性相关，线性无关。</li>
-<li>若 $D$ 是 PID，$D^{(n)}$ 是 $D$ 上秩为 $n$ 的自由模，则 $D^{(n)}$ 的子模都是自由模，且秩不超过 $n$.并且这个子模可以用 $D$ 上矩阵来刻画。</li>
-<li>PID 上的矩阵可以相抵等价于对角矩阵,且每一个元素都是后一项的因子。</li>
-<li>PID 上有限生成模同构于某个自由模的商模，且可以写成循环模的直和。并且上述分解长度唯一，在同构的意义下唯一。</li>
-<li>扭子模以及扭子模可以分解成一些初等循环模的直和。</li>
-<li>将上述 PID 上模的结论应用于 Abel 群以及域 $F$ 上线性空间，可以得到一系列结论。</li>
-<li>每一个有限生成 Abel 群都是一个有限群和自由群的直和。每个有限 Abel 群都是一些素数幂阶循环群的直和。</li>
-<li>域上矩阵环都有有理标准型，并且在代数闭域中有 Jordan 标准型。 </li>
-<li>对于 PID 上有限生成模 $M$ 的自同态全体 End $M$ 反同构于一个两个 PID 上矩阵子环的的商。</li>
-<li>应用到域上的线性空间可以得到与一个矩阵交换的矩阵全体的维数定理，自然推论是如果一个线性变换是循环的，那么与之交换的变换是它的多项式。</li>
-<li>对于 PID 上有限生成模 $M$ 的自同态全体 End $M$，它的中心是 scale transformation。</li>
-<li>一个域上的向量空间加上一个线性变换可以看做是 $F[\lambda]$ 模。</li>
-</ol>
-<h3 id="To_be_Continue"><a href="#To_be_Continue" class="headerlink" title="To be Continue"></a>To be Continue</h3>]]></content>
-    <summary type="html">
-    <![CDATA[<p>最近在读 Nathan Jacobson《Basic Algebra I》，理一下知识点。长期更新<br>]]>
     
     </summary>
     
