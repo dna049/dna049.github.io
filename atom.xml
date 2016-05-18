@@ -170,9 +170,9 @@
     <link href="http://dna049.com/2016/05/18/a-trival-formula%20about%20d(n)/"/>
     <id>http://dna049.com/2016/05/18/a-trival-formula about d(n)/</id>
     <published>2016-05-18T06:49:51.000Z</published>
-    <updated>2016-05-18T15:32:37.000Z</updated>
+    <updated>2016-05-18T15:38:32.000Z</updated>
     <content type="html"><![CDATA[<p>codeforce 上有<a href="http://codeforces.com/contest/235/problem/E" target="_blank" rel="external">一道题</a> 。 rng_58 用一个奇妙的公式解决了这个问题。并且给出了公式的证明，这里给出另一个比较好的证明。<br><a id="more"></a></p>
-<h4 id="24d_28n_29_24__u7684_u4E00_u4E2A_u516C_u5F0F"><a href="#24d_28n_29_24__u7684_u4E00_u4E2A_u516C_u5F0F" class="headerlink" title="$d(n)$ 的一个公式"></a>$d(n)$ 的一个公式</h4><p>按照公式，我们有 $d(n) = \sum_{i \mid n} 1$。其实这个公式可以推广成</p>
+<h4 id="24d_28n_29_24__u7684_u4E00_u4E2A_u516C_u5F0F"><a href="#24d_28n_29_24__u7684_u4E00_u4E2A_u516C_u5F0F" class="headerlink" title="$d(n)$ 的一个公式"></a>$d(n)$ 的一个公式</h4><p>按照公式，我们有 $d(n) = \sum_{i \mid n} 1$。其实这个公式可以推广为</p>
 <p>$$ d(n_1,\cdots,n_m) = \sum_{i_1 \mid n_1} \cdots \sum_{i_m \mid n_m} 1, \; gcd(i_s,i_t)=1,1 \leq  s &lt; t \leq m$$</p>
 <p>Proof： 数学归纳法证明：$m=1$ 时结论显然。<br>设结论对 $m-1$ 成立。<br>$$ \begin{aligned}<br>d(n_1,\cdots,n_m) &amp;= \sum_{i \mid n_1,\cdots,n_m} 1 =  \sum_{d \mid n_m} \sum_{i \mid n_1,\cdots,n_m , gcd(i,n_m)=d} 1 \\<br>&amp;= \sum_{d \mid n_m} \sum_{\frac{i}{d} \mid n_1,\cdots,n_{m-1} , gcd(\frac{i}{d},\frac{n_m}{d})=1} 1 \\<br>&amp;= \sum_{d \mid n_m} \sum_{i \mid n_1,\cdots,n_{m-1} , gcd(i,d)=1} 1<br>\end{aligned} $$<br>由数学归纳法知，原结论成立。</p>
 <h4 id="u4E0A_u9762_u516C_u5F0F_u7684_u4E00_u4E2A_u5E94_u7528"><a href="#u4E0A_u9762_u516C_u5F0F_u7684_u4E00_u4E2A_u5E94_u7528" class="headerlink" title="上面公式的一个应用"></a>上面公式的一个应用</h4><p>$$ \sum_{i_1 = 1} ^{n_1} \cdots \sum_{i_m = 1} ^{n_m} d(n_1,\cdots,n_m) = \sum_{gcd(i_s,i_t)=1,1 \leq  s &lt; t \leq m } \lfloor \frac{n_1}{i_1} \rfloor \cdots  \lfloor \frac{n_m}{i_m} \rfloor $$</p>
