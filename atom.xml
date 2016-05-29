@@ -194,9 +194,9 @@
     <link href="http://dna049.com/2016/05/29/Nim-SG-function/"/>
     <id>http://dna049.com/2016/05/29/Nim-SG-function/</id>
     <published>2016-05-29T04:12:10.000Z</published>
-    <updated>2016-05-29T13:40:29.000Z</updated>
+    <updated>2016-05-29T14:09:32.000Z</updated>
     <content type="html"><![CDATA[<p>在2002年张一飞写过一遍论文 <img src="NimGame.pdf" alt="《由感性认识到理性认识－透析一类博弈游戏的解答过程》"> 从此开启了这类博弈问题的大门，留下学习笔记。<br><a id="more"></a></p>
-<h4 id="1-__u53D6_u77F3_u5B50_u6E38_u620F"><a href="#1-__u53D6_u77F3_u5B50_u6E38_u620F" class="headerlink" title="1. 取石子游戏"></a>1. 取石子游戏</h4><p>$A，B$ 两人面对若干堆石子，按照如下规则取石子</p>
+<h4 id="u53D6_u77F3_u5B50_u6E38_u620F"><a href="#u53D6_u77F3_u5B50_u6E38_u620F" class="headerlink" title="取石子游戏"></a>取石子游戏</h4><p>$A，B$ 两人面对若干堆石子，按照如下规则取石子</p>
 <ol>
 <li>每步至少取一枚石子</li>
 <li>每步只能在某一堆取走部分或者全部石子</li>
@@ -222,7 +222,18 @@
 <p>下面证明上面的结论。<br>引理：$a_1 \oplus a_2 \oplus \a_n = p \neq 0$，则必存在 $1 \leq k \leq n$，使得 $a_k \oplus p &lt; a_k$。这是因为我们看 $p$ 的最高位即知存在 $a_k$ 其最高位也为 $1$, 那么与 $p$ 异或后，这一位就从 $1$ 变为 $0$，证毕。</p>
 <p>若 $f(S) = 0$，则无论先行者如何取子 $S \to T$，都有 $f(T) \neq 0$。<br>若 $f(S) \neq 0$，则先行者存在一种取法 $S \to T$, 使得 $f(T) = 0$。这是因为由引理 $a_1 \oplus a_2 \oplus \a_n = p \neq 0$，存在 $1 \leq k \leq n$，使得 $x = a_k \oplus p &lt; a_k$。那么我们在第 $k$ 堆取走 $a_k - x$ 个石子，那么 $a_1 \oplus a_2 \oplus \a_n \oplus p = 0$，证毕。</p>
 <p>这说明了上述想法的可行性。下面把这种思想推广成一般的 SG 函数的情形</p>
-<h4 id="SG__u51FD_u6570"><a href="#SG__u51FD_u6570" class="headerlink" title="SG 函数"></a>SG 函数</h4>]]></content>
+<h4 id="SG__u51FD_u6570"><a href="#SG__u51FD_u6570" class="headerlink" title="SG 函数"></a>SG 函数</h4><p>当对石子的取法进行限制时，例如每次最多能去 $m$ 个，或每次最少取 $l$ 个等，此时再令 $f(x) = x$ 就不合适了。那么应该选择怎样的 $f$ 呢。显然 $f$ 必须满足：</p>
+<ol>
+<li>若 $f(S) = 0$, 则无论先行者如何取子 $S \to T$，都有 $f(T) \neq 0$</li>
+<li>若 $f(S) \neq 0$, 则先行者存在一种取子 $S \to T$，使得 $f(T) = 0$。</li>
+</ol>
+<p>我们用 $(S) = \lbrace S_1,S_2, \cdots S_k \rbrace$ 表示 $S$ 的下一个可能的局面，定义 $g(S) = \lbrace f(S_1),f(S_2), \cdots f(S_k) \rbrace $。</p>
+<p>由 $f$ 满足条件1知<br>$$ \lbrace f(S) \rbrace \cap g(S) = \emptyset $$<br>由条件2知<br>$$ \max g(S) &lt; f(S)$$</p>
+<p>因此我们定义函数 $f(S)$ 为 $f(S) \equiv \min g(S)$</p>
+<blockquote>
+<p>写的这么乱，估计只有自己看的懂 0.0</p>
+</blockquote>
+]]></content>
     <summary type="html">
     <![CDATA[<p>在2002年张一飞写过一遍论文 <img src="NimGame.pdf" alt="《由感性认识到理性认识－透析一类博弈游戏的解答过程》"> 从此开启了这类博弈问题的大门，留下学习笔记。<br>]]>
     
