@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> SG 函数之取石子博弈 · 0.肆玖</title><meta name="description" content="SG 函数之取石子博弈 - dna049"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div id="mask" style="display: none;"><img id="mask-image" src="#" style=" "></div><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">SG 函数之取石子博弈</h1><div class="post-time">2016年5月29日</div><div class="post-content"><p>在2002年张一飞写过一篇论文 <a href="NimGame.pdf">《由感性认识到理性认识－透析一类博弈游戏的解答过程》</a> 从此开启了这类博弈问题的大门，留下学习笔记。<br><a id="more"></a></p>
-<h4 id="u53D6_u77F3_u5B50_u6E38_u620F"><a href="#u53D6_u77F3_u5B50_u6E38_u620F" class="headerlink" title="取石子游戏"></a>取石子游戏</h4><p>$A，B$ 两人面对若干堆石子，按照如下规则取石子</p>
+<h4 id="u53D6_u77F3_u5B50_u6E38_u620F"><a href="#u53D6_u77F3_u5B50_u6E38_u620F" class="headerlink" title="取石子游戏"></a>取石子游戏</h4><p>$A,B$ 两人面对若干堆石子，按照如下规则取石子</p>
 <ol>
 <li>每步至少取一枚石子</li>
 <li>每步只能在某一堆取走部分或者全部石子</li>
@@ -7,7 +7,7 @@
 </ol>
 <p>首先抛开问题，我们先从一般的入手。</p>
 <p>我们可以用一个 $n$ 元组 $(a_1,a_2,\cdots,a_n)$ 表示一个局面 $S$。显然<strong>改变 $n$ 元组的顺序仍然是一个局面。</strong></p>
-<p>一个局面 $n$ 元局面$(a_1,a_2,\cdots,a_n)$和一个 $m$ 元局面 $(b_1,b_2,\cdots,b_m)$ 之和显然就是一个 $m+n$ 元局面 $(a_1,a_2,\cdots,a_n,b_1,b_2,\cdots,b_m)$。类似的一个局面也可以有多种分解。</p>
+<p>一个局面 $n$ 元局面$(a_1,a_2,\cdots,a_n)$和一个 $m$ 元局面 $(b_1,b_2,\cdots,b_m)$ 之和显然就是一个 $m + n$ 元局面 $(a_1,a_2,\cdots,a_n,b_1,b_2,\cdots,b_m)$。类似的一个局面也可以有多种分解。</p>
 <p>对于局面 $S$，若先行者有必胜策略，则称 “$S$ 胜”；<br>对于局面 $S$，若后行者有必胜策略，则称 “$S$ 负”。</p>
 <p>如果局面 $S$ 胜，则必然存在取子方式 $S \to T$，且 $T$ 负；<br>如果局面 $S$ 负，则对任意取子方式 $S \to T$，有 $T$ 胜。</p>
 <p>局面分解理论，若 $S = A + B$ 则下面结论显然</p>
@@ -20,10 +20,10 @@
 </ol>
 <p>因此根据上面的分解理论，可以将一个局面进行化简。例如 $(2,2,2,7,9,9)$ 可以化简成 $(2,7)$</p>
 <p>而局面分解的关系，很容易让人联想到整数的位运算－异或。</p>
-<p>对于上面取石子问题，每一个局面都可以分解成只有一堆石子的局面，我们，对一个局面定义一个函数 $f$，然后把它们异或是不是，然后判断是非为0，作为是否胜的充要条件.这样做是否可行呢？先对原始例子进行实验。</p>
+<p>对于上面取石子问题，每一个局面都可以分解成只有一堆石子的局面。<br>对一个局面，定义一个函数 $f$，然后把它们异或是不是，然后判断是非为0，作为是否胜的充要条件.这样做是否可行呢？先对原始例子进行实验。</p>
 <p>函数 $f$：若局面 $S$ 只有一个石子，设 $S={a}$，则定义 $f(a) = a$。<br>设局面 $S = (a_1,a_2,\cdots,a_n)=(a_1)+(a_2)+\cdots (a_n)$，则 $f(S) = f(a_1) \oplus f(a_2) \oplus \cdots \oplus f(a_n)$<br>对于一个局面 $S$，若 $f(S) = 0$，则 $S$ 负，否则，$S$ 胜。</p>
-<p>下面证明上面的结论。<br>引理：$a_1 \oplus a_2 \oplus \a_n = p \neq 0$，则必存在 $1 \leq k \leq n$，使得 $a_k \oplus p &lt; a_k$。这是因为我们看 $p$ 的最高位即知存在 $a_k$ 其最高位也为 $1$, 那么与 $p$ 异或后，这一位就从 $1$ 变为 $0$，证毕。</p>
-<p>若 $f(S) = 0$，则无论先行者如何取子 $S \to T$，都有 $f(T) \neq 0$。<br>若 $f(S) \neq 0$，则先行者存在一种取法 $S \to T$, 使得 $f(T) = 0$。这是因为由引理 $a_1 \oplus a_2 \oplus \a_n = p \neq 0$，存在 $1 \leq k \leq n$，使得 $x = a_k \oplus p &lt; a_k$。那么我们在第 $k$ 堆取走 $a_k - x$ 个石子，那么 $a_1 \oplus a_2 \oplus \a_n \oplus p = 0$，证毕。</p>
+<p>下面证明上面的结论。<br>引理：$a_1 \oplus a_2 \oplus a_n = p \neq 0$，则必存在 $1 \leq k \leq n$，使得 $a_k \oplus p &lt; a_k$。这是因为我们看 $p$ 的最高位即知存在 $a_k$ 其最高位也为 $1$, 那么与 $p$ 异或后，这一位就从 $1$ 变为 $0$，证毕。</p>
+<p>若 $f(S) = 0$，则无论先行者如何取子 $S \to T$，都有 $f(T) \neq 0$。<br>若 $f(S) \neq 0$，则先行者存在一种取法 $S \to T$, 使得 $f(T) = 0$。这是因为由引理 $a_1 \oplus a_2 \oplus a_n = p \neq 0$，存在 $1 \leq k \leq n$，使得 $x = a_k \oplus p &lt; a_k$。那么我们在第 $k$ 堆取走 $a_k - x$ 个石子，那么 $a_1 \oplus a_2 \oplus a_n \oplus p = 0$，证毕。</p>
 <p>这说明了上述想法的可行性。下面把这种思想推广成一般的 SG 函数的情形</p>
 <h4 id="SG__u51FD_u6570"><a href="#SG__u51FD_u6570" class="headerlink" title="SG 函数"></a>SG 函数</h4><p>当对石子的取法进行限制时，例如每次最多能去 $m$ 个，或每次最少取 $l$ 个等，此时再令 $f(x) = x$ 就不合适了。那么应该选择怎样的 $f$ 呢。显然 $f$ 必须满足：</p>
 <ol>
