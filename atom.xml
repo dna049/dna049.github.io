@@ -192,6 +192,34 @@
   </entry>
   
   <entry>
+    <title><![CDATA[五引理]]></title>
+    <link href="http://dna049.com/2016/10/11/the-five-lemma/"/>
+    <id>http://dna049.com/2016/10/11/the-five-lemma/</id>
+    <published>2016-10-11T11:22:35.000Z</published>
+    <updated>2016-10-11T12:41:41.000Z</updated>
+    <content type="html"><![CDATA[<p>在同调代数中，Five lemma，Snake lemma，Nine lemma （五引理，蛇形引理，马蹄引理）都是重要的引理。这里介绍一下 五引理。其实它的一般形式是有两个四引理得出的。</p>
+<a id="more"></a>
+<p>以下范畴为：Abel范畴(这里仅在模范畴中考虑，此时 monic 即为单同态，epic 即为满同态)。</p>
+<h4 id="u4E94_u5F15_u7406"><a href="#u4E94_u5F15_u7406" class="headerlink" title="五引理"></a>五引理</h4><p>若下图中每一行都正合且$f$ epic，$q$ monic, $g,p$ isomorphism,then $h$ is isomorphism.<br><img src="five lemma.png" alt="五引理"></p>
+<h4 id="u4E94_u5F15_u7406_u7684_u7279_u6B8A_u5F62_u5F0F"><a href="#u4E94_u5F15_u7406_u7684_u7279_u6B8A_u5F62_u5F0F" class="headerlink" title="五引理的特殊形式"></a>五引理的特殊形式</h4><p>若下图中每一行都正合且$f,h$ isomorphism,then $g$ is isomorphism.<br><img src="five lemmaS.png" alt="五引理特殊形式"></p>
+<h4 id="u4E24_u4E2A_u56DB_u5F15_u7406_u53CA_u5176_u8BC1_u660E"><a href="#u4E24_u4E2A_u56DB_u5F15_u7406_u53CA_u5176_u8BC1_u660E" class="headerlink" title="两个四引理及其证明"></a>两个四引理及其证明</h4><ol>
+<li>若下图中每一行都正合且 $f$ epic，$p$ monic, $g$ epic,then $h$ is epic.<br><img src="four lemma1.png" alt="四引理1"></li>
+</ol>
+<ol>
+<li>若下图中每一行都正合且 $g$ epic，$q$ monic, $p$ monic,then $h$ is monic.<br><img src="four lemma2.png" alt="四引理2"></li>
+</ol>
+<p>记忆方法： 左满右单，两满夹一满，两单夹一单。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在同调代数中，Five lemma，Snake lemma，Nine lemma （五引理，蛇形引理，马蹄引理）都是重要的引理。这里介绍一下 五引理。其实它的一般形式是有两个四引理得出的。</p>]]>
+    
+    </summary>
+    
+      <category term="math" scheme="http://dna049.com/tags/math/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[一个简单组合问题]]></title>
     <link href="http://dna049.com/2016/06/03/one-Combination/"/>
     <id>http://dna049.com/2016/06/03/one-Combination/</id>
@@ -815,33 +843,6 @@
       <category term="C++" scheme="http://dna049.com/tags/C/"/>
     
       <category term="数论" scheme="http://dna049.com/tags/%E6%95%B0%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[POJ2559 单调栈]]></title>
-    <link href="http://dna049.com/2016/04/10/POJ2559-monostack/"/>
-    <id>http://dna049.com/2016/04/10/POJ2559-monostack/</id>
-    <published>2016-04-10T11:27:49.000Z</published>
-    <updated>2016-05-23T15:17:58.000Z</updated>
-    <content type="html"><![CDATA[<p><a href="http://poj.org/problem?id=2559" target="_blank" rel="external">POJ</a>上有一到有趣的题：求一个柱状图中面积最大的矩阵面积为多少?<br> 最暴力的方法当然0.0不值一提，下面看看如何用单调栈的方法解决<br><a id="more"></a><br><img src="poj2559.png" alt="poj2559"></p>
-<h2 id="u5355_u8C03_u6808"><a href="#u5355_u8C03_u6808" class="headerlink" title="单调栈"></a>单调栈</h2><h4 id="u7EF4_u62A4_u5355_u8C03_u6808_uFF1A"><a href="#u7EF4_u62A4_u5355_u8C03_u6808_uFF1A" class="headerlink" title="维护单调栈："></a>维护单调栈：</h4><p>进栈操作：每次入栈前先检验栈顶元素和进栈元素x的大小，如果小于x，就让x直接入栈。如果栈顶元素大于等于x,那么出栈，直到栈空或者栈顶元素小于x</p>
-<h4 id="u4F8B_u5B50"><a href="#u4F8B_u5B50" class="headerlink" title="例子"></a>例子</h4><p>$ a[\;] = \lbrace 1, 4, 5, 2, 0 \rbrace $</p>
-<ol>
-<li>初始栈为空，进栈，栈内元素(1)</li>
-<li>4大于1，进栈。栈内元素(1,4)</li>
-<li>5大于4，进栈。栈内元素(1,4,5)</li>
-<li>2小于5, 5出栈，2小于4,4出栈，2大于1,进栈，栈内元素(1,2)</li>
-<li>0要入栈，1,2出栈，0进栈。栈内元素(0)</li>
-</ol>
-<h4 id="u7528_u9014_u53EF_u4EE5_u5728__24O_28n_29_24__u65F6_u95F4_u5185_u627E_u5230_24i_24_u4F4D_u7F6E_u5DE6_28_u53F3_29_u8FB9_u9996_u6B21_u6BD4_u5B83_u5C0F_u7684_u4F4D_u7F6E_u3002_u8BE6_u89C1POJ2559_u7684_u4EE3_u7801_u6C42_u89E3"><a href="#u7528_u9014_u53EF_u4EE5_u5728__24O_28n_29_24__u65F6_u95F4_u5185_u627E_u5230_24i_24_u4F4D_u7F6E_u5DE6_28_u53F3_29_u8FB9_u9996_u6B21_u6BD4_u5B83_u5C0F_u7684_u4F4D_u7F6E_u3002_u8BE6_u89C1POJ2559_u7684_u4EE3_u7801_u6C42_u89E3" class="headerlink" title="用途可以在 $O(n)$ 时间内找到$i$位置左(右)边首次比它小的位置。详见POJ2559的代码求解"></a>用途可以在 $O(n)$ 时间内找到$i$位置左(右)边首次比它小的位置。详见POJ2559的代码求解</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1e5</span>+<span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> L[N],R[N],stk[N]; <span class="comment">//L[i]: min x&lt;i s.t. h[x]&gt;h[i]</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">monoStack</span><span class="params">(<span class="keyword">int</span> h[], <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> top = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; ++j) &#123;</span><br><span class="line">        <span class="keyword">while</span>(top &amp;&amp; h[stk[top-<span class="number">1</span>]] &gt;= h[j]) --top;</span><br><span class="line">        L[j] = (top == <span class="number">0</span>?-<span class="number">1</span>:stk[top-<span class="number">1</span>]);</span><br><span class="line">        stk[top++] = j;</span><br><span class="line">    &#125;</span><br><span class="line">    top = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = n-<span class="number">1</span>; j &gt;= <span class="number">0</span>; --j) &#123;</span><br><span class="line">        <span class="keyword">while</span>(top &amp;&amp; h[stk[top-<span class="number">1</span>]] &gt;= h[j]) --top;</span><br><span class="line">        R[j] = top == <span class="number">0</span>?n:stk[top-<span class="number">1</span>];</span><br><span class="line">        stk[top++] = j;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)&amp;&amp;n)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>,h+i);</span><br><span class="line">        &#125;</span><br><span class="line">        monoStack(h,n);</span><br><span class="line">        LL ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">            ans = max(ans,LL(h[i])*(R[i]-L[i]-<span class="number">1</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><a href="http://poj.org/problem?id=2559">POJ</a>上有一到有趣的题：求一个柱状图中面积最大的矩阵面积为多少?<br> 最暴力的方法当然0.0不值一提，下面看看如何用单调栈的方法解决<br>]]>
-    
-    </summary>
-    
-      <category term="C++" scheme="http://dna049.com/tags/C/"/>
     
   </entry>
   
