@@ -134,7 +134,7 @@
     <link href="http://dna049.com/2020/02/02/Recommended-Site/"/>
     <id>http://dna049.com/2020/02/02/Recommended-Site/</id>
     <published>2020-02-01T18:02:00.000Z</published>
-    <updated>2016-05-05T23:40:45.000Z</updated>
+    <updated>2017-03-05T08:42:35.000Z</updated>
     <content type="html"><![CDATA[<p>这里记录一些有用的，有趣的网站。一来便于查阅，二来用于分享。长期更新。<br>本人博客：<a href="http://dna049.com">dna049</a> 本质是指向域名<a href="http://dna049.github.io" target="_blank" rel="external">dna049.github.io</a> 的。 </p>
 <blockquote>
 <p>不具名的博主不管有没有观众，谢谢侬 0.0</p>
@@ -146,8 +146,9 @@
 <li><a href="http://blog.csdn.net/acdreamers" target="_blank" rel="external">ACdreamer</a></li>
 <li><a href="http://picks.logdown.com" target="_blank" rel="external">Pick</a></li>
 <li><a href="http://97littleleaf11.xyz" target="_blank" rel="external">littleleaf</a></li>
+<li>开服务器共享文件： python -m SimpleHTTPServer 8000<a id="more"></a>
+</li>
 </ol>
-<a id="more"></a>
 <h4 id="2-__u6570_u5B66_u5DE5_u5177"><a href="#2-__u6570_u5B66_u5DE5_u5177" class="headerlink" title="2. 数学工具"></a>2. 数学工具</h4><ol>
 <li><a href="http://gen.lib.rus.ec" target="_blank" rel="external">数学书下载神器</a></li>
 <li><a href="http://mlworks.cn/posts/introduction-to-mathjax-and-latex-expression/" target="_blank" rel="external">Example of Latex and Mathjax</a></li>
@@ -169,6 +170,8 @@
 <li><a href="http://www.freeroms.com/nes_roms_NUM.htm" target="_blank" rel="external">黑白机nes游戏资源和素材</a></li>
 <li><a href="https://www.fodey.com/generators/animated/ninjatext.asp" target="_blank" rel="external">英文文本用小忍着的动画画出</a></li>
 <li><a href="http://wigflip.com/signbot/" target="_blank" rel="external">在线生成液晶字幕</a></li>
+<li><a href="http://www.53xiu.com/html/sxtjc/39_2.html" target="_blank" rel="external">mac装win10教程2017年</a></li>
+<li><a href="http://bbs.feng.com/forum.php?mod=viewthread&amp;tid=9939833&amp;authorid=5970371&amp;page=2" target="_blank" rel="external">上面系统安装可能出现的问题</a></li>
 </ol>
 ]]></content>
     <summary type="html">
@@ -183,7 +186,7 @@
 <li><a href="http://blog.csdn.net/acdreamers">ACdreamer</a></li>
 <li><a href="http://picks.logdown.com">Pick</a></li>
 <li><a href="http://97littleleaf11.xyz">littleleaf</a></li>
-</ol>]]>
+<li>开服务器共享文件： python -m SimpleHTTPServer 8000]]>
     
     </summary>
     
