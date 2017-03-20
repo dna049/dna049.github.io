@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 玩具：HC6800-ES开发版 · 0.肆玖</title><meta name="description" content="玩具：HC6800-ES开发版 - dna049"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div id="mask" style="display: none;"><img id="mask-image" src="#" style=" "></div><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">玩具：HC6800-ES开发版</h1><div class="post-time">2017年3月19日</div><div class="post-content"><p>这里记录一些我的新玩具: <strong>51单片机</strong> 的基础常识，作为初学者，下文必然是错误百出。</p>
+<a id="more"></a>
+<blockquote>
+<p>很久没更新博客了,毕竟很久没写程序了。数学类的嵌套的定义又太多，很不好写。</p>
+</blockquote>
+<h4 id="u65B0_u73A9_u5177"><a href="#u65B0_u73A9_u5177" class="headerlink" title="新玩具"></a>新玩具</h4><p>这次淘宝买的新玩具是：HC6800-ES V2.0 开发版，内部单片机是STC89C52。见下图<br><img src="HC6800.png" alt="开发版"><br>作为小白看了一下视频，但是呢，感觉视频什么的太慢，还是看书看<a href="HC6800-ES-V2.0实验指导书.pdf">手册</a>来的爽。安装好单片机版C语言的IDE Keil4 以及烧录软件之后，装一下开发版驱动，就可以在不知道单片机原理的情况下轻松的控制单片机了。例如什么 LED灯闪烁，跑马灯，等等很基础的程序。</p>
+<p>下面是单片机的管脚图和说明：<br><img src="89C52.png" alt="管脚图"><br><img src="STC89C52_1.png" alt="说明1"><br><img src="STC89C52_2.png" alt="说明2"></p>
+<p>从图上看知道P0,P1,P2,P3是重要的I/O口，例如我们把P2接到LED灯，那么给低电平0，就可以使灯亮。还有P0，P1不仅可以作为I/O口，还可以作为地址，计时器、计数器来用。还有P3，等等。由于我用的是开发版，每个口接什么基本上已经固定了，用的时候查相应的官方资料就行了。它也提供了很多程序例子，因此还是很好掌握的，只是要记点东西才能灵活操作它。</p>
+<p>sbit LSA=P2^2;<br>sbit LSB=P2^3;<br>sbit LSC=P2^4;</p>
+<h4 id="HC6800-ES-VS2-0__u5E38_u89C1_u7BA1_u811A_u63A5_u6CD5_u3002"><a href="#HC6800-ES-VS2-0__u5E38_u89C1_u7BA1_u811A_u63A5_u6CD5_u3002" class="headerlink" title="HC6800-ES-VS2.0 常见管脚接法。"></a>HC6800-ES-VS2.0 常见管脚接法。</h4><ol>
+<li>P2口8个位接了8个LED灯，至0灯亮。</li>
+<li>P1.5接了蜂鸣器。循环至0至1发声。</li>
+<li>P3.0 ~ P3.3 接了独立键盘（不过开发版上竟然接反了K1和K2），使用按键的时候要软件消除抖动，一般延迟10ms来完成。</li>
+<li>通过P1的数据，来判断矩阵键盘按的键。（见下图）<br><img src="keyboard.png" alt="矩阵键盘原理图"></li>
+<li>数码管使用P0, 通过 LSA=P2.2, LSB=P2.3, LSB=P2.4 的0-1指来控制显示的地方。</li>
+</ol>
+<h4 id="u5E38_u7528_u5B9A_u65F6_u5668"><a href="#u5E38_u7528_u5B9A_u65F6_u5668" class="headerlink" title="常用定时器"></a>常用定时器</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">TimerConfiguration</span><span class="params">()</span></span>&#123;</span><br><span class="line">	TMOD=<span class="number">0X02</span>;<span class="comment">//选择为定时器0模式，工作方式2，仅用TRX打开启动。</span>	TH0=<span class="number">0X9C</span>; <span class="comment">//给定时器赋初值，定时100us</span></span><br><span class="line">	TL0=<span class="number">0X9C</span>;</span><br><span class="line">	ET0=<span class="number">1</span>;<span class="comment">//打开定时器0中断允许</span></span><br><span class="line">	EA=<span class="number">1</span>;<span class="comment">//打开总中断</span></span><br><span class="line">	TR0=<span class="number">1</span>;<span class="comment">//打开定时器</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Timer</span><span class="params">()</span> interrupt 1 </span>&#123;</span><br><span class="line">	<span class="comment">// do sth.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面东西要记没办法。</p>
+<h4 id="1602__u6DB2_u6676_u663E_u793A"><a href="#1602__u6DB2_u6676_u663E_u793A" class="headerlink" title="1602 液晶显示"></a>1602 液晶显示</h4><p>这个虽然很复杂，但是生产该显示屏的会提供<code>lcd.h</code>和<code>lcd.c</code>然后我们只要先初始化LCD：<code>LcdInit</code>再执行字节输出函数：<code>LcdWriteData(char c)</code>即可。</p>
+</div></article></div></section><footer><div class="paginator"><a href="/2020/02/02/Recommended-Site/" class="prev">上一篇</a><a href="/2016/10/11/the-five-lemma/" class="next">下一篇</a></div><div data-thread-key="2017/03/19/singlechip/" data-title="玩具：HC6800-ES开发版" data-url="http://dna049.com/2017/03/19/singlechip/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div class="copyright"><p>© 2015 - 2017  <a href="http://dna049.com">dna049</a></p></div></footer></div><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?699b245cef6684fc1e306cd9cc1cb26a";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>
