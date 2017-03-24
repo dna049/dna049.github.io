@@ -199,7 +199,7 @@
     <link href="http://dna049.com/2017/03/23/Zariski-Topology-on-k-n/"/>
     <id>http://dna049.com/2017/03/23/Zariski-Topology-on-k-n/</id>
     <published>2017-03-23T15:35:59.000Z</published>
-    <updated>2017-03-24T00:27:53.000Z</updated>
+    <updated>2017-03-24T00:32:32.000Z</updated>
     <content type="html"><![CDATA[<p>$k^n$ 最常见的拓扑自然是欧式拓扑，但是下面介绍的Zariski拓扑也是十分重要和“常见”的拓扑，并且它也保持了很多自然的性质，又有其独特的地方，值得了解一番。</p>
 <blockquote>
 <p>详见 Jacobson《Basic Algebra 2》</p>
@@ -213,7 +213,7 @@
 <p>则有：</p>
 <ol>
 <li>$V(k[x_1,x_2,\cdots,x_n]) = \emptyset$; $V(\emptyset)=k[x_1,x_2,\cdots,x_n]$</li>
-<li>$ \Cap_{i \in I} V(S<em>i) = V(\Cup</em>{i in I} S_i) $</li>
+<li>$ \Cap _{i \in I} V(S <em>i) = V(\Cup </em>{i in I} S _i) $</li>
 <li>$V(S) = V(I(S))$; for ideals $I_1,I_2$, $V(I_1) \cup V(I_2) = V(I_1 I_2)$</li>
 </ol>
 <p>所以，上述$V(S)$全体作为闭集构成了 $k^n$ 的一个拓扑，称为 $k^n$ 上的Zariski拓扑。</p>
