@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> interst result_4_1 · 0.肆玖</title><meta name="description" content="interst result_4_1 - dna049"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div id="mask" style="display: none;"><img id="mask-image" src="#" style=" "></div><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">interst result_4_1</h1><div class="post-time">2017年4月1日</div><div class="post-content"><p>前几天一个学弟告诉我关于复数域上幂零矩阵$A$的一个充要条件,特此记录<br>$$A = AB-BA for some B \in M_n{\mathbb{C}}$$</p>
+<a id="more"></a>
+<p>证明分几个小步骤。<br>必要性：</p>
+<ol>
+<li>若$A$为（上三角）若当块，那么取 $B = \diag {0,1,\cdots,n-1}$ 即可，若 $A$ 为分块若当块（若当标准型），那么取对应的分块 $B$ 即可。又由于<br>$$ P^{-1} A P = P^{-1} A P P^{-1} B P -P^{-1} B P P^{-1} A P $$<br>因此，由对若当标准型成立即可知道对一般形式成立。</li>
+<li>$\tr(A^k) = 0, 1 \leq k \leq n$,则 $A$ 幂零。<br>由若当标准型，可知，只需证明<br>\begin{cases}<br>x_1 + x_2 + \cdots + x_n = 0 \<br>x_1 ^ 2 + x_2 ^ 2 + \cdots + x_n ^2 = 0 \<br>\vdots  \<br>x_1 ^ n + x_2 ^n + \cdots + x_n ^n  = 0<br>\end{cases}<br>推出，$x_1 = x_2 = \cdots x_n = 0$， 不妨设<br>x_1 t_1 + x_2 t_2 + \cdots + x_r t_r = 0 \<br>x_1 ^ 2 t_1  + x_2 ^ 2 t_2 + \cdots + x_r ^2 t_r= 0 \<br>\vdots  \<br>x_1 ^ r + x_2 ^r + \cdots + x_r ^r t_r = 0<br>\end{cases}<br>其中 $x_i$ 互不相同，那么，假设$r&gt;1$ 则由 Vandemode 行列式不为0知，$t_i = 0$ 矛盾，因此 $r = 1$,因此 $x_i = 0$。</li>
+<li>$C = AB-BA$ 且 $AC = CA$ 则，$C$ 幂零。<br>$$ \forall k,\tr (C^k) = \tr(C^{k-1}AB - C^{k-1}BA) = \tr(C^{k-1}AB) - \tr(AC^{k-1}B) = 0$$，因此由上面结论知，$C$ 幂零。</li>
+<li>由上面结论，充分性显然。</li>
+</ol>
+</div></article></div></section><footer><div class="paginator"><a href="/2020/02/02/Recommended-Site/" class="prev">上一篇</a><a href="/2017/03/25/KaplanskyTheorem/" class="next">下一篇</a></div><div data-thread-key="2017/04/01/interst-result-4-1/" data-title="interst result_4_1" data-url="http://dna049.com/2017/04/01/interst-result-4-1/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div class="copyright"><p>© 2015 - 2017  <a href="http://dna049.com">dna049</a></p></div></footer></div><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?699b245cef6684fc1e306cd9cc1cb26a";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body></html>
