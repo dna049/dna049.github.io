@@ -2,7 +2,7 @@
 <ol>
 <li><p>必要性对若当块成立，若$A$为（上三角）若当块，那么取 $B = diag \lbrace 0,1,\cdots,n-1 \rbrace$ 即可，若 $A$ 为分块若当块（若当标准型），那么取对应的分块 $B$ 即可。又由于<br>$$ P^{-1} A P = P^{-1} A P P^{-1} B P -P^{-1} B P P^{-1} A P $$<br>因此，由对若当标准型成立,可知道对一般形式成立。</p>
 </li>
-<li><p>$tr(A^k) = 0, 1 \leq k \leq n$,则 $A$ 幂零。<br>由若当标准型可知，只需证明<br>$$<br>\begin{cases}<br>x_1 + x_2 + \cdots + x_n = 0 \\<br>x_1 ^ 2 + x_2 ^ 2 + \cdots + x_n ^2 = 0 \\<br>\cdots  \\<br>x_1 ^ n + x_2 ^n + \cdots + x_n ^n  = 0<br>\end{cases}<br>$$<br>推出，$x_1 = x_2 = \cdots x_n = 0$， 不妨设<br>$$<br>\begin{cases}<br>x_1 t_1 + x_2 t_2 + \cdots + x_r t_r = 0 \\<br>x_1 ^ 2 t_1  + x_2 ^ 2 t_2 + \cdots + x_r ^2 t_r= 0 \\<br>\cdots  \<br>x_1 ^ r t_1 + x_2 ^r t_2 + \cdots + x_r ^r t_r = 0<br>\end{cases}<br>$$<br>其中 $x_i$ 互不相同，那么，假设$r&gt;1$则由 Vandemode 行列式不为0知，$t_i = 0$ 矛盾，因此 $r = 1$,因此 $x_i = 0$。</p>
+<li><p>$tr(A^k) = 0, 1 \leq k \leq n$,则 $A$ 幂零。<br>由若当标准型可知，只需证明<br>$$<br>\begin{cases}<br>x_1 + x_2 + \cdots + x_n = 0 \\<br>x_1 ^ 2 + x_2 ^ 2 + \cdots + x_n ^2 = 0 \\<br>\cdots  \\<br>x_1 ^ n + x_2 ^n + \cdots + x_n ^n  = 0<br>\end{cases}<br>$$<br>推出，$x_1 = x_2 = \cdots x_n = 0$， 不妨设<br>$$<br>\begin{cases}<br>x_1 t_1 + x_2 t_2 + \cdots + x_r t_r = 0 \\<br>x_1 ^ 2 t_1  + x_2 ^ 2 t_2 + \cdots + x_r ^2 t_r= 0 \\<br>\cdots  \\<br>x_1 ^ r t_1 + x_2 ^r t_2 + \cdots + x_r ^r t_r = 0<br>\end{cases}<br>$$<br>其中 $x_i$ 互不相同，那么，假设$r&gt;1$则由 Vandemode 行列式不为0知，$t_i = 0$ 矛盾，因此 $r = 1$ 此时 $x_i = 0$。</p>
 </li>
 <li><p>$C = AB-BA$ 且 $AC = CA$ 则，$C$ 幂零。<br>$$ \forall k,tr (C^k) = tr(C^{k-1}AB - C^{k-1}BA) =tr(C^{k-1}AB) - tr(AC^{k-1}B) = 0$$ 因此由上面结论知，$C$ 幂零。</p>
 </li>
