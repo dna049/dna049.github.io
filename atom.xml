@@ -199,10 +199,13 @@
     <link href="http://dna049.com/2017/04/04/matrix-commute-with-A/"/>
     <id>http://dna049.com/2017/04/04/matrix-commute-with-A/</id>
     <published>2017-04-04T12:52:20.000Z</published>
-    <updated>2017-04-04T13:05:16.000Z</updated>
+    <updated>2017-04-04T13:09:52.000Z</updated>
     <content type="html"><![CDATA[<a id="more"></a>
 <p>这个结果还是有些重要的所以记录一下，但是呢？我太懒了，直接截图吧0.0<br><img src="m1.png" alt="1"><br><img src="m2.png" alt="2"><br><img src="m3.png" alt="3"><br><img src="m4.png" alt="4"><br><img src="m5.png" alt="5"></p>
-<p>特别的结果：若方阵$A$的特征多项式是最小多项式，那么与$A$交换的矩阵必然是 $A$ 的多项式。特别地，若当块与$J$可换的矩阵全体是 $f(J)$。</p>
+<p>总体问题还是很复杂，但是特殊情形十分简单：</p>
+<blockquote>
+<p>若方阵$A$的特征多项式是最小多项式，那么与$A$交换的矩阵必然是 $A$ 的多项式。若当块与$J$可换的矩阵全体是 $f(J)$。</p>
+</blockquote>
 ]]></content>
     <summary type="html">
     <![CDATA[<a id="more"></a>
@@ -214,20 +217,21 @@
   </entry>
   
   <entry>
-    <title><![CDATA[noncommutative rings]]></title>
+    <title><![CDATA[非交换环概念框架图]]></title>
     <link href="http://dna049.com/2017/04/04/noncommutative-rings/"/>
     <id>http://dna049.com/2017/04/04/noncommutative-rings/</id>
     <published>2017-04-04T12:37:11.000Z</published>
-    <updated>2017-04-04T12:45:59.000Z</updated>
-    <content type="html"><![CDATA[<p>  最近在看 T.Y.Lam（林节玄）的书，深知非交换环的小技巧深不见底，不过仔细品味了一番之后也觉得十分有趣。最后给一张各种概念之间的关系，每一种概念都有很多等价定义，概念之间关系的推导也十分微妙，充满了技巧性。</p>
+    <updated>2017-04-04T13:08:41.000Z</updated>
+    <content type="html"><![CDATA[<p>最近在看 T.Y.Lam（林节玄）的书，深知非交换环的小技巧深不见底，不过仔细品味了一番之后也觉得十分有趣。最后给一张各种概念之间的关系，每一种概念都有很多等价定义，概念之间关系的推导也十分微妙，充满了技巧性。</p>
 <a id="more"></a>
-<p><img src="noncommutativeRings.png" alt="框架图"></p>
+<p><img src="noncommutaiveRings.png" alt="框架图"></p>
+<p>上面带 <code>=</code> 号的条件是说在此条件下，两个概念等价。<br>推理的细节，以及各个概念的定义为这里就不写了。</p>
 <blockquote>
-<p>上面带 <code>=</code> 号的条件是说在此条件下，两个概念等价。<br>推理的细节，以及各个概念的定义为这里就不写了。有兴趣可以查 GTM 131 T.Y.Lam《A First Course in Noncommutative Rings》 </p>
+<p>有兴趣可以查阅 GTM 131 T.Y.Lam《A First Course in Noncommutative Rings》 </p>
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>  最近在看 T.Y.Lam（林节玄）的书，深知非交换环的小技巧深不见底，不过仔细品味了一番之后也觉得十分有趣。最后给一张各种概念之间的关系，每一种概念都有很多等价定义，概念之间关系的推导也十分微妙，充满了技巧性。</p>]]>
+    <![CDATA[<p>最近在看 T.Y.Lam（林节玄）的书，深知非交换环的小技巧深不见底，不过仔细品味了一番之后也觉得十分有趣。最后给一张各种概念之间的关系，每一种概念都有很多等价定义，概念之间关系的推导也十分微妙，充满了技巧性。</p>]]>
     
     </summary>
     
