@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 均值不等式 · 0.肆玖</title><meta name="description" content="均值不等式 - dna049"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div id="mask" style="display: none;"><img id="mask-image" src="#" style=" "></div><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/Link" target="_self" class="nav-list-link">LINK</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">均值不等式</h1><div class="post-time">2016年2月24日</div><div class="post-content"><p>初中就学过最简单的均值不等式 $\frac{a+b}{2} \geq \sqrt{ab},a ,b \geq 0$。它的证明只需配方就知道了，这里介绍一下一般的均值不等式:<br>$$ \frac{ \sum_{i=1} ^n a_i}{n} \geq \sqrt[n]{\Pi_{i=1}^n a_i }$$<br><a id="more"></a><br>当 $n=1$ 时结论是平凡的，$n=2$ 时配方即知。$n=2^k$时不难用数学归纳法知，结论成立，下面主要看 $2^{k-1} &lt;n&lt; 2^k$的情况<br>令 $A = \frac{ \sum_{i=1} ^n a_i}{n} $ 则，应用 $2^k$ 时的结论<br>$$ \frac{ \sum_{i=1} ^n a_i + (2^k-n)A }{2^k} \geq\sqrt[2^k]{\Pi_{i=1}^n a_i A^{2^k -n}} $$<br>化简可得到结论。</p>
+<pre><code>上述证明简单优美，第一次在陈纪修《数学分析》(上)看到这个优美的方法。
+</code></pre></div></article></div></section><footer><div class="paginator"><a href="/2016/02/24/Where-is-natural-base/" class="prev">上一篇</a><a href="/2016/02/24/zhuangbility0-0/" class="next">下一篇</a></div><div data-thread-key="2016/02/24/Mean-Inequality/" data-title="均值不等式" data-url="http://dna049.com/2016/02/24/Mean-Inequality/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div class="copyright"><p>© 2015 - 2017  <a href="http://dna049.com">dna049</a></p></div></footer></div><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?699b245cef6684fc1e306cd9cc1cb26a";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body></html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Perron-Frobenius理论 · 0.肆玖</title><meta name="description" content="Perron-Frobenius理论 - dna049"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div id="mask" style="display: none;"><img id="mask-image" src="#" style=" "></div><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/Link" target="_self" class="nav-list-link">LINK</a></li><li class="nav-list-item"><a href="/About" target="_self" class="nav-list-link">ABOUT</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Perron-Frobenius理论</h1><div class="post-time">2015年12月17日</div><div class="post-content"><p>1907年O.Perron发现正矩阵的谱有特别有趣的性质。G.Frobenius在1908-1912年间将Perron的工作推广到不可约非负矩阵的情形，并得到了新的进一步结果。Ferron-Frobenius理论有很多证明方式，下面介绍H.Wielandt的优美证明。<br><a id="more"></a></p>
+<p>两个矩阵X和Y称为置换相似的，若存在一个置换矩阵P满足$P^TXP=Y$。设$A\in M_n$.称A为可约的，若A置换相似于一个形如<br><span>$$\left( \begin{matrix}
+B &amp; 0\\
+C &amp; D
+\end{matrix} \right)$$</span><!-- Has MathJax --><br>其中B，D为方阵，若A不是可约的，则称A是不可约的。</p>
+<h5 id="u5F15_u74061__u8BBEA_u662Fn_28n_26gt_3B1_29_u9636_u4E0D_u53EF_u7EA6_u975E_u8D1F_u77E9_u9635_uFF0C_24y_5Cin__5Cmathbf_7BR_7D_+_5E_7Bn_7D__5Cbackslash__5Clbrace_0__5Crbrace__24__u4E14_u81F3_u5C11_u6709_u4E00_u4E2A_u5206_u91CF_u4E3A0-_u5219__24_28I+A_29y_24__u7684_u6B63_u5206_u91CF_u7684_u4E2A_u6570_u5927_u4E8Ey_u7684_u6B63_u5206_u91CF_u4E2A_u6570_u3002"><a href="#u5F15_u74061__u8BBEA_u662Fn_28n_26gt_3B1_29_u9636_u4E0D_u53EF_u7EA6_u975E_u8D1F_u77E9_u9635_uFF0C_24y_5Cin__5Cmathbf_7BR_7D_+_5E_7Bn_7D__5Cbackslash__5Clbrace_0__5Crbrace__24__u4E14_u81F3_u5C11_u6709_u4E00_u4E2A_u5206_u91CF_u4E3A0-_u5219__24_28I+A_29y_24__u7684_u6B63_u5206_u91CF_u7684_u4E2A_u6570_u5927_u4E8Ey_u7684_u6B63_u5206_u91CF_u4E2A_u6570_u3002" class="headerlink" title="引理1 设A是n(n&gt;1)阶不可约非负矩阵，$y\in \mathbf{R}_+^{n} \backslash \lbrace 0 \rbrace $ 且至少有一个分量为0.则 $(I+A)y$ 的正分量的个数大于y的正分量个数。"></a>引理1 设A是n(n&gt;1)阶不可约非负矩阵，$y\in \mathbf{R}_+^{n} \backslash \lbrace 0 \rbrace $ 且至少有一个分量为0.则 $(I+A)y$ 的正分量的个数大于y的正分量个数。</h5><p>Proof： 设y恰好有k个正分量，$1 \leq k \leq n-1$。设P是置换矩阵使得$x=Py$的前k个分量为正，其它为0，因为A是非负矩阵，所以$(I+A)y$的零分量个数不会超过$n-k$。假设这个个数等于$n-k$，则有$y_i = 0 \Rightarrow (Ay)_i = 0$。即$(Py)_i = 0 \Rightarrow (PAy)_i = 0$ 于是$(PAP^Tx)_i = 0,i=k+1,\cdots,n$，设$B=PAP^T$. 则当$k+1 \leq i \leq n$ 时，<br><span>$$(Bx)_i = \sum _{j=1} ^{n} b _{ij} x _j = 
+\sum _{j=1} ^{k} b _{ij} x _j = 0$$</span><!-- Has MathJax --></p>
+<p>但当$1 \leq j \leq k$时，<span>$x _ j &gt;0$</span><!-- Has MathJax -->。所以<span>$b _{ij}=0,k+1 \leq i \leq n,1 \leq j \leq k$</span><!-- Has MathJax --> 矛盾于A不可约,证毕。</p>
+<p>由引理1，我们马上得到以下结论</p>
+<h5 id="u5F15_u74062__u8BBEA_u662Fn_u9636_u4E0D_u53EF_u7EA6_u975E_u8D1F_u77E9_u9635_uFF0C_24y_5Cin__5Cmathbf_7BR_7D_+_5E_7Bn_7D__5Cbackslash__5Clbrace_0__5Crbrace__24__u5219__24_28I+A_29_5E_7Bn-1_7Dy_26gt_3B0_24"><a href="#u5F15_u74062__u8BBEA_u662Fn_u9636_u4E0D_u53EF_u7EA6_u975E_u8D1F_u77E9_u9635_uFF0C_24y_5Cin__5Cmathbf_7BR_7D_+_5E_7Bn_7D__5Cbackslash__5Clbrace_0__5Crbrace__24__u5219__24_28I+A_29_5E_7Bn-1_7Dy_26gt_3B0_24" class="headerlink" title="引理2 设A是n阶不可约非负矩阵，$y\in \mathbf{R}_+^{n} \backslash \lbrace 0 \rbrace $ 则 $(I+A)^{n-1}y&gt;0$."></a>引理2 设A是n阶不可约非负矩阵，$y\in \mathbf{R}_+^{n} \backslash \lbrace 0 \rbrace $ 则 $(I+A)^{n-1}y&gt;0$.</h5><h5 id="u5F15_u74063__u8BBE_24n_26gt_3B1_24_u5219n_u9636_u975E_u8D1F_u77E9_u9635A_u4E0D_u53EF_u7EA6_u5F53_u4E14_u4EC5_u5F53_uFF0C_24y_5Cin__5Cmathbf_7BR_7D_+_5E_7Bn_7D__5Cbackslash__5Clbrace_0__5Crbrace__24__u5219__24_28I+A_29_5E_7Bn-1_7D_26gt_3B0_24"><a href="#u5F15_u74063__u8BBE_24n_26gt_3B1_24_u5219n_u9636_u975E_u8D1F_u77E9_u9635A_u4E0D_u53EF_u7EA6_u5F53_u4E14_u4EC5_u5F53_uFF0C_24y_5Cin__5Cmathbf_7BR_7D_+_5E_7Bn_7D__5Cbackslash__5Clbrace_0__5Crbrace__24__u5219__24_28I+A_29_5E_7Bn-1_7D_26gt_3B0_24" class="headerlink" title="引理3 设$n&gt;1$则n阶非负矩阵A不可约当且仅当，$y\in \mathbf{R}_+^{n} \backslash \lbrace 0 \rbrace $ 则 $(I+A)^{n-1}&gt;0$."></a>引理3 设$n&gt;1$则n阶非负矩阵A不可约当且仅当，$y\in \mathbf{R}_+^{n} \backslash \lbrace 0 \rbrace $ 则 $(I+A)^{n-1}&gt;0$.</h5><p>proof: 应用引理2，考虑$(I+A)^{n-1}e_j$即可。</p>
+<h5 id="u5F15_u74064__u4E00_u4E2A_u4E0D_u53EF_u7EA6_u975E_u8D1F_u77E9_u9635_u7684_u975E_u8D1F_u7279_u5F81_u5411_u91CF_u662F_u6B63_u7279_u5F81_u5411_u91CF_u3002"><a href="#u5F15_u74064__u4E00_u4E2A_u4E0D_u53EF_u7EA6_u975E_u8D1F_u77E9_u9635_u7684_u975E_u8D1F_u7279_u5F81_u5411_u91CF_u662F_u6B63_u7279_u5F81_u5411_u91CF_u3002" class="headerlink" title="引理4 一个不可约非负矩阵的非负特征向量是正特征向量。"></a>引理4 一个不可约非负矩阵的非负特征向量是正特征向量。</h5><p>Proof：设A是不可约非负矩阵，$Ax=\lambda x, x \geq 0,x \neq 0$。显然 $\lambda \geq 0$ 我们有<br><span>$$(I+A)x = 
+(1 + \lambda)x$$</span><!-- Has MathJax --><br>因此$(1+A)x$与$x$有相同个数的正分量，有引理1知$x&gt;0$。</p>
+<h5 id="Collatz-Wielandt_u51FD_u6570"><a href="#Collatz-Wielandt_u51FD_u6570" class="headerlink" title="Collatz-Wielandt函数"></a>Collatz-Wielandt函数</h5><p>设A是一个n阶非负矩阵。A的Collatz－Wielandt函数<span>$f_A \colon \mathbf{R} _+ ^n \backslash \lbrace 0 \rbrace  \to \mathbf{R} _+$</span><!-- Has MathJax --><br>定义为<br><span>$$f_A(x) = \min _{ x _i \neq 0 } 
+\frac{(Ax) _i }{x _i}$$</span><!-- Has MathJax --></p>
+<h5 id="u5F15_u74065__u8BBEA_u4E3An_u9636_u975E_u8D1F_u4E0D_u53EF_u7EA6_u77E9_u9635_uFF0C_u5219"><a href="#u5F15_u74065__u8BBEA_u4E3An_u9636_u975E_u8D1F_u4E0D_u53EF_u7EA6_u77E9_u9635_uFF0C_u5219" class="headerlink" title="引理5 设A为n阶非负不可约矩阵，则"></a>引理5 设A为n阶非负不可约矩阵，则</h5><ol>
+<li>$f_A(tx) = f_A(x), \forall t &gt; 0 $</li>
+<li>$f_A(x) = \max \lbrace \rho | Ax-\rho x \geq 0 \rbrace$</li>
+<li>设 $x \in \mathbf{R} _+ ^n \backslash \lbrace 0 \rbrace $ ,记 $y = (I+A)^{n-1} x$ ,则 $ f_A(y) \geq f_A(x)$。</li>
+</ol>
+<p>Proof：(1),(2)显然。下证明(3)<br>我们有$Ax- f_A(x)x \geq 0$，在等式两边左乘以$(I+A)^{n-1}$并利用$A$和$(I+A)^{n-1}$乘法可交换的性质，得到<br><span>$$A(I+A)^{n-1}x - 
+f_A(x)(I+A)^{n-1}x \geq 0$$</span><!-- Has MathJax --><br>即<br><span>$$Ay - f_A(x)y
+\geq 0$$</span><!-- Has MathJax --><br>再由(2)就得到(3)。</p>
+<p>容易证明：$f_A$是有界函数，实际上，$f_A$非负且不超过$A$的最大行和。<br>记<span>$\Omega _n = \lbrace x \in \mathbf{R} _+ ^n | \sum _{i=1} ^n = 1 \rbrace$</span><!-- Has MathJax -->引理5.1说明，我们只需要在$ \Omega _n$上研究$f_A$即可。显然$\Omega _n$是一个紧集，但是$f_A$可能在$\Omega _n$ 的边界不连续。但是我们仍然有引理6。</p>
+<h5 id="u5F15_u74066__u8BBEA_u662Fn_u9636_u975E_u8D1F_u4E0D_u53EF_u7EA6_u77E9_u9635_uFF0C_u5219_3C_21-_uFFFC10-_3E_u5728_24_5Cmathbf_7BR_7D__+__5En__5Cbackslash__5Clbrace_0__5Crbrace__24_u4E0A_u53EF_u4EE5_u53D6_u5230_u6700_u5927_u503C_u3002"><a href="#u5F15_u74066__u8BBEA_u662Fn_u9636_u975E_u8D1F_u4E0D_u53EF_u7EA6_u77E9_u9635_uFF0C_u5219_3C_21-_uFFFC10-_3E_u5728_24_5Cmathbf_7BR_7D__+__5En__5Cbackslash__5Clbrace_0__5Crbrace__24_u4E0A_u53EF_u4EE5_u53D6_u5230_u6700_u5927_u503C_u3002" class="headerlink" title="引理6 设A是n阶非负不可约矩阵，则<span>$f _ A$</span><!-- Has MathJax -->在$\mathbf{R} _+ ^n \backslash \lbrace 0 \rbrace $上可以取到最大值。"></a>引理6 设A是n阶非负不可约矩阵，则<span>$f _ A$</span><!-- Has MathJax -->在$\mathbf{R} _+ ^n \backslash \lbrace 0 \rbrace $上可以取到最大值。</h5><p>Proof： 记<br><span>$$\Delta = (I+A)^{n-1} \Omega _n = \lbrace y |
+y=(I+A)^{n-1} x ,x \in \Omega _n \rbrace$$</span><!-- Has MathJax --><br>则$\Delta$是一个紧集，且有引理2知$\Delta$中向量都是正向量，因此<span>$f _ A$</span><!-- Has MathJax --> 在$ \Delta $上连续，由Weierstrass定理，$f_A$在某一点<span>$y^0 \in \Delta$</span><!-- Has MathJax -->取得<span>$f _ A$</span><!-- Has MathJax -->在$\Delta$上的最大值。记 <span>$z ^0 = y ^0 / \sum_{i=1} ^n y _i ^0 \in \Omega _ n$</span><!-- Has MathJax -->。<span>$\forall x \in \Omega _n$</span><!-- Has MathJax -->，记 $ y=(I+A)^{n-1}x $利用引理5可知<br><span>$$f_A(x) \leq f_A(y) 
+\leq f_A(y ^0) = f_A(z^0)$$</span><!-- Has MathJax --><br>这就证明了<span>$f_A$</span><!-- Has MathJax --> 在 $z^0$上取到它在<span>$\Omega _n$</span><!-- Has MathJax -->上的最大值。利用对<span>$\forall z \in R _+ ^n \backslash \lbrace 0 \rbrace$</span><!-- Has MathJax -->和引理6.1有<br><span>$$f_A(z) \leq f_A(\frac{z}{\sum_{i=1}^n z _i}) = 
+f_A(z^0)$$</span><!-- Has MathJax --><br>可见<span>$f_A$</span><!-- Has MathJax -->在$z^0$处取到它在<span>$R _+ ^n \backslash \lbrace 0 \rbrace$</span><!-- Has MathJax -->上的最大值。</p>
+<p>矩阵A的谱半径$\rho(A)$定义成矩阵A的所有特征值的绝对值的最大值。<br>万事俱备了，下面开始介绍著名的Perron-Frobenius定理</p>
+<h5 id="u5B9A_u74067_28Perron-Frobenius_29__u8BBEA_u662Fn_28n_26gt_3B1_29_u9636_u975E_u8D1F_u4E0D_u53EF_u7EA6_u77E9_u9635_uFF0C_u5219_u4E0B_u9762_u7ED3_u8BBA_u6210_u7ACB_u3002"><a href="#u5B9A_u74067_28Perron-Frobenius_29__u8BBEA_u662Fn_28n_26gt_3B1_29_u9636_u975E_u8D1F_u4E0D_u53EF_u7EA6_u77E9_u9635_uFF0C_u5219_u4E0B_u9762_u7ED3_u8BBA_u6210_u7ACB_u3002" class="headerlink" title="定理7(Perron-Frobenius) 设A是n(n&gt;1)阶非负不可约矩阵，则下面结论成立。"></a>定理7(Perron-Frobenius) 设A是n(n&gt;1)阶非负不可约矩阵，则下面结论成立。</h5><ol>
+<li>$\rho(A)&gt;0$ 且 $\rho(A)$是矩阵A的一个单特征值。</li>
+<li>A有一个对应于$\rho(A)$的正特征向量。</li>
+<li>A的每个非负特征向量都对应于特征值$\rho(A)$.</li>
+</ol>
+<p>Proof：由引理6存在$x^0 \in R _+ ^n \backslash \lbrace 0 \rbrace  $满足<br><span>$$f_A(x^0) \geq f_A(x),
+\forall x \in \mathbf{R} _+ ^n \backslash \lbrace 0 \rbrace$$</span><!-- Has MathJax --></p>
+<p>记<span>$r=f_A(x^0)$</span><!-- Has MathJax -->。取<span>$u=(1,\cdots,1)^T$</span><!-- Has MathJax -->。因为$A$不可约，没有零行，所以<br><span>$$r \geq f_A(u) =
+\min \sum _ {i=1} ^n a _{ij} &gt; 0$$</span><!-- Has MathJax --><br>下面证明r是A的一个特征值，我们有<br><span>$$Ax^0 - rx^0 
+\geq 0$$</span><!-- Has MathJax --><br>假设$Ax^0 - rx^0 \neq 0$。由引理5.2<br><span>$$(I+A)^{n-1}
+(Ax^0 - rx^0) &gt; 0$$</span><!-- Has MathJax --><br>即<br><span>$$Ay^0 - 
+ry^0&gt; 0$$</span><!-- Has MathJax --><br>其中<span>$y_0 = (I+A)^{n-1}x^0 &gt;0$</span><!-- Has MathJax -->。因此存在一个正数 $\epsilon$ 使得<br><span>$$Ay^0 - 
+(r+\epsilon)y^0&gt; 0$$</span><!-- Has MathJax --><br>由引理5.2，<span>$f_A(y^0) \geq r+\epsilon &gt; r$</span><!-- Has MathJax -->这就与<span>$r=f_A(x^0)$</span><!-- Has MathJax -->的最大性矛盾。所以$Ax^0=rx^0$。从而r是A的一个特征值，$x^0$是A的一个特征向量。有引理4知，$x^0$是正向量。<br>设$\lambda$是A的任何一个特征向量：$Ax=\lambda x$ 则<br><span>$$|\lambda||x|
+\leq A|x|$$</span><!-- Has MathJax --><br>于是$|\lambda| \leq f _ A(|x|) \leq r$ 这表明$r = \rho(A)$。</p>
+<p>现证明$\rho(A)$是单特征值，我们先证明$\rho(A)$的几何重数是1，设<br><span>$$Ay = \rho(A) y,
+0 \neq y \in \mathbf{C} ^n$$</span><!-- Has MathJax --><br>则<br><span>$$A|y| \geq 
+\rho(A)|y|$$</span><!-- Has MathJax --><br>上面证明过程表面上式是等式。且$|y|&gt;0$。可见，A的对应于$\rho(A)$的特征向量不含零分量。设y和z是对应$\rho(A)$的特征向量。则<span>$|y|&gt;0,|z|&gt;0.z_ 1 y-y_ 1 z$</span><!-- Has MathJax -->属于$\rho(A)$的特征子空间，但<span>$z_ 1 y-y_ 1 z$</span><!-- Has MathJax -->的第一个分量为0，所以它不可能是$\rho(A)$的特征值，因此，<span>$z_ 1 y-y_ 1 z＝0$</span><!-- Has MathJax -->，y和z线性相关，所以$\rho(A)$的几何重数为1.<br>为了证明$r=\rho(A)$是特征多项式$\phi(\lambda) = det(\lambda I - A)$的单根，只需证明，导数<span>$\phi&apos;(r) \neq 0$</span><!-- Has MathJax -->。用$adj(Z)$表示Z的伴随矩阵。我们有<br><span>$$\phi&apos;(\lambda) = \sum_{i=1}^n det[(\lambda I - A)(i|i)]
+=tr[adj(\lambda I - A)]$$</span><!-- Has MathJax --><br>记$B(r)=adj(rI-A)$则$\phi’(r) = tr B(r)$,<br><span>$$(rI-A)B(r) = det(rI-A)I
+=0$$</span><!-- Has MathJax --><br>因为r的几何重数为1，所以$rank(rI-A)=n-1$，于是$B(r) \neq 0$。设b是$B(r)$的任意一个非零列，则$(rI-A)b=0$,因此b是A的对应于r的特征向量，但是A有一个对应于r的特征向量$x^0$，且因为r的几何重数为1，因此b是$x^0$的一个常数倍，从而$b&gt;0$或者$b<0$。这就证明了$b(r)$的每一列要么是零列，要么是正向量，要么是负向量。考虑<span>$[B(r)]^T = adj(rI-A^T),r=\rho(A)=\rho(A^T)$<!-- Has MathJax --> 。上面结论应用于$[B(r)]^T$的列，所以$B(r)&gt;0$或者$B(r)&lt;0$,从而$\phi’(r)=tr[B(r)] \neq 0$,这就证明了$\rho(A)$是单特征值。<br>我们已经证明了(1),(2)。现在来证明(3)。设$y&gt;0$是$A^T$对应于$\rho(A)$的特征向量，设x是A的任意一个非负特征向量：<span>$Ax = \mu x$</span><!-- Has MathJax -->。则<br><span>$$\mu y^T x = y^T Ax = 
+\rho(A)y^Tx$$</span><!-- Has MathJax --><br>因为$y^Tx&gt;0$,我们有$ \mu = \rho(A) $，证毕。<br>注：由引理4，A的非负特征向量实际上都是正向量，因此结论3可叙述成：在A的所有特征向量中，只有$\rho(A)$有非负特征向量。上述证明还确定了以下结果：</0$。这就证明了$b(r)$的每一列要么是零列，要么是正向量，要么是负向量。考虑<span></p>
+<h6 id="u5B9A_u74068-__u8BBEA_u662F_u4E00_u4E2An_28n_26gt_3B1_29_u9636_u4E0D_u53EF_u7EA6_u975E_u8D1F_u77E9_u9635_uFF0C_u5219"><a href="#u5B9A_u74068-__u8BBEA_u662F_u4E00_u4E2An_28n_26gt_3B1_29_u9636_u4E0D_u53EF_u7EA6_u975E_u8D1F_u77E9_u9635_uFF0C_u5219" class="headerlink" title="定理8. 设A是一个n(n&gt;1)阶不可约非负矩阵，则"></a>定理8. 设A是一个n(n&gt;1)阶不可约非负矩阵，则</h6><span>$$\rho(A) = \max \lbrace f_A(x)|x\in \mathbf{R} _+ ^n
+\backslash \lbrace 0 \rbrace \rbrace$$</span><!-- Has MathJax -->
+<p>若<span>$\mathbf{R} _+ ^n \backslash \lbrace 0 \rbrace ,f_A(x) = \rho(A)$</span><!-- Has MathJax -->则$\rho&gt;0$且x是对应于$\rho(A)$的一个特征向量。</p>
+<h6 id="u5B9A_u74069-__u8BBEA_u662F_u4E00_u4E2A_u975E_u8D1F_u77E9_u9635_uFF0C_u5219_24_5Crho_28A_29_24_u662FA_u7684_u7279_u5F81_u503C_uFF0C_u4E14A_u6709_u4E00_u4E2A_u5BF9_u5E94_u4E8E_24_5Crho_28A_29_24_u7684_u975E_u8D1F_u7279_u5F81_u5411_u91CF_u3002"><a href="#u5B9A_u74069-__u8BBEA_u662F_u4E00_u4E2A_u975E_u8D1F_u77E9_u9635_uFF0C_u5219_24_5Crho_28A_29_24_u662FA_u7684_u7279_u5F81_u503C_uFF0C_u4E14A_u6709_u4E00_u4E2A_u5BF9_u5E94_u4E8E_24_5Crho_28A_29_24_u7684_u975E_u8D1F_u7279_u5F81_u5411_u91CF_u3002" class="headerlink" title="定理9. 设A是一个非负矩阵，则$\rho(A)$是A的特征值，且A有一个对应于$\rho(A)$的非负特征向量。"></a>定理9. 设A是一个非负矩阵，则$\rho(A)$是A的特征值，且A有一个对应于$\rho(A)$的非负特征向量。</h6><p>Proof：设A的阶数为n，定理对$n=1$是平凡地成立。下面设$n=2$，用J表示元素全为1的矩阵。<br>对于正整数k，记<span>$A_k = A + \frac{1}{k} J$</span><!-- Has MathJax -->是一个正矩阵，由Perron-Frobenius定理，<span>$A_k$</span><!-- Has MathJax -->在<span>$\Omega _n = \lbrace x \in \mathbf{R} _+ ^n | \sum _{i=1} ^n = 1 \rbrace$</span><!-- Has MathJax -->中有唯一一个对应于<span>$\rho(A_k)$</span><!-- Has MathJax -->的特征向量$x^k$<br>因为向量序列$\lbrace x^k \rbrace $有界因此，由Bolzano-Weierstrass定理,$\lbrace x^k \rbrace $有收敛子列<span>$\lbrace x^{k_i} \rbrace: \lim _{i \to \infty } = x$</span><!-- Has MathJax -->。显然<span>$x \in \Omega _n$</span><!-- Has MathJax -->因此<span>$$A _{k_i}x^{k _i} = 
+\rho(A _{k _i}) x^{k _i}$$</span><!-- Has MathJax --><br>注意到<span>$A _{k_i} \to A , \rho(A _{k _i}) \to \rho(A)$</span><!-- Has MathJax --> 因此$i \to \infty$得到$Ax = \rho(A)x$，证毕。</p>
+<p>至此，Prron-Frobenius定理介绍完毕。下面介绍一个非负矩阵特征值的界。<br>定理10 设A是一个n阶矩阵非负矩阵，则<br><span>$$\min_{1 \leq i \leq n} r_i \leq \rho(A) 
+\leq \max_{1 \leq i \leq n} r_i$$</span><!-- Has MathJax --><br><span>$$\min_{1 \leq i \leq n} c_i \leq \rho(A) 
+\leq \max_{1 \leq i \leq n} c_i$$</span><!-- Has MathJax --><br>其中<span>$r_i, c_j$</span><!-- Has MathJax -->分别为A的第i行和和第j列和。<br>Proof：设x是$A^T$的一个Perron向量(对应于谱半径的非负特征向量)。因为$\rho(A^T)=\rho(A)$从$A^Tx=\rho(A)x$得<br><span>$$\rho(A)x_i = \sum_{k=1}^n a_{ki}x_k 
+\qquad i = 1,\cdots,n.$$</span><!-- Has MathJax --><br>将这些等式相加得到<span>$\rho(A) \sum_{i=1}^n x_i =\sum_{k=1}^n r_k x_k$</span><!-- Has MathJax -->，即<br><span>$$\rho(A)= 
+\frac{\sum_{k=1}^n r_k x_k }{\sum_{i=1}^n x_i}$$</span><!-- Has MathJax --><br>证毕。</p>
+<h6 id="u5B9A_u740611_28Wielandt_29__u8BBEA_u662Fn_28n_26gt_3B1_29_u9636_u4E0D_u53EF_u7EA6_u975E_u8D1F_u77E9_u9635_uFF0C_u4E14_24_7CB_7C__5Cleq_A_24__u5219_u5BF9_u4E8EB_u7684_u4EFB_u4F55_u7279_u5F81_u503C_24_5Clambda_24_u6709"><a href="#u5B9A_u740611_28Wielandt_29__u8BBEA_u662Fn_28n_26gt_3B1_29_u9636_u4E0D_u53EF_u7EA6_u975E_u8D1F_u77E9_u9635_uFF0C_u4E14_24_7CB_7C__5Cleq_A_24__u5219_u5BF9_u4E8EB_u7684_u4EFB_u4F55_u7279_u5F81_u503C_24_5Clambda_24_u6709" class="headerlink" title="定理11(Wielandt) 设A是n(n&gt;1)阶不可约非负矩阵，且$|B| \leq A$ 则对于B的任何特征值$\lambda$有"></a>定理11(Wielandt) 设A是n(n&gt;1)阶不可约非负矩阵，且$|B| \leq A$ 则对于B的任何特征值$\lambda$有</h6><span>$$|\lambda| \leq 
+\rho(A)$$</span><!-- Has MathJax -->
+<p>Proof：设$Bx=\lambda x$则$|B||x| \geq |\lambda||x|$,但是$|B| \leq A$，所以$|\lambda| |x| \leq |B||x| \leq A |x|$，由引理5.2和8知<br><span>$$|\lambda| \leq f_A(|x|) 
+\leq \rho(A)$$</span><!-- Has MathJax --><br>证毕。</p>
+<p>根据谱半径的连续性，我们马上有如下推论</p>
+<ol>
+<li>若矩阵A非负，且$|B| \leq A$,则$\rho(B) \leq \rho(A)$</li>
+<li>对任意矩阵A，$\rho(A) \leq \rho(|A|)$.(这个直接证明也可以)</li>
+</ol>
+<blockquote>
+<p>本文源自詹兴致所著的《矩阵论》第六章。</p>
+</blockquote>
+<p>定理虽然很长但是整个过程十分优美，思路十分清晰，仔细分析每一步还是很容易看懂的，并且在证明的过程中就能体会为什么一开始要提出“非负不可约矩阵”的概念了，然后应用连续性把一些结果推广到非负矩阵。</p>
+</div></article></div></section><footer><div class="paginator"><a href="/2015/12/20/Open-and-Close-set-in-topology-vector-space/" class="prev">上一篇</a><a href="/2015/12/16/Shur-Theorem/" class="next">下一篇</a></div><div data-thread-key="2015/12/17/Perron-Frobenius Theory/" data-title="Perron-Frobenius理论" data-url="http://dna049.com/2015/12/17/Perron-Frobenius Theory/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dna049"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div class="copyright"><p>© 2015 - 2017  <a href="http://dna049.com">dna049</a></p></div></footer></div><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?699b245cef6684fc1e306cd9cc1cb26a";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body></html>
