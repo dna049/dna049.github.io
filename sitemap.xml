@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dna049.com/About/index.html</loc>
+    <lastmod>2017-04-16T14:10:45.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://dna049.com/tags/index.html</loc>
     <lastmod>2017-04-16T13:43:56.000Z</lastmod>
   </url>
@@ -9,11 +14,6 @@
   <url>
     <loc>http://dna049.com/Links/index.html</loc>
     <lastmod>2017-04-16T13:43:39.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://dna049.com/About/index.html</loc>
-    <lastmod>2017-04-16T13:43:33.000Z</lastmod>
   </url>
   
   <url>
