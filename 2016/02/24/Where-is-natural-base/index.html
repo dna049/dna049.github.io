@@ -114,7 +114,7 @@
 <meta property="og:site_name" content="0.肆玖">
 <meta property="og:description" content="自然底数 $e$ 之所以重要，我想很大程度上是因为，指数函数 $f(x)=e^x$ 是“唯一”(在常数倍意义下)满足导数等于本身的函数。因此 $e$ 被叫做自然底数。">
 <meta property="og:image" content="http://dna049.com/where_is_natural_log.jpg">
-<meta property="og:updated_time" content="2017-04-19T10:09:50.000Z">
+<meta property="og:updated_time" content="2017-04-19T10:11:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自然底数e的由来">
 <meta name="twitter:description" content="自然底数 $e$ 之所以重要，我想很大程度上是因为，指数函数 $f(x)=e^x$ 是“唯一”(在常数倍意义下)满足导数等于本身的函数。因此 $e$ 被叫做自然底数。">
@@ -384,7 +384,7 @@
       
         <p>自然底数 $e$ 之所以重要，我想很大程度上是因为，指数函数 $f(x)=e^x$ 是“唯一”(在常数倍意义下)满足导数等于本身的函数。因此 $e$ 被叫做自然底数。<br><a id="more"></a></p>
 <p>然而，$e$ 的定义可以由一个常见的重要数列极限来定义。即<br>$$ e \equiv \lim _{n \to \infty}(1+\frac{1}{n})^n $$<br>那么为什么右边有极限呢，我们来仔细分析。<br>令<br>$$ a_n = (1+\frac{1}{n})^n ,\; b_n =(1+\frac{1}{n})^{n+1} $$<br>则,由<a href="http://dna049.com/2016/02/24/Mean-Inequality/">均值不等式</a>易知<br>$$ a_n = (1+\frac{1}{n})^n \cdot 1 \leq [\frac{n(1+\frac{1}{n})+1}{n+1}]^{n+1} =a_{n+1} $$<br>且<br>$$ \frac{1}{b_n} = (\frac{n}{n+1})^n \cdot 1 \leq [\frac{(n+1)\frac{n}{n+1}+1}{n+2}]^{n+2} = \frac{1}{b_{n+1}} $$<br>因此 $2 = a_1 \leq a_n \leq b_n \leq b_1 = 4$。由于单调有界序列必有极限，不妨把这个极限记作 $e$ 且由上面推理知 $2 &lt; e &lt; 4$。</p>
-<h2 id="u8865_u5145"><a href="#u8865_u5145" class="headerlink" title="补充"></a>补充</h2><p>设<br>$$ f_n = (1+\frac{1}{n})^{n+c} , \quad g_n = (1+\frac{1}{n})^{n+d} $$<br>那么满足$f_n \leq e &lt; g_n$ 的最大的 $c=\frac{1}{\ln 2}$，最小的$d = \frac{1}{2}$，详细证明见下手写稿子</p>
+<h2 id="u8865_u5145"><a href="#u8865_u5145" class="headerlink" title="补充"></a>补充</h2><p>设<br>$$ f_n = (1+\frac{1}{n})^{n+c} , \quad g_n = (1+\frac{1}{n})^{n+d} $$<br>那么满足$f_n \leq e &lt; g_n$ 的最大的 $c=\frac{1}{\ln 2}-1$，最小的$d = \frac{1}{2}$，详细证明见下手写稿子</p>
 <p><img src="where_is_natural_log.jpg" alt="手写证明"></p>
 
       
