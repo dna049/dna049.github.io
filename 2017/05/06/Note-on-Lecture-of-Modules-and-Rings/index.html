@@ -118,7 +118,7 @@
 
 2017年内长期更新">
 <meta property="og:image" content="http://dna049.com/MRing1.png">
-<meta property="og:updated_time" content="2017-05-08T05:24:38.000Z">
+<meta property="og:updated_time" content="2017-05-08T05:33:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Lecture on Modules and Rings》读书笔记">
 <meta name="twitter:description" content="为了把看过的知识变成自己的东西，在此理一下思路（导师建议写的东西记录一下，不然以后过不了多久又忘了，花了时间就要有收获）
@@ -464,7 +464,7 @@
 </blockquote>
 <p>$u_1,\cdots,u_m$ 在 $M = R^n$ 中线性无关, 当且仅当<br>$$0 \neq u_1 \wedge \cdots \wedge u_m \in \bigwedge ^m (M)$$</p>
 <h3 id="5-__u603B_u7ED3_u56FE"><a href="#5-__u603B_u7ED3_u56FE" class="headerlink" title="5. 总结图"></a>5. 总结图</h3><p>自由模下的关系(任意箭头一般都不可逆):<br><img src="MRing1.png" alt="MRing1"></p>
-<p>一般地, Dedekind finite + Rank condition 依然无法推出 stably finite. 例如:<br>设 $R$ 为由元素$s,t,u,v;w,x,y,z$ 生成的$k$代数,设 $A = \begin{pmatrix}<br>s &amp; u \\<br>t &amp; v<br>\end{pmatrix}, B = \begin{pmatrix}<br>x &amp; y \\<br>z &amp; w<br>\end{pmatrix}$, 其中生成元满足关系: $$AB = I_2$$<br>由此可知, $R$是domain, 但是一般地, $BA \neq I_2$. 因此 $M_2(R)$不是Dedekind finite的. 因此 $R$ 不满足 stably finite 条件. 定义 $f: R \to k$为 $f(s)=f(v) = f(x) = f(w) = =f(1) = 1, f(u) = f(t) = f(y) = f(z) = 0$. 因此由 $k$ 满足 rank condition, so is $R$.</p>
+<p>一般地, Dedekind finite + Rank condition 依然无法推出 stably finite. 例如:<br>设 $R$ 为由元素$s,t,u,v;w,x,y,z$ 生成的$k$代数,设 $A = \begin{pmatrix}<br>s &amp; u \\<br>t &amp; v<br>\end{pmatrix}, B = \begin{pmatrix}<br>x &amp; y \\<br>z &amp; w<br>\end{pmatrix}$, 其中生成元满足关系: $$AB = I_2$$<br>由此可知, $R$是domain, 但是一般地, $BA \neq I_2$. 因此 $M_2(R)$不是Dedekind finite的. 因此 $R$ 不满足 stably finite 条件.<br>定义 $f: R \to k$为 $f(s)=f(v) = f(x) = f(w) =f(1) = 1, f(u) = f(t) = f(y) = f(z) = 0$. 因此由 $k$ 满足 rank condition, so is $R$.</p>
 <h2 id="u6295_u5C04_u6A21"><a href="#u6295_u5C04_u6A21" class="headerlink" title="投射模"></a>投射模</h2><h3 id="1-__u6295_u5C04_u6A21_u7684_u5B9A_u4E49"><a href="#1-__u6295_u5C04_u6A21_u7684_u5B9A_u4E49" class="headerlink" title="1. 投射模的定义"></a>1. 投射模的定义</h3><p>一个右$R$模$P$成为projective module(投射模),如果<br>对任意$R$模满同态$g:B \to C$和任意$R$模同态 $h: P \to C$,存在$R$模同态 $h’: P \to B$ 使得 $h = gh’$</p>
 <blockquote>
 <p>由定义显然free module is always projective.</p>
