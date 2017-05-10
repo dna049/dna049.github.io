@@ -118,7 +118,7 @@
 
 2017年内长期更新">
 <meta property="og:image" content="http://dna049.com/MRing1.png">
-<meta property="og:updated_time" content="2017-05-10T08:26:34.000Z">
+<meta property="og:updated_time" content="2017-05-10T09:40:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Lecture on Modules and Rings》读书笔记">
 <meta name="twitter:description" content="为了把看过的知识变成自己的东西，在此理一下思路（导师建议写的东西记录一下，不然以后过不了多久又忘了，花了时间就要有收获）
@@ -488,19 +488,19 @@
 </blockquote>
 <p>例: $e \in R$ 为幂等元, 则$R = eR \oplus (1-e)R$, 所以, $P = eR$ 为有限生成投射模.</p>
 <h3 id="3-_Invertible_Modules_and_Fractional_Ideals_28_u53EF_u9006_u6A21_2C_u53EF_u9006_u7406_u60F3_29"><a href="#3-_Invertible_Modules_and_Fractional_Ideals_28_u53EF_u9006_u6A21_2C_u53EF_u9006_u7406_u60F3_29" class="headerlink" title="3. Invertible Modules and Fractional Ideals(可逆模,可逆理想)"></a>3. Invertible Modules and Fractional Ideals(可逆模,可逆理想)</h3><blockquote>
-<p>此下节中默认$R$为交换环</p>
+<p>此小节中默认$R$为交换环</p>
 </blockquote>
-<p>很大一类的交换环上的投射模是由环扩张 $S \supset R$ 得到的.<br>现在, 给定(交换)环扩张$S \supset R$. 考虑模$S$的$R$-子模, 设 $P,Q$ 为模$S$的$R$-子模, 定义:<br>$$ PQ = \lbrace \sum p_i q_i : p_i \in P, q_i \in Q \rbrace, \quad Q:P = {s \in S: sP \in Q} ,\quad P^{-1} = \lbrace s \in S : sP \subset R \rbrace = R:P$$<br>注意到 $P^{-1}$依赖于环扩张$S$的选取.</p>
+<p>很大一类的交换环上的投射模是由环扩张 $S \supset R$ 得到的.<br>现在, 给定(交换)环扩张$S \supset R$. 考虑模$S$的$R$-子模, 设 $P,Q$ 为模$S$的$R$-子模, 定义:<br>$$ PQ = \lbrace \sum p_i q_i : p_i \in P, q_i \in Q \rbrace, \quad Q:P = \lbrace s \in S: sP \in Q \rbrace,\quad P^{-1} = \lbrace s \in S : sP \subset R \rbrace = R:P$$<br>注意到 $P^{-1}$依赖于环扩张$S$的选取.</p>
 <p>由上面定义,我们立即有下面引理(条件1,2等价):</p>
 <ol>
-<li>存在$S$的$R$-子模$Q$使得 $PQ = S$</li>
+<li>存在$S$的$R$-子模$Q$使得 $PQ = R$</li>
 <li>$PP^{-1} = R$</li>
 </ol>
 <p>由于上述定价,我们把满足条件的$P$称为 <strong>Invertible $R$-submodule</strong> of $S$<br>在此条件下,我们有:</p>
 <ol>
-<li>$P$ 是有限生成投射$R$-模.</li>
+<li>$P$ 是有限生成投射$R$-模.(利用 $\sum p_i q_i = 1$)</li>
 <li>任意$R$-子模$M \in S$,自然映射 $f: P \otimes _R M \to PM$ 是 $R$-模同构</li>
-<li>$P^* = P^{-1}$</li>
+<li>$P^{\star} \simeq P^{-1}$ (因此$P^{\star}$可以成$S$的子模).</li>
 <li>$P_R$是自由模,当且仅当存在$s \in R$使得$P = sR$(此时$s$必然是$s$中的可逆元).</li>
 </ol>
 <blockquote>
