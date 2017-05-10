@@ -118,7 +118,7 @@
 
 2017年内长期更新">
 <meta property="og:image" content="http://dna049.com/MRing1.png">
-<meta property="og:updated_time" content="2017-05-08T05:33:20.000Z">
+<meta property="og:updated_time" content="2017-05-10T08:26:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Lecture on Modules and Rings》读书笔记">
 <meta name="twitter:description" content="为了把看过的知识变成自己的东西，在此理一下思路（导师建议写的东西记录一下，不然以后过不了多久又忘了，花了时间就要有收获）
@@ -401,9 +401,9 @@
 <blockquote>
 <p>$R^I$表示$R$的$I$次积, 当指标集$I$有限时, 积与直和(余积)等价,此时 $R^{(I)}$通常写成 $R^n$</p>
 </blockquote>
-<h3 id="1-_IBN__28Invaruant_Basis_Number_29__u6027_u8D28"><a href="#1-_IBN__28Invaruant_Basis_Number_29__u6027_u8D28" class="headerlink" title="1. IBN (Invaruant Basis Number) 性质"></a>1. IBN (Invaruant Basis Number) 性质</h3><p><strong>Generation Lemma</strong> 表明，对任意模，若 ${e_i : i \in I}$ 是其一族极小生成集，且 $I$是无限集，则$M$不能由基数小于$I$的集合生成。</p>
+<h3 id="1-_IBN__28Invariant_Basis_Number_29__u6027_u8D28"><a href="#1-_IBN__28Invariant_Basis_Number_29__u6027_u8D28" class="headerlink" title="1. IBN (Invariant Basis Number) 性质"></a>1. IBN (Invariant Basis Number) 性质</h3><p><strong>Generation Lemma</strong> 表明，对任意模，若 ${e_i : i \in I}$ 是其一族极小生成集，且 $I$是无限集，则$M$不能由基数小于$I$的集合生成。</p>
 <p>由<strong>Generation Lemma</strong>可知，若$R^{(I)} = R^{(J)}$, 且 $I$ 无限，那么 $|I| = |J|$，但是当 $I$ 有限时，结论并不一定成立，例如 $R = End(_kV)$,其中 $V$ 为可数无穷维空间，则$R \simeq R^2$. 因此提出 $IBN$ 的概念：</p>
-<p><strong>IBN (Invaruant Basis Number)</strong> 称环$R$满足<strong>IBN</strong>性质，如果对任意<br>$$m,n \in \mathbb{N}, R^m \simeq R^n \Longrightarrow m=n$$</p>
+<p><strong>IBN (Invariant Basis Number)</strong> 称环$R$满足<strong>IBN</strong>性质，如果对任意<br>$$m,n \in \mathbb{N}, R^m \simeq R^n \Longrightarrow m=n$$</p>
 <p>由定义不难看出，$R$ 不满足 IBN 性质，当且仅当, 存在 $R$ 上 $m \times n$矩阵 $A$ 和 $n \times m$ 矩阵 $B$ 使得<br>$$AB = I_n, BA =I_m$$ 因此 IBN 性质是对称概念.</p>
 <blockquote>
 <p>由IBN上述等价定义知 $f: R \to S \neq 0$ 为环同态，则 $S$ 满足IBN性质可推出$R$ 满足IBN性质。</p>
@@ -428,7 +428,7 @@
 <p>由上面等价定义2知道 rank condition 是个对称的概念.</p>
 </blockquote>
 <p>若有环同态 $f: R \to S$, 其中$S$满足rank condition, 那么$R$也满足.</p>
-<p>rank condition 与 stably finite 以及 IBN 之间的关系:<br>stably finite $\Longrightarrow$ rank condition $\Longrightarrow$ IBN<br>套用一下定义,以及它们各自的等价定义,逆反命题就可以证明.</p>
+<p>rank condition 与 stably finite 以及 IBN 之间的关系($R \neq 0$):<br>stably finite $\Longrightarrow$ rank condition $\Longrightarrow$ IBN<br>套用一下定义,以及它们各自的等价定义,逆反命题就可以证明.</p>
 <blockquote>
 <p>stably finite 与 rank conditon 的密切联系</p>
 </blockquote>
@@ -469,7 +469,7 @@
 <blockquote>
 <p>由定义显然free module is always projective.</p>
 </blockquote>
-<p>等价定义: 从右模范畴到Abel范畴 $Hom(P,-)$ 的函子是exact functor(正合函子).<br>由定价定义易知:<br>$$\bigoplus_{i \in I} P_i \mbox{ 投射当且仅当 } P_i, i\in I \mbox{ 投射 }$$<br>由之前说明的自由模都是投射模可知以下条件等价</p>
+<p>等价定义: 从右模范畴到Abel范畴 $\hom(P,-)$ 的函子是exact functor(正合函子).<br>由定价定义易知:<br>$$\bigoplus_{i \in I} P_i \mbox{ 投射当且仅当 } P_i, i\in I \mbox{ 投射 }$$<br>由之前说明的自由模都是投射模可知以下条件等价</p>
 <ol>
 <li>$P_R$ 投射</li>
 <li>$P_R$ 是某个自由$R$模的直和因子</li>
@@ -480,9 +480,9 @@
 <p>Proof: 由$P_R$投射模,所以存在$Q_R$使得$E = Q \oplus P$为自由模, 取$F$为 $E$ 的可数直和即可.</p>
 </blockquote>
 <p>不是投射($\mathbb{Z}$)模的例子:<br>$\mathbb{Z} / 2 \mathbb{Z}, \quad M = \mathbb{Z} \times \mathbb{Z} \times \cdots$</p>
-<p>一个有趣的结果:<br>设$P = \mathbb{Z} \oplus \mathbb{Z} \oplus \cdots \subset M$, 则$hom_Z(M/P,Z) = 0$.<br>证明关键点在于 $M = A_2 + A_3$, 其中 $A_k = \lbrace (k a_1,k^2 a_2,\cdots,k^n a_k,\cdots): a_i \in \mathbb{Z} \rbrace$<br>然后说明 $A_k \in P$, 且$f(M)=f(A_2)+f(A_3) \subset f(P)$即可.</p>
-<h3 id="2-_Dual_Basis_28_u5BF9_u5076_u57FA_29"><a href="#2-_Dual_Basis_28_u5BF9_u5076_u57FA_29" class="headerlink" title="2. Dual Basis(对偶基)"></a>2. Dual Basis(对偶基)</h3><p>$P_R$ 是投射模, 当且仅当它有对偶基, 即存在一族元素 $\lbrace a_i: i\in I \rbrace \subset P$ 和线性函数 $\lbrace f_i: i \in I \rbrace \subset P^{\star} = Hom(P,R)$ 使得对任意$a \in P$, 只有有限个 $f(a_i)$非零, 且 $a = \sum a_i f_i (a)$.</p>
-<p>对任意$R$-模$M_R$, $ M^{\star} = Hom(M,R) $ 是左 $R$ 模, $M^{\star \star} = hom(M^{\star} ,R)$ 是右 $R$模, 我们有自然的右模同态, $\epsilon : M \to M^{\star \star}$定义为: $\epsilon(a) = \hat{a}$, 其中 $\hat{a} (f) = f(a)$ 为求值函数.</p>
+<p>一个有趣的结果:<br>设$P = \mathbb{Z} \oplus \mathbb{Z} \oplus \cdots \subset M$, 则$\hom_{\mathbb{Z}}(M/P,\mathbb{Z}) = 0$.<br>证明关键点在于 $M = A_2 + A_3$, 其中 $A_k = \lbrace (k a_1,k^2 a_2,\cdots,k^n a_k,\cdots): a_i \in \mathbb{Z} \rbrace$<br>然后说明 $A_k \in P$, 且$f(M)=f(A_2)+f(A_3) \subset f(P)$即可.</p>
+<h3 id="2-_Dual_Basis_28_u5BF9_u5076_u57FA_29"><a href="#2-_Dual_Basis_28_u5BF9_u5076_u57FA_29" class="headerlink" title="2. Dual Basis(对偶基)"></a>2. Dual Basis(对偶基)</h3><p>$P_R$ 是投射模, 当且仅当它有对偶基, 即存在一族元素 $\lbrace a_i: i\in I \rbrace \subset P$ 和线性函数 $\lbrace f_i: i \in I \rbrace \subset P^{\star} = \hom(P,R)$ 使得对任意$a \in P$, 只有有限个 $f(a_i)$非零, 且 $a = \sum a_i f_i (a)$.</p>
+<p>对任意$R$-模$M_R$, $ M^{\star} = \hom(M,R) $ 是左 $R$ 模, $M^{\star \star} = \hom(M^{\star} ,R)$ 是右 $R$模, 我们有自然的右模同态, $\epsilon : M \to M^{\star \star}$定义为: $\epsilon(a) = \hat{a}$, 其中 $\hat{a} (f) = f(a)$ 为求值函数.</p>
 <blockquote>
 <p>特别地, 当 $M_R$ 是投射的, $\epsilon$ 是单同态, $M_R$ 是有限生成投射时, $\epsilon$为同构.</p>
 </blockquote>
@@ -516,10 +516,10 @@
 <blockquote>
 <p>之前说过 $P^{-1}$依赖于$R$的扩张$S$的选取,现在我们在$R$的所有regular element(正则元)这个乘闭子集$C_R$上做局部化得到环$K$,那么自然映射此时是单同态,因此局部化得到的环可以看做$R$的扩张(由$R$唯一决定).且对任意$k \in K$, 都存在regular element $u$ 使得 $uk \in R$.</p>
 </blockquote>
-<p>称$K$的$R$-子模为 <strong>fractional ideal(分次理想)</strong> 通常记为 $\mathfrak{A}$<br>引理: 对任意fractional ideal $\mathfrak{A} \subset K$且$\mathfrak{A} \cap C_R \neq \emptyset$, 则有 $Hom(\mathfrak{A}, K) \simeq K$.<br>Proof: 作映射$\lambda : K \to Hom_R(\mathfrak{A},K)$为: $\lambda(k)(a) = ka$,证明单满即可.</p>
-<p>对任意fractional ideals $\mathfrak{A},\mathfrak{B} \subset K$, 我们也有类似引理的证明: 当 $\mathfrak{A} \cap C_R \neq \emptyset$<br>$$Hom_ R(\mathfrak{A},\mathfrak{B}) \simeq \mathfrak{B}:\mathfrak{A}$$</p>
+<p>称$K$的$R$-子模为 <strong>fractional ideal(分次理想)</strong> 通常记为 $\mathfrak{A}$<br>引理: 对任意fractional ideal $\mathfrak{A} \subset K$且$\mathfrak{A} \cap C_R \neq \emptyset$, 则有 $\hom(\mathfrak{A}, K) \simeq K$.<br>Proof: 作映射$\lambda : K \to \hom_R(\mathfrak{A},K)$为: $\lambda(k)(a) = ka$,证明单满即可.</p>
+<p>对任意fractional ideals $\mathfrak{A},\mathfrak{B} \subset K$, 我们也有类似引理的证明: 当 $\mathfrak{A} \cap C_R \neq \emptyset$<br>$$\hom_ R(\mathfrak{A},\mathfrak{B}) \simeq \mathfrak{B}:\mathfrak{A}$$</p>
 <blockquote>
-<p>特别地, 若$\mathfrak{A} \cap C_R \neq \emptyset$,则$\mathfrak{A}^* = \mathfrak{A} ^{-1} = R:\mathfrak{A}$.</p>
+<p>特别地, 若$\mathfrak{A} \cap C_R \neq \emptyset$,则$\mathfrak{A}^{\star} = \mathfrak{A} ^{-1} = R:\mathfrak{A}$.</p>
 </blockquote>
 <p>对任意fractional ideal $\mathfrak{A} \subset K$, 下面等价:</p>
 <ol>
@@ -536,10 +536,10 @@
 </blockquote>
 <h3 id="4-__u4EA4_u6362_u73AF_u4E0A_u7684Picard_Group"><a href="#4-__u4EA4_u6362_u73AF_u4E0A_u7684Picard_Group" class="headerlink" title="4. 交换环上的Picard Group"></a>4. 交换环上的Picard Group</h3><p>实际上, 第二小节和第三小节中的Invertible Module 都是”秩为1”的有限生成投射模, 对于交换环, 秩的概念定义如下:<br>由于若$P,Q$为$R$-模, $P \otimes Q$也是$R$-模, 且当$P,Q$投射时, $P \otimes Q$也是投射模.<br>当$P$是有限生成投射$R$-模时, 对于$R$的任意素理想$\mathfrak{p}$, 在其上局部化得到 $P_{\mathfrak{p}} = P \bigotimes_{R} R_{\mathfrak{p}} $ 也是有限生成投射的. 由于 $R_{P}$交换局部环, 因此$P_{\mathfrak{p}}$是自由的(交换局部环上有限生成投射模是自由模).因此就有秩, 也就是说我们有从$R$的素谱到$\mathbb{Z}$(带离散拓扑)的一个连续映射. 当这个映射是常值映射时(这要求$R$中无非平凡幂等元),就称这个常值为投射模$P$的秩.</p>
 <blockquote>
-<p>注意到若$rk(P)=n,rk(Q)=m$ 那么 $rk(P^*)=n,rk(P \otimes Q) = mn$</p>
+<p>注意到若$rk(P)=n,rk(Q)=m$ 那么 $rk(P^{\star})=n,rk(P \otimes Q) = mn$</p>
 </blockquote>
 <p><strong>引理</strong> 设$R \subset S$ 为交换环, 那么在任意$S$的可逆$R$-子模都是秩为1的投射模.<br>Proof: 用一个Invertible Module(可逆模)的定义, 以及成为自由模的条件, 即可证明.</p>
-<p>设 $Pic(R)$ 为 $R$ 上所有秩为1的有限生成投射模的同构等价类. 将$P$ 的等价类记作 $[P]$<br>我们定义乘法(满足结合律, 交换律):<br>$$ [P][Q] = [P \otimes Q]$$<br>$[R]$ 成为 $Pic(R)$ 中的幺元, $[P]^{-1} = [P^*]$.<br>即 $Pic(R)$ 关于上述乘法构成abelian group. 称为交换环$R$的Picard group.</p>
+<p>设 $Pic(R)$ 为 $R$ 上所有秩为1的有限生成投射模的同构等价类. 将$P$ 的等价类记作 $[P]$<br>我们定义乘法(满足结合律, 交换律):<br>$$ [P][Q] = [P \otimes Q]$$<br>$[R]$ 成为 $Pic(R)$ 中的幺元, $[P]^{-1} = [P^{\star}]$.<br>即 $Pic(R)$ 关于上述乘法构成abelian group. 称为交换环$R$的Picard group.</p>
 <blockquote>
 <p>实际上 “Pic” 还是交换环范畴到abelian group范畴的函子.</p>
 </blockquote>
@@ -581,13 +581,13 @@
 <p>证明难度还是有的, 要用到任意有限生成artinian模都是有限长的.</p>
 </blockquote>
 <p>例子:<br>设$R$是divison ring $D$上的$n \times n$上三角矩阵全体, 则$R$是hereditary artinian ring.</p>
-<h3 id="7_Trace_Ideal"><a href="#7_Trace_Ideal" class="headerlink" title="7 Trace Ideal"></a>7 Trace Ideal</h3><p>Definition: 对任意 $P_R$, 定义$tr(P) = \sum im(f)$ 其中, $f$ 跑遍 $P^*$. 容易看出 $T = tr(P)$ 是 $R$ 的理想, 称为 Trace Ideal. 它满足:<br>若$P_R$ 是投射的, 则 $PT = P, T^2 = T, ann(P) = ann_r(T)$<br>特别的, 若$P_R$ 是有限生成投射的, 那么其对偶基$\lbrace a_i f_i \rbrace_{1\leq i \leq n}$. 那么 $tr(P)$ 可由有限集 $\lbrace f_j(a_i) \rbrace$ 生成.<br>另外,若 $tr(P) = R$, 我们称 $P$ 是生成子.</p>
+<h3 id="7_Trace_Ideal"><a href="#7_Trace_Ideal" class="headerlink" title="7 Trace Ideal"></a>7 Trace Ideal</h3><p>Definition: 对任意 $P_R$, 定义$tr(P) = \sum im(f)$ 其中, $f$ 跑遍 $P^{\star}$. 容易看出 $T = tr(P)$ 是 $R$ 的理想, 称为 Trace Ideal. 它满足:<br>若$P_R$ 是投射的, 则 $PT = P, T^2 = T, ann(P) = ann_r(T)$<br>特别的, 若$P_R$ 是有限生成投射的, 那么其对偶基$\lbrace a_i f_i \rbrace_{1\leq i \leq n}$. 那么 $tr(P)$ 可由有限集 $\lbrace f_j(a_i) \rbrace$ 生成.<br>另外,若 $tr(P) = R$, 我们称 $P$ 是生成子.</p>
 <p><strong>引理</strong> 设$T$是交换环$R$的有限生成幂等理想, 则存在幂等元$e \in R$ 使得 $T=eR$.<br>Proof: 关键在于把 $T$ 写成 $T = \sum_{i=1} ^n Tx_i$</p>
 <p>由上述引理和$T = Tr(P)$的性质, 不难证明下面定理:<br><strong>定理</strong> 设$P_R$是交换环$R$有限生成投射模, 那么存在幂等元$e$使得$T=Tr(P)=eR, N = ann(P) = (1-e)R$, 特别地, $R = T \otimes N$, 投射模$P_R$是faithful(忠实的)当且仅当$T = R$.<br>当$R$无非平凡幂等元时, 则$P \neq 0$ 是(有限生成投射)生成子. </p>
 <blockquote>
 <p>定理中条件缺一不可, 且幂等元$e$可以根据有限对偶基显式表达出来.</p>
 </blockquote>
-<p>Trace ideal 的应用:<br><strong>引理</strong> 设$R \subset S$ 是环(不要求交换), 则 $R$是$S_R$的直和因子, 当且仅当, $Tr(S_R) = R$.<br>Proof: 若$R$是$S_R$的直和因子, 则 $Tr(S_R) \supset Tr(R_R) = R$, 所以$Tr(S_R) = R$.<br>若$Tr(S_R) = R$, 那么存在 $f_i \in S_R^*,s_i \in S, (1 \leq i \leq n) $ 使得 $\sum f_i(s_i) = 1$.<br>定义映射 $\lambda: S \to R$ 为: $\lambda(s) = f(s_i s)$. 为环同态, 且在$R$上限制为恒等映射.(因此$R$是$S_R$的直和因子).</p>
+<p>Trace ideal 的应用:<br><strong>引理</strong> 设$R \subset S$ 是环(不要求交换), 则 $R$是$S_R$的直和因子, 当且仅当, $Tr(S_R) = R$.<br>Proof: 若$R$是$S_R$的直和因子, 则 $Tr(S_R) \supset Tr(R_R) = R$, 所以$Tr(S_R) = R$.<br>若$Tr(S_R) = R$, 那么存在 $f_i \in S_R^{\star},s_i \in S, (1 \leq i \leq n) $ 使得 $\sum f_i(s_i) = 1$.<br>定义映射 $\lambda: S \to R$ 为: $\lambda(s) = f(s_i s)$. 为环同态, 且在$R$上限制为恒等映射.(因此$R$是$S_R$的直和因子).</p>
 <p><strong>定理</strong> 设$R \subset S$, 其中$R$是交换环, $S$ 是f.g. 右$R$-模. 则$R$是$S_R$的直和因子.<br>Proof: 由$ann(S_R) = 0$, 在由上面引理即证.</p>
 
       
