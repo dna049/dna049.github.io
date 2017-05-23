@@ -130,11 +130,51 @@
   </entry>
   
   <entry>
-    <title><![CDATA[第一次运动会 + 山地半程马拉松]]></title>
+    <title><![CDATA[《Commutative Algebra》by Matsumura 读书笔记]]></title>
+    <link href="http://dna049.com/2017/05/23/CommAlg/"/>
+    <id>http://dna049.com/2017/05/23/CommAlg/</id>
+    <published>2017-05-23T00:40:06.000Z</published>
+    <updated>2017-05-23T05:12:28.000Z</updated>
+    <content type="html"><![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》.</p>
+<a id="more"></a>
+<h3 id="u57FA_u672C_u6982_u5FF5"><a href="#u57FA_u672C_u6982_u5FF5" class="headerlink" title="基本概念"></a>基本概念</h3><p>可以说书中没一句废话, 开头直接给出下面概念, 并且叙述一些常见等价刻画: </p>
+<ol>
+<li>理想的 radical 的定义</li>
+<li>prime ideal 的(等价)定义</li>
+<li>primary ideal 的定义, 说明 primary ideal 的 radical 是 prime ideal (反之不尽然), 并给出一个理想成为 primary ideal 的充分条件: 包含某个极大理想的某次幂.</li>
+<li>定义了环$A$上的 Zariski 拓扑(素谱) $Spec(A)$, 极大谱 $\Omega(A)$, 包含某个集合的素理想全体构成闭集(容易验证确实构成拓扑空间), 给出素谱的基本开邻域基. 由于每个理想都包含在某个极大理想中, 极大理想都是素的, 因此 $Spec(A) = 0 \Leftrightarrow A = 0$, 也就是说 $Spec$ 的定义是没有毛病的. $Spec(A)$连通当且仅当$A$ 中无非平凡幂等元.</li>
+<li>说明环之间的同态映射 $f: A \to B$ 可以诱导 $Spec(B) \to Spec(A)$ 之间的连续映射, 也就是说 $Spec$ 定义了一个环范畴到拓扑空间范畴的一个逆变函子.</li>
+<li>给出了一个关于素理想并的常见引理: 一个理想包含在最多两个不是素理想的理想的并中, 则它必然包含在其中一个理想中. 当然这也说明了任意两个真理想的并不会是整个环.</li>
+<li>给出了两个理想互素的定义(和为整个环), 并说明此时它们的积等于交. 证明用到$(I+J)(I \cap J) \subset IJ$.</li>
+<li>定义乘闭子集$S$准备做局部化, 应用zorn引理说明与$S$不相交的理想中任意极大元都是素理想, 由此可以证明: $A$中幂零元全体$nil(A)$是$A$中所有素理想的交, 也等于$A$中所有极小素理想的交. 再由此结论, 可以说明每个理想$I$的radical: $\sqrt{I}$ 是所有包含$I$的素理想的交.</li>
+<li>定义环$A$在$S$处的局部化$S^{-1}A$. $S^{-1}A = 0 \Leftrightarrow 0 \in S$. 并且我们有自然映射 $\phi : A \to S^{-1}A, \quad a \mapsto a/1$, 它满足泛性质: 若$f: A \to B$ 是环同态, 且$f(S)$均为$B$中可逆元, 那么有$g: S^{-1}A \to B$ 使得 $f = g \phi$</li>
+<li>$A$中与$S$不交的理想(素, 准素)和$S^{-1}A$中的理想(素, 准素)有保序一一对应.</li>
+<li>类似于环, 可以对模$M$作局部化$S^{-1}M \simeq S^{-1}A \otimes M$, 这个同构可以由两个自然的合理的互逆映射给出. 并且我们还有同构 $S^{-1}(M \otimes N) = S^{-1} M \otimes S^{-1}N$. 由于张量函子右正合, 用定义可以证明 $S^{-1}A \otimes -$ 是正合函子. 也就是说 $S^{-1}A$ 是平坦$A$-模.</li>
+<li>给出有限表示(finite presentation)的定义: 即一个有限生成模, 且其生成关系也是有限生成的. 等价于说有正合列:$ A^m \to A^n \to M \to 0$ 此时我们有:<br>$$S^{-1}(\hom(M,N)) \simeq \hom(S^{-1}M, S^{-1}N)$$<br>证明的关键在于对于自由模$M=A^n$时有上述自然同构, 再由有限表示, 应用 five lemma 证明上式.</li>
+<li><strong>局部整体关系</strong> $M \to \prod_{\max p} M_{p}$ 是单的. 其中 $M_{p} = (A - p)^{-1} M$. 证明应用定义说明$Ann(x) = A$ 即可.</li>
+<li><strong>整环的特殊情形</strong> 当$A$为整环时, $A$在任意乘闭子集处的局部化都可以看做它的分式域的子环, 实际上我们有<br>$$ A = \bigcap_{\max p} A_{p}$$<br>证明类似整数作有理数. 定义$D = \lbrace a \in A | ax \in A \rbrace$ 说明若$x \notin A$ 可知 $D \subset A$(真包含), 因此$D$在某个极大理想$P$中, 可推出 $x \notin A_{P}$.</li>
+<li>我们有自然的同构 $A/I \otimes M \simeq M/IM$, 同构可由正合列 $0 \to I \to A \to A/I \to 0$, 用$- \otimes M$ 作用上去, 再由定义有 $I \otimes M \to IM$ 的自然满同态($M$平坦时可以说明是同构), 得到正合列: $0 \to IM  \to M \to A/I \otimes M \to 0$<br>特别地, 我们有: $S^{-1}(A/I) = S^{-1}A / I(S^{-1}A)$</li>
+<li><strong>Jacobson radical</strong>: $rad(A) = \lbrace x| 1+xy \in U(A) \rbrace$为所有极大理想的交.</li>
+<li><strong>局部环</strong>: 若环$A$只有一个极大素理想$\mathfrak{m}$, 则称 $A$ 为局部环, $A/\mathfrak{m}$称为$A$的residue field.<br>局部环之所以重要是因为, 任意环$A$在素理想$p$处作局部化都是一个局部环$A_p$. 此时$A_p$的residue field记作 $k(p)$. 它恰好是整环$A/p$的分式域$K(A/p)$. 由 $A \to A/p$ 到 $A_p \to K(A/p)$ 因此, 我们有 $k(p) \simeq K(A/p)$ </li>
+<li><strong>局部映射</strong>: 若环 $(A, \mathfrak{m}, k)$和 $(A’, \mathfrak{m}’, k’)$ 为局部环, 且有环同态 $\phi: A \to A’$ 使得 $\phi(\mathfrak{m}) \subseteq \mathfrak{m}’$, 则称为局部映射, 此时$\phi$自然诱导了环同态$k \to k’$.<br>现在对任意环同态 $\phi: A \to B$, 考虑连续映射<br>$$\hat{\phi}: Spec(B) \to Spec(A), \quad P \to \phi^{-1}(P) = P \cap A = p$$<br>此时 $\phi(A-p) \subseteq B-P$, 即$\phi$诱导了局部映射$\phi_P: A_p \to B_P$.</li>
+<li><strong>半局部环</strong> </li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》.</p>]]>
+    
+    </summary>
+    
+      <category term="math" scheme="http://dna049.com/tags/math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[第一次校运动会 + 山地半程马拉松]]></title>
     <link href="http://dna049.com/2017/05/21/maoshanmarathon/"/>
     <id>http://dna049.com/2017/05/21/maoshanmarathon/</id>
     <published>2017-05-21T15:32:20.000Z</published>
-    <updated>2017-05-22T00:00:58.000Z</updated>
+    <updated>2017-05-23T05:12:40.000Z</updated>
     <content type="html"><![CDATA[<p>有幸参加我旦旦的第57届运动会, 报了穿梭接力, 引体向上, 5公里. 人生中第一次运动会, 明年再来, 完美. 第一次山地马拉松跟平时马拉松没太大区别, 除了上坡十分变态以外. 风景很迷人, 空气很清新, 太阳… 毕竟521.</p>
 <a id="more"></a>
 <h3 id="u8FD0_u52A8_u4F1A"><a href="#u8FD0_u52A8_u4F1A" class="headerlink" title="运动会"></a>运动会</h3><p><img src="0.jpg" alt="运动会照片"></p>
@@ -162,8 +202,8 @@
     <link href="http://dna049.com/2017/05/06/Note-on-Lecture-of-Modules-and-Rings/"/>
     <id>http://dna049.com/2017/05/06/Note-on-Lecture-of-Modules-and-Rings/</id>
     <published>2017-05-06T02:35:40.000Z</published>
-    <updated>2017-05-10T09:40:54.000Z</updated>
-    <content type="html"><![CDATA[<p>为了把看过的知识变成自己的东西，在此理一下思路（导师建议写的东西记录一下，不然以后过不了多久又忘了，花了时间就要有收获）</p>
+    <updated>2017-05-22T04:25:58.000Z</updated>
+    <content type="html"><![CDATA[<p>为了把看过的知识变成自己的东西，在此理一下思路（导师建议学的东西记录一下，不然以后过不了多久又忘了，花了时间就要有收获）</p>
 <blockquote>
 <p>2017年内长期更新</p>
 </blockquote>
@@ -366,7 +406,7 @@
 <p><strong>定理</strong> 设$R \subset S$, 其中$R$是交换环, $S$ 是f.g. 右$R$-模. 则$R$是$S_R$的直和因子.<br>Proof: 由$ann(S_R) = 0$, 在由上面引理即证.</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>为了把看过的知识变成自己的东西，在此理一下思路（导师建议写的东西记录一下，不然以后过不了多久又忘了，花了时间就要有收获）</p>
+    <![CDATA[<p>为了把看过的知识变成自己的东西，在此理一下思路（导师建议学的东西记录一下，不然以后过不了多久又忘了，花了时间就要有收获）</p>
 <blockquote>
 <p>2017年内长期更新</p>
 </blockquote>]]>
@@ -897,24 +937,6 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p>在C语言中最常用的函数应该就是scanf，printf吧。对于大量输入输出时C++也常用scanf和print代替cin和cout。然而我们学习C语言最先接触的scanf和printf其实我们并不完全了解。<br>]]>
-    
-    </summary>
-    
-      <category term="C++" scheme="http://dna049.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[输出源代码的代码]]></title>
-    <link href="http://dna049.com/2016/05/09/print-self/"/>
-    <id>http://dna049.com/2016/05/09/print-self/</id>
-    <published>2016-05-08T17:54:14.000Z</published>
-    <updated>2016-05-09T15:16:46.000Z</updated>
-    <content type="html"><![CDATA[<p>我们可以把计算机看成一个函数，将一份代码映成一段输出，那么输出为代码本事就是数学中不动点。任意语言都有很多相应版本的这种程序，原理都是类似的，我自己写的C++代码如下：<br><a id="more"></a></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">/**************************************</span><br><span class="line">* Welcome to visit http://dna049.com</span><br><span class="line">**************************************/</span></span><br><span class="line"><span class="built_in">string</span> a[<span class="number">20</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">a[<span class="number">0</span>]=<span class="string">"#include&lt;iostream&gt;"</span>;</span><br><span class="line">a[<span class="number">1</span>]=<span class="string">"#include&lt;string&gt;"</span>;</span><br><span class="line">a[<span class="number">2</span>]=<span class="string">"using namespace std;"</span>;</span><br><span class="line">a[<span class="number">3</span>]=<span class="string">"/**************************************"</span>;</span><br><span class="line">a[<span class="number">4</span>]=<span class="string">"* Welcome to visit http://dna049.com"</span>;</span><br><span class="line">a[<span class="number">5</span>]=<span class="string">"**************************************/"</span>;</span><br><span class="line">a[<span class="number">6</span>]=<span class="string">"string a[20];"</span>;</span><br><span class="line">a[<span class="number">7</span>]=<span class="string">"int main()&#123;"</span>;</span><br><span class="line">a[<span class="number">8</span>]=<span class="string">"for(int i=0;i&lt;8;++i) cout&lt;&lt;a[i]&lt;&lt;endl;"</span>;</span><br><span class="line">a[<span class="number">9</span>]=<span class="string">"for(int i=0;i&lt;=12;++i) cout&lt;&lt;char(97)&lt;&lt;char(91)&lt;&lt;i&lt;&lt;char(93)&lt;&lt;char(61)&lt;&lt;char(34)&lt;&lt;a[i]&lt;&lt;char(34)&lt;&lt;char(59)&lt;&lt;endl;"</span>;</span><br><span class="line">a[<span class="number">10</span>]=<span class="string">"for(int i=8;i&lt;=12;++i) cout&lt;&lt;a[i]&lt;&lt;endl;"</span>;</span><br><span class="line">a[<span class="number">11</span>]=<span class="string">"return 0;"</span>;</span><br><span class="line">a[<span class="number">12</span>]=<span class="string">"&#125;"</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">8</span>;++i) <span class="built_in">cout</span>&lt;&lt;a[i]&lt;&lt;endl;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">12</span>;++i) <span class="built_in">cout</span>&lt;&lt;<span class="keyword">char</span>(<span class="number">97</span>)&lt;&lt;<span class="keyword">char</span>(<span class="number">91</span>)&lt;&lt;i&lt;&lt;<span class="keyword">char</span>(<span class="number">93</span>)&lt;&lt;<span class="keyword">char</span>(<span class="number">61</span>)&lt;&lt;<span class="keyword">char</span>(<span class="number">34</span>)&lt;&lt;a[i]&lt;&lt;<span class="keyword">char</span>(<span class="number">34</span>)&lt;&lt;<span class="keyword">char</span>(<span class="number">59</span>)&lt;&lt;endl;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">8</span>;i&lt;=<span class="number">12</span>;++i) <span class="built_in">cout</span>&lt;&lt;a[i]&lt;&lt;endl;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>我们可以把计算机看成一个函数，将一份代码映成一段输出，那么输出为代码本事就是数学中不动点。任意语言都有很多相应版本的这种程序，原理都是类似的，我自己写的C++代码如下：<br>]]>
     
     </summary>
     
