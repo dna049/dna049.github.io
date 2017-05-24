@@ -113,7 +113,7 @@
 <meta property="og:url" content="http://dna049.com/2017/05/23/CommAlg/index.html">
 <meta property="og:site_name" content="0.肆玖">
 <meta property="og:description" content="在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指含幺交换环(commutative ring with identity)">
-<meta property="og:updated_time" content="2017-05-24T04:27:09.000Z">
+<meta property="og:updated_time" content="2017-05-24T09:59:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Commutative Algebra》by Matsumura 读书笔记">
 <meta name="twitter:description" content="在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指含幺交换环(commutative ring with identity)">
@@ -381,7 +381,7 @@
       
 
       
-        <p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指<em>含幺交换环(commutative ring with identity)</em></p>
+        <p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指<strong>含幺交换环(commutative ring with identity)</strong></p>
 <a id="more"></a>
 <h2 id="u57FA_u672C_u6982_u5FF5"><a href="#u57FA_u672C_u6982_u5FF5" class="headerlink" title="基本概念"></a>基本概念</h2><p>可以说书中没一句废话, 开头直接给出下面概念, 并且叙述一些常见等价刻画: </p>
 <ol>
@@ -447,7 +447,7 @@
 <p>特别地, 去 $B = S^{-1}A$.</p>
 </blockquote>
 <p>设$M$是平坦$A$-模, 则$A$-regular元都是$M$-regular元. 这只因为 $0 \to A \xrightarrow{a} A$ 可推出 $0 \to M \xrightarrow{a}M$.</p>
-<h4 id="u5C40_u90E8_u73AF_u4E0A_u6709_u9650_u751F_u6210_u6A21_u662F_u81EA_u7531_u6A21"><a href="#u5C40_u90E8_u73AF_u4E0A_u6709_u9650_u751F_u6210_u6A21_u662F_u81EA_u7531_u6A21" class="headerlink" title="局部环上有限生成模是自由模"></a>局部环上有限生成模是自由模</h4><p>$(A,\mathfrak{m},k)$是局部环, $M$是平坦$A$-模, 若$\mathfrak{m}$幂零或$M$有限生成, 则 $M$是自由模.<br>在<em>基本概念21</em>中, $G$生成了$M$, 如果 $G$ 中元素线性无关, 那么 $G$自然就是$M$的一组基(从而是自由模), 也就是说, 我们只需证明$G =\lbrace x_1 \cdots x_n \rbrace$在 $M/mM = M \otimes k$下的象线性无关, 则由$G$线性无关. 而<em>$\mathfrak{m}$幂零或$M$有限生成</em>这个条件本质上是保证$M/mM \neq 0$(由NAK lemma). 然后对$n$应用数学归纳, 并利用<em>平坦模等价刻画6</em>说明线性无关性. 从而命题得证.</p>
+<h4 id="u5C40_u90E8_u73AF_u4E0A_u6709_u9650_u751F_u6210_u6A21_u662F_u81EA_u7531_u6A21"><a href="#u5C40_u90E8_u73AF_u4E0A_u6709_u9650_u751F_u6210_u6A21_u662F_u81EA_u7531_u6A21" class="headerlink" title="局部环上有限生成模是自由模"></a>局部环上有限生成模是自由模</h4><p>$(A,\mathfrak{m},k)$是局部环, $M$是平坦$A$-模, 若$\mathfrak{m}$幂零或$M$有限生成, 则 $M$是自由模.<br>在<strong>基本概念21</strong>中, $G$生成了$M$, 如果 $G$ 中元素线性无关, 那么 $G$自然就是$M$的一组基(从而是自由模), 也就是说, 我们只需证明$G =\lbrace x_1 \cdots x_n \rbrace$在 $M/mM = M \otimes k$下的象线性无关, 则由$G$线性无关. 而<strong>$\mathfrak{m}$幂零或$M$有限生成</strong>这个条件本质上是保证$M/mM \neq 0$(由NAK lemma). 然后对$n$应用数学归纳, 并利用<strong>平坦模等价刻画6</strong>说明线性无关性. 从而命题得证.</p>
 <blockquote>
 <p>局部环上的投射模都是自由模</p>
 </blockquote>
@@ -456,6 +456,9 @@
 <li>$(I \cap J)B = IB \cap JB$ </li>
 <li>$(I : J)B = IB : JB$, 其中$J$是有限生成的.<br>Proof: 由正合列: $0 \to I \cap J \to A \to A/I \otimes A/J$, 张量上$B$得到 $0 \to (I \cap J)B \to B \to B/IB \otimes B/JB$. 因此$(I \cap J)B = IB \cap JB$.<br>当$J$有限生成是, 只需证明$J = aA$的形式: 由正合列$0 \to (I :aA) \to A \xrightarrow{f} \to A/I$. 其中 $f(x) = ax<br>\mod I$. 张量上$B$即可得到结论, 对于一般情况应用<br>$$ (I: \sum_{i=1} ^n a_i A) = \bigcap_{i=1} ^n (I : a_i A)$$</li>
 </ol>
+<blockquote>
+<p>平坦映射讲一个保持理想的交, 一种反映平坦的地方吧.</p>
+</blockquote>
 <h4 id="u5E73_u5766_u7684_u5C40_u90E8_u6574_u4F53_u6027"><a href="#u5E73_u5766_u7684_u5C40_u90E8_u6574_u4F53_u6027" class="headerlink" title="平坦的局部整体性"></a>平坦的局部整体性</h4><p>设$f: A \to B$是环同态(即$B$是交换结合$A$代数), 那么下面条件等价:</p>
 <ol>
 <li>$B$ 作为$A$-模平坦.</li>
@@ -464,13 +467,66 @@
 </ol>
 <h3 id="u5FE0_u5B9E_u5E73_u5766_28faithful_flat_f-f-_29"><a href="#u5FE0_u5B9E_u5E73_u5766_28faithful_flat_f-f-_29" class="headerlink" title="忠实平坦(faithful flat f.f.)"></a>忠实平坦(faithful flat f.f.)</h3><p>一个自然的问题, 平坦模何时成为忠实平坦模呢?<br>设$M$是$A$-模, 下面条件等价</p>
 <ol>
-<li>$M$是f.f.$A$-模;</li>
+<li>$M$是 f.f. $A$-模;</li>
 <li>$M$是平坦$A$-模, 且对任意$A$-模$N \neq 0$, $N \otimes M \neq 0$;</li>
-<li>$M$是平坦$A$-模, 且对任意$A$的极大理想$\mathfrak{m}$, $mM \neq M$.<br>Proof: $1 \to 2$: 由$0 \to N \to 0$和$0 \to N \otimes M \to 0$同时正合性证毕. $2 \to 3$: 由于$A/\mathfrak{m} \neq 0$, 所以 $M/\mathfrak{m} M \simeq A/\mathfrak{m} \otimes M \neq 0$. $3 \to 2$: 对任意$0 \neq x \in N$, 存在$I$使得$Ax \simeq A/I$, 设$\mathfrak{m}$为包含$I$的一个极大理想, 于是$IM \subseteq \mathfrak{m}M \subset M$, 从而 $(A/I)\otimes M = M/IM neq 0$. 又由$M$平坦知: $0 \to (A/I) \otimes M \to N \otimes M$正合, 所以$N \otimes M \neq 0$. $2 \to 1$: 设 $S: N’ \xrightarrow{f} N \xrightarrow{g} \to N’’$ 为$A$-模序列. 若 $S \otimes M : N’\otimes M \xrightarrow{\hat{f}} N \otimes M  \xrightarrow{\hat{g}} \to N’’\otimes M$. 由于 $- \otimes M$函子正合. $Im(gf) \otimes M = Im(\hat{f}\hat{g})=0$. 从而$Im(gf)=0$, 即$S$是复形, $H(S) \otimes M = H(S \otimes M) = 0$, 从而$H(S) = 0$, 证毕.<blockquote>
+<li>$M$是平坦$A$-模, 且对任意$A$的极大理想$\mathfrak{m}$, $mM \neq M$.<br>Proof: $1 \to 2$: 由$0 \to N \to 0$和$0 \to N \otimes M \to 0$同时正合性证毕. $2 \to 3$: 由于$A/\mathfrak{m} \neq 0$, 所以 $M/\mathfrak{m} M \simeq A/\mathfrak{m} \otimes M \neq 0$. $3 \to 2$: 对任意$0 \neq x \in N$, 存在$I$使得$Ax \simeq A/I$, 设$\mathfrak{m}$为包含$I$的一个极大理想, 于是$IM \subseteq \mathfrak{m}M \subset M$, 从而 $(A/I)\otimes M = M/IM \neq 0$. 又由$M$平坦知: $0 \to (A/I) \otimes M \to N \otimes M$正合, 所以$N \otimes M \neq 0$. $2 \to 1$: 设 $S: N’ \xrightarrow{f} N \xrightarrow{g} \to N’’$ 为$A$-模序列. 若 $S \otimes M : N’\otimes M \xrightarrow{\hat{f}} N \otimes M  \xrightarrow{\hat{g}} \to N’’\otimes M$. 由于 $- \otimes M$函子正合. $Im(gf) \otimes M = Im(\hat{f}\hat{g})=0$. 从而$Im(gf)=0$, 即$S$是复形, $H(S) \otimes M = H(S \otimes M) = 0$, 从而$H(S) = 0$, 证毕.<blockquote>
 <p>$2 \to 1$ 的证明很有意思.</p>
 </blockquote>
 </li>
 </ol>
+<h4 id="u5C40_u90E8_u73AF_u4E2D_u5E73_u5766_u548C_u5FE0_u5B9E_u5E73_u5766"><a href="#u5C40_u90E8_u73AF_u4E2D_u5E73_u5766_u548C_u5FE0_u5B9E_u5E73_u5766" class="headerlink" title="局部环中平坦和忠实平坦"></a>局部环中平坦和忠实平坦</h4><p>设$(A,\mathfrak{m}), (B,\mathfrak{n})$是局部环, $\phi: A \to B$是局部同态, 若$M \neq 0$是有限$B$-模或$\mathfrak{n}$幂零, 则<br>$$ M \mbox{是平坦模} \Longleftrightarrow M \mbox{是忠实平坦模}$$<br>由 $\mathfrak{m} M \subseteq \mathfrak{n}M \neq M$ (NAK lemma), 从而由忠实平坦模的等价刻画知结论成立.<br>推论1: $B$在$A$上平坦等价于忠实平坦.(取$M=B$)<br>推论2: 若$M$是有限生成$A$-模或$\mathfrak{m}$幂零, 则$M$平坦等价于忠实平坦(其实本结论可以由<strong>局部环上有限生成模是自由模</strong>小节直接推出).</p>
+<h4 id="u5FE0_u5B9E_u5E73_u5766_u6A21_u7684_u6027_u8D28"><a href="#u5FE0_u5B9E_u5E73_u5766_u6A21_u7684_u6027_u8D28" class="headerlink" title="忠实平坦模的性质"></a>忠实平坦模的性质</h4><p>类似于平坦模, transitive, change of base 都成立. 并且它还满足 descent property: 若$B$是$A$-代数, $M$是忠实平坦$B$-模, 也是忠实平坦$A$-模, 那么$B$也是忠实平坦$A$-模.<br><strong>忠实平坦在环扩张中起了很重要的作用</strong><br>设$\phi: A \to B$ 是f.f.同态 则:</p>
+<ol>
+<li>对任意$A$-模$N$, $N \to N \otimes B, \quad x \mapsto x \otimes 1$ 是单的. 特别地, $\phi$是单的, 因此$A$可以看做$B$的子环.</li>
+<li>对任意$A$的理想$I$, 我们有$IB \cap A = I$</li>
+<li>$\hat{\phi}: Spec(B) \to Spec(A)$ 是满的.</li>
+</ol>
+<p>Proof: 1.$0 \neq x \in N$, 则 $0 \neq Ax \subset N$.因此 $Ax \otimes B \in N \otimes B$($B$平坦). 又$Ax \otimes B = (x \otimes 1)(A \otimes B) = (x \otimes 1)B$.由$B$忠实平坦知 $x \otimes 1 \neq 0$. 2.由于$B \otimes _A (A/I) = B/IB$在$A/I$上忠实平坦, 因此 $A/I \subseteq B/IB$. 因此$IB \cap A \subset I$. 又反方向显然, 证毕. 3. 设$p \in Spec(A)$. $B_p = B \otimes A_p$在$A_p$上忠实平坦, 因此 $pB_p \neq B_p$<strong>(这是关键的一步</strong>). 取$B_p$中一个包含$pB_p$的极大理想$\mathfrak{m}$. 则$pA_p \subseteq \mathfrak{m} \cap A_p$, 因此$pA_p = \mathfrak{m} \cap A_p$. 设$P = \mathfrak{m} \cap B$. 则 $P \cap A = \mathfrak{m} \cap B \cap A = \mathfrak{m} \cap A = \mathfrak{m} \cap A_p \cap A = pA_p \cap A = p$<br>要理解上面式子关键在于 $0 \to A \to A_p \to B_p = A_p \otimes B$. 最后$\mathfrak{m}$1被拉回之后就在$B$中了.</p>
+<h4 id="u5FE0_u5B9E_u5E73_u5766_u7684_u7B49_u4EF7_u523B_u753B"><a href="#u5FE0_u5B9E_u5E73_u5766_u7684_u7B49_u4EF7_u523B_u753B" class="headerlink" title="忠实平坦的等价刻画"></a>忠实平坦的等价刻画</h4><p>之前已经给了一些平坦的等价可以, 都是与张量积有关, 下面给出的都与谱有关. 即与素理想有关.<br>设$\phi: A \to B$是平坦映射, 以下结论等价:</p>
+<ol>
+<li>$\phi$是忠实平坦的;</li>
+<li>$\phi$是平坦的, 且$\hat{\phi}: Spec(B) \to Spec(A)$是满的;</li>
+<li>$\phi$是平坦的, 且对任意$A$中极大理想$\mathfrak{m}$,存在$B$中极大理想$\mathfrak{m}’$使得$\mathfrak{m}’ \cap A = \mathfrak{m}$.<blockquote>
+<p>这注定了它和 NAK lemma 之间密切的联系.</p>
+</blockquote>
+</li>
+</ol>
+<p>$1 \to 2$ 已证, $2 \to 3$ 是因为存在$p’ \in Spec(B)$ 使得$p’ \cap A = \mathfrak{m}$. 找一个包含$p’$的极大理想$\mathfrak{m}’$. 则$\mathfrak{m} \cap A = \mathfrak{m}$(由于$\mathfrak{m}$极大). $3 \to 1$ 是因为此时$\mathfrak{m}B \subseteq \mathfrak{m}’B = \mathfrak{m} \subset B$. 因此$B$在$A$上忠实平坦.</p>
+<h4 id="u5FE0_u5B9E_u5E73_u5766_u4E0A_u7684_u5E73_u5766"><a href="#u5FE0_u5B9E_u5E73_u5766_u4E0A_u7684_u5E73_u5766" class="headerlink" title="忠实平坦上的平坦"></a>忠实平坦上的平坦</h4><p>设$B$是$A$上的忠实平坦$A$代数. $M$是$A$-模. 则$M$是$A$上的(忠实)平坦模 $\Longleftrightarrow$ $M$是$B$上的(忠实)平坦模.<br>$\Longrightarrow$就是change of base的结果. $\Longleftarrow$成立是因为一般地我们有:<br>$$(S \otimes _A M) \otimes_A B = (S \otimes _A B) \otimes _B (M \otimes _A B)$$</p>
+<h4 id="u6574_u73AF_u4E0A_u7684_u5FE0_u5B9E_u5E73_u5766"><a href="#u6574_u73AF_u4E0A_u7684_u5FE0_u5B9E_u5E73_u5766" class="headerlink" title="整环上的忠实平坦"></a>整环上的忠实平坦</h4><p>设$A$设整环, 整环$B$满足$A \subseteq B \subseteq Q(A)$, 其中$Q(A)$是$A$的分式域. 则$B$在$A$上忠实平坦当且仅当$B=A$.<br>Proof: 若$B \neq A$, 则对任意$0 \neq x \in B\A$, $x = y/s,\quad y,s \in A, s \notin U(A)$, 从而$sB \cap A = A \neq sA$. 因此$B$在$A$上不忠实平坦, 所以$B = A$.</p>
+<blockquote>
+<p>但是$A$与$Q(A)$之间的任意环都是平坦的(这可以由<strong>平坦模的等价刻画6</strong>得到)</p>
+</blockquote>
+<h3 id="Going-up_and_Going-down"><a href="#Going-up_and_Going-down" class="headerlink" title="Going-up and Going-down"></a>Going-up and Going-down</h3><p>在这里还是重提以下Going-up和Going-down是什么鬼吧, 这部分之前一直糊里糊涂的过了.</p>
+<p>设 $\phi: A \to B$ 是环同态. 我们说Going-up条件成立是指:<br>对任意$p \subset p’ \in Spec(A)$, 对任意在理想$p$上的$P \in Spec(B)$(即$P \cap A = p$). 都存在$P’ \in Spec(B)$, 使得$P’ \cap A = p’$ 且 $P \subset P’$</p>
+<blockquote>
+<p>上面$p \subset p’$ 是真包含, 若上述$P’$存在, 包含关系必然也是真包含的.</p>
+</blockquote>
+<p>类似地, 我们说Going-down条件成立是指:<br>对任意$p \subset p’ \in Spec(A)$, 对任意在理想$p’$上的$P’ \in Spec(B)$(即$P’ \cap A = p’$). 都存在$P \in Spec(B)$, 使得$P \cap A = p$ 且 $P \subset P’$.<br>这等价于:<br>对任意$p \in Spec(A)$, 对任意包含$pB$的极小素理想$P$都有$P \cap A = p$.</p>
+<blockquote>
+<p>上面$p \subset p’$ 是真包含, 若上述$P$存在, 包含关系必然也是真包含的.</p>
+</blockquote>
+<h4 id="u5E73_u5766Going-down"><a href="#u5E73_u5766Going-down" class="headerlink" title="平坦Going-down"></a>平坦Going-down</h4><p>设 $\phi: A \to B$是平坦映射, 则$\phi$满足Going-down条件.<br>Proof: 设$p’ \subset p \in Spec(A)$, $P \in Spec(B)$ 使得 $P \cap A = p$. 则$B_P = B_p$ 在局部环$A_p$上平坦, 因此忠实平坦, 所以$Spec(B_P) \to Spec(A_p)$是满的, 设$P^{\star} \ subset B_P$满足 $P^{\star} \cap A_p = p’A_p$. 则$P’ = P^{\star} \cap B$即为所求.</p>
+<h4 id="u6574Going-up"><a href="#u6574Going-up" class="headerlink" title="整Going-up"></a>整Going-up</h4><p>设$A \subset B$是环, 且$B$在$A$上整. 则:</p>
+<ol>
+<li>$Spec(B) \to Spec(A)$ 是满的</li>
+<li>$B$中在某个$Spec(A)$上的所有素理想互不包含.</li>
+<li>Going-up条件成立.</li>
+<li>若$A$是局部环, $p$是唯一极大理想, 则B中在$p$上的素理想都是极大理想.</li>
+</ol>
+<p>先证$4$: 设$\mathfrak{n}$为$B$的一个极大理想, 设$\mathfrak{m} = \mathfrak{n} \cap A$. $\bar{B} = B / \mathfrak{n}$ 是域, 并且在环 $\bar{A} = A/\mathfrak{m}$ 上整, 对$A$中任意非零元$x$. $1/x \in \bar{B}$. 因此<br>$$(1/x)^n + a_1 (1/x)^{n-1} + \cdots a_n = 0$$<br>所以 $1/x = -(a_1 + a_2 x + a_n x^{n-1} \in A$. 即$\bar{A}$ 是域, $\mathfrak{m} = p$ 为$A$的唯一极大理想. 设$P \in Spec(B)$ 使得 $P \cap A = p$. 则$\bar{B} = B/P$ 是整环, 且在域$\bar{A} = A/p$ 上整, 易知 $\bar{B}$也是域, 即$P$是极大理想.<br>再证$1, 2$: 对任意$p \in Spec(A)$. $B_p = B \otimes _A A_p = (A-p)^{-1}B$在$A_p$上整且包含$A_p$. 又因为$B$中在$p$上的素理想与$B_p$中在$pA_p$的素理想一一对应, 在由$4$知道 它对应于$B_p$中的极大理想, 因此$1, 2$得证.<br>最后证明$3$: 设$p \subset p’ \in Spec(A)$, $P \in Spec(B)$使得$P \cap A = p$, $B/P$包含$A/p$且在其上整. 由$1$知, 存在$P’/P$使得$P’/P \cap A/p = p’/p$. 所以 $P’ \in Spec(B)$ 满足 $P’ \cap B = p’$.</p>
+<blockquote>
+<p>一个有用的结论: 整环$B$在$A$上整, 则$B$是域当且仅当$A$是域.</p>
+</blockquote>
+<h3 id="u4EE3_u6570_u51E0_u4F55_u4E2D_u7684_Constructible_Set"><a href="#u4EE3_u6570_u51E0_u4F55_u4E2D_u7684_Constructible_Set" class="headerlink" title="代数几何中的 Constructible Set"></a>代数几何中的 Constructible Set</h3><h4 id="Noetherian__u7A7A_u95F4"><a href="#Noetherian__u7A7A_u95F4" class="headerlink" title="Noetherian 空间"></a>Noetherian 空间</h4><p>称一个拓扑空间$X$为Noetherian, 如果它满足闭集的降链条件, 等价于开集的升链条件.<br>显然有限个Noetherian空间的并还是Noetherian空间, Noetherian空间的子空间还是Noetherian空间. Noetherian空间是紧的.</p>
+<blockquote>
+<p>由于Noetherian环$A$满足素理想的降链条件, 此时$Spec(A)$是Noetherian空间.</p>
+</blockquote>
+<h4 id="u4E0D_u53EF_u7EA6_28_u95ED_29_u96C6_28irreducible_closed_set_29"><a href="#u4E0D_u53EF_u7EA6_28_u95ED_29_u96C6_28irreducible_closed_set_29" class="headerlink" title="不可约(闭)集(irreducible closed set)"></a>不可约(闭)集(irreducible closed set)</h4><p>一个闭集称为不可约的, 如果它不能写成两个真闭子集的并. </p>
+<blockquote>
+<p>在Noetherian空间中, 每个闭集都可以写成有限个不可约闭子集的并. 并且这些不可约子集互不包含, 称每一个都为这个闭集的不可约部分.</p>
+</blockquote>
+<h4 id="u5C40_u90E8_u95ED_u96C6_28locally_closed_29"><a href="#u5C40_u90E8_u95ED_u96C6_28locally_closed_29" class="headerlink" title="局部闭集(locally closed)"></a>局部闭集(locally closed)</h4><p>一个集合$Z$ 称为 locally closed 如果 $\forall z \in Z, \quad \exists U_z \mbox{ 使得 } U_z \cap Z$ 是开邻域$U_z$ 中的闭集. 这等价于说 $Z$是拓扑空间$X$中某个开集和闭集的交. 特别地, 开集和闭集都是locally closed.</p>
 
       
     </div>
