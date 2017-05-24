@@ -134,15 +134,15 @@
     <link href="http://dna049.com/2017/05/23/CommAlg/"/>
     <id>http://dna049.com/2017/05/23/CommAlg/</id>
     <published>2017-05-23T00:40:06.000Z</published>
-    <updated>2017-05-23T05:12:28.000Z</updated>
-    <content type="html"><![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》.</p>
+    <updated>2017-05-24T03:14:25.000Z</updated>
+    <content type="html"><![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指”含幺交换环(commutative ring with identity)”</p>
 <a id="more"></a>
-<h3 id="u57FA_u672C_u6982_u5FF5"><a href="#u57FA_u672C_u6982_u5FF5" class="headerlink" title="基本概念"></a>基本概念</h3><p>可以说书中没一句废话, 开头直接给出下面概念, 并且叙述一些常见等价刻画: </p>
+<h2 id="u57FA_u672C_u6982_u5FF5"><a href="#u57FA_u672C_u6982_u5FF5" class="headerlink" title="基本概念"></a>基本概念</h2><p>可以说书中没一句废话, 开头直接给出下面概念, 并且叙述一些常见等价刻画: </p>
 <ol>
 <li>理想的 radical 的定义</li>
 <li>prime ideal 的(等价)定义</li>
 <li>primary ideal 的定义, 说明 primary ideal 的 radical 是 prime ideal (反之不尽然), 并给出一个理想成为 primary ideal 的充分条件: 包含某个极大理想的某次幂.</li>
-<li>定义了环$A$上的 Zariski 拓扑(素谱) $Spec(A)$, 极大谱 $\Omega(A)$, 包含某个集合的素理想全体构成闭集(容易验证确实构成拓扑空间), 给出素谱的基本开邻域基. 由于每个理想都包含在某个极大理想中, 极大理想都是素的, 因此 $Spec(A) = 0 \Leftrightarrow A = 0$, 也就是说 $Spec$ 的定义是没有毛病的. $Spec(A)$连通当且仅当$A$ 中无非平凡幂等元.</li>
+<li>定义了环$A$上的 Zariski 拓扑(素谱) $Spec(A)$, 极大谱 $\Omega(A)$, 包含某个集合的素理想全体构成闭集(容易验证确实构成拓扑空间), 给出素谱的基本开邻域基. 由于每个理想都包含在某个极大理想中, 极大理想都是素的, 因此 $Spec(A) = 0 \Leftrightarrow A = 0$, 也就是说 $Spec$ 的定义是没有毛病的. $Spec(A)$连通当且仅当$A$ 中无非平凡幂等元.<br>$$V(I) = V(J) \Longleftrightarrow \sqrt{I} = \sqrt{J}$$</li>
 <li>说明环之间的同态映射 $f: A \to B$ 可以诱导 $Spec(B) \to Spec(A)$ 之间的连续映射, 也就是说 $Spec$ 定义了一个环范畴到拓扑空间范畴的一个逆变函子.</li>
 <li>给出了一个关于素理想并的常见引理: 一个理想包含在最多两个不是素理想的理想的并中, 则它必然包含在其中一个理想中. 当然这也说明了任意两个真理想的并不会是整个环.</li>
 <li>给出了两个理想互素的定义(和为整个环), 并说明此时它们的积等于交. 证明用到$(I+J)(I \cap J) \subset IJ$.</li>
@@ -157,11 +157,77 @@
 <li><strong>Jacobson radical</strong>: $rad(A) = \lbrace x| 1+xy \in U(A) \rbrace$为所有极大理想的交.</li>
 <li><strong>局部环</strong>: 若环$A$只有一个极大素理想$\mathfrak{m}$, 则称 $A$ 为局部环, $A/\mathfrak{m}$称为$A$的residue field.<br>局部环之所以重要是因为, 任意环$A$在素理想$p$处作局部化都是一个局部环$A_p$. 此时$A_p$的residue field记作 $k(p)$. 它恰好是整环$A/p$的分式域$K(A/p)$. 由 $A \to A/p$ 到 $A_p \to K(A/p)$ 因此, 我们有 $k(p) \simeq K(A/p)$ </li>
 <li><strong>局部映射</strong>: 若环 $(A, \mathfrak{m}, k)$和 $(A’, \mathfrak{m}’, k’)$ 为局部环, 且有环同态 $\phi: A \to A’$ 使得 $\phi(\mathfrak{m}) \subseteq \mathfrak{m}’$, 则称为局部映射, 此时$\phi$自然诱导了环同态$k \to k’$.<br>现在对任意环同态 $\phi: A \to B$, 考虑连续映射<br>$$\hat{\phi}: Spec(B) \to Spec(A), \quad P \to \phi^{-1}(P) = P \cap A = p$$<br>此时 $\phi(A-p) \subseteq B-P$, 即$\phi$诱导了局部映射$\phi_P: A_p \to B_P$.</li>
-<li><strong>半局部环</strong> </li>
+<li><strong>半局部环</strong> 若环$A$只有有限个极大理想$\mathfrak{m}_1, \mathfrak{m}_2, \cdots , \mathfrak{m}_r$, 则称 $A$ 为半局部环(semilocal ring).<br>由于不同极大理想必然互素, 因此<br>$$rad(A) = \mathfrak{m}_1 \cap \cdots \cap \mathfrak{m}_r = \prod \mathfrak{m}_i$$</li>
+<li><p><strong>NAK lemma</strong> 设$I$是环$A$的理想, $M$是有限生成(f.g.)$A$-模. 若 $IM = M$, 则存在$t \in I$ 使得 $(1+t)M = 0$, 特别地, 若还有 $I \subseteq rad(A)$, 则 $M=0$.<br>Proof: 设$M=Am_1 + \cdots + Am_s$, 对 $s$ 数学归纳, $s=0$ 时, 结论显然, 设$M’ = M / Am_s$, 则由归纳假设, $\exists x \in I$ 使得 $(1+x)M’=0$, 即 $(1+x)M \subseteq Aw_s$, 由于 $M = IM$, 我们有 $(1+x)M = I(1+x)M \subseteq I(Aw_s) = Iw_s$, 因此存在$y \in I$使得$(1+x)w_s = yw_s$. 所以<br>$(1+x-y)(1+x)M = 0$, $t = x-y+x+(x-y)x$ 即为所求.<br><strong>NAK lemma</strong> 常用如下应用形式: $I$为环$A$的理想, $N \subset M$ 为$A$-模, 若 $M = N + IM$, 且$I$幂零或$M$有限生成, 则$M=N$.</p>
+<blockquote>
+<p>不要以为有限生成, 理想幂零, 环是整环或者reduced条件很苛刻, 其实实际碰到的也都是这些环, 主要问题在于有没有丰富的结果, 这些条件在何时发挥着作用. 有限生成可以用数学归纳, 幂零理想可以用于幂次和根理想.</p>
+</blockquote>
+</li>
+<li><p>给定局部环 $(A, \mathfrak{m},k)$ , $M$是$A$-模, 若$\mathfrak{m}$ 幂零(例如$A$是Artinian)或者$M$有限生成, 则$M$的子集$G$生成$M$, 当且仅当它在$M/\mathfrak{m}M = M \ otimes k$下像 $\bar{G}$ 生成 $M \otimes k$.</p>
+<blockquote>
+<p>由于$M \otimes k$是域$k$上的向量空间, 因此它的一组基提升之后就能生成 $M$, 但是一般地并不能保证这些生成元线性无关.</p>
+</blockquote>
+</li>
+<li><p>$M$-regular: $a \in A$ 称为 $M$-regular, 若 $0 \to M \xrightarrow{a} M$, 显然, $M$-regular元全体构成了一个乘闭子集. 设$S_0$为$A$-regular元全体, 则 $S_0^{-1}A$称为$A$的total quotient ring. 此时 $\phi A \to S_0{-1}A$ 是环单同态.</p>
+</li>
+<li><p>若$M$是Noetherian环$A$上有限生成模,那么我们有投射表示:<br>$$ \cdots \to X_i \to X_{i+1} \to \cdots X_0 \to M \to 0$$<br>其中 $X_i$为有限自由$A$-模, 特别地, 此时 $M$是有限表示(finite presentation). 此时多项式环$A[x_1, \cdots, x_n]$也是Noetherian, 类似的形式幂级数环$A[[x_1, \cdots, x_n]]$也是Noetherian, $A$ 上的有限维代数也是Noetherian.</p>
+<blockquote>
+<p>任意环中, 理想链的长度不低于极大理想的个数.</p>
+</blockquote>
+</li>
+<li><p>环$A$是Artinian, 当且仅当它作为$A$-模是有限长的, 当且仅当它是Noetherian, 并且它的素理想都是极大的.</p>
+</li>
+<li>设$\mathfrak{a}$是环$A$的理想, $b \in A$, 若$\mathfrak{a} + bA$和$\mathfrak{a}:bA$都有限生成, 则$\mathfrak{a}$有限生成.<br>Proof: 设$a_i \in \mathfrak{a},\quad b_j \in A$使得$\mathfrak{a} + bA = \sum a_iA + bA$且$\mathfrak{a} : bA = \sum c_j A$. 设$\mathfrak{a}’ = \sum a_iA + \sum bc_j A \subseteq \mathfrak{a}$. 对任意 $a \in \mathfrak{a}$, 我们有 $a \in \mathfrak{a}’ + bA$, 即$a \equiv rb \mod \mathfrak{a}’$. 因此 $rb \in \mathfrak{a}$. 即 $r \in \mathfrak{a}: bA$, $rb \in \mathfrak{a}’$, 因此$a \in \mathfrak{a}’$, 即$\mathfrak{a} = \mathfrak{a}’$.</li>
+<li>(Cohen)环$A$是Noetherian, 当且仅当它的每个素理想都是有限生成的.<br>Proof: 记$A$中所有非有限生成理想构成的集合为$F$, 取$F$中极大元$\mathfrak{a}$(zorn引理保证可行性), 那么由条件知道$\mathfrak{a}$不是素理想, 因此存在 $a,b \in A$, 使得 $a b,\notin \mathfrak{a}$且$ab \in \mathfrak{a}$. 又因为 $\mathfrak{a}$的极大性知: $\mathfrak{a}+bA$和$\mathfrak{a}:bA$有限生成, 所以 $\mathfrak{a}$有限生成, 所以$F = \emptyset$.</li>
+<li>定义$Supp(M) = \lbrace p \in Spec(A) | M_p \neq  0 \rbrace$. 若$M$有限生成, 则 $Supp(M) = V(Ann(M))$.</li>
+</ol>
+<h2 id="u5E73_u5766_u6027_28Flatness_29"><a href="#u5E73_u5766_u6027_28Flatness_29" class="headerlink" title="平坦性(Flatness)"></a>平坦性(Flatness)</h2><p>设 $S: \cdots \to N  \to N’ \to N’’ \to \cdots$ 是任意$A$-模序列.<br>称$A$-模$M$是平坦的, 如果$S$正合, 则$S \otimes M$正合.<br>称$M$忠实平坦的(faithful flat), 如果$S$正合当且仅当$S \otimes M$ 正合.<br>例子: 投射模是平坦的, 自由模是忠实平坦的.</p>
+<h4 id="u5E73_u5766_u6A21_u7684_u7B49_u4EF7_u523B_u753B"><a href="#u5E73_u5766_u6A21_u7684_u7B49_u4EF7_u523B_u753B" class="headerlink" title="平坦模的等价刻画"></a>平坦模的等价刻画</h4><ol>
+<li>$M$是平坦的.</li>
+<li>若$0 \to N \to N’$ exact, 则 $0 \to N \otimes M \to N’ \otimes M$ exact.</li>
+<li>对任意(有限生成)理想$I$, $0 \to I \otimes M \to M$ exact. 即 $I \otimes M \simeq IM$.</li>
+<li>$Tor_1 ^A(M,A/I) = 0$ 对任意(有限生成)理想$I$成立.</li>
+<li>$Tor_1 ^A(M,N) = 0$ 对任意(有限生成)模$N$成立.</li>
+<li>若 $\sum a_i x_i = 0$, 则存在$b_{ij} \in A, y_j \in M$使得$\sum a_i b_{ij} = 0$ 且 $x_i = \sum b_{ij}y_j$. <blockquote>
+<p>1 -&gt; 6 -&gt; 3.</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="u5E73_u5766_u6A21_u7684_u57FA_u672C_u6027_u8D28"><a href="#u5E73_u5766_u6A21_u7684_u57FA_u672C_u6027_u8D28" class="headerlink" title="平坦模的基本性质"></a>平坦模的基本性质</h4><p><strong>Transitivity</strong>: 设$\phi: A \to B$是平坦环同态(即$B$看做$A$-模是平坦的), 那么平坦$B$-模$N$也是平坦$A$模. (直接用定义证明即可)</p>
+<p><strong>Change of base</strong>: 设$\phi: A \to B$ 是环同态, 若$M$是平坦$A$-模, 则 $M \otimes B$ 是平坦$B$-模.</p>
+<p><strong>Localization</strong>: $S^{-1}A$ 是平坦 $A$-模. (直接用元素定义可证)</p>
+<p><strong>Tor函子和张量函子交换</strong>: 设$\phi: A \to B$是平坦同态, $M,N$是$A$-模, 则有 $Tor_i ^A(M,N) \otimes _A B = Tor_i ^B(M \otimes_A B,N \otimes_A B)$.<br>当$A$ Noetherian且$M$有限生成, 则$Ext_i ^A(M,N) \otimes _A B = Ext_i ^B(M \otimes_A B,N \otimes_A B)$<br>Proof: 给定$M$的一个投射(自由)表示: $\cdots \to X_1 \to X_0 \to M \to 0$. 由于$B_A$平坦, 我们得到$M \otimes_A B$ 的投射表示: $\cdots \to X_1 \otimes_A B  \to X_0 \otimes_A B \to M \otimes_A B \to 0$. 因此我们有:<br>$$ Tor_i ^B(M \otimes_A B,N \otimes_A B) = H_i(X. \otimes_A N \otimes_A B) = H_i(X. \otimes_A N)\otimes_A B = Tor_i ^A(M,N) \otimes _A B $$<br>当$A$ Noetherian且$M$有限生成时, 我们可以给$M$的一个有限自由表示, 再由$B$平坦得到了, $M \otimes _A B$的有限自由表示:<br>$\cdots \to X_1 \otimes_A B \to X_0 \otimes_A B \to M \otimes_A B \to 0$ 由此得到复形:<br>$$ 0 \to \hom_B(M \otimes _A B, N \otimes _A B) \to  \hom_B(X_0 \otimes _A B, N \otimes _A B) \to \hom_B(X_1 \otimes _A B, N \otimes _A B) \to \cdots $$<br>由于 $X_i$ 是有限自由模, 因此 $\hom_B(X_i \otimes B, N \otimes B) = \hom_A(X_i, N) \otimes _A B$. 所以<br>$$Ext_i ^B(M \otimes_A B,N \otimes_A B) = H_i(\hom_A(X_i, N) \otimes _A B) = H_i(\hom_A(X_i, N)) \otimes _A B = Ext_i ^A(M,N) \otimes _A B$$</p>
+<blockquote>
+<p>特别地, 去 $B = S^{-1}A$.</p>
+</blockquote>
+<p>设$M$是平坦$A$-模, 则$A$-regular元都是$M$-regular元. 这只因为 $0 \to A \xrightarrow{a} A$ 可推出 $0 \to M \xrightarrow{a}M$.</p>
+<h4 id="u5C40_u90E8_u73AF_u4E0A_u6709_u9650_u751F_u6210_u6A21_u662F_u81EA_u7531_u6A21"><a href="#u5C40_u90E8_u73AF_u4E0A_u6709_u9650_u751F_u6210_u6A21_u662F_u81EA_u7531_u6A21" class="headerlink" title="局部环上有限生成模是自由模"></a>局部环上有限生成模是自由模</h4><p>$(A,\mathfrak{m},k)$是局部环, $M$是平坦$A$-模, 若$\mathfrak{m}$幂零或$M$有限生成, 则 $M$是自由模.<br>在”基本概念21”中, $G$生成了$M$, 如果 $G$ 中元素线性无关, 那么 $G$自然就是$M$的一组基(从而是自由模), 也就是说, 我们只需证明$G =\lbrace x_1 \cdots x_n \rbrace$在 $M/mM = M \otimes k$下的象线性无关, 则由$G$线性无关. 而”$\mathfrak{m}$幂零或$M$有限生成”这个条件本质上是保证$M/mM \neq 0$(由NAK lemma). 然后对$n$应用数学归纳, 并利用”平坦模等价刻画6”说明线性无关性. 从而命题得证.</p>
+<blockquote>
+<p>局部环上的投射模都是自由模</p>
+</blockquote>
+<h4 id="u5E73_u5766_u6A21_u597D_u5E73_u57660-0"><a href="#u5E73_u5766_u6A21_u597D_u5E73_u57660-0" class="headerlink" title="平坦模好平坦0.0"></a>平坦模好平坦0.0</h4><p>设$A \to B$是平坦同态, 设$I,J$是$A$是理想, 则</p>
+<ol>
+<li>$(I \cap J)B = IB \cap JB$ </li>
+<li>$(I : J)B = IB : JB$, 其中$J$是有限生成的.<br>Proof: 由正合列: $0 \to I \cap J \to A \to A/I \otimes A/J$, 张量上$B$得到 $0 \to (I \cap J)B \to B \to B/IB \otimes B/JB$. 因此$(I \cap J)B = IB \cap JB$.<br>当$J$有限生成是, 只需证明$J = aA$的形式: 由正合列$0 \to (I :aA) \to A \xrightarrow{f} \to A/I$. 其中 $f(x) = ax<br>\mod I$. 张量上$B$即可得到结论, 对于一般情况应用<br>$$ (I: \sum_{i=1} ^n a_i A) = \bigcap_{i=1} ^n (I : a_i A)$$</li>
+</ol>
+<h4 id="u5E73_u5766_u7684_u5C40_u90E8_u6574_u4F53_u6027"><a href="#u5E73_u5766_u7684_u5C40_u90E8_u6574_u4F53_u6027" class="headerlink" title="平坦的局部整体性"></a>平坦的局部整体性</h4><p>设$f: A \to B$是环同态(即$B$是交换结合$A$代数), 那么下面条件等价:</p>
+<ol>
+<li>$B$ 作为$A$-模平坦.</li>
+<li>$B_P$ 作为$A_p$模平坦, 其中$p = P \cap A, \quad P \in Spec(B)$</li>
+<li>$B_P$ 作为$A_p$模平坦, 其中$p = P \cap A, \quad P \in \omega(B)$<br>Proof: $1 \to 2 \to 3$ 显然, $3 \to 1$, 只需证明 $Tor_1 ^A(B,N)=0$. 由$Tor_1 ^{A_p}(B_P, N_p) = 0, P \in \omega(B)$. 知道结论成立.</li>
+</ol>
+<h3 id="u5FE0_u5B9E_u5E73_u5766_28faithful_flat_f-f-_29"><a href="#u5FE0_u5B9E_u5E73_u5766_28faithful_flat_f-f-_29" class="headerlink" title="忠实平坦(faithful flat f.f.)"></a>忠实平坦(faithful flat f.f.)</h3><p>一个自然的问题, 平坦模何时成为忠实平坦模呢?<br>设$M$是$A$-模, 下面条件等价</p>
+<ol>
+<li>$M$是f.f.$A$-模;</li>
+<li>$M$是平坦$A$-模, 且对任意$A$-模$N \neq 0$, $N \otimes M \neq 0$;</li>
+<li>$M$是平坦$A$-模, 且对任意$A$的极大理想$\mathfrak{m}$, $mM \neq M$.<br>Proof: $1 \to 2$: 由$0 \to N \to 0$和$0 \to N \otimes M \to 0$同时正合性证毕. $2 \to 3$: 由于$A/\mathfrak{m} \neq 0$, 所以 $M/\mathfrak{m} M \simeq A/\mathfrak{m} \otimes M \neq 0$. $3 \to 2$: 对任意$0 \neq x \in N$, 存在$I$使得$Ax \simeq A/I$, 设$\mathfrak{m}$为包含$I$的一个极大理想, 于是$IM \subseteq \mathfrak{m}M \subset M$, 从而 $(A/I)\otimes M = M/IM neq 0$. 又由$M$平坦知: $0 \to (A/I) \otimes M \to N \otimes M$正合, 所以$N \otimes M \neq 0$. $2 \to 1$: 设 $S: N’ \xrightarrow{f} N \xrightarrow{g} \to N’’$ 为$A$-模序列. 若 $S \otimes M : N’\otimes M \xrightarrow{\hat{f}} N \otimes M  \xrightarrow{\hat{g}} \to N’’\otimes M$. 由于 $- \otimes M$函子正合. $Im(gf) \otimes M = Im(\hat{f}\hat{g})=0$. 从而$Im(gf)=0$, 即$S$是复形, $H(S) \otimes M = H(S \otimes M) = 0$, 从而$H(S) = 0$, 证毕.<blockquote>
+<p>$2 \to 1$ 的证明很有意思.</p>
+</blockquote>
+</li>
 </ol>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》.</p>]]>
+    <![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指”含幺交换环(commutative ring with identity)”</p>]]>
     
     </summary>
     
