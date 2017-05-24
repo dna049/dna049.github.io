@@ -134,8 +134,8 @@
     <link href="http://dna049.com/2017/05/23/CommAlg/"/>
     <id>http://dna049.com/2017/05/23/CommAlg/</id>
     <published>2017-05-23T00:40:06.000Z</published>
-    <updated>2017-05-24T03:14:25.000Z</updated>
-    <content type="html"><![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指”含幺交换环(commutative ring with identity)”</p>
+    <updated>2017-05-24T04:27:09.000Z</updated>
+    <content type="html"><![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指<em>含幺交换环(commutative ring with identity)</em></p>
 <a id="more"></a>
 <h2 id="u57FA_u672C_u6982_u5FF5"><a href="#u57FA_u672C_u6982_u5FF5" class="headerlink" title="基本概念"></a>基本概念</h2><p>可以说书中没一句废话, 开头直接给出下面概念, 并且叙述一些常见等价刻画: </p>
 <ol>
@@ -201,7 +201,7 @@
 <p>特别地, 去 $B = S^{-1}A$.</p>
 </blockquote>
 <p>设$M$是平坦$A$-模, 则$A$-regular元都是$M$-regular元. 这只因为 $0 \to A \xrightarrow{a} A$ 可推出 $0 \to M \xrightarrow{a}M$.</p>
-<h4 id="u5C40_u90E8_u73AF_u4E0A_u6709_u9650_u751F_u6210_u6A21_u662F_u81EA_u7531_u6A21"><a href="#u5C40_u90E8_u73AF_u4E0A_u6709_u9650_u751F_u6210_u6A21_u662F_u81EA_u7531_u6A21" class="headerlink" title="局部环上有限生成模是自由模"></a>局部环上有限生成模是自由模</h4><p>$(A,\mathfrak{m},k)$是局部环, $M$是平坦$A$-模, 若$\mathfrak{m}$幂零或$M$有限生成, 则 $M$是自由模.<br>在”基本概念21”中, $G$生成了$M$, 如果 $G$ 中元素线性无关, 那么 $G$自然就是$M$的一组基(从而是自由模), 也就是说, 我们只需证明$G =\lbrace x_1 \cdots x_n \rbrace$在 $M/mM = M \otimes k$下的象线性无关, 则由$G$线性无关. 而”$\mathfrak{m}$幂零或$M$有限生成”这个条件本质上是保证$M/mM \neq 0$(由NAK lemma). 然后对$n$应用数学归纳, 并利用”平坦模等价刻画6”说明线性无关性. 从而命题得证.</p>
+<h4 id="u5C40_u90E8_u73AF_u4E0A_u6709_u9650_u751F_u6210_u6A21_u662F_u81EA_u7531_u6A21"><a href="#u5C40_u90E8_u73AF_u4E0A_u6709_u9650_u751F_u6210_u6A21_u662F_u81EA_u7531_u6A21" class="headerlink" title="局部环上有限生成模是自由模"></a>局部环上有限生成模是自由模</h4><p>$(A,\mathfrak{m},k)$是局部环, $M$是平坦$A$-模, 若$\mathfrak{m}$幂零或$M$有限生成, 则 $M$是自由模.<br>在<em>基本概念21</em>中, $G$生成了$M$, 如果 $G$ 中元素线性无关, 那么 $G$自然就是$M$的一组基(从而是自由模), 也就是说, 我们只需证明$G =\lbrace x_1 \cdots x_n \rbrace$在 $M/mM = M \otimes k$下的象线性无关, 则由$G$线性无关. 而<em>$\mathfrak{m}$幂零或$M$有限生成</em>这个条件本质上是保证$M/mM \neq 0$(由NAK lemma). 然后对$n$应用数学归纳, 并利用<em>平坦模等价刻画6</em>说明线性无关性. 从而命题得证.</p>
 <blockquote>
 <p>局部环上的投射模都是自由模</p>
 </blockquote>
@@ -227,7 +227,7 @@
 </ol>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指”含幺交换环(commutative ring with identity)”</p>]]>
+    <![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指<em>含幺交换环(commutative ring with identity)</em></p>]]>
     
     </summary>
     
