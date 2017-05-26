@@ -134,7 +134,7 @@
     <link href="http://dna049.com/2017/05/23/CommAlg/"/>
     <id>http://dna049.com/2017/05/23/CommAlg/</id>
     <published>2017-05-23T00:40:06.000Z</published>
-    <updated>2017-05-24T09:59:55.000Z</updated>
+    <updated>2017-05-26T08:48:32.000Z</updated>
     <content type="html"><![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指<strong>含幺交换环(commutative ring with identity)</strong></p>
 <a id="more"></a>
 <h2 id="u57FA_u672C_u6982_u5FF5"><a href="#u57FA_u672C_u6982_u5FF5" class="headerlink" title="基本概念"></a>基本概念</h2><p>可以说书中没一句废话, 开头直接给出下面概念, 并且叙述一些常见等价刻画: </p>
@@ -281,6 +281,32 @@
 <p>在Noetherian空间中, 每个闭集都可以写成有限个不可约闭子集的并. 并且这些不可约子集互不包含, 称每一个都为这个闭集的不可约部分.</p>
 </blockquote>
 <h4 id="u5C40_u90E8_u95ED_u96C6_28locally_closed_29"><a href="#u5C40_u90E8_u95ED_u96C6_28locally_closed_29" class="headerlink" title="局部闭集(locally closed)"></a>局部闭集(locally closed)</h4><p>一个集合$Z$ 称为 locally closed 如果 $\forall z \in Z, \quad \exists U_z \mbox{ 使得 } U_z \cap Z$ 是开邻域$U_z$ 中的闭集. 这等价于说 $Z$是拓扑空间$X$中某个开集和闭集的交. 特别地, 开集和闭集都是locally closed.</p>
+<h4 id="Noetherian_u7A7A_u95F4_u4E2Dconstructible_u96C6"><a href="#Noetherian_u7A7A_u95F4_u4E2Dconstructible_u96C6" class="headerlink" title="Noetherian空间中constructible集."></a>Noetherian空间中constructible集.</h4><p>设$X$是一个Noetherian空间, 称集合$Z \subseteq$是一个constructible集, 如果它是有限个locally close集合的并.<br>(非Noetherian空间中也可以定义constructible集, 但是很复杂)<br>显然constructible集关于交并差都是封闭的.</p>
+<p>设$X$是一个Noetherian空间, 称集合$Z \subseteq$是一个pro-constructible(对应的ind-constructible)集, 如果它是任意一族constructible集的交(对应的并).</p>
+<p><strong>constructible集</strong> 判定方法, Noetherian空间$X$的子集$Z$称为constructible集的充要条件是:<br>对任意不可约闭子集$X_0 \subseteq X$, 若$X_0 \cap Z$在$X_0$中稠密, 则$X_0 \cap Z$ 包含 $X_0$ 中某个非空开集.<br>Proof: 必要性: 若$Z$是constructible集, 则<br>$$X<em>0 \cap Z = \bigcup \</em>{i=1} ^m (U_i \cap F_i)$$<br>其中 $U_i$是$X$中开集, $F_i$是$X$中不可约闭子集(这是可以做到的是因为Noetherian空间中闭集都可以写成有限个不可约闭集的并), 且$U_i \cap F_i$是非空的(如果空就直接踢掉了). 则$\bar{U_i \cap F_i} = F_i$(这是因为否则$\bar{U_i \cap F_i} \cup (c(U_i) \cap F_i) = F_i$, 但是$F_i$是不可约闭集). 因此<br>$$X_0 = \bar{X_0 \cap Z} = \bigcup _{i=1} ^m F_i$$<br>因此必有某个$F_i = X_0$. 从而 $U_i \cap X_0 = U_i \cap F_i$是$X_0$中的一个非空开集.<br>充分性: 我们对$\bar{Z}$进行应用所谓的超限数学归纳. 首先, $\emptyset$是constructible集, 其次假设$\bar{Z}$中所有满足条件且$\bar{Z’} \subset \bar{Z}$(严格包含)的$Z’$都是constructible集. 我们证明此时$Z$也是constructible集:<br>设$\bar{Z} =  F_1 \cup \dots \cup F_r$ 是$\bar{Z}$的不可约分解. 那么 $\bar{F_1 \cap Z} =  F_1$(毕竟不可约闭集). 因此, 由条件存在 $F_1$中的真子集$F_1’$使得$\emptyset \neq F_1 - F_1’ \subseteq Z$. 此时定义$F^{\star} = F_1’ \cap F_2 \cap cdots \cap F_r$. 那么 $Z = (F_1 - F_1’) \cup (Z \cap F^{\star})$. 由于 $F_1 - F_1’$ 是 locally closed, 又因为$Z \cap F^{\star}$ 满足条件: 若$X_0$是不可约闭集且$X_0 = \bar{Z \cap F^{\star} \cap X_0} \subseteq \bar{F^{\star}} = F^{\star}$, 从而$Z \cap F^{\star} \cap X_0 = Z \cap \X_0$ 从而包含$\X_0$ 中的一个非空开集. 并且 $\bar{Z \cap F^{\star}} \subseteq F^{\star} \subset Z$. 由数学归纳知$Z \cap F^{\star}$是constructible集. 从而$Z = (F_1 - F_1’) \cup (Z \cap F^{\star})$是constructible集.</p>
+<blockquote>
+<p>以上结果对一般地Noetherian空间都成立.</p>
+</blockquote>
+<h4 id="u8003_u5BDF_u4E0A_u8FF0_u5B9A_u4E49_u5728_24Spec_28A_29_24_u4E0A_u7684_u5177_u4F53_u8868_u73B0"><a href="#u8003_u5BDF_u4E0A_u8FF0_u5B9A_u4E49_u5728_24Spec_28A_29_24_u4E0A_u7684_u5177_u4F53_u8868_u73B0" class="headerlink" title="考察上述定义在$Spec(A)$上的具体表现"></a>考察上述定义在$Spec(A)$上的具体表现</h4><p><strong>$Spec(A)$ 中的不可约闭集</strong>: 设$F$是$Spec(A)$中的闭集, 则$F$不可约当且仅当, $F = V(p)$, 其中$p \in Spec(A)$, 可以看出此时$p$由$F$唯一决定.<br>充分性由$p \in V(p)$显然.<br>必要性. $F = V(I)$. 若$I$不是素理想, 则存在$a, b \notin I, ab \in I$, 即$F = (F \cap V(a)) \cup (F \cap V(b))$. 矛盾于$F$不可约.</p>
+<p>设$\phi: A \to B$是环同态, 设$X = Spec(A), Y = Spec(B)$, 由自然的 $f: Y \to A$. 那么$f(Y)$在$X$中稠密, 当且仅当 $\ker(\phi) \subseteq nil(A)$. 特别地, 当$A$reduce时, $f(Y)$在$X$中稠密, 当且仅当$\phi$是单同态.<br>证明 $\bar{f(Y)} = V(I)$, 其中$I = \bigcap_{p \in Y} \phi^{-1}(p) = \phi^{-1}(\bigcap_{p \in Y} p) = \phi^{-1}(nil(B))$. 显然 $\ker(\phi) \subseteq I$.<br>若$f(Y)$在$X$中稠密, 则$V(I) = X$. 因此$I \subseteq nil(A)$, 从而 $\ker(\phi) \subseteq nil(A)$. 另一方面, 若$\ker(\phi) \subseteq nil(A)$, 则$I = \phi^{-1}(nil(B)) \subseteq nil(A)$. 从而 $\bar{f(Y)} = X$.</p>
+<blockquote>
+<p>之前提到了, $Spec$ 是环范畴到拓扑范畴的逆变函子, 现在是说, 这个拓扑空间的一些性质可以与环的一些性质有一个对应关系, 这个函子保持了很好的性质.</p>
+</blockquote>
+<p>之前关于constructible集的定义都是在Noetherian空间中考虑的, 因此我们下面考虑的环一般是Noetherian环:</p>
+<p><strong>(Chevalley)</strong> 设$A$是Noetherian环, $B$是$A$上的有限生成代数(从而也是Noetherian环). 设$\phi: A \to B$ 是自然映射, 记$X = Spec(A), Y = Spec(B)$ 则$f: Y \to X$. 则$f$将$Y$中constructible集映成$X$中的constructible集.</p>
+<blockquote>
+<p>先证明$f(Y)$是constructible集, 在利用下面的引理.</p>
+</blockquote>
+<p>另一方面设$A$是Noetherian环, $X’$是$X = Spec(A)$中的constructible集, 那么存在$A$的有限生成代数$B$使得$Spec(B)$在$Spec(A)$中的像恰好是$X’$.</p>
+<blockquote>
+<p>对于$X’ = D(a) \cap V(I)$, 然后考虑$B = \lbrace 1,a,a^2,\cdots \rbrace ^{-1} (A/I)$, 然后考虑constructible集合.</p>
+</blockquote>
+<p><strong>pro-constructible集</strong> 设$A$是Noetherian环, $\phi: A \to B$, $\bar{\phi}(Spec(B))$是$Spec(A)$中的pro-constructible集.</p>
+<h4 id="24f_3A_spec_28B_29__5Cto_Spec_28A_29_24_u6210_u4E3A_28_u5F00_2C_u95ED_29_u8FDE_u7EED_u6620_u5C04"><a href="#24f_3A_spec_28B_29__5Cto_Spec_28A_29_24_u6210_u4E3A_28_u5F00_2C_u95ED_29_u8FDE_u7EED_u6620_u5C04" class="headerlink" title="$f: spec(B) \to Spec(A)$成为(开,闭)连续映射"></a>$f: spec(B) \to Spec(A)$成为(开,闭)连续映射</h4><p>设$A$是Noetherian环, $B$是$A$上的有限生成代数, 假设它们之间的自然映射$\phi: A \to B$满足Going-down条件, 则对应的自然映射$f: Spec(B) \to Spec(A)$ 是开(连续)映射.</p>
+<blockquote>
+<p>设$U$是$Spec(B)$中开集, 则$f(U)$是constructible集, 再由Going-down条件知道$Spec(A) - f(U)$是闭集.</p>
+</blockquote>
+<p>设$\phi: A \to B$满足Going-up条件, 且$B$是Noetherian环, 则$f: Spec(B) \to Spec(A)$ 是闭映射.</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指<strong>含幺交换环(commutative ring with identity)</strong></p>]]>
