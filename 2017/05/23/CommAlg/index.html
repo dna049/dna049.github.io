@@ -113,7 +113,7 @@
 <meta property="og:url" content="http://dna049.com/2017/05/23/CommAlg/index.html">
 <meta property="og:site_name" content="0.肆玖">
 <meta property="og:description" content="在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指含幺交换环(commutative ring with identity)">
-<meta property="og:updated_time" content="2017-05-27T06:57:06.000Z">
+<meta property="og:updated_time" content="2017-05-27T06:58:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Commutative Algebra》by Matsumura 读书笔记">
 <meta name="twitter:description" content="在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指含幺交换环(commutative ring with identity)">
@@ -576,7 +576,7 @@
 <p>本节设$M$是Noetherian环$A$上的模.</p>
 </blockquote>
 <p>称一个$A$-模是<strong>co-primary</strong>如果它仅有一个associated prime ideal. $N \subseteq M$称为$M$的primary子模, 如果$M/N$是co-primary. 若 $Ass(M/N) = \lbrace p \rbrace$, 则称$N$为$p$-primary或称$N$属于$p$(的primary submodule).</p>
-<h4 id="co-primary_u7B49_u4EF7_u523B_u753B"><a href="#co-primary_u7B49_u4EF7_u523B_u753B" class="headerlink" title="co-primary等价刻画"></a>co-primary等价刻画</h4><p>$M$是co-primary的, 当且仅当$M \neq 0$, 且若$a \in A$是$M$的零因子, 则$a$在$M$上locally nilpotent( $\forall x in M, \exists n, such that a^n x = 0$ ).<br>Proof: 若$Ass(M) = \lbrace p \rbrace$, 则对任意$x \in M$, $Ass(Ax) \subseteq Ass(M) = \lbrace p \rbrace$, 若$Ass(Ax) = \emptyset$(取$n = 1$即可), 若$Ass(Ax) =  \lbrace p \rbrace$. 因此$p$是$Supp(Ax) = V(Ann(x))$中唯一的极小元素. 即$p = \sqrt{Ann(x)}$.<br>另一方面, 定义$p = \lbrace a \in A | a \mbox{在} M \mbox{上 locally nilpotent} \rbrace$. 它显然是一个理想. 对任意$q \in Ass(M)$, 存在 $x \in M$使得$q = Ann(x)$. 因此$p \subseteq \sqrt{q} = q$. 另一方面由于$p$为所有associated prime理想的并, 因为$q \subseteq p$. 从而$Ass(M) = \lbrace p rbrace$.</p>
+<h4 id="co-primary_u7B49_u4EF7_u523B_u753B"><a href="#co-primary_u7B49_u4EF7_u523B_u753B" class="headerlink" title="co-primary等价刻画"></a>co-primary等价刻画</h4><p>$M$是co-primary的, 当且仅当$M \neq 0$, 且若$a \in A$是$M$的零因子, 则$a$在$M$上locally nilpotent( $\forall x in M, \exists n, such that a^n x = 0$ ).<br>Proof: 若$Ass(M) = \lbrace p \rbrace$, 则对任意$x \in M$, $Ass(Ax) \subseteq Ass(M) = \lbrace p \rbrace$, 若$Ass(Ax) = \emptyset$(取$n = 1$即可), 若$Ass(Ax) =  \lbrace p \rbrace$. 因此$p$是$Supp(Ax) = V(Ann(x))$中唯一的极小元素. 即$p = \sqrt{Ann(x)}$.<br>另一方面, 定义$p = \lbrace a \in A | a \mbox{在} M \mbox{上 locally nilpotent} \rbrace$. 它显然是一个理想. 对任意$q \in Ass(M)$, 存在 $x \in M$使得$q = Ann(x)$. 因此$p \subseteq \sqrt{q} = q$. 另一方面由于$p$为所有associated prime理想的并, 因为$q \subseteq p$. 从而$Ass(M) = \lbrace p \rbrace$.</p>
 <blockquote>
 <p>当$M = A/q$时, 上述条件恰好就是$q$为准素理想的定义.</p>
 </blockquote>
@@ -588,7 +588,7 @@
 <blockquote>
 <p>任意准素分解都可以化成irredundant准素分解.</p>
 </blockquote>
-<p>设$N = Q_1 \cap \cdots \cap Q_r$是$N$的一个irredundant准素分解, 若$Q_i$属于$p_i$. 则$Ass(M/N) = \lbrace p_1 \cdots p_r rbrace$.<br>Proof: 由自然单同态$0 \to M/Q_1 \oplus \cdots \oplus M/Q_r$. 因此$M/N \subseteq \cup Ass(M/Q_i) = \lbrace p_1 \cdots p_r rbrace$. 另一方面 $(Q_2 \cap \cdots \cap Q_r)/N$同构于$M/Q_1$的子模, 从而$Ass(Q_2 \cap \cdots \cap Q_r)/N) = \lbrace p_1<br> rbrace$. 从而$p_1 \in Ass(M)$. 其它的类似.</p>
+<p>设$N = Q_1 \cap \cdots \cap Q_r$是$N$的一个irredundant准素分解, 若$Q_i$属于$p_i$. 则$Ass(M/N) = \lbrace p_1 \cdots p_r \rbrace$.<br>Proof: 由自然单同态$0 \to M/Q_1 \oplus \cdots \oplus M/Q_r$. 因此$M/N \subseteq \cup Ass(M/Q_i) = \lbrace p_1 \cdots p_r \rbrace$. 另一方面 $(Q_2 \cap \cdots \cap Q_r)/N$同构于$M/Q_1$的子模, 从而$Ass(Q_2 \cap \cdots \cap Q_r)/N) = \lbrace p_1<br> \rbrace$. 从而$p_1 \in Ass(M)$. 其它的类似.</p>
 <p>设$N$是$M$的一个$p$-primary子模. 设$q$是一个理想. 若$p \subseteq q$, 则$N = M \cap N_q$, 反之 $N_q = M_q$.<br>Proof: 由于$Ass(M/N) = \lbrace p \rbrace$. 若$p \subseteq q$, 则$A-q$中无$M/N$的零因子, 即$M/N \to (M/N)_q = M_q / N_q$是单射, 从而$N = M \cap N_q$. 反之<br>$Ass(M_q/N_q) = Ass(M/N) \cap \lbrace  \mbox{包含于} p \mbox{的素理想} \rbrace = \emptyset$. 从而$M_q/N_q = 0$.</p>
 <blockquote>
 <p>推论, 若$N = Q_1 \cap \cdots \cap Q_r$是$N$的一个irredundant准素分解, 其中$p_1$是$Ass(M/N)$中的极小素理想. 则$Q_1 = M \cap N_{p_1}$ 由$N$和$p_1$决定.</p>
