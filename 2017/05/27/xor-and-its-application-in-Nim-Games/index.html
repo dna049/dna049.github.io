@@ -113,7 +113,7 @@
 <meta property="og:url" content="http://dna049.com/2017/05/27/xor-and-its-application-in-Nim-Games/index.html">
 <meta property="og:site_name" content="0.肆玖">
 <meta property="og:description" content="异或运算是一种很神奇用途很广的运算. 从性质上, 异或运算作为二元运算, 关于所有非负整数构成一个Abel群, $0$作为幺元, 每个元的逆元都是自身(等价于说$char(\mathbb{N}^{\star}, xor) = 2$).">
-<meta property="og:updated_time" content="2017-05-27T02:31:57.000Z">
+<meta property="og:updated_time" content="2017-05-27T03:01:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异或运算及其在Nim游戏中的应用">
 <meta name="twitter:description" content="异或运算是一种很神奇用途很广的运算. 从性质上, 异或运算作为二元运算, 关于所有非负整数构成一个Abel群, $0$作为幺元, 每个元的逆元都是自身(等价于说$char(\mathbb{N}^{\star}, xor) = 2$).">
@@ -387,6 +387,9 @@
 <h3 id="u5F02_u6216_u7684_u7B80_u5355_u5E94_u7528"><a href="#u5F02_u6216_u7684_u7B80_u5355_u5E94_u7528" class="headerlink" title="异或的简单应用"></a>异或的简单应用</h3><p>简单的直接贴代码吧, 不废话.</p>
 <h4 id="u7528_u5F02_u6216_u6765_u6539_u53D8_u4E24_u4E2A_u6570"><a href="#u7528_u5F02_u6216_u6765_u6539_u53D8_u4E24_u4E2A_u6570" class="headerlink" title="用异或来改变两个数"></a>用异或来改变两个数</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">swap(UI &amp; a, UI &amp; b)&#123;</span><br><span class="line">	a = a^b;</span><br><span class="line">	b = a^b;</span><br><span class="line">	a = a^b</span><br><span class="line">&#125; <span class="comment">// UI 表示 unsigned int, 写的很骚气.</span></span><br></pre></td></tr></table></figure>
 <h4 id="u5F02_u6216_u627E_u51FA_u552F_u4E00_u51FA_u73B0_u5947_u6570_u6B21_u7684_u6570"><a href="#u5F02_u6216_u627E_u51FA_u552F_u4E00_u51FA_u73B0_u5947_u6570_u6B21_u7684_u6570" class="headerlink" title="异或找出唯一出现奇数次的数"></a>异或找出唯一出现奇数次的数</h4><p>把这一堆数全体直接异或即可.</p>
+<blockquote>
+<p>这个方法可以推广到找出两个只出现奇数次的, 其它出现偶数次的两个数, 方法就是先异或之后的值按照最高位进行标记然后分成两组, 再来一遍.</p>
+</blockquote>
 <h3 id="Nim_u53D6_u77F3_u5B50_u95EE_u9898"><a href="#Nim_u53D6_u77F3_u5B50_u95EE_u9898" class="headerlink" title="Nim取石子问题"></a>Nim取石子问题</h3><p>在2002年国家IO集训队中张一飞写了<a href="透析一类搏弈游戏的解答过程by张一飞.pdf">由感性认识到理性认识——透析一类搏弈游戏的解答过程</a>中明确的表面了这个取Nim石子游戏用异或可以完美的解决.</p>
 <blockquote>
 <p>我把他结果简单表达如下, 并在做一点小小的改变之后得到类似的结果</p>
@@ -403,7 +406,7 @@
 <blockquote>
 <p>若$k!=0$, 由引理知道, 可以减小某个$a_i$使得之后的异或和为$0$;<br>若$k=0$, 则任意改变都会导致异或和不为$0$.</p>
 </blockquote>
-<p>这样操作下去堆数一定在一直减小.<br>对于规则1: 由于空局面是负局面容易看出, 若异或和为$0$则先手负, 反之先手胜.<br>而对于规则2, 由于空局面是胜局面, 这就有些尴尬了.</p>
+<p>这样操作下去堆数一定在一直减小.<br>对于规则1: 由于空局面是负局面容易看出, 若异或和为$0$则先手负, 反之先手胜.<br>而对于规则2, 由于空局面是胜局面,而$1$局面是负局面, 这就有些尴尬了. 并且局面并不能像规则1一样进行分解, 因此十分麻烦. 未完待续.</p>
 
       
     </div>
