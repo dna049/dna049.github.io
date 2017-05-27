@@ -130,11 +130,24 @@
   </entry>
   
   <entry>
+    <title><![CDATA[xor and its application in Nim Games]]></title>
+    <link href="http://dna049.com/2017/05/27/xor-and-its-application-in-Nim-Games/"/>
+    <id>http://dna049.com/2017/05/27/xor-and-its-application-in-Nim-Games/</id>
+    <published>2017-05-27T00:54:12.000Z</published>
+    <updated>2017-05-27T00:54:12.000Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[《Commutative Algebra》by Matsumura 读书笔记]]></title>
     <link href="http://dna049.com/2017/05/23/CommAlg/"/>
     <id>http://dna049.com/2017/05/23/CommAlg/</id>
     <published>2017-05-23T00:40:06.000Z</published>
-    <updated>2017-05-26T08:51:32.000Z</updated>
+    <updated>2017-05-27T00:53:29.000Z</updated>
     <content type="html"><![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指<strong>含幺交换环(commutative ring with identity)</strong></p>
 <a id="more"></a>
 <h2 id="u57FA_u672C_u6982_u5FF5"><a href="#u57FA_u672C_u6982_u5FF5" class="headerlink" title="基本概念"></a>基本概念</h2><p>可以说书中没一句废话, 开头直接给出下面概念, 并且叙述一些常见等价刻画: </p>
@@ -307,6 +320,48 @@
 <p>设$U$是$Spec(B)$中开集, 则$f(U)$是constructible集, 再由Going-down条件知道$Spec(A) - f(U)$是闭集.</p>
 </blockquote>
 <p>设$\phi: A \to B$满足Going-up条件, 且$B$是Noetherian环, 则$f: Spec(B) \to Spec(A)$ 是闭映射.</p>
+<h3 id="Noetherian_u73AF_u4E0A_u7684Associated_Primes"><a href="#Noetherian_u73AF_u4E0A_u7684Associated_Primes" class="headerlink" title="Noetherian环上的Associated Primes"></a>Noetherian环上的Associated Primes</h3><p>给定一个Noetherian环上的模$M$, 我们称$A$的一个素理想为$M$的associated prime, 如果它满足下面等价的条件:</p>
+<ol>
+<li>$\exists x \in M$使得$Ann(x) = p$;</li>
+<li>$M$包含一个子模同构于$A/p$.</li>
+</ol>
+<p>我们把$M$中所有的associated prime ideal记为$Ass(M)$. 有时也用$Ass_A(M)$来防止歧义.</p>
+<blockquote>
+<p>由下面三个结论说明, $Ass(M)$确实是$M$的一个重要不变量.</p>
+<p>(本节)环默认为Noetherian环.</p>
+</blockquote>
+<h4 id="24Ann_28x_29_24_u5168_u4F53_u4E2D_u7684_u6781_u5927_u5143_u5728_24Ass_28M_29_24_u4E2D"><a href="#24Ann_28x_29_24_u5168_u4F53_u4E2D_u7684_u6781_u5927_u5143_u5728_24Ass_28M_29_24_u4E2D" class="headerlink" title="$Ann(x)$全体中的极大元在$Ass(M)$中"></a>$Ann(x)$全体中的极大元在$Ass(M)$中</h4><p>设$p$是$\lbrace Ann(X) | 0 \neq x \in M \rbrace$. 则$p \in Ass(M)$</p>
+<p>由上, 显然可知道 $Ass(M) = \emptyset \Longleftrightarrow M=0$. 即$Ass(M)$是元素是十分丰富的. $M$中的零因子是$Ass(M)$中元素的并.</p>
+<h4 id="24Ass_28M_29_24_u548C_u5C40_u90E8_u5316_u53EF_u4EA4_u6362"><a href="#24Ass_28M_29_24_u548C_u5C40_u90E8_u5316_u53EF_u4EA4_u6362" class="headerlink" title="$Ass(M)$和局部化可交换"></a>$Ass(M)$和局部化可交换</h4><p>给定一个乘闭子集$S$, 记$A’ = S^{-1}A, M’ = S^{-1} B$, 则<br>$$ Ass_A(M’) = f(Ass_{A’}(M’) = Ass_A(M) \cap \lbrace p | p \cap S = \emptyset \rbrace$$<br>其中 $f: \Spec(A’) \to Spec(A)$ 为自然映射.</p>
+<h4 id="24Supp_28M_29_24_u7684_u6781_u5C0F_u5143_u5168_u4F53_u7B49_u4E8E_24Ass_28M_29_24_u7684_u6781_u5C0F_u5143_u5168_u4F53"><a href="#24Supp_28M_29_24_u7684_u6781_u5C0F_u5143_u5168_u4F53_u7B49_u4E8E_24Ass_28M_29_24_u7684_u6781_u5C0F_u5143_u5168_u4F53" class="headerlink" title="$Supp(M)$的极小元全体等于$Ass(M)$的极小元全体"></a>$Supp(M)$的极小元全体等于$Ass(M)$的极小元全体</h4><p>$Ass(M) \subset Supp(M)$ 且$Supp(M)$中的极小元在$Ass(M)$中(从而$Supp(M)$的极小元全体等于$Ass(M)$的极小元全体).<br>Proof: 设$p \in Ass(M)$, 则由正合列 $0 \to A/p \to M$, 从而$0 \to A_p/pA_p \to M_p$ 正合. 由$A_p/pA_p \neq 0$, 从而 $M_p \neq 0$, 从而$p \in Supp(M)$.<br>设$p \in Supp(M)$, 由于局部化和$Ass(M)$可交换, $p \in Ass_A(M)$ 等价于 $pA_p \in Ass_{A_p}(M_p)$. 因此, 我们不妨设$(A, p)$是局部环, $M \neq 0$. 且对任意 $q \subset p, M_q = 0$, 即$Supp(M) = \lbrace p \rbrace$. 由于$Ass(M)$非空, 且包含于$Supp(M)$中, 因此$p \in Ass(M)$.</p>
+<blockquote>
+<p>设$I$是$A$的理想, 则$Ass(A/I)$中的极小元全体为包含$I$的极小素理想全体. 从而 $$ \bigcap _{p \in Ass(A/I)} p = \sqrt{I}$$</p>
+</blockquote>
+<p>若$0 \to M’ \to M \to M’’$ 是$A$-模正合列, 则$Ass(M) \subset Ass(M’) \cup Ass(M’’)$<br>Proof: 设$p \in Ass(M)$, 则存在$N \subseteq M$使得$N \simeq A/p$. 若$N \cap M’ = 0$(本质上是和$f(M’)$的交). 则$N$同构于$M’’$的一个子模, 因此$p \in Ass(M’’)$. 若$N \cap M’ \neq 0$, 则任取$0 \neq x \in N \cap M’$, 则$Ann(x) = p$.</p>
+<p>设$M \neq 0$是Noetherian环上的有限生成模, 则存在(长为$n$的)子模链$(0) = M_0 \subset \cdots \subset M_{n-1} \subset M_n = M$使得$M_i / M_{i-1} = A/p_i}$, 其中 $p_i \in Spec(A)$. 从而$Ass(M) \subset \lbrace p_1 \cdots p_n rbrace\$是有限集.<br>Proof: 由$M \neq 0$ 则$Ass(M) \neq \emptyset$, 选择$M_1 \subseteq M$, 使得$M_1 \simeq A/p_1$, 若$M_1 \neq M$, 再对$M/M_1$做同样的事情, 由于$M$是Noetherian的, 因此次过程在有限步后终止. 又因为<br>$$Ass(M) \subseteq Ass(M_1) \cup Ass(M_2/M_1) \cup \cdots \cup Ass(M_n /M_{n-1})$$<br>再由$Ass(M_i/M_{i-1}) = Ass(A/p_i)=p_i$知结论成立.</p>
+<h3 id="Primary_Decomposition_28_u51C6_u7D20_u5206_u89E3_29"><a href="#Primary_Decomposition_28_u51C6_u7D20_u5206_u89E3_29" class="headerlink" title="Primary Decomposition(准素分解)"></a>Primary Decomposition(准素分解)</h3><blockquote>
+<p>本节设$M$是Noetherian环$A$上的模.</p>
+</blockquote>
+<p>称一个$A$-模是<strong>co-primary</strong>如果它仅有一个associated prime ideal. $N \subseteq M$称为$M$的primary子模, 如果$M/N$是co-primary. 若 $Ass(M/N) = \lbrace p \rbrace$, 则称$N$为$p$-primary或称$N$属于$p$(的primary submodule).</p>
+<h4 id="co-primary_u7B49_u4EF7_u523B_u753B"><a href="#co-primary_u7B49_u4EF7_u523B_u753B" class="headerlink" title="co-primary等价刻画"></a>co-primary等价刻画</h4><p>$M$是co-primary的, 当且仅当$M \neq 0$, 且若$a \in A$是$M$的零因子, 则$a$在$M$上locally nilpotent( $\forall x in M, \exists n, such that a^n x = 0$ ).<br>Proof: 若$Ass(M) = \lbrace p \rbrace$, 则对任意$x \in M$, $Ass(Ax) \subseteq Ass(M) = \lbrace p \rbrace$, 若$Ass(Ax) = \emptyset$(取$n = 1$即可), 若$Ass(Ax) =  \lbrace p \rbrace$. 因此$p$是$Supp(Ax) = V(Ann(x))$中唯一的极小元素. 即$p = \sqrt{Ann(x)}$.<br>另一方面, 定义$p = \lbrace a \in A | a \mbox{在} M \mbox{上 locally nilpotent} \rbrace$. 它显然是一个理想. 对任意$q \in Ass(M)$, 存在 $x \in M$使得$q = Ann(x)$. 因此$p \subseteq \sqrt{q} = q$. 另一方面由于$p$为所有associated prime理想的并, 因为$q \subseteq p$. 从而$Ass(M) = \lbrace p rbrace$.</p>
+<blockquote>
+<p>当$M = A/q$时, 上述条件恰好就是$q$为准素理想的定义.</p>
+</blockquote>
+<h4 id="p-primary_u7684_u4EA4_u4F9D_u7136_u662Fp-primary"><a href="#p-primary_u7684_u4EA4_u4F9D_u7136_u662Fp-primary" class="headerlink" title="p-primary的交依然是p-primary"></a>p-primary的交依然是p-primary</h4><p>设$p$是$A$的素理想, $Q_1, Q_2$是$M$的$p$-primary子模. 则$Q_1 \cap Q_2$也是$M$的$p$-primary子模.</p>
+<blockquote>
+<p>由$0 \to M / Q_1 \cap Q_2 \to M/Q_1 \oplus M/Q_2$ 显然</p>
+</blockquote>
+<h4 id="u51C6_u7D20_u5206_u89E3_u95EA_u4EAE_u767B_u573A"><a href="#u51C6_u7D20_u5206_u89E3_u95EA_u4EAE_u767B_u573A" class="headerlink" title="准素分解闪亮登场"></a>准素分解闪亮登场</h4><p>设$N$是$M$的一个子模, 我们称$N = Q_1 \cap \cdots \cap Q_r$是$N$的一个准素分解, 如果$Q_i$是$M$中的primary子模. 我们称一个准素分解是irredundant如果每个准素子模都不能去掉, 并且$Ass(M/Q_i)$各不相同. 对于任意准素分解, 我们都可以通过有限次剔除之后使得它的每一个准素子模都不可去掉, 而如果有两个准素子模属于相同的associated prime $p$, 则我们可以把它们交起来构成一个新的准素子模, 从而可知</p>
+<blockquote>
+<p>任意准素分解都可以化成irredundant准素分解.</p>
+</blockquote>
+<p>设$N = Q_1 \cap \cdots \cap Q_r$是$N$的一个irredundant准素分解, 若$Q_i$属于$p_i$. 则$Ass(M/N) = \lbrace p_1 \cdots p_r rbrace$.<br>Proof: 由自然单同态$0 \to M/Q_1 \oplus \cdots \oplus M/Q_r$. 因此$M/N \subseteq \cup Ass(M/Q_i) = \lbrace p_1 \cdots p_r rbrace$. 另一方面 $(Q_2 \cap \cdots \cap Q_r)/N$同构于$M/Q_1$的子模, 从而$Ass(Q_2 \cap \cdots \cap Q_r)/N) = \lbrace p_1<br> rbrace$. 从而$p_1 \in Ass(M)$. 其它的类似.</p>
+<p>设$N$是$M$的一个$p$-primary子模. 设$q$是一个理想. 若$p \subseteq q$, 则$N = M \cap N_q$, 反之 $N_q = M_q$.<br>Proof: 由于$Ass(M/N) = \lbrace p \rbrace$. 若$p \subseteq q$, 则$A-q$中无$M/N$的零因子, 即$M/N \to (M/N)_q = M_q / N_q$是单射, 从而$N = M \cap N_q$. 反之<br>$Ass(M_q/N_q) = Ass(M/N) \cap \lbrace  \mbox{包含于} p \mbox{的素理想} \rbrace = \emptyset$. 从而$M_q/N_q = 0$.</p>
+<blockquote>
+<p>推论, 若$N = Q_1 \cap \cdots \cap Q_r$是$N$的一个irredundant准素分解, 其中$p_1$是$Ass(M/N)$中的极小素理想. 则$Q_1 = M \cap N_{p_1}$ 由$N$和$p_1$决定.</p>
+</blockquote>
+<p><strong>准素分解</strong> 设$M$是(Noetherian环)$A$-模. 对每个$p \in Ass(M)$, 我们可以选取$p$-primary子模$Q(p)$, 使得<br>$$ (0) = \bigcap_{p in Ass(M)} Q(p) $$<br>Proof: 给定一个$p \in Ass(M)$, 我们考虑$M$的一些子模构成的集合: $\mathfrak{N} = \lbrace N \subseteq M | p \notin Ass(N) \rbrace \neq \emptyset$($(0)$在其中). 由Zorn引理可知其存在极大元$Q(p) \neq M$. 由$Q(p)$的极大性, 知道 $Ass(M/Q(p) = \lbrace p \rbrace$. 从而<br>$$ Ass(\bigcap_{p in Ass(M)} Q(p)) = \bigcap_{p in Ass(M)} Ass(Q(p)) = \emptyset$$.</p>
+<p>由上可知, 若$M$有限生成, 则将上面定理应用于$M/N$, 再由$Ass(M/N)$是有限集, 从而$N$由primary decomposition.</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指<strong>含幺交换环(commutative ring with identity)</strong></p>]]>
@@ -1035,60 +1090,6 @@
     </summary>
     
       <category term="math" scheme="http://dna049.com/tags/math/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[C 语言中函数 scanf 和 printf]]></title>
-    <link href="http://dna049.com/2016/05/11/scanf-and-printf-in-C/"/>
-    <id>http://dna049.com/2016/05/11/scanf-and-printf-in-C/</id>
-    <published>2016-05-11T04:10:17.000Z</published>
-    <updated>2016-05-11T05:50:05.000Z</updated>
-    <content type="html"><![CDATA[<p>在C语言中最常用的函数应该就是scanf，printf吧。对于大量输入输出时C++也常用scanf和print代替cin和cout。然而我们学习C语言最先接触的scanf和printf其实我们并不完全了解。<br><a id="more"></a></p>
-<h2 id="scanf"><a href="#scanf" class="headerlink" title="scanf"></a>scanf</h2><p>按照 <a href="http://www.cplusplus.com/reference/cstdio/scanf/?kw=scanf" target="_blank" rel="external">C++ reference</a> 的介绍，scanf 的原型为<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">scanf</span> <span class="params">( <span class="keyword">const</span> <span class="keyword">char</span> * format, ... )</span></span>;</span><br><span class="line">format = %[*][width][length]specifier</span><br></pre></td></tr></table></figure></p>
-<p><img src="scanf.png" alt="scanf 对应length"></p>
-<p>其中上面的[*]表示输入的东西被忽略，[width] 表示最大输入长度，而 [length] 表示是类型的一种延伸，可以是 hh, h, l, ll, j, z, t, L 中的一种。例如<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="comment">/*------ Welcome to visit blog of dna049: http://dna049.com ------*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%3ld"</span>,&amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%ld\n"</span>,n);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// input : 12345</span></span><br><span class="line"><span class="comment">// output: 123</span></span><br></pre></td></tr></table></figure></p>
-<p>specifier 是必选项 它可以是 $i,d,u,o,x,f,e,g,a,c,s,p,n,%$。还有两个特殊的 [characters]和[^characters]。上面的参数就不过多说了。特别要强调的是这两个特殊的。<br>[characters] 表示只接受 [characters] 中的字符；[^characters] 表示只不接受 [characters] 中的字符。例如：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="comment">/*------ Welcome to visit blog of dna049: http://dna049.com ------*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> s[<span class="number">100</span>],a[<span class="number">100</span>];</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%[1-9A-Z]"</span>,s);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s\n"</span>,s);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%[^b]"</span>,a);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s\n"</span>,a);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// input : 123AaBbCc</span></span><br><span class="line"><span class="comment">// output: 123A</span></span><br><span class="line"><span class="comment">// output: aB</span></span><br></pre></td></tr></table></figure>
-<h4 id="u7279_u522B_u6CE8_u610F"><a href="#u7279_u522B_u6CE8_u610F" class="headerlink" title="特别注意"></a><strong>特别注意</strong></h4><p>在使用下面语句进行输入时遇到空白符(whitespace)会结束输入的。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">"%s"</span>,str);</span><br></pre></td></tr></table></figure></p>
-<p>whitespace可以使用int isspace ( int c );判断。有这些字符有：<br><img src="whitespace.png" alt="whitespace"></p>
-<h4 id="scanf_u5178_u578B_u4F8B_u5B50"><a href="#scanf_u5178_u578B_u4F8B_u5B50" class="headerlink" title="scanf典型例子"></a>scanf典型例子</h4><ol>
-<li><p>有时我们明确知道输入为 $(a,b)$ 这种类型，我们可以这样做</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">"(%d,%d)"</span>,&amp;a,&amp;b);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>输入字符包含除回车之外的字符</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">"%[^\n]"</span>,str);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>只输入小写字母和数字</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">"%[0-9a-z]"</span>,str);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h4 id="scanf__u8FD4_u56DE_u503C"><a href="#scanf__u8FD4_u56DE_u503C" class="headerlink" title="scanf 返回值"></a>scanf 返回值</h4><ol>
-<li>正整数：表示正确输入参数的个数</li>
-<li>0：输入不匹配，无法正确输入任何值</li>
-<li>EOF（一般为-1）为读到文件结尾或在terminal中输入了 ctrl + z</li>
-</ol>
-<h2 id="printf"><a href="#printf" class="headerlink" title="printf"></a>printf</h2><p>print 的原型为<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">printf</span> <span class="params">( <span class="keyword">const</span> <span class="keyword">char</span> * format, ... )</span></span>;</span><br><span class="line">%[flags][width][.precision][length]specifier</span><br></pre></td></tr></table></figure></p>
-<p><img src="printf.png" alt="printf"></p>
-<p>specifier 和 scanf 的类似就不多说了。[length] [width]同理。[.precision] 一看就懂<br>[flags] 可选有 -,+,#,0。其中</p>
-<ol>
-<li>- 表示在给定宽度内向左靠齐。默认向右见下例子</li>
-<li>+ 表示即使是非负数，前面也要加正号。</li>
-<li># 目前不清楚用法。</li>
-<li>0 就是在不足宽度的时候补0</li>
-</ol>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> a = <span class="number">123.45678</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%+10.4f "</span>,a);</span><br><span class="line"><span class="keyword">int</span> t =<span class="number">100</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%04d "</span>,t);</span><br><span class="line"><span class="keyword">int</span> x = <span class="number">123</span>;</span><br><span class="line"><span class="built_in">printf</span>(x&amp;<span class="number">1</span>?<span class="string">"%d is odd"</span>:<span class="string">"%d is even"</span>,x);</span><br><span class="line"><span class="comment">// output: +0123.4568 0100 123 is odd</span></span><br></pre></td></tr></table></figure>
-<h2 id="u795E_u5668_uFF1Asscanf__u548C_sprintf"><a href="#u795E_u5668_uFF1Asscanf__u548C_sprintf" class="headerlink" title="神器：sscanf 和 sprintf"></a>神器：sscanf 和 sprintf</h2><p>不多说了，举个例子说明问题吧<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">/* sscanf example */</span></span><br><span class="line">    <span class="keyword">char</span> sentence []=<span class="string">"Rudolph is 12 years old"</span>;</span><br><span class="line">    <span class="keyword">char</span> str [<span class="number">20</span>];</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="built_in">sscanf</span> (sentence,<span class="string">"%s %*s %d"</span>,str,&amp;i);</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">"%s -&gt; %d\n"</span>,str,i);</span><br><span class="line">    <span class="comment">/* sprintf example */</span></span><br><span class="line">    <span class="keyword">char</span> buffer [<span class="number">50</span>];</span><br><span class="line">    <span class="keyword">int</span> n, a=<span class="number">5</span>, b=<span class="number">3</span>;</span><br><span class="line">    n=<span class="built_in">sprintf</span> (buffer, <span class="string">"%d plus %d is %d"</span>, a, b, a+b);</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">"[%s] is a string %d chars long\n"</span>,buffer,n);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// output: </span></span><br><span class="line"><span class="comment">// Rudolph -&gt; 12</span></span><br><span class="line"><span class="comment">// [5 plus 3 is 8] is a string 13 chars long</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="u6700_u540E_u8BF4_u4E00_u4E2A_u6BD4_u8F83_u8BE1_u5F02_u4F46_u662F_u53EF_u4EE5_u7406_u89E3_u7684_u4E8B_u60C5"><a href="#u6700_u540E_u8BF4_u4E00_u4E2A_u6BD4_u8F83_u8BE1_u5F02_u4F46_u662F_u53EF_u4EE5_u7406_u89E3_u7684_u4E8B_u60C5" class="headerlink" title="最后说一个比较诡异但是可以理解的事情"></a>最后说一个比较诡异但是可以理解的事情</h2><blockquote>
-<p>sacnf 输入 float 和 double 时分别用 %f,%lf。<br>printf 输出 float 和 double 时用的都是 %f。</p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>在C语言中最常用的函数应该就是scanf，printf吧。对于大量输入输出时C++也常用scanf和print代替cin和cout。然而我们学习C语言最先接触的scanf和printf其实我们并不完全了解。<br>]]>
-    
-    </summary>
-    
-      <category term="C++" scheme="http://dna049.com/tags/C/"/>
     
   </entry>
   
