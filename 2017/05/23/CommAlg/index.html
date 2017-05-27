@@ -113,7 +113,7 @@
 <meta property="og:url" content="http://dna049.com/2017/05/23/CommAlg/index.html">
 <meta property="og:site_name" content="0.肆玖">
 <meta property="og:description" content="在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指含幺交换环(commutative ring with identity)">
-<meta property="og:updated_time" content="2017-05-27T05:36:02.000Z">
+<meta property="og:updated_time" content="2017-05-27T06:57:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Commutative Algebra》by Matsumura 读书笔记">
 <meta name="twitter:description" content="在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指含幺交换环(commutative ring with identity)">
@@ -388,7 +388,7 @@
 <li>理想的 radical 的定义</li>
 <li>prime ideal 的(等价)定义</li>
 <li>primary ideal 的定义, 说明 primary ideal 的 radical 是 prime ideal (反之不尽然), 并给出一个理想成为 primary ideal 的充分条件: 包含某个极大理想的某次幂.</li>
-<li>定义了环$A$上的 Zariski 拓扑(素谱) $Spec(A)$, 极大谱 $\Omega(A)$, 包含某个集合的素理想全体构成闭集(容易验证确实构成拓扑空间), 给出素谱的基本开邻域基. 由于每个理想都包含在某个极大理想中, 极大理想都是素的, 因此 $Spec(A) = 0 \Leftrightarrow A = 0$, 也就是说 $Spec$ 的定义是没有毛病的. $Spec(A)$连通当且仅当$A$ 中无非平凡幂等元.<br>$$V(I) = V(J) \Longleftrightarrow \sqrt{I} = \sqrt{J}$$</li>
+<li>定义了环$A$上的 Zariski 拓扑(素谱) $Spec(A)$, 极大谱 $\Omega(A)$, 包含某个集合的素理想全体构成闭集(容易验证确实构成拓扑空间), 给出素谱的基本开邻域基. 由于每个理想都包含在某个极大理想中, 极大理想都是素的, 因此 $Spec(A) = \emptyset \Leftrightarrow A = 0$, 也就是说 $Spec$ 的定义是没有毛病的. $Spec(A)$连通当且仅当$A$ 中无非平凡幂等元.<br>$$V(I) = V(J) \Longleftrightarrow \sqrt{I} = \sqrt{J}$$</li>
 <li>说明环之间的同态映射 $f: A \to B$ 可以诱导 $Spec(B) \to Spec(A)$ 之间的连续映射, 也就是说 $Spec$ 定义了一个环范畴到拓扑空间范畴的一个逆变函子.</li>
 <li>给出了一个关于素理想并的常见引理: 一个理想包含在最多两个不是素理想的理想的并中, 则它必然包含在其中一个理想中. 当然这也说明了任意两个真理想的并不会是整个环.</li>
 <li>给出了两个理想互素的定义(和为整个环), 并说明此时它们的积等于交. 证明用到$(I+J)(I \cap J) \subset IJ$.</li>
@@ -414,7 +414,7 @@
 <p>由于$M \otimes k$是域$k$上的向量空间, 因此它的一组基提升之后就能生成 $M$, 但是一般地并不能保证这些生成元线性无关.</p>
 </blockquote>
 </li>
-<li><p>$M$-regular: $a \in A$ 称为 $M$-regular, 若 $0 \to M \xrightarrow{a} M$, 显然, $M$-regular元全体构成了一个乘闭子集. 设$S_0$为$A$-regular元全体, 则 $S_0^{-1}A$称为$A$的total quotient ring. 此时 $\phi A \to S_0{-1}A$ 是环单同态.</p>
+<li><p>$M$-regular: $a \in A$ 称为 $M$-regular, 若 $0 \to M \xrightarrow{a} M$, 显然, $M$-regular元全体构成了一个乘闭子集. 设$S_0$为$A$-regular元全体, 则 $S_0^{-1}A$称为$A$的total quotient ring. 此时 $\phi: A \to S_0^{-1} A$ 是环单同态.</p>
 </li>
 <li><p>若$M$是Noetherian环$A$上有限生成模,那么我们有投射表示:<br>$$ \cdots \to X_i \to X_{i+1} \to \cdots X_0 \to M \to 0$$<br>其中 $X_i$为有限自由$A$-模, 特别地, 此时 $M$是有限表示(finite presentation). 此时多项式环$A[x_1, \cdots, x_n]$也是Noetherian, 类似的形式幂级数环$A[[x_1, \cdots, x_n]]$也是Noetherian, $A$ 上的有限维代数也是Noetherian.</p>
 <blockquote>
@@ -424,10 +424,10 @@
 <li><p>环$A$是Artinian, 当且仅当它作为$A$-模是有限长的, 当且仅当它是Noetherian, 并且它的素理想都是极大的.</p>
 </li>
 <li>设$\mathfrak{a}$是环$A$的理想, $b \in A$, 若$\mathfrak{a} + bA$和$\mathfrak{a}:bA$都有限生成, 则$\mathfrak{a}$有限生成.<br>Proof: 设$a_i \in \mathfrak{a},\quad b_j \in A$使得$\mathfrak{a} + bA = \sum a_iA + bA$且$\mathfrak{a} : bA = \sum c_j A$. 设$\mathfrak{a}’ = \sum a_iA + \sum bc_j A \subseteq \mathfrak{a}$. 对任意 $a \in \mathfrak{a}$, 我们有 $a \in \mathfrak{a}’ + bA$, 即$a \equiv rb \mod \mathfrak{a}’$. 因此 $rb \in \mathfrak{a}$. 即 $r \in \mathfrak{a}: bA$, $rb \in \mathfrak{a}’$, 因此$a \in \mathfrak{a}’$, 即$\mathfrak{a} = \mathfrak{a}’$.</li>
-<li>(Cohen)环$A$是Noetherian, 当且仅当它的每个素理想都是有限生成的.<br>Proof: 记$A$中所有非有限生成理想构成的集合为$F$, 取$F$中极大元$\mathfrak{a}$(zorn引理保证可行性), 那么由条件知道$\mathfrak{a}$不是素理想, 因此存在 $a,b \in A$, 使得 $a b,\notin \mathfrak{a}$且$ab \in \mathfrak{a}$. 又因为 $\mathfrak{a}$的极大性知: $\mathfrak{a}+bA$和$\mathfrak{a}:bA$有限生成, 所以 $\mathfrak{a}$有限生成, 所以$F = \emptyset$.</li>
+<li>(Cohen)环$A$是Noetherian, 当且仅当它的每个素理想都是有限生成的.<br>Proof: 记$A$中所有非有限生成理想构成的集合为$F$, 取$F$中极大元$\mathfrak{a}$(zorn引理保证可行性), 那么由条件知道$\mathfrak{a}$不是素理想, 因此存在 $a,b \in A$, 使得 $a, b \notin \mathfrak{a}$且$ab \in \mathfrak{a}$. 又因为 $\mathfrak{a}$的极大性知: $\mathfrak{a}+bA$和$\mathfrak{a}:bA$有限生成, 所以 $\mathfrak{a}$有限生成, 所以$F = \emptyset$.</li>
 <li>定义$Supp(M) = \lbrace p \in Spec(A) | M_p \neq  0 \rbrace$. 若$M$有限生成, 则 $Supp(M) = V(Ann(M))$.</li>
 </ol>
-<h2 id="u5E73_u5766_u6027_28Flatness_29"><a href="#u5E73_u5766_u6027_28Flatness_29" class="headerlink" title="平坦性(Flatness)"></a>平坦性(Flatness)</h2><p>设 $S: \cdots \to N  \to N’ \to N’’ \to \cdots$ 是任意$A$-模序列.<br>称$A$-模$M$是平坦的, 如果$S$正合, 则$S \otimes M$正合.<br>称$M$忠实平坦的(faithful flat), 如果$S$正合当且仅当$S \otimes M$ 正合.<br>例子: 投射模是平坦的, 自由模是忠实平坦的.</p>
+<h2 id="u5E73_u5766_u6027_28Flatness_29"><a href="#u5E73_u5766_u6027_28Flatness_29" class="headerlink" title="平坦性(Flatness)"></a>平坦性(Flatness)</h2><p>设 $S: \quad \cdots \to N  \to N’ \to N’’ \to \cdots$ 是任意$A$-模序列.<br>称$A$-模$M$是平坦的, 如果$S$正合, 则$S \otimes M$正合.<br>称$M$忠实平坦的(faithful flat), 如果$S$正合当且仅当$S \otimes M$ 正合.<br>例子: 投射模是平坦的, 自由模是忠实平坦的.</p>
 <h4 id="u5E73_u5766_u6A21_u7684_u7B49_u4EF7_u523B_u753B"><a href="#u5E73_u5766_u6A21_u7684_u7B49_u4EF7_u523B_u753B" class="headerlink" title="平坦模的等价刻画"></a>平坦模的等价刻画</h4><ol>
 <li>$M$是平坦的.</li>
 <li>若$0 \to N \to N’$ exact, 则 $0 \to N \otimes M \to N’ \otimes M$ exact.</li>
@@ -454,7 +454,7 @@
 <h4 id="u5E73_u5766_u6A21_u597D_u5E73_u57660-0"><a href="#u5E73_u5766_u6A21_u597D_u5E73_u57660-0" class="headerlink" title="平坦模好平坦0.0"></a>平坦模好平坦0.0</h4><p>设$A \to B$是平坦同态, 设$I,J$是$A$是理想, 则</p>
 <ol>
 <li>$(I \cap J)B = IB \cap JB$ </li>
-<li>$(I : J)B = IB : JB$, 其中$J$是有限生成的.<br>Proof: 由正合列: $0 \to I \cap J \to A \to A/I \otimes A/J$, 张量上$B$得到 $0 \to (I \cap J)B \to B \to B/IB \otimes B/JB$. 因此$(I \cap J)B = IB \cap JB$.<br>当$J$有限生成是, 只需证明$J = aA$的形式: 由正合列$0 \to (I :aA) \to A \xrightarrow{f} \to A/I$. 其中 $f(x) = ax<br>\mod I$. 张量上$B$即可得到结论, 对于一般情况应用<br>$$ (I: \sum_{i=1} ^n a_i A) = \bigcap_{i=1} ^n (I : a_i A)$$</li>
+<li>$(I : J)B = IB : JB$, 其中$J$是有限生成的.<br>Proof: 由正合列: $0 \to I \cap J \to A \to A/I \otimes A/J$, 张量上$B$得到 $0 \to (I \cap J)B \to B \to B/IB \otimes B/JB$. 因此$(I \cap J)B = IB \cap JB$.<br>当$J$有限生成时, 只需证明$J = aA$的形式: 由正合列$0 \to (I :aA) \to A \xrightarrow{f} \to A/I$. 其中 $f(x) = ax<br>\mod I$. 张量上$B$即可得到结论, 对于一般情况应用<br>$$ (I: \sum_{i=1} ^n a_i A) = \bigcap_{i=1} ^n (I : a_i A)$$</li>
 </ol>
 <blockquote>
 <p>平坦映射讲一个保持理想的交, 一种反映平坦的地方吧.</p>
@@ -469,7 +469,7 @@
 <ol>
 <li>$M$是 f.f. $A$-模;</li>
 <li>$M$是平坦$A$-模, 且对任意$A$-模$N \neq 0$, $N \otimes M \neq 0$;</li>
-<li>$M$是平坦$A$-模, 且对任意$A$的极大理想$\mathfrak{m}$, $mM \neq M$.<br>Proof: $1 \to 2$: 由$0 \to N \to 0$和$0 \to N \otimes M \to 0$同时正合性证毕. $2 \to 3$: 由于$A/\mathfrak{m} \neq 0$, 所以 $M/\mathfrak{m} M \simeq A/\mathfrak{m} \otimes M \neq 0$. $3 \to 2$: 对任意$0 \neq x \in N$, 存在$I$使得$Ax \simeq A/I$, 设$\mathfrak{m}$为包含$I$的一个极大理想, 于是$IM \subseteq \mathfrak{m}M \subset M$, 从而 $(A/I)\otimes M = M/IM \neq 0$. 又由$M$平坦知: $0 \to (A/I) \otimes M \to N \otimes M$正合, 所以$N \otimes M \neq 0$. $2 \to 1$: 设 $S: N’ \xrightarrow{f} N \xrightarrow{g} \to N’’$ 为$A$-模序列. 若 $S \otimes M : N’\otimes M \xrightarrow{\hat{f}} N \otimes M  \xrightarrow{\hat{g}} \to N’’\otimes M$. 由于 $- \otimes M$函子正合. $Im(gf) \otimes M = Im(\hat{f}\hat{g})=0$. 从而$Im(gf)=0$, 即$S$是复形, $H(S) \otimes M = H(S \otimes M) = 0$, 从而$H(S) = 0$, 证毕.<blockquote>
+<li>$M$是平坦$A$-模, 且对任意$A$的极大理想$\mathfrak{m}$, $mM \neq M$.<br>Proof: $1 \to 2$: 由$0 \to N \to 0$和$0 \to N \otimes M \to 0$同时正合性证毕. $2 \to 3$: 由于$A/\mathfrak{m} \neq 0$, 所以 $M/\mathfrak{m} M \simeq A/\mathfrak{m} \otimes M \neq 0$. $3 \to 2$: 对任意$0 \neq x \in N$, 存在$I$使得$Ax \simeq A/I$, 设$\mathfrak{m}$为包含$I$的一个极大理想, 于是$IM \subseteq \mathfrak{m}M \subset M$, 从而 $(A/I)\otimes M = M/IM \neq 0$. 又由$M$平坦知: $0 \to (A/I) \otimes M \to N \otimes M$正合, 所以$N \otimes M \neq 0$. $2 \to 1$: 设 $S: N’ \xrightarrow{f} N \xrightarrow{g} N’’$ 为$A$-模序列. 若 $S \otimes M : N’\otimes M \xrightarrow{\hat{f}} N \otimes M  \xrightarrow{\hat{g}} N’’\otimes M$. 由于 $- \otimes M$函子正合. $Im(gf) \otimes M = Im(\hat{f}\hat{g})=0$. 从而$Im(gf)=0$, 即$S$是复形, $H(S) \otimes M = H(S \otimes M) = 0$, 从而$H(S) = 0$, 证毕.<blockquote>
 <p>$2 \to 1$ 的证明很有意思.</p>
 </blockquote>
 </li>
@@ -481,7 +481,7 @@
 <li>对任意$A$的理想$I$, 我们有$IB \cap A = I$</li>
 <li>$\hat{\phi}: Spec(B) \to Spec(A)$ 是满的.</li>
 </ol>
-<p>Proof: 1.$0 \neq x \in N$, 则 $0 \neq Ax \subset N$.因此 $Ax \otimes B \in N \otimes B$($B$平坦). 又$Ax \otimes B = (x \otimes 1)(A \otimes B) = (x \otimes 1)B$.由$B$忠实平坦知 $x \otimes 1 \neq 0$. 2.由于$B \otimes _A (A/I) = B/IB$在$A/I$上忠实平坦, 因此 $A/I \subseteq B/IB$. 因此$IB \cap A \subset I$. 又反方向显然, 证毕. 3. 设$p \in Spec(A)$. $B_p = B \otimes A_p$在$A_p$上忠实平坦, 因此 $pB_p \neq B_p$<strong>(这是关键的一步</strong>). 取$B_p$中一个包含$pB_p$的极大理想$\mathfrak{m}$. 则$pA_p \subseteq \mathfrak{m} \cap A_p$, 因此$pA_p = \mathfrak{m} \cap A_p$. 设$P = \mathfrak{m} \cap B$. 则 $P \cap A = \mathfrak{m} \cap B \cap A = \mathfrak{m} \cap A = \mathfrak{m} \cap A_p \cap A = pA_p \cap A = p$<br>要理解上面式子关键在于 $0 \to A \to A_p \to B_p = A_p \otimes B$. 最后$\mathfrak{m}$1被拉回之后就在$B$中了.</p>
+<p>Proof: 1.$0 \neq x \in N$, 则 $0 \neq Ax \subset N$.因此 $Ax \otimes B \in N \otimes B$($B$平坦). 又$Ax \otimes B = (x \otimes 1)(A \otimes B) = (x \otimes 1)B$.由$B$忠实平坦知 $x \otimes 1 \neq 0$. 2.由于$B \otimes _A (A/I) = B/IB$在$A/I$上忠实平坦, 因此 $A/I \subseteq B/IB$. 因此$IB \cap A \subset I$. 又反方向显然, 证毕. 3. 设$p \in Spec(A)$. $B_p = B \otimes A_p$在$A_p$上忠实平坦, 因此 $pB_p \neq B_p$<strong>(这是关键的一步</strong>). 取$B_p$中一个包含$pB_p$的极大理想$\mathfrak{m}$. 则$pA_p \subseteq \mathfrak{m} \cap A_p$, 因此$pA_p = \mathfrak{m} \cap A_p$. 设$P = \mathfrak{m} \cap B$. 则<br>$$P \cap A = \mathfrak{m} \cap B \cap A = \mathfrak{m} \cap A = \mathfrak{m} \cap A_p \cap A = pA_p \cap A = p$$<br>要理解上面式子关键在于 $0 \to A \to A_p \to B_p = A_p \otimes B$. 最后$\mathfrak{m}$1被拉回之后就在$B$中了.</p>
 <h4 id="u5FE0_u5B9E_u5E73_u5766_u7684_u7B49_u4EF7_u523B_u753B"><a href="#u5FE0_u5B9E_u5E73_u5766_u7684_u7B49_u4EF7_u523B_u753B" class="headerlink" title="忠实平坦的等价刻画"></a>忠实平坦的等价刻画</h4><p>之前已经给了一些平坦的等价可以, 都是与张量积有关, 下面给出的都与谱有关. 即与素理想有关.<br>设$\phi: A \to B$是平坦映射, 以下结论等价:</p>
 <ol>
 <li>$\phi$是忠实平坦的;</li>
@@ -493,7 +493,7 @@
 </ol>
 <p>$1 \to 2$ 已证, $2 \to 3$ 是因为存在$p’ \in Spec(B)$ 使得$p’ \cap A = \mathfrak{m}$. 找一个包含$p’$的极大理想$\mathfrak{m}’$. 则$\mathfrak{m} \cap A = \mathfrak{m}$(由于$\mathfrak{m}$极大). $3 \to 1$ 是因为此时$\mathfrak{m}B \subseteq \mathfrak{m}’B = \mathfrak{m} \subset B$. 因此$B$在$A$上忠实平坦.</p>
 <h4 id="u5FE0_u5B9E_u5E73_u5766_u4E0A_u7684_u5E73_u5766"><a href="#u5FE0_u5B9E_u5E73_u5766_u4E0A_u7684_u5E73_u5766" class="headerlink" title="忠实平坦上的平坦"></a>忠实平坦上的平坦</h4><p>设$B$是$A$上的忠实平坦$A$代数. $M$是$A$-模. 则$M$是$A$上的(忠实)平坦模 $\Longleftrightarrow$ $M$是$B$上的(忠实)平坦模.<br>$\Longrightarrow$就是change of base的结果. $\Longleftarrow$成立是因为一般地我们有:<br>$$(S \otimes _A M) \otimes_A B = (S \otimes _A B) \otimes _B (M \otimes _A B)$$</p>
-<h4 id="u6574_u73AF_u4E0A_u7684_u5FE0_u5B9E_u5E73_u5766"><a href="#u6574_u73AF_u4E0A_u7684_u5FE0_u5B9E_u5E73_u5766" class="headerlink" title="整环上的忠实平坦"></a>整环上的忠实平坦</h4><p>设$A$设整环, 整环$B$满足$A \subseteq B \subseteq Q(A)$, 其中$Q(A)$是$A$的分式域. 则$B$在$A$上忠实平坦当且仅当$B=A$.<br>Proof: 若$B \neq A$, 则对任意$0 \neq x \in B\A$, $x = y/s,\quad y,s \in A, s \notin U(A)$, 从而$sB \cap A = A \neq sA$. 因此$B$在$A$上不忠实平坦, 所以$B = A$.</p>
+<h4 id="u6574_u73AF_u4E0A_u7684_u5FE0_u5B9E_u5E73_u5766"><a href="#u6574_u73AF_u4E0A_u7684_u5FE0_u5B9E_u5E73_u5766" class="headerlink" title="整环上的忠实平坦"></a>整环上的忠实平坦</h4><p>设$A$设整环, 整环$B$满足$A \subseteq B \subseteq Q(A)$, 其中$Q(A)$是$A$的分式域. 则$B$在$A$上忠实平坦当且仅当$B=A$.<br>Proof: 若$B \neq A$, 则对任意$0 \neq x \in B \backslash A$, $x = y/s,\quad y,s \in A, s \notin U(A)$, 从而$sB \cap A = A \neq sA$. 因此$B$在$A$上不忠实平坦, 所以$B = A$.</p>
 <blockquote>
 <p>但是$A$与$Q(A)$之间的任意环都是平坦的(这可以由<strong>平坦模的等价刻画6</strong>得到)</p>
 </blockquote>
@@ -529,7 +529,7 @@
 <h4 id="u5C40_u90E8_u95ED_u96C6_28locally_closed_29"><a href="#u5C40_u90E8_u95ED_u96C6_28locally_closed_29" class="headerlink" title="局部闭集(locally closed)"></a>局部闭集(locally closed)</h4><p>一个集合$Z$ 称为 locally closed 如果 $\forall z \in Z, \quad \exists U_z \mbox{ 使得 } U_z \cap Z$ 是开邻域$U_z$ 中的闭集. 这等价于说 $Z$是拓扑空间$X$中某个开集和闭集的交. 特别地, 开集和闭集都是locally closed.</p>
 <h4 id="Noetherian_u7A7A_u95F4_u4E2Dconstructible_u96C6"><a href="#Noetherian_u7A7A_u95F4_u4E2Dconstructible_u96C6" class="headerlink" title="Noetherian空间中constructible集."></a>Noetherian空间中constructible集.</h4><p>设$X$是一个Noetherian空间, 称集合$Z \subseteq$是一个constructible集, 如果它是有限个locally close集合的并.<br>(非Noetherian空间中也可以定义constructible集, 但是很复杂)<br>显然constructible集关于交并差都是封闭的.</p>
 <p>设$X$是一个Noetherian空间, 称集合$Z \subseteq$是一个pro-constructible(对应的ind-constructible)集, 如果它是任意一族constructible集的交(对应的并).</p>
-<p><strong>constructible集</strong> 判定方法, Noetherian空间$X$的子集$Z$称为constructible集的充要条件是:<br>对任意不可约闭子集$X_0 \subseteq X$, 若$X_0 \cap Z$在$X_0$中稠密, 则$X_0 \cap Z$ 包含 $X_0$ 中某个非空开集.<br>Proof: 必要性: 若$Z$是constructible集, 则<br>$$ X_0 \cap Z = \bigcup _{i=1} ^m (U_i \cap F_i) $$<br>其中 $U_i$是$X$中开集, $F_i$是$X$中不可约闭子集(这是可以做到的是因为Noetherian空间中闭集都可以写成有限个不可约闭集的并), 且$U_i \cap F_i$是非空的(如果空就直接踢掉了). 则$\bar{U_i \cap F_i} = F_i$(这是因为否则$\bar{U_i \cap F_i} \cup (c(U_i) \cap F_i) = F_i$, 但是$F_i$是不可约闭集). 因此<br>$$X_0 = \bar{X_0 \cap Z} = \bigcup _{i=1} ^m F_i$$<br>因此必有某个$F_i = X_0$. 从而 $U_i \cap X_0 = U_i \cap F_i$是$X_0$中的一个非空开集.<br>充分性: 我们对$\bar{Z}$进行应用所谓的超限数学归纳. 首先, $\emptyset$是constructible集, 其次假设$\bar{Z}$中所有满足条件且$\bar{Z’} \subset \bar{Z}$(严格包含)的$Z’$都是constructible集. 我们证明此时$Z$也是constructible集:<br>设$\bar{Z} =  F_1 \cup \dots \cup F_r$ 是$\bar{Z}$的不可约分解. 那么 $\bar{F_1 \cap Z} =  F_1$(毕竟不可约闭集). 因此, 由条件存在 $F_1$中的真子集$F_1’$使得$\emptyset \neq F_1 - F_1’ \subseteq Z$. 此时定义$F^{\star} = F_1’ \cap F_2 \cap cdots \cap F_r$. 那么 $Z = (F_1 - F_1’) \cup (Z \cap F^{\star})$. 由于 $F_1 - F_1’$ 是 locally closed, 又因为$Z \cap F^{\star}$ 满足条件: 若$X_0$是不可约闭集且$X_0 = \bar{Z \cap F^{\star} \cap X_0} \subseteq \bar{F^{\star}} = F^{\star}$, 从而$Z \cap F^{\star} \cap X_0 = Z \cap \X_0$ 从而包含$\X_0$ 中的一个非空开集. 并且 $\bar{Z \cap F^{\star}} \subseteq F^{\star} \subset Z$. 由数学归纳知$Z \cap F^{\star}$是constructible集. 从而$Z = (F_1 - F_1’) \cup (Z \cap F^{\star})$是constructible集.</p>
+<p><strong>constructible集</strong> 判定方法, Noetherian空间$X$的子集$Z$称为constructible集的充要条件是:<br>对任意不可约闭子集$X_0 \subseteq X$, 若$X_0 \cap Z$在$X_0$中稠密, 则$X_0 \cap Z$ 包含 $X_0$ 中某个非空开集.<br>Proof: 必要性: 若$Z$是constructible集, 则<br>$$ X_0 \cap Z = \bigcup _{i=1} ^m (U_i \cap F_i) $$<br>其中 $U_i$是$X$中开集, $F_i$是$X$中不可约闭子集(这是可以做到的是因为Noetherian空间中闭集都可以写成有限个不可约闭集的并), 且$U_i \cap F_i$是非空的(如果空就直接踢掉了). 则$\bar{U_i \cap F_i} = F_i$(这是因为否则$\bar{U_i \cap F_i} \cup (c(U_i) \cap F_i) = F_i$, 但是$F_i$是不可约闭集). 因此<br>$$X_0 = \bar{X_0 \cap Z} = \bigcup _{i=1} ^m F_i$$<br>因此必有某个$F_i = X_0$. 从而 $U_i \cap X_0 = U_i \cap F_i$是$X_0$中的一个非空开集.<br>充分性: 我们对$\bar{Z}$进行应用所谓的超限数学归纳. 首先, $\emptyset$是constructible集, 其次假设$\bar{Z}$中所有满足条件且$\bar{Z’} \subset \bar{Z}$(严格包含)的$Z’$都是constructible集. 我们证明此时$Z$也是constructible集:<br>设$\bar{Z} =  F_1 \cup \dots \cup F_r$ 是$\bar{Z}$的不可约分解. 那么 $\bar{F_1 \cap Z} =  F_1$(毕竟不可约闭集). 因此, 由条件存在 $F_1$中的真子集$F_1’$使得$\emptyset \neq F_1 - F_1’ \subseteq Z$. 此时定义$F^{\star} = F_1’ \cap F_2 \cap cdots \cap F_r$. 那么 $Z = (F_1 - F_1’) \cup (Z \cap F^{\star})$. 由于 $F_1 - F_1’$ 是 locally closed, 又因为$Z \cap F^{\star}$ 满足条件: 若$X_0$是不可约闭集且$X_0 = \bar{Z \cap F^{\star} \cap X_0} \subseteq \bar{F^{\star}} = F^{\star}$, 从而$Z \cap F^{\star} \cap X_0 = Z \cap X_0$ 从而包含$X_0$ 中的一个非空开集. 并且 $\bar{Z \cap F^{\star}} \subseteq F^{\star} \subset Z$. 由数学归纳知$Z \cap F^{\star}$是constructible集. 从而$Z = (F_1 - F_1’) \cup (Z \cap F^{\star})$是constructible集.</p>
 <blockquote>
 <p>以上结果对一般地Noetherian空间都成立.</p>
 </blockquote>
@@ -565,13 +565,13 @@
 </blockquote>
 <h4 id="24Ann_28x_29_24_u5168_u4F53_u4E2D_u7684_u6781_u5927_u5143_u5728_24Ass_28M_29_24_u4E2D"><a href="#24Ann_28x_29_24_u5168_u4F53_u4E2D_u7684_u6781_u5927_u5143_u5728_24Ass_28M_29_24_u4E2D" class="headerlink" title="$Ann(x)$全体中的极大元在$Ass(M)$中"></a>$Ann(x)$全体中的极大元在$Ass(M)$中</h4><p>设$p$是$\lbrace Ann(X) | 0 \neq x \in M \rbrace$. 则$p \in Ass(M)$</p>
 <p>由上, 显然可知道 $Ass(M) = \emptyset \Longleftrightarrow M=0$. 即$Ass(M)$是元素是十分丰富的. $M$中的零因子是$Ass(M)$中元素的并.</p>
-<h4 id="24Ass_28M_29_24_u548C_u5C40_u90E8_u5316_u53EF_u4EA4_u6362"><a href="#24Ass_28M_29_24_u548C_u5C40_u90E8_u5316_u53EF_u4EA4_u6362" class="headerlink" title="$Ass(M)$和局部化可交换"></a>$Ass(M)$和局部化可交换</h4><p>给定一个乘闭子集$S$, 记$A’ = S^{-1}A, M’ = S^{-1} B$, 则<br>$$ Ass_A(M’) = f(Ass_{A’}(M’) = Ass_A(M) \cap \lbrace p | p \cap S = \emptyset \rbrace$$<br>其中 $f: \Spec(A’) \to Spec(A)$ 为自然映射.</p>
+<h4 id="24Ass_28M_29_24_u548C_u5C40_u90E8_u5316_u53EF_u4EA4_u6362"><a href="#24Ass_28M_29_24_u548C_u5C40_u90E8_u5316_u53EF_u4EA4_u6362" class="headerlink" title="$Ass(M)$和局部化可交换"></a>$Ass(M)$和局部化可交换</h4><p>给定一个乘闭子集$S$, 记$A’ = S^{-1}A, M’ = S^{-1} B$, 则<br>$$ Ass_A(M’) = f(Ass_{A’}(M’) = Ass_A(M) \cap \lbrace p | p \cap S = \emptyset \rbrace$$<br>其中 $f: Spec(A’) \to Spec(A)$ 为自然映射.</p>
 <h4 id="24Supp_28M_29_24_u7684_u6781_u5C0F_u5143_u5168_u4F53_u7B49_u4E8E_24Ass_28M_29_24_u7684_u6781_u5C0F_u5143_u5168_u4F53"><a href="#24Supp_28M_29_24_u7684_u6781_u5C0F_u5143_u5168_u4F53_u7B49_u4E8E_24Ass_28M_29_24_u7684_u6781_u5C0F_u5143_u5168_u4F53" class="headerlink" title="$Supp(M)$的极小元全体等于$Ass(M)$的极小元全体"></a>$Supp(M)$的极小元全体等于$Ass(M)$的极小元全体</h4><p>$Ass(M) \subset Supp(M)$ 且$Supp(M)$中的极小元在$Ass(M)$中(从而$Supp(M)$的极小元全体等于$Ass(M)$的极小元全体).<br>Proof: 设$p \in Ass(M)$, 则由正合列 $0 \to A/p \to M$, 从而$0 \to A_p/pA_p \to M_p$ 正合. 由$A_p/pA_p \neq 0$, 从而 $M_p \neq 0$, 从而$p \in Supp(M)$.<br>设$p \in Supp(M)$, 由于局部化和$Ass(M)$可交换, $p \in Ass_A(M)$ 等价于 $pA_p \in Ass_{A_p}(M_p)$. 因此, 我们不妨设$(A, p)$是局部环, $M \neq 0$. 且对任意 $q \subset p, M_q = 0$, 即$Supp(M) = \lbrace p \rbrace$. 由于$Ass(M)$非空, 且包含于$Supp(M)$中, 因此$p \in Ass(M)$.</p>
 <blockquote>
 <p>设$I$是$A$的理想, 则$Ass(A/I)$中的极小元全体为包含$I$的极小素理想全体. 从而 $$ \bigcap _{p \in Ass(A/I)} p = \sqrt{I}$$</p>
 </blockquote>
 <p>若$0 \to M’ \to M \to M’’$ 是$A$-模正合列, 则$Ass(M) \subset Ass(M’) \cup Ass(M’’)$<br>Proof: 设$p \in Ass(M)$, 则存在$N \subseteq M$使得$N \simeq A/p$. 若$N \cap M’ = 0$(本质上是和$f(M’)$的交). 则$N$同构于$M’’$的一个子模, 因此$p \in Ass(M’’)$. 若$N \cap M’ \neq 0$, 则任取$0 \neq x \in N \cap M’$, 则$Ann(x) = p$.</p>
-<p>设$M \neq 0$是Noetherian环上的有限生成模, 则存在(长为$n$的)子模链$(0) = M_0 \subset \cdots \subset M_{n-1} \subset M_n = M$使得$M_i / M_{i-1} = A/p_i}$, 其中 $p_i \in Spec(A)$. 从而$Ass(M) \subset \lbrace p_1 \cdots p_n rbrace\$是有限集.<br>Proof: 由$M \neq 0$ 则$Ass(M) \neq \emptyset$, 选择$M_1 \subseteq M$, 使得$M_1 \simeq A/p_1$, 若$M_1 \neq M$, 再对$M/M_1$做同样的事情, 由于$M$是Noetherian的, 因此次过程在有限步后终止. 又因为<br>$$Ass(M) \subseteq Ass(M_1) \cup Ass(M_2/M_1) \cup \cdots \cup Ass(M_n /M_{n-1})$$<br>再由$Ass(M_i/M_{i-1}) = Ass(A/p_i)=p_i$知结论成立.</p>
+<p>设$M \neq 0$是Noetherian环上的有限生成模, 则存在(长为$n$的)子模链$(0) = M_0 \subset \cdots \subset M_{n-1} \subset M_n = M$使得$M_i / M_{i-1} = A/p_i$, 其中 $p_i \in Spec(A)$. 从而$Ass(M) \subset \lbrace p_1 \cdots p_n \rbrace$是有限集.<br>Proof: 由$M \neq 0$ 则$Ass(M) \neq \emptyset$, 选择$M_1 \subseteq M$, 使得$M_1 \simeq A/p_1$, 若$M_1 \neq M$, 再对$M/M_1$做同样的事情, 由于$M$是Noetherian的, 因此次过程在有限步后终止. 又因为<br>$$Ass(M) \subseteq Ass(M_1) \cup Ass(M_2/M_1) \cup \cdots \cup Ass(M_n /M_{n-1})$$<br>再由$Ass(M_i/M_{i-1}) = Ass(A/p_i)=p_i$知结论成立.</p>
 <h3 id="Primary_Decomposition_28_u51C6_u7D20_u5206_u89E3_29"><a href="#Primary_Decomposition_28_u51C6_u7D20_u5206_u89E3_29" class="headerlink" title="Primary Decomposition(准素分解)"></a>Primary Decomposition(准素分解)</h3><blockquote>
 <p>本节设$M$是Noetherian环$A$上的模.</p>
 </blockquote>
