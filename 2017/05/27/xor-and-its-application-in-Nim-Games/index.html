@@ -107,16 +107,16 @@
 
 
 
-<meta name="description" content="异或运算是一种很神奇用途很广的运算. 从性质上, 异或运算作为二元运算, 关于所有非负整数构成一个Abel群, $0$作为幺元, 每个元的逆元都是自身(等价于说$ch(N^{\star}, xor) = 2$). 目前我知道的应用是: 1. 交换两个数; 2. 找出一堆数中唯一只出现奇数次的数; 3.在Nim游戏中的应用. 当然了还有很多其它的应用就不列举了.">
+<meta name="description" content="异或运算是一种很神奇用途很广的运算. 从性质上, 异或运算作为二元运算, 关于所有非负整数构成一个Abel群, $0$作为幺元, 每个元的逆元都是自身(等价于说$char(\mathbb{N}^{\star}, xor) = 2$).">
 <meta property="og:type" content="article">
-<meta property="og:title" content="异或(xor)运算及其在Nim游戏中的应用">
+<meta property="og:title" content="异或运算及其在Nim游戏中的应用">
 <meta property="og:url" content="http://dna049.com/2017/05/27/xor-and-its-application-in-Nim-Games/index.html">
 <meta property="og:site_name" content="0.肆玖">
-<meta property="og:description" content="异或运算是一种很神奇用途很广的运算. 从性质上, 异或运算作为二元运算, 关于所有非负整数构成一个Abel群, $0$作为幺元, 每个元的逆元都是自身(等价于说$ch(N^{\star}, xor) = 2$). 目前我知道的应用是: 1. 交换两个数; 2. 找出一堆数中唯一只出现奇数次的数; 3.在Nim游戏中的应用. 当然了还有很多其它的应用就不列举了.">
-<meta property="og:updated_time" content="2017-05-27T01:32:25.000Z">
+<meta property="og:description" content="异或运算是一种很神奇用途很广的运算. 从性质上, 异或运算作为二元运算, 关于所有非负整数构成一个Abel群, $0$作为幺元, 每个元的逆元都是自身(等价于说$char(\mathbb{N}^{\star}, xor) = 2$).">
+<meta property="og:updated_time" content="2017-05-27T02:31:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="异或(xor)运算及其在Nim游戏中的应用">
-<meta name="twitter:description" content="异或运算是一种很神奇用途很广的运算. 从性质上, 异或运算作为二元运算, 关于所有非负整数构成一个Abel群, $0$作为幺元, 每个元的逆元都是自身(等价于说$ch(N^{\star}, xor) = 2$). 目前我知道的应用是: 1. 交换两个数; 2. 找出一堆数中唯一只出现奇数次的数; 3.在Nim游戏中的应用. 当然了还有很多其它的应用就不列举了.">
+<meta name="twitter:title" content="异或运算及其在Nim游戏中的应用">
+<meta name="twitter:description" content="异或运算是一种很神奇用途很广的运算. 从性质上, 异或运算作为二元运算, 关于所有非负整数构成一个Abel群, $0$作为幺元, 每个元的逆元都是自身(等价于说$char(\mathbb{N}^{\star}, xor) = 2$).">
 
 
 
@@ -150,7 +150,7 @@
 
 
 
-  <title> 异或(xor)运算及其在Nim游戏中的应用 | 0.肆玖 </title>
+  <title> 异或运算及其在Nim游戏中的应用 | 0.肆玖 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -320,7 +320,7 @@
             
             
               
-                异或(xor)运算及其在Nim游戏中的应用
+                异或运算及其在Nim游戏中的应用
               
             
           </h1>
@@ -381,22 +381,29 @@
       
 
       
-        <p>异或运算是一种很神奇用途很广的运算. 从性质上, 异或运算作为二元运算, 关于所有非负整数构成一个Abel群, $0$作为幺元, 每个元的逆元都是自身(等价于说$ch(N^{\star}, xor) = 2$). 目前我知道的应用是: 1. 交换两个数; 2. 找出一堆数中唯一只出现奇数次的数; 3.在Nim游戏中的应用. 当然了还有很多其它的应用就不列举了.</p>
-<a id="more"></a>
+        <p>异或运算是一种很神奇用途很广的运算. 从性质上, 异或运算作为二元运算, 关于所有非负整数构成一个Abel群, $0$作为幺元, 每个元的逆元都是自身(等价于说$char(\mathbb{N}^{\star}, xor) = 2$).<br><a id="more"></a></p>
 <h3 id="u5F02_u6216_u7684_u5B9A_u4E49_u548C_u7B80_u5355_u6027_u8D28"><a href="#u5F02_u6216_u7684_u5B9A_u4E49_u548C_u7B80_u5355_u6027_u8D28" class="headerlink" title="异或的定义和简单性质"></a>异或的定义和简单性质</h3><p>异或, 英文: exclusive OR, 缩写xor, 习惯记作$\^$. 这个运算$1 \^ 1 = 0 \^ 0 = 0, 1^0 = 0^1 = 1$. 对任意是两个非负整数$a, b$, 将其写成$2$-进制, 然后各位分别进行异或操作即可. 容易根据上面定义说明之前提到的性质. 下面再介绍一个重要但不是很明显的性质:</p>
 <p><strong>引理</strong>: 若$k = a_1 \^ \cdots \^ a_n \neq 0$, 则必然存在$i$, 使得 $a_i \^ k  &lt; a_i$.<br>证明: 因为$k \neq 0$, 所以必然记$k$得最高位是第$t$位, 则必然存在$i$, 使得$a_i$的第$t$为不为$0$(否则$k$的第$t$位的$1$咋来的). 那么此时 $a_i \^ k$的第$t$为$0$, 前面的位不变, 从而小于$a_i$.</p>
 <h3 id="u5F02_u6216_u7684_u7B80_u5355_u5E94_u7528"><a href="#u5F02_u6216_u7684_u7B80_u5355_u5E94_u7528" class="headerlink" title="异或的简单应用"></a>异或的简单应用</h3><p>简单的直接贴代码吧, 不废话.</p>
 <h4 id="u7528_u5F02_u6216_u6765_u6539_u53D8_u4E24_u4E2A_u6570"><a href="#u7528_u5F02_u6216_u6765_u6539_u53D8_u4E24_u4E2A_u6570" class="headerlink" title="用异或来改变两个数"></a>用异或来改变两个数</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">swap(UI &amp; a, UI &amp; b)&#123;</span><br><span class="line">	a = a^b;</span><br><span class="line">	b = a^b;</span><br><span class="line">	a = a^b</span><br><span class="line">&#125; <span class="comment">// UI 表示 unsigned int, 写的很骚气.</span></span><br></pre></td></tr></table></figure>
 <h4 id="u5F02_u6216_u627E_u51FA_u552F_u4E00_u51FA_u73B0_u5947_u6570_u6B21_u7684_u6570"><a href="#u5F02_u6216_u627E_u51FA_u552F_u4E00_u51FA_u73B0_u5947_u6570_u6B21_u7684_u6570" class="headerlink" title="异或找出唯一出现奇数次的数"></a>异或找出唯一出现奇数次的数</h4><p>把这一堆数全体直接异或即可.</p>
-<h3 id="Nim_u53D6_u77F3_u5B50_u95EE_u9898"><a href="#Nim_u53D6_u77F3_u5B50_u95EE_u9898" class="headerlink" title="Nim取石子问题"></a>Nim取石子问题</h3><p>在2002年国家IO集训队中张一飞写了<a href="由感性认识到理性认识——透析一类搏弈游戏的解答过程">透析一类搏弈游戏的解答过程（张一飞).pdf</a>中明确的表面了这个取Nim石子游戏用异或可以完美的解决.</p>
+<h3 id="Nim_u53D6_u77F3_u5B50_u95EE_u9898"><a href="#Nim_u53D6_u77F3_u5B50_u95EE_u9898" class="headerlink" title="Nim取石子问题"></a>Nim取石子问题</h3><p>在2002年国家IO集训队中张一飞写了<a href="透析一类搏弈游戏的解答过程by张一飞.pdf">由感性认识到理性认识——透析一类搏弈游戏的解答过程</a>中明确的表面了这个取Nim石子游戏用异或可以完美的解决.</p>
 <blockquote>
-<p>我把他结果简单总结如下, 并在做一点小小的改变之后得到类似的结果</p>
+<p>我把他结果简单表达如下, 并在做一点小小的改变之后得到类似的结果</p>
 </blockquote>
 <p>游戏规则1 : 甲乙两人面对若干堆石子，其中每一堆石子的数目任意给定, 两人轮流取走一些石子, 每次至少取一枚石子, 每次只能从某一堆中取, 可以取完, 谁无法取子, 谁就是输家(规则2正好相反).</p>
 <blockquote>
 <p>在规则1中张一飞一步一步由浅入深, 从具体例子过度到理性的判断, 最终给出若所有石子数异或结果为0, 则后手胜, 反之先手胜.</p>
 </blockquote>
-<p>首先对于此类取石子问题, </p>
+<p>首先对于此类取石子博弈问题:</p>
+<blockquote>
+<p>必胜局面必然存在一步转化成为一个必负局面;<br>必负局面必然任意一步转化都会成为必胜局面.</p>
+</blockquote>
+<p>而对于异或也有类似的结果: $k = a_1 \^ cdots \^ a_n$</p>
+<blockquote>
+<p>若$k!=0$, 由引理知道, 可以减小某个$a_i$使得之后的异或和为$0$;<br>若$k=0$, 则任意改变都会导致异或和不为$0$.</p>
+</blockquote>
+<p>这样操作下去堆数一定在一直减小.<br>对于规则1: 由于空局面是负局面容易看出, 若异或和为$0$则先手负, 反之先手胜.<br>而对于规则2, 由于空局面是胜局面, 这就有些尴尬了.</p>
 
       
     </div>
