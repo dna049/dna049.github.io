@@ -113,7 +113,7 @@
 <meta property="og:url" content="http://dna049.com/2017/05/23/CommAlg/index.html">
 <meta property="og:site_name" content="0.肆玖">
 <meta property="og:description" content="在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指含幺交换环(commutative ring with identity)">
-<meta property="og:updated_time" content="2017-05-27T00:53:29.000Z">
+<meta property="og:updated_time" content="2017-05-27T05:36:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Commutative Algebra》by Matsumura 读书笔记">
 <meta name="twitter:description" content="在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指含幺交换环(commutative ring with identity)">
@@ -409,7 +409,7 @@
 <p>不要以为有限生成, 理想幂零, 环是整环或者reduced条件很苛刻, 其实实际碰到的也都是这些环, 主要问题在于有没有丰富的结果, 这些条件在何时发挥着作用. 有限生成可以用数学归纳, 幂零理想可以用于幂次和根理想.</p>
 </blockquote>
 </li>
-<li><p>给定局部环 $(A, \mathfrak{m},k)$ , $M$是$A$-模, 若$\mathfrak{m}$ 幂零(例如$A$是Artinian)或者$M$有限生成, 则$M$的子集$G$生成$M$, 当且仅当它在$M/\mathfrak{m}M = M \ otimes k$下像 $\bar{G}$ 生成 $M \otimes k$.</p>
+<li><p>给定局部环 $(A, \mathfrak{m},k)$ , $M$是$A$-模, 若$\mathfrak{m}$ 幂零(例如$A$是Artinian)或者$M$有限生成, 则$M$的子集$G$生成$M$, 当且仅当它在$M/\mathfrak{m}M = M \otimes k$下像 $\bar{G}$ 生成 $M \otimes k$.</p>
 <blockquote>
 <p>由于$M \otimes k$是域$k$上的向量空间, 因此它的一组基提升之后就能生成 $M$, 但是一般地并不能保证这些生成元线性无关.</p>
 </blockquote>
@@ -529,7 +529,7 @@
 <h4 id="u5C40_u90E8_u95ED_u96C6_28locally_closed_29"><a href="#u5C40_u90E8_u95ED_u96C6_28locally_closed_29" class="headerlink" title="局部闭集(locally closed)"></a>局部闭集(locally closed)</h4><p>一个集合$Z$ 称为 locally closed 如果 $\forall z \in Z, \quad \exists U_z \mbox{ 使得 } U_z \cap Z$ 是开邻域$U_z$ 中的闭集. 这等价于说 $Z$是拓扑空间$X$中某个开集和闭集的交. 特别地, 开集和闭集都是locally closed.</p>
 <h4 id="Noetherian_u7A7A_u95F4_u4E2Dconstructible_u96C6"><a href="#Noetherian_u7A7A_u95F4_u4E2Dconstructible_u96C6" class="headerlink" title="Noetherian空间中constructible集."></a>Noetherian空间中constructible集.</h4><p>设$X$是一个Noetherian空间, 称集合$Z \subseteq$是一个constructible集, 如果它是有限个locally close集合的并.<br>(非Noetherian空间中也可以定义constructible集, 但是很复杂)<br>显然constructible集关于交并差都是封闭的.</p>
 <p>设$X$是一个Noetherian空间, 称集合$Z \subseteq$是一个pro-constructible(对应的ind-constructible)集, 如果它是任意一族constructible集的交(对应的并).</p>
-<p><strong>constructible集</strong> 判定方法, Noetherian空间$X$的子集$Z$称为constructible集的充要条件是:<br>对任意不可约闭子集$X_0 \subseteq X$, 若$X_0 \cap Z$在$X_0$中稠密, 则$X_0 \cap Z$ 包含 $X_0$ 中某个非空开集.<br>Proof: 必要性: 若$Z$是constructible集, 则<br>$$X<em>0 \cap Z = \bigcup \</em>{i=1} ^m (U_i \cap F_i)$$<br>其中 $U_i$是$X$中开集, $F_i$是$X$中不可约闭子集(这是可以做到的是因为Noetherian空间中闭集都可以写成有限个不可约闭集的并), 且$U_i \cap F_i$是非空的(如果空就直接踢掉了). 则$\bar{U_i \cap F_i} = F_i$(这是因为否则$\bar{U_i \cap F_i} \cup (c(U_i) \cap F_i) = F_i$, 但是$F_i$是不可约闭集). 因此<br>$$X_0 = \bar{X_0 \cap Z} = \bigcup _{i=1} ^m F_i$$<br>因此必有某个$F_i = X_0$. 从而 $U_i \cap X_0 = U_i \cap F_i$是$X_0$中的一个非空开集.<br>充分性: 我们对$\bar{Z}$进行应用所谓的超限数学归纳. 首先, $\emptyset$是constructible集, 其次假设$\bar{Z}$中所有满足条件且$\bar{Z’} \subset \bar{Z}$(严格包含)的$Z’$都是constructible集. 我们证明此时$Z$也是constructible集:<br>设$\bar{Z} =  F_1 \cup \dots \cup F_r$ 是$\bar{Z}$的不可约分解. 那么 $\bar{F_1 \cap Z} =  F_1$(毕竟不可约闭集). 因此, 由条件存在 $F_1$中的真子集$F_1’$使得$\emptyset \neq F_1 - F_1’ \subseteq Z$. 此时定义$F^{\star} = F_1’ \cap F_2 \cap cdots \cap F_r$. 那么 $Z = (F_1 - F_1’) \cup (Z \cap F^{\star})$. 由于 $F_1 - F_1’$ 是 locally closed, 又因为$Z \cap F^{\star}$ 满足条件: 若$X_0$是不可约闭集且$X_0 = \bar{Z \cap F^{\star} \cap X_0} \subseteq \bar{F^{\star}} = F^{\star}$, 从而$Z \cap F^{\star} \cap X_0 = Z \cap \X_0$ 从而包含$\X_0$ 中的一个非空开集. 并且 $\bar{Z \cap F^{\star}} \subseteq F^{\star} \subset Z$. 由数学归纳知$Z \cap F^{\star}$是constructible集. 从而$Z = (F_1 - F_1’) \cup (Z \cap F^{\star})$是constructible集.</p>
+<p><strong>constructible集</strong> 判定方法, Noetherian空间$X$的子集$Z$称为constructible集的充要条件是:<br>对任意不可约闭子集$X_0 \subseteq X$, 若$X_0 \cap Z$在$X_0$中稠密, 则$X_0 \cap Z$ 包含 $X_0$ 中某个非空开集.<br>Proof: 必要性: 若$Z$是constructible集, 则<br>$$ X_0 \cap Z = \bigcup _{i=1} ^m (U_i \cap F_i) $$<br>其中 $U_i$是$X$中开集, $F_i$是$X$中不可约闭子集(这是可以做到的是因为Noetherian空间中闭集都可以写成有限个不可约闭集的并), 且$U_i \cap F_i$是非空的(如果空就直接踢掉了). 则$\bar{U_i \cap F_i} = F_i$(这是因为否则$\bar{U_i \cap F_i} \cup (c(U_i) \cap F_i) = F_i$, 但是$F_i$是不可约闭集). 因此<br>$$X_0 = \bar{X_0 \cap Z} = \bigcup _{i=1} ^m F_i$$<br>因此必有某个$F_i = X_0$. 从而 $U_i \cap X_0 = U_i \cap F_i$是$X_0$中的一个非空开集.<br>充分性: 我们对$\bar{Z}$进行应用所谓的超限数学归纳. 首先, $\emptyset$是constructible集, 其次假设$\bar{Z}$中所有满足条件且$\bar{Z’} \subset \bar{Z}$(严格包含)的$Z’$都是constructible集. 我们证明此时$Z$也是constructible集:<br>设$\bar{Z} =  F_1 \cup \dots \cup F_r$ 是$\bar{Z}$的不可约分解. 那么 $\bar{F_1 \cap Z} =  F_1$(毕竟不可约闭集). 因此, 由条件存在 $F_1$中的真子集$F_1’$使得$\emptyset \neq F_1 - F_1’ \subseteq Z$. 此时定义$F^{\star} = F_1’ \cap F_2 \cap cdots \cap F_r$. 那么 $Z = (F_1 - F_1’) \cup (Z \cap F^{\star})$. 由于 $F_1 - F_1’$ 是 locally closed, 又因为$Z \cap F^{\star}$ 满足条件: 若$X_0$是不可约闭集且$X_0 = \bar{Z \cap F^{\star} \cap X_0} \subseteq \bar{F^{\star}} = F^{\star}$, 从而$Z \cap F^{\star} \cap X_0 = Z \cap \X_0$ 从而包含$\X_0$ 中的一个非空开集. 并且 $\bar{Z \cap F^{\star}} \subseteq F^{\star} \subset Z$. 由数学归纳知$Z \cap F^{\star}$是constructible集. 从而$Z = (F_1 - F_1’) \cup (Z \cap F^{\star})$是constructible集.</p>
 <blockquote>
 <p>以上结果对一般地Noetherian空间都成立.</p>
 </blockquote>
