@@ -192,7 +192,7 @@
     <link href="http://dna049.com/2017/05/23/CommAlg/"/>
     <id>http://dna049.com/2017/05/23/CommAlg/</id>
     <published>2017-05-23T00:40:06.000Z</published>
-    <updated>2017-05-28T03:07:59.000Z</updated>
+    <updated>2017-05-28T07:14:32.000Z</updated>
     <content type="html"><![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指<strong>含幺交换环(commutative ring with identity)</strong></p>
 <a id="more"></a>
 <h2 id="u57FA_u672C_u6982_u5FF5"><a href="#u57FA_u672C_u6982_u5FF5" class="headerlink" title="基本概念"></a>基本概念</h2><p>可以说书中没一句废话, 开头直接给出下面概念, 并且叙述一些常见等价刻画: </p>
@@ -421,7 +421,7 @@
 <h4 id="u5206_u6B21_u6A21_u7684Poincare_u6570"><a href="#u5206_u6B21_u6A21_u7684Poincare_u6570" class="headerlink" title="分次模的Poincare数"></a>分次模的Poincare数</h4><p>设$A$是分次Noetherian环, 且设$A_0$是Artinian环. 如果$M_A$是有限生成分次$A$-模, 则由上面结论知, 每一个$M_n$都是有限生成$R_0$-模, 从而是有限长的. 记作$l(M_n)$. 记$P(M,t) = \sum_{n=0}^{\infty} l(M_n)t^n \in \mathbb{Z}[[t]]$, 称为$M$的Poincare级数.</p>
 <p>引理: 设$A$是Artin环, 若$0 \to M_0 \to M_1 \to \cdots \to M_s \to 0$是有限生成$A$-模正合列. 则 $\sum_{i=1} ^s l(M_i) = 0$<br>Proof: $s=0,1$时显然, $s=2$时, 由$0 \to M_0 \to M_1 \to M_2 \to 0$, 则有$l(M_1)=l(M_0)+l(M_2)$. 对于$M_i \to M_{i+1}$ 有分解: $M_i \to Im M_i \to 0$以及 $0 \to Im M_i \to M_{i+1}$. 于是有:$l(M_k) = l(Im M_{k-1} + l(Im M_k)$. 累加可得到结论.</p>
 <p>(Hilbert-Serre) 设$A$是分次Noetherian环, $A_0$是Artinian环, 若$A = A_0[x_1, \cdots x_m]$, 其$deg x_i = e_i &gt;0$, 则对任意有限生成分次$A$-模$M$, 存在某个多项式$f(t) \in \mathbb{Z}[t]$, 使得$P(M,t)$为<br>$$ \frac{f(t)}{\prod_{i=1}^m (1-t^{e_{i}})} $$<br>的有理展开.<br><img src="Hilbert.png" alt="证明过程"></p>
-<p><strong>(Hilbert-Serre)多项式</strong> 设$A$是分次Noetherian环, $A_0$是Artinian环, 若$A = A_0[x_1, \cdots x_m]$, 其$deg x_i = 1$, 则对任意有限生成分次$A$-模$M$, 存在次数不超过$m-1$的多项式$\bar{l}(t) \in \mathbb{Q}[t]$, 使得$n&gt;&gt;0$时, $\bar{l}(t) = l(M_n)$.<br>Proof: 应用之前的结果, 以及$\frac{1}{(1-t)^k}$的展开.</p>
+<p><strong>(Hilbert-Serre)多项式</strong> 设$A$是分次Noetherian环, $A_0$是Artinian环, 若$A = A_0[x_1, \cdots x_m]$, 其$deg x_i = 1$, 则对任意有限生成分次$A$-模$M$, 存在次数不超过$m-1$的多项式$\bar{l}(t) \in \mathbb{Q}[t]$, 使得$n \gg 0$时, $\bar{l}(t) = l(M_n)$.<br>Proof: 应用之前的结果, 以及$\frac{1}{(1-t)^k}$的展开.</p>
 <p>命题: 设$f(x) \in \mathbb{Q}[x]$是一个$n$次多项式. 则$f(x)$在$n+1$个相邻的整数取整数值当且仅当$f(x)$是$C_x ^0 , C_x ^1, \cdots, C_x ^n$的整线性组合.<br>Proof: 设$f(x) = a_0 C_x ^0 + a_1 C_x ^1 + \cdots + a_n C_x ^n, a_i \in \mathbb{Q}$. 则$f(x+1) - f(x) = a_1 C_x ^0 + \cdots + a_n C_x ^{n-1}$在$n$个相邻的位置取整值. 由归纳假设可知$a_1, \cdots a_n \in \mathbb{Z}$, 从而$a_0 \in \mathbb{Z}$.</p>
 <h4 id="ring_of_filtration"><a href="#ring_of_filtration" class="headerlink" title="ring of filtration"></a>ring of filtration</h4><p>我们定义环$A$的filtration为理想降链:<br>$$A = J_0 \supseteq J_1 \supseteq J_2 \supseteq \cdots$$<br>满足$J_n J_m  \subseteq J_{n+m}$.</p>
 <p>给定一个filtration, 我们可以定义一个分次环$A’$(容易验证)<br>$$A’ = \oplus_{n=0} ^{\infty} J_n / J_{n+1}$$</p>
@@ -446,7 +446,43 @@
 <p>当$A$是Noetherian整环时, $I^w M = \cap {n=1} ^{\infty} I^n M =(0)$<br>当$I \subseteq J(A)$时, $I^w M = \cap {n=1} ^{\infty} I^n M =(0)$<br>特别地, 当$A$是Noetherian, $\cap {n=1} ^{\infty} J^n = 0$.<br>当$A$不是Noetherian环时, 上述结果可能不成立, 例如实数$\mathbb{R}$上在$0$处无穷次可导的函数全体$A$. $J$是在$A$中在$0$处取值为$0$的函数全体($A$的唯一极大理想), 则$e^{-\frac{1}{x^2}} \in A$</p>
 <p>非交换环有一个著名的Jacobson猜想: $R$是左右Noetherian环, 则$\cap_{n=1} ^{\infty} J(R) = 0$.</p>
 </blockquote>
-<h3 id="Dimension_Theroy"><a href="#Dimension_Theroy" class="headerlink" title="Dimension Theroy"></a>Dimension Theroy</h3>]]></content>
+<h3 id="Dimension_Theroy"><a href="#Dimension_Theroy" class="headerlink" title="Dimension Theroy"></a>Dimension Theroy</h3><p>设$A$是环, $n+1$个素理想构成的序列$p_0 \supset p_1 \supset \cdots \supset p_n$称为长为$n$的素理想链. 对任意$p \in Spec(A)$, 满足$p = p_0$的最长素理想链的称为$p$的高度, 记作$ht(p)$. 显然 $ht(p) = 0$表示$p$为$A$的极小素理想.<br><strong>理想的高度</strong> 设$I$为$A$的真理想, 定义$I$的高度为包含$I$的所有素理想高度的最小值.<br>$$ht(I) = \inf \lbrace ht(p) | p \supset I \rbrace = ht(\sqrt{I})$$<br><strong>环的Krull维数</strong> $A$的维数定义为最长的素理想链的长度.即<br>$$\dim(A) = \sup \lbrace ht(p) | p \in Spec(A) \rbrace $$</p>
+<blockquote>
+<p>PID has Dimension $\leq 1$.<br>Proof: 若$(p) \supset (q) \supset (0)$. 则存在$b \neq 0$使得$q = pb$, 从而$(p)(b) \subset (q)$, 所以$(b) \subseteq (q)$, 所以存在$c$ 使得 $b = cpb$, 因此$cp = 1$(domain中), 从而$(p)=A$. 证毕.</p>
+</blockquote>
+<p>由上述定义可知: 对任意$p \in Spec(A), ht(p) = \dim(A_p)$, 对任意理想$I$, $\dim(A/I) + ht(I) \leq \dim(A)$.</p>
+<p><strong>模的Krull维数</strong> 设$M \neq 0$是$A$-模. 定义$M$的维数为:<br>$$\dim(M) = \dim(A/Ann(M))$$<br>当$M = 0$时, 记$\dim(M) = -1$.)</p>
+<p>若$M \neq 0$是Noetherian环$A$上的有限生成模, 则下列条件等价:</p>
+<ol>
+<li>$M$是有限长的.</li>
+<li>环$A/Ann(M)$是Artinian.</li>
+<li>$\dim(M) = 0$.</li>
+</ol>
+<p>由Noetherian环成为Artin环的充要条件知 $2 \leftrightarrow 3$. 再由有限生成Artinian模是有限长的可知$2 \to 1$. 现在证明$1\to 3$: 我们不妨考虑$Ann(M) = (0)$的情形, 若$l(M)$有限, 若$\dim(A) &gt;0$, 则存在极小素理想$p$不是极大素理想. 由于$M$是有限生成的, 且$Ann(M)=(0)$, $M_p \neq 0$, 即$p \in Supp(M)$是极小素理想, 因此$p \in Ass(M)$. 即$M$中包含一个同构于$A/p$的子模. 由于$\dim(A/p) &gt; 0$, 我们有$l(A/p) = \infty$(这是因为有限长, 则为Artinian, 从而维数为0), 从而矛盾于$l(M)$有限长.</p>
+<h4 id="Noetherian_u534A_u5C40_u90E8_u73AF"><a href="#Noetherian_u534A_u5C40_u90E8_u73AF" class="headerlink" title="Noetherian半局部环"></a>Noetherian半局部环</h4><p>众所周知的几个关于维数的等价刻画本来是在Noetherian局部环中考虑的, 这里可以推广到Noetherian半局部环.</p>
+<p>设$A$是Noetherian semi-local环, $\mathfrak{m} = J(A)$. $A$的理想被称为<strong>ideal of definition(IOD)</strong>如果存在$k&gt;0$使得$\mathfrak{m}^k \subseteq I subseteq \mathfrak{m}$.</p>
+<blockquote>
+<p>当$A$是局部环时, IOD就是$J$-准素理想.</p>
+</blockquote>
+<p>$I$是IOD的等价定义</p>
+<ol>
+<li>$I \subseteq \mathfrak{m}$且$A/I$是Artinian.</li>
+<li>$I \subseteq \mathfrak{m}$且$\dim(A/I)=0$.<br>Proof: $1 \leftrightarrow$显然, 若$I$是IOD, 即存在$k&gt;0$使得$\mathfrak{m}^k \subseteq I subseteq \mathfrak{m}$. 从而包含$I$的素理想必然是极大理想, 从而$\dim(A) = 0$. 另一方面, 若$I \subseteq \mathfrak{m}$且$A/I$是Artinian. 则$J(A/I) = \mathfrak{m}/I$幂零, 从而$\mathfrak{m}^n \subseteq I$.<blockquote>
+<p>由于此时$A/I$是Artinian, 所以就可以由Poincare数, 以及Hilbert-Serre多项式. 完美的一P.</p>
+</blockquote>
+</li>
+</ol>
+<p>设$I$是IOD, $M$是一个有限生成$A$-模. 设<br>$$A^{\star} = gr^I(A) = \otimes I^n / I^{n+1}$$<br>$$M^{\star} = gr^I(M) = \otimes I^n M / I^{n+1} M $$<br>设$I = A x_1 + \cdots Ax_r$. 那么$A^{\star}$是$B=A/I[X_1, \cdots, X_r]$的同态像. 因此 $F_{M^{\star}}(n) = l(I^n M/ I^{n+1} M)$是关于$n$的次数不超过$r-1$的多项式(由Hilbert-Serre的结果). 从而<br>$$\chi(M, I;n) \triangleq l(M/ I^{n+1} M) = \sum_{j=1} ^ {n-1}F_{M^{\star}}(j) $$<br>是一个次数不超过$r$的多项式.<br>对于不同的IOD $I’$, 存在$s, s’$使得$(I’)^s \subseteq I, I^{s’} \subseteq I’$. 从而$deg chi(M, I;n) = chi(M, I’;n)$. 即 chi(M, I;n)是$M$的一个不变量, 记作$d(M)$.</p>
+<blockquote>
+<p>若有一个IOD被$r$个元素生成, 则$d(M) \leq r$.</p>
+</blockquote>
+<p>设$I$是Noetherian半局部环$A$的一个IOD, 给定有限生成模的一个短正合列:$ 0 \to M’ \to M \to M’’ \to 0$. 则$d(M) = \max(d(M’),d(M’’))$ 更进一步, 当$n \gg 0$时, $\chi(M,I;n) - \chi(M’,I;n) - \chi(M’’,I;n)$的次数小于$d(M’)$.<br>Proof: 由于$l(M’’/I^n M’’) = l(M/M’+I^n M) \leq l(M/I^M)$, 从而$d(M’’) \leq d(M)$. 更进一步, $\chi(M,I;n)-\chi(M’’,I;n) = l(M’+I^n M/I^n M) = l(M’/M’ \cap I^n M)<br>$. 因此由Artin-Rees引理, 存在$r$使得$M’ \cap I^n M \subseteq I^{n-r} M’$, 从而 $l(M’/I^n M’) \geq l(M’/M’ \cap I^n M) \geq l(M’/I^{n-r} M’)$. 从而$\chi(M,I;n)-\chi(M’’,I;n)$与$\chi(M’,I;n)$有相同的最高次项.</p>
+<p>引理1: 设$A$是Noetherian半局部环, 则$d(A) \geq dim(A)$<br>对$d(A)$进行数学归纳. 若$d(A)=0$, 则存在$k$使得$\mathfrak{m}^k = \mathfrak{m}^{k+1} \cdots$. 由<strong>Krull交定理</strong>知$\mathfrak{m}^k=(0)$. 从而$l(A)$是有限长的, $\dim(A)=0$.<br>若$d(A)&gt;0$. 不妨设$r = \dim(A)&gt;0$, 设$p_0 \supset \cdots p_r = p$是长为$r$的素理想链. 任取$x \in p_{r-1} \backslash p$. 则 $\dim(A/xA+p) \geq r-1$. 再由正合序列<br>$$0 \to A/p \xleftarrow{x} A/p \to A/xA+p \to 0$$<br>我们有$d(A/xA+p) &lt; d(A/p) \leq d(A)$(这个严格小是因为上面”更进一步”的结论). 因此, 由数学归纳$r-1 \leq \dim(A/xA+p) \leq d(A/xA+p) &lt; d(A)$, 证毕.</p>
+<blockquote>
+<p>上述引理表明Noetherian半局部环的维数有限, 且对于任意Noetherian及其素理想$p, ht(p) = \dim(A_p)$有限, 从而<strong>Noetherian环满足素理想的降链条件</strong>, 当然Noetherian也可以由无限Krull维数, 例如: <img src="Nagata_noether.png" alt="Nagata example"> <img src="Noether_judge.png" alt="补充"></p>
+</blockquote>
+<p>引理2: 设$M \neq 0$是Noetherian半局部环$A$上的有限生成模. $x \in J(A)$. 则<br>$$ d(M) \geq d(M/xM) \geq d(M)-1$$<br>取IOD$I \ni x$. 则$\chi(M/xM,I;n) = l(M/xM+I^n M) = l(M/I^nM) - l(xM + I^n M/I^n M)$ 且 $xM + I^n M /I^n M \simeq xM/xM \cap I^n M \simeq M/(I^n M:x)$, 又因为$I^{n-1} \subseteq (I^n M:x)$ 从而<br>$$\chi(M/xM,I;n) \geq l(M/I^nM) - l(M/I^{n-1}M) = \chi(M,I;n) - \chi(M,I;n-1)$$</p>
+]]></content>
     <summary type="html">
     <![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指<strong>含幺交换环(commutative ring with identity)</strong></p>]]>
     
