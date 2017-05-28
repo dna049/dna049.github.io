@@ -192,7 +192,7 @@
     <link href="http://dna049.com/2017/05/23/CommAlg/"/>
     <id>http://dna049.com/2017/05/23/CommAlg/</id>
     <published>2017-05-23T00:40:06.000Z</published>
-    <updated>2017-05-27T15:41:10.000Z</updated>
+    <updated>2017-05-28T03:07:59.000Z</updated>
     <content type="html"><![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指<strong>含幺交换环(commutative ring with identity)</strong></p>
 <a id="more"></a>
 <h2 id="u57FA_u672C_u6982_u5FF5"><a href="#u57FA_u672C_u6982_u5FF5" class="headerlink" title="基本概念"></a>基本概念</h2><p>可以说书中没一句废话, 开头直接给出下面概念, 并且叙述一些常见等价刻画: </p>
@@ -423,7 +423,30 @@
 <p>(Hilbert-Serre) 设$A$是分次Noetherian环, $A_0$是Artinian环, 若$A = A_0[x_1, \cdots x_m]$, 其$deg x_i = e_i &gt;0$, 则对任意有限生成分次$A$-模$M$, 存在某个多项式$f(t) \in \mathbb{Z}[t]$, 使得$P(M,t)$为<br>$$ \frac{f(t)}{\prod_{i=1}^m (1-t^{e_{i}})} $$<br>的有理展开.<br><img src="Hilbert.png" alt="证明过程"></p>
 <p><strong>(Hilbert-Serre)多项式</strong> 设$A$是分次Noetherian环, $A_0$是Artinian环, 若$A = A_0[x_1, \cdots x_m]$, 其$deg x_i = 1$, 则对任意有限生成分次$A$-模$M$, 存在次数不超过$m-1$的多项式$\bar{l}(t) \in \mathbb{Q}[t]$, 使得$n&gt;&gt;0$时, $\bar{l}(t) = l(M_n)$.<br>Proof: 应用之前的结果, 以及$\frac{1}{(1-t)^k}$的展开.</p>
 <p>命题: 设$f(x) \in \mathbb{Q}[x]$是一个$n$次多项式. 则$f(x)$在$n+1$个相邻的整数取整数值当且仅当$f(x)$是$C_x ^0 , C_x ^1, \cdots, C_x ^n$的整线性组合.<br>Proof: 设$f(x) = a_0 C_x ^0 + a_1 C_x ^1 + \cdots + a_n C_x ^n, a_i \in \mathbb{Q}$. 则$f(x+1) - f(x) = a_1 C_x ^0 + \cdots + a_n C_x ^{n-1}$在$n$个相邻的位置取整值. 由归纳假设可知$a_1, \cdots a_n \in \mathbb{Z}$, 从而$a_0 \in \mathbb{Z}$.</p>
-]]></content>
+<h4 id="ring_of_filtration"><a href="#ring_of_filtration" class="headerlink" title="ring of filtration"></a>ring of filtration</h4><p>我们定义环$A$的filtration为理想降链:<br>$$A = J_0 \supseteq J_1 \supseteq J_2 \supseteq \cdots$$<br>满足$J_n J_m  \subseteq J_{n+m}$.</p>
+<p>给定一个filtration, 我们可以定义一个分次环$A’$(容易验证)<br>$$A’ = \oplus_{n=0} ^{\infty} J_n / J_{n+1}$$</p>
+<p>特别地, 给定环$A$的理想$I$, 它的幂定义了一个filtration, 称为$I$-adic filtration, 对应的分次环记作$gr^I(A)$.</p>
+<p>若$I$是Noetherian环$A$的一个理想, 则$gr^I(A)$也是Noetherian.<br>Proof: 由于$I$有限生成, $I = a_1 A + \cdots a_r A$, $A/I$Noetherian, 所以$gr^I(A) = A/I[\bar{a_1}, \cdots, \bar{a_r}]$ 为Noetherian.</p>
+<h4 id="module_of_filtration"><a href="#module_of_filtration" class="headerlink" title="module of filtration"></a>module of filtration</h4><p>设$M$是$A$-模, $I$是$A$的理想, 定义$M$的filtration为子模降链:<br>$$M = M_0 \supseteq M_1 \supseteq M_2 \supseteq \cdots \quad (\star)$$<br>我们称$(\star)$为$I$-admissible如果对任意$n$成立$IM_n \subseteq M_{n+1}$. $I$-adic若$M_n = I^n M$, essential $I$-adic若$(\star)$是$I$-admissible且存在$n_0$, 当$n&gt;n_0$时, $M_{n+1} = IM_n$.</p>
+<p><strong>filtration topology</strong> 给定$M$的一个filtration$(\star)$, 我们可以定义$M$上的拓扑: 对任意$x \in M$, $x$的领域基为$\lbrace x +M_n | n&gt;0 \rbrace$.</p>
+<blockquote>
+<p>显然上述拓扑是Hausdorff的当且仅当$\bigcap M_n = (0)$.</p>
+</blockquote>
+<p>若上述filtration$(\star)$是$I$-adic的, 则称上述拓扑为$I$-adic拓扑. 显然一个essential $I$-adic拓扑也定义了$M$上的一个$I$-adic拓扑.</p>
+<h4 id="Rees_u73AF"><a href="#Rees_u73AF" class="headerlink" title="Rees环"></a>Rees环</h4><p>设$I$是$A$的理想. 记 $T(I) =  A + Ix  + I^2x^2 + \cdots \leq A[x]$.<br>称$T(I)$为由理想$I$决定的Rees环. 作为$A[x]$的子代数, $T(I) = <ix>$.</ix></p>
+<p>引理: 若$A$是Noetherian. 则$T(I)$是Noetherian.<br>Proof: $I = a_1 A + cdots \a_r A$. 于是作为$A[x]$的$A$子代数. $T(I) = <ix> = A[a_1 x, \cdots, a_r x]$是$A[x_1, \cdots, x_r]$的商代数, 由Hilbert基定理, $T(I)$是Noetherian环.</ix></p>
+<h4 id="Rees_u6A21"><a href="#Rees_u6A21" class="headerlink" title="Rees模"></a>Rees模</h4><p>对于$M_A$, $A[x] \otimes_A M$是$A[x]$-模, 其中元素可以唯一表示$\sum_i x^i \otimes m_i$(和为有限和). 另一方面$M[x] = \lbrace \sum_i m_i x^i \mbox{ (有限和) }| m_i \in M \rbrace$. 于是$M[x]$可自然地看做$A[x]$-模. 并且作为$R[x]$-模, 有同构$M[x] = R[x] \otimes _R M, \quad \sum_i m_i x^i \mapsto \sum_i x^i \otimes m_i$.</p>
+<p>记 $T_I(M) = M + MIx + MI^2x^2 \cdots \leq M[x]$. 作为$T(I)$-模, $T_I(M)$可由$M$生成, $M = \sum_{j=1} ^s m_jA$是有限生成$A$-模, 则$T_I(M) = \sum_{j=1} ^s m_j T(I)$是有限生成$T(I)$-模. 从而若$A$是Noetherian, $M_R$是有限生成模, 则$T_I(M)$是Noetherian $T(I)$-模.</p>
+<h4 id="Artin-Rees_u5F15_u7406"><a href="#Artin-Rees_u5F15_u7406" class="headerlink" title="Artin-Rees引理"></a>Artin-Rees引理</h4><p>设$I$是Noetherian环$A$的理想, $M$是有限生成$A$-模. $M_1, M_2$是$M$的子模. 则存在$k \in \mathbb{N}$使得对任意$n \geq k$<br>$$I^n(M_1 \cap M_2) \subseteq I^nM_1 \cap M_2 = I^{n-k}(I^k M_1 \cap M_2) \subseteq I^{n-k}(M_1 \cap M_2)$$<br>Proof: 只需证明存在$k$使得对任意$n \geq k$, $I^nM_1 \cap M_2 \subseteq I^{n-k}(I^k M_1 \cap M_2)$(其它都包含关系显然). 考虑Rees环$T(I)$及Rees模$T\I(M)$, 以及$T\I(M)$的子模$N = M_1 \cap M_2 + (IM_1 \cap M_2)x + \cdots + (I^n M_1 \cap M_2)+ \cdots$. 由$T\I(M)$是Noetherian模, $N_{T(I)}$是有限生成模. 不妨设 $N =  T(I)u_0 + T(I)u_1 x + \cdots T(I) u_k x^k$, 其中$u_j \in I^j M_1 \cap M_2$. 对任意$n \geq k, u \in I^n M_1 \cap M_2$我们有$ux^n  \in (I^n M_1 \cap M_2)x^n \subseteq N$. 于是存在$f_j \in T(I)$, 使得$ux^n = \sum_{j=1} ^k f_j u_j x^j$. 比较$x^n$的系数, 得到$u = \sum_{j=1} ^k f_j’ u_j$. 其中$f_j’ \in I^{n-j}$. 由于<br>$$I^{n-j}(I^jM_1 \cap M_2 = I^{n-k}I^{k-j}(I^jM_1 \cap M_2 \subseteq I^{n-k}(I^k M_1 \cap M_2)$$<br>从而 $u \in I^{n-k}(I^k M_1 \cap M_2)$. 证毕.</p>
+<blockquote>
+<p>取$M_1 = M, M_2 = N \leq M$ 我们可以得到:<br>设$I$是Noetherian环$A$的理想, $N$是有限生成模$M$的子模, 则存在$k$使得$n \geq k$时, $$I^n N \subseteq I^n M \cap N = I^{n-k}(I^k M \cap N) \subset I^{n-k}N$$ </p>
+</blockquote>
+<p><strong>Krull交定理</strong> 设$I$是Noetherian环$A$的理想, $M$是有限生成$A$-模, 记 $I^w M = \cap {n=1} ^{\infty} I^n M$, 则$I(I^wM) = I^w M$, 从而$I^w M = \lbrace x \in M | \exists b \in I, x = bx \rbrace$.<br>取$M_1 = M, M_2 = I^w M$, 则存在$k$, 使得当$n \geq k$时<br>$$ I^w M =  I^n M \cap I^w M = I^{n-k}(I^k M \cap I^w M) = I^{n-k} (I^w M)$$<br>所以 $I^w M = I(I^w M)$. 显然$\lbrace x \in M | \exists b \in I, x = bx \rbrace \subseteq I^w M$. 另一方面$I^w M   = I(I^w M)$当且仅当$I + Ann(I^w M) = A$. 这是存在$b \in I$, 使得$1-b \in Ann(I^w M)$. 即对任意$x \in I^w M , x=bx$.</p>
+<blockquote>
+<p>当$A$是Noetherian整环时, $I^w M = \cap {n=1} ^{\infty} I^n M =(0)$<br>当$I \subseteq J(A)$时, $I^w M = \cap {n=1} ^{\infty} I^n M =(0)$<br>特别地, 当$A$是Noetherian, $\cap {n=1} ^{\infty} J^n = 0$.<br>当$A$不是Noetherian环时, 上述结果可能不成立, 例如实数$\mathbb{R}$上在$0$处无穷次可导的函数全体$A$. $J$是在$A$中在$0$处取值为$0$的函数全体($A$的唯一极大理想), 则$e^{-\frac{1}{x^2}} \in A$</p>
+<p>非交换环有一个著名的Jacobson猜想: $R$是左右Noetherian环, 则$\cap_{n=1} ^{\infty} J(R) = 0$.</p>
+</blockquote>
+<h3 id="Dimension_Theroy"><a href="#Dimension_Theroy" class="headerlink" title="Dimension Theroy"></a>Dimension Theroy</h3>]]></content>
     <summary type="html">
     <![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指<strong>含幺交换环(commutative ring with identity)</strong></p>]]>
     
