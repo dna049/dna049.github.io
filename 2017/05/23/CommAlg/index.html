@@ -116,7 +116,7 @@
 <meta property="og:image" content="http://dna049.com/Hilbert.png">
 <meta property="og:image" content="http://dna049.com/Nagata_noether.png">
 <meta property="og:image" content="http://dna049.com/Noether_judge.png">
-<meta property="og:updated_time" content="2017-05-28T07:14:32.000Z">
+<meta property="og:updated_time" content="2017-05-29T14:39:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Commutative Algebra》by Matsumura 读书笔记">
 <meta name="twitter:description" content="在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指含幺交换环(commutative ring with identity)">
@@ -667,12 +667,20 @@
 <blockquote>
 <p>若有一个IOD被$r$个元素生成, 则$d(M) \leq r$.</p>
 </blockquote>
-<p>设$I$是Noetherian半局部环$A$的一个IOD, 给定有限生成模的一个短正合列:$ 0 \to M’ \to M \to M’’ \to 0$. 则$d(M) = \max(d(M’),d(M’’))$ 更进一步, 当$n \gg 0$时, $\chi(M,I;n) - \chi(M’,I;n) - \chi(M’’,I;n)$的次数小于$d(M’)$.<br>Proof: 由于$l(M’’/I^n M’’) = l(M/M’+I^n M) \leq l(M/I^M)$, 从而$d(M’’) \leq d(M)$. 更进一步, $\chi(M,I;n)-\chi(M’’,I;n) = l(M’+I^n M/I^n M) = l(M’/M’ \cap I^n M)<br>$. 因此由Artin-Rees引理, 存在$r$使得$M’ \cap I^n M \subseteq I^{n-r} M’$, 从而 $l(M’/I^n M’) \geq l(M’/M’ \cap I^n M) \geq l(M’/I^{n-r} M’)$. 从而$\chi(M,I;n)-\chi(M’’,I;n)$与$\chi(M’,I;n)$有相同的最高次项.</p>
-<p>引理1: 设$A$是Noetherian半局部环, 则$d(A) \geq dim(A)$<br>对$d(A)$进行数学归纳. 若$d(A)=0$, 则存在$k$使得$\mathfrak{m}^k = \mathfrak{m}^{k+1} \cdots$. 由<strong>Krull交定理</strong>知$\mathfrak{m}^k=(0)$. 从而$l(A)$是有限长的, $\dim(A)=0$.<br>若$d(A)&gt;0$. 不妨设$r = \dim(A)&gt;0$, 设$p_0 \supset \cdots p_r = p$是长为$r$的素理想链. 任取$x \in p_{r-1} \backslash p$. 则 $\dim(A/xA+p) \geq r-1$. 再由正合序列<br>$$0 \to A/p \xleftarrow{x} A/p \to A/xA+p \to 0$$<br>我们有$d(A/xA+p) &lt; d(A/p) \leq d(A)$(这个严格小是因为上面”更进一步”的结论). 因此, 由数学归纳$r-1 \leq \dim(A/xA+p) \leq d(A/xA+p) &lt; d(A)$, 证毕.</p>
+<p>引理0: 设$I$是Noetherian半局部环$A$的一个IOD, 给定有限生成模的一个短正合列:$ 0 \to M’ \to M \to M’’ \to 0$. 则$d(M) = \max(d(M’),d(M’’))$ 更进一步, 当$n \gg 0$时, $\chi(M,I;n) - \chi(M’,I;n) - \chi(M’’,I;n)$的次数小于$d(M’)$.<br>Proof: 由于$l(M’’/I^n M’’) = l(M/M’+I^n M) \leq l(M/I^M)$, 从而$d(M’’) \leq d(M)$. 更进一步, $\chi(M,I;n)-\chi(M’’,I;n) = l(M’+I^n M/I^n M) = l(M’/M’ \cap I^n M)<br>$. 因此由Artin-Rees引理, 存在$r$使得$M’ \cap I^n M \subseteq I^{n-r} M’$, 从而 $l(M’/I^n M’) \geq l(M’/M’ \cap I^n M) \geq l(M’/I^{n-r} M’)$. 从而$\chi(M,I;n)-\chi(M’’,I;n)$与$\chi(M’,I;n)$有相同的最高次项.</p>
+<p>引理1: 设$A$是Noetherian半局部环, 则$d(A) \geq dim(A)$<br>对$d(A)$进行数学归纳. 若$d(A)=0$, 则存在$k$使得$\mathfrak{m}^k = \mathfrak{m}^{k+1} \cdots$. 由<strong>Krull交定理</strong>知$\mathfrak{m}^k=(0)$. 从而$l(A)$是有限长的, $\dim(A)=0$.<br>若$d(A)&gt;0$. 不妨设$r = \dim(A)&gt;0$, 设$p_0 \supset \cdots p_r = p$是长为$r$的素理想链. 任取$x \in p_{r-1} \backslash p$. 则 $\dim(A/xA+p) \geq r-1$. 再由正合序列<br>$$0 \to A/p \xrightarrow{x} A/p \to A/xA+p \to 0$$<br>我们有$d(A/xA+p) &lt; d(A/p) \leq d(A)$(这个严格小是因为上面”更进一步”的结论). 因此, 由数学归纳$r-1 \leq \dim(A/xA+p) \leq d(A/xA+p) &lt; d(A)$, 证毕.</p>
 <blockquote>
 <p>上述引理表明Noetherian半局部环的维数有限, 且对于任意Noetherian及其素理想$p, ht(p) = \dim(A_p)$有限, 从而<strong>Noetherian环满足素理想的降链条件</strong>, 当然Noetherian也可以由无限Krull维数, 例如: <img src="Nagata_noether.png" alt="Nagata example"> <img src="Noether_judge.png" alt="补充"></p>
 </blockquote>
 <p>引理2: 设$M \neq 0$是Noetherian半局部环$A$上的有限生成模. $x \in J(A)$. 则<br>$$ d(M) \geq d(M/xM) \geq d(M)-1$$<br>取IOD$I \ni x$. 则$\chi(M/xM,I;n) = l(M/xM+I^n M) = l(M/I^nM) - l(xM + I^n M/I^n M)$ 且 $xM + I^n M /I^n M \simeq xM/xM \cap I^n M \simeq M/(I^n M:x)$, 又因为$I^{n-1} \subseteq (I^n M:x)$ 从而<br>$$\chi(M/xM,I;n) \geq l(M/I^nM) - l(M/I^{n-1}M) = \chi(M,I;n) - \chi(M,I;n-1)$$</p>
+<p>引理3: 设$M \neq 0$是Noetherian半局部环$A$上的有限生成模. 设$\dim(A) = r$. 那么存在$r$个元素$x_1, \cdots, x_r \in J(A)$使得$l(M/x_1 M + \cdots x_r M) \leq \infty$.<br>Proof: 应用数学归纳法, 并说明在$J(A)$不包含在$Ann(M)$的任意极小素理想即可.</p>
+<p><strong>维数等价定理</strong> 设$M \neq 0$是Noetherian半局部环$A$上的有限生成模. 则$d(M) = dim(M) = $使得$l(M/x_1 M + \cdots x_r M) \leq \infty$的最小的$r$. 其中$x_1, \cdots x_r \in M$.<br>若$l(M/x_1 M + \cdots x_r M) \leq \infty$ 则由引理2知, $d(M) \leq r$. 当$r$满足条件的最小值, 由引理3知, $r \leq \dim(M)$. 从而只需证明 $\dim(M) \leq d(M)$. 取$M$的一个子模链$M = M_1 \supset M_2 \supset \cdots \supset M_{k+1} = 0$. 使得 $M/M_{i+1} \simeq A/p_i, p_i \in Spec(A)$. 那么 $p_i \supseteq Ann(M)$. 且 $Ass(M) \subseteq \lbrace p_1, \cdots, p_k \rbrace$(这些之前就证明过了). 从而$Supp(M) = V(Ann(M))$. 包含$Ann(M)$的极小素理想是$Supp(M)$的极小素理想, 从而在$Ass(M)$中, 从而在$\lbrace p_1, \cdots, p_k \rbrace$. 即 $Ass(M) = \lbrace p_1, \cdots, p_k \rbrace$. 因此(其中第一个等号要对$M$的降链应用引理0)<br>$$d(M) = \max d(A/p_i) \geq \max \dim(A/p_i) = \dim(A/Ann(M)) = \dim(M)$$</p>
+<p><strong>广义Krull维数定理</strong> $I=(a_1, \cdots, a_r)$是Noetherian环$A$的理想. 则任意包含$p$的极小素理想$p$的高度不超过$r$. 特别地, $h(I) \leq r$.<br>Proof: 由于$pA_p$是$A_p$中包含$IA_p$的唯一素理想, 因此$\dim(A_p/IA_p)=0$. 从而环$A_p/(a_1 A_p + \cdots a_rA_p)$是Artinian. 因此$ht(p) = \dim(A_p) \leq r$.</p>
+<h4 id="Noetherian_u5C40_u90E8_u73AF_u548Cregular_local_ring_28_u6B63_u5219_u5C40_u90E8_u73AF_29"><a href="#Noetherian_u5C40_u90E8_u73AF_u548Cregular_local_ring_28_u6B63_u5219_u5C40_u90E8_u73AF_29" class="headerlink" title="Noetherian局部环和regular local ring(正则局部环)"></a>Noetherian局部环和regular local ring(正则局部环)</h4><p>设$(A, \mathfrak{m},k)$是维数为$d$的Noetherian局部环. 此时IOD和属于$\mathfrak{m}$的准素理想是一回事. 我们知道IOD的生成元个数至少为$d$并且存在IOD的生成元个数恰好为$d$, 若$\lbrace x_1, \cdots, x_d \rbrace$生成了一个IOD则称为<strong>system of parameters</strong>(SOP). 若一个SOP生成了唯一极大理想$\mathfrak{m}$. 则我们称$A$为<strong>正则局部环</strong></p>
+<p>由于$\mathfrak{m}$的极小基个数等于$\rank_k \mathfrak{m}/\mathfrak{m}^2$. 因此一般地我们有<br>$$\dim(A) \leq $\rank_k \mathfrak{m}/\mathfrak{m}^2$$<br>等号取得, 当且仅当$A$是Noetherian局部环.</p>
+<p>设$$(A, \mathfrak{m})$是Noetherian局部环, $\lbrace x_1, \cdots, x_d \rbrace$是一个$SOP$. 则<br>$$\dim(A/(x_1, \cdots, x_i) = d-i = \dim(A) - i$$</p>
+<p>设$A$是Noetherian环, 则$\dim A[x_1, \cdots, x_n] = \dimA + n$.<br>Proof: 对$B = A[x]$ 证明即可. 对任意$p \in Spec(A)$, 选择$P$为满足$P \cap A = p$中极大元. 则$ht(P/pB) = 1$. 又$ht(P) = ht(p) + ht(P/pB) = ht(p)+1$. 再由 $Spec(B) \to Spec(A)$是满的. 因此$\dim(B) = \dim(A) + 1$.</p>
+<p>推论: 设$k$是域, 则$\dim k[x_1, \cdots, x_n] = n$. 理想$(x_1, \cdots, x_i)$是高度为$i$的素理想.<br>Proof: 由于$(0) \supset (x_1) \supset (x_1,x_2) \supset \cdots \supset (x_1, \cdots, x_i)$ 是长为$n$的素理想链. 在由$\dim k[x_1, \cdots, x_n] = n$知结论成立.</p>
 
       
     </div>
