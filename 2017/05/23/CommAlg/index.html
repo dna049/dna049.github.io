@@ -116,7 +116,7 @@
 <meta property="og:image" content="http://dna049.com/Hilbert.png">
 <meta property="og:image" content="http://dna049.com/Nagata_noether.png">
 <meta property="og:image" content="http://dna049.com/Noether_judge.png">
-<meta property="og:updated_time" content="2017-05-29T14:39:54.000Z">
+<meta property="og:updated_time" content="2017-05-29T15:13:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Commutative Algebra》by Matsumura 读书笔记">
 <meta name="twitter:description" content="在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指含幺交换环(commutative ring with identity)">
@@ -681,6 +681,25 @@
 <p>设$$(A, \mathfrak{m})$是Noetherian局部环, $\lbrace x_1, \cdots, x_d \rbrace$是一个$SOP$. 则<br>$$\dim(A/(x_1, \cdots, x_i) = d-i = \dim(A) - i$$</p>
 <p>设$A$是Noetherian环, 则$\dim A[x_1, \cdots, x_n] = \dimA + n$.<br>Proof: 对$B = A[x]$ 证明即可. 对任意$p \in Spec(A)$, 选择$P$为满足$P \cap A = p$中极大元. 则$ht(P/pB) = 1$. 又$ht(P) = ht(p) + ht(P/pB) = ht(p)+1$. 再由 $Spec(B) \to Spec(A)$是满的. 因此$\dim(B) = \dim(A) + 1$.</p>
 <p>推论: 设$k$是域, 则$\dim k[x_1, \cdots, x_n] = n$. 理想$(x_1, \cdots, x_i)$是高度为$i$的素理想.<br>Proof: 由于$(0) \supset (x_1) \supset (x_1,x_2) \supset \cdots \supset (x_1, \cdots, x_i)$ 是长为$n$的素理想链. 在由$\dim k[x_1, \cdots, x_n] = n$知结论成立.</p>
+<h2 id="Depth"><a href="#Depth" class="headerlink" title="Depth"></a>Depth</h2><h4 id="24M_24-regular_sequence"><a href="#24M_24-regular_sequence" class="headerlink" title="$M$-regular sequence"></a>$M$-regular sequence</h4><p>我们称$a_1, \cdots, a_r$是一个<strong>$M$-regular sequence</strong>: 如果它满足:</p>
+<ol>
+<li>$\forall 1 \leq i \leq r, a_i$不是$M/(a_1, \cdots, a_{i-1})M$的零因子;</li>
+<li>$(a_1, \cdots, a_r)M \neq M$.<blockquote>
+<p>上述定义与$a_1, \cdots, a_r$的次序有关, 例如$k$为域, $A=k[x, y,z], a_1 = X(Y-1), a_2 = Y, a_3= Z(Y-1)$是$A$-regular sequence, 但$a_1, a_3, a_2$不是.</p>
+</blockquote>
+</li>
+</ol>
+<p>类似地, 可以定义一个理想$I$上的(极大)$M$-regular sequnence.</p>
+<p>引理1: 假设$a_1, \cdots, a_r$是$M$-regular 且<br>$$a_1 \xi_1 + \cdots a_r \xi_r = 0$$<br>则 $\xi_i \in (a_1, \cdots, a_r)M$.</p>
+<p>引理2: 假设$a_1, \cdots, a_r$是$M$-regular, 则$a_1 ^{n_1} + \cdots a_r$.</p>
+<p>若$a_1, a_2, \cdots \in A$是一个$M$-regular sequence. 则由严格子模升链$a_1 M \subset (a_1, a_2)M \subset \cdots$. 因此有理想严格升链$a_1 \subset (a_1, a_2) \subset \cdots$. 从而若$A$是Noetherian环, 则$M$-regular sequence的长度总是有限的, 因此每个理想$I$上$M$-regular sequence都可以推展为一个极大$M$-regular sequence.</p>
+<p>定理: 设$M$是Noetherian环$A$上的有限生成模. $I$是$A$的理想, 满足$IM \neq M$. $n$为给定正整数. 则下列条件等价:</p>
+<ol>
+<li>$Ext_A ^i(N, M) = 0 (i&lt;n)$ 对任意满足$Supp(N) \subseteq V(I)$的有限生成$A$-模成立;</li>
+<li>$Ext_A ^i(A/I, M) = 0 (i&lt;n)$;</li>
+<li>存在一个满足$Supp(N) = V(I)$的有限生成模$N$使得$Ext_A ^i(N, M) = 0 (i&lt;n)$;</li>
+<li>$I$中存在长度为$n$的$M$-regular sequence $a_1, \cdots, a_n$.</li>
+</ol>
 
       
     </div>
