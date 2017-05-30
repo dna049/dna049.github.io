@@ -192,7 +192,7 @@
     <link href="http://dna049.com/2017/05/23/CommAlg/"/>
     <id>http://dna049.com/2017/05/23/CommAlg/</id>
     <published>2017-05-23T00:40:06.000Z</published>
-    <updated>2017-05-29T15:13:57.000Z</updated>
+    <updated>2017-05-30T06:10:04.000Z</updated>
     <content type="html"><![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指<strong>含幺交换环(commutative ring with identity)</strong></p>
 <a id="more"></a>
 <h2 id="u57FA_u672C_u6982_u5FF5"><a href="#u57FA_u672C_u6982_u5FF5" class="headerlink" title="基本概念"></a>基本概念</h2><p>可以说书中没一句废话, 开头直接给出下面概念, 并且叙述一些常见等价刻画: </p>
@@ -237,7 +237,7 @@
 </li>
 <li>设$\mathfrak{a}$是环$A$的理想, $b \in A$, 若$\mathfrak{a} + bA$和$\mathfrak{a}:bA$都有限生成, 则$\mathfrak{a}$有限生成.<br>Proof: 设$a_i \in \mathfrak{a},\quad b_j \in A$使得$\mathfrak{a} + bA = \sum a_iA + bA$且$\mathfrak{a} : bA = \sum c_j A$. 设$\mathfrak{a}’ = \sum a_iA + \sum bc_j A \subseteq \mathfrak{a}$. 对任意 $a \in \mathfrak{a}$, 我们有 $a \in \mathfrak{a}’ + bA$, 即$a \equiv rb \mod \mathfrak{a}’$. 因此 $rb \in \mathfrak{a}$. 即 $r \in \mathfrak{a}: bA$, $rb \in \mathfrak{a}’$, 因此$a \in \mathfrak{a}’$, 即$\mathfrak{a} = \mathfrak{a}’$.</li>
 <li>(Cohen)环$A$是Noetherian, 当且仅当它的每个素理想都是有限生成的.<br>Proof: 记$A$中所有非有限生成理想构成的集合为$F$, 取$F$中极大元$\mathfrak{a}$(zorn引理保证可行性), 那么由条件知道$\mathfrak{a}$不是素理想, 因此存在 $a,b \in A$, 使得 $a, b \notin \mathfrak{a}$且$ab \in \mathfrak{a}$. 又因为 $\mathfrak{a}$的极大性知: $\mathfrak{a}+bA$和$\mathfrak{a}:bA$有限生成, 所以 $\mathfrak{a}$有限生成, 所以$F = \emptyset$.</li>
-<li>定义$Supp(M) = \lbrace p \in Spec(A) | M_p \neq  0 \rbrace$. 若$M$有限生成, 则 $Supp(M) = V(Ann(M))$.</li>
+<li>定义$Supp(M) = \lbrace p \in Spec(A) | M_p \neq  0 \rbrace$. 若$M$有限生成, 则 $Supp(M) = V(Ann(M))$. 此时$Supp(M)$就是零化$M$的理想的闭包, 没毛病, 完美.</li>
 </ol>
 <h2 id="u5E73_u5766_u6027_28Flatness_29"><a href="#u5E73_u5766_u6027_28Flatness_29" class="headerlink" title="平坦性(Flatness)"></a>平坦性(Flatness)</h2><p>设 $S: \quad \cdots \to N  \to N’ \to N’’ \to \cdots$ 是任意$A$-模序列.<br>称$A$-模$M$是平坦的, 如果$S$正合, 则$S \otimes M$正合.<br>称$M$忠实平坦的(faithful flat), 如果$S$正合当且仅当$S \otimes M$ 正合.<br>例子: 投射模是平坦的, 自由模是忠实平坦的.</p>
 <h4 id="u5E73_u5766_u6A21_u7684_u7B49_u4EF7_u523B_u753B"><a href="#u5E73_u5766_u6A21_u7684_u7B49_u4EF7_u523B_u753B" class="headerlink" title="平坦模的等价刻画"></a>平坦模的等价刻画</h4><ol>
@@ -509,6 +509,19 @@
 <li>存在一个满足$Supp(N) = V(I)$的有限生成模$N$使得$Ext_A ^i(N, M) = 0 (i&lt;n)$;</li>
 <li>$I$中存在长度为$n$的$M$-regular sequence $a_1, \cdots, a_n$.</li>
 </ol>
+<p>Proof: $1 \to 2 \to 3$显然, $3 \to 4$: 我们有$Ext_A ^0 (N,M) = \hom_A (N,M) = 0$. 若$I$中无元素是$M$-regular, 则$I$包含在$Ass(M)$全体的(Noetherian所以有限)并中, 从而$I$包含于某个素理想$P$中, 从而由单射$A/P \to M$. 在$P$处作局部化, 我们有$\hom_{A_P}(k, M_P) \neq 0$, 其中$k = A_P / P A_P$. 由于$P \in V(I) = Supp(N)$. 从而$N_P \neq 0$, 从而由<strong>NAK lemma</strong> $N \otimes k = N_P / PN_P \neq 0$. 从而$\hom(N \otimes k, k) \neq 0$. 从而$\hom_{A_P}(N_P, M_P) \neq 0$. (三个映射的复合, 第一个满第三个单). 然而它$\hom_A(N,M)=0$在$P$处局部化的结果, 矛盾. 从而$\exists a_1 \in I$, 若$n&gt;1$, 取$M_1 = M/a_1 M$. 由模的短正合列<br>$$ 0 \to M \xrightarrow{a_1} M \to M_1 \to 0$$<br>得到同调群的长正合列:<br>$$ \cdots \to Ext_A ^i (N,M) \to Ext_A ^i (N,M_1) \to Ext_A ^{i+1} (N,M) \to \cdots$$<br>这说明 $Ext_A ^i(N,M_1) =0 (i<n-1)$, 0="" 从而由数学归纳知.="" 存在$m\_1$-regular序列="" $a\_2,="" \cdots,="" a\_n$.="" $4="" \to="" 1$:="" 设$m\_1="M/aM$." 则由数学归纳知$ext\_a="" ^i="" (n,m\_1)="0" (1="" <="" n-1)$.="" 从而我们有正合列="" $$="" ext\_a="" (n,m)="" \xrightarrow{a\_1}="" ^{i+1}="" (i<n)$$="" 又="" $supp(n)="V(Ann(N))" \subseteq="" v(i)$,="" 因此="" $i="" \sqrt{ann(n)}$.="" 因此存在$r=""> 0$使得$a_1 ^r N = 0$. 因此$a_1^r$ 也零化$Ext_A^i(N,M)$. 从而 $Ext_A(N,M) 0 (1 &lt;n)$.</n-1)$,></p>
+<blockquote>
+<p>我们将上述$I$中最长的$M$-regular序列称为$I$-depth of $M$. 记作$depth_I(M)$. 上述定理表明 $$depth_I(M) = \min \lbrace i | Ext_A ^i(A/I,M) \neq 0 \rbrace$$<br>当$(A, \mathfrak{m})$ 是(Noetherian局部环时), 我们用 $depth(M), depth_A(M)$来表示$depth_{\mathfrak{m}}(M)$称作$M$的深度.<br>对任意$P \in Spec(A)$, $depth M_P = 0 \Longleftrightarrow PA_P \in Ass_{A_P}(M_P) \Longleftrightarrow P \in Ass(M) \Longleftrightarrow depth_p(M) = 0$. 一般地, 由于局部化函子正合, 因此$depth_{A_P} (M_p) \gep depth_P (M)$<br>若$M = 0$, 定义$depth_I(M) = 0$; 若$IM = M \neq 0$, 定义$depth_I(M) = \infty$.</p>
+</blockquote>
+<h4 id="Grade"><a href="#Grade" class="headerlink" title="Grade"></a>Grade</h4><p>设$M$是Noetherian环$A$上的有限生成模. 定义$M$的garde为:<br>$$grade M = \inf \lbrace i | Ext_A ^i (M,A) \ neq 0 \rbrace$$<br>由上面定义知:<br>$$grade M = depth_I(A), \quad I = Ann(M)$$<br>同理, 由定义知: $grade M  \leq proj.dim M$</p>
+<p>对于$A$中任意理想$I$, $depth_I(A)$为$I$中最长的$A$-sequence序列$a_1, \cdots, a_r$的长度. 又此时$ht(a_1, \cdots, a_r) = r$. 从而$depth_I(A) \leq ht(I)$</p>
+<p>引理1 :设$M \neq 0 ,N$是Noetherian环$A$上的有限生成模, 若$grad M = k$, $proj. dim N = l &lt; k$. 则 $Ext_A ^i(M,N) = 0 (i &lt; k-l)$<br>Proof: 对$l$数学归纳, $l=0$时, $N$为自由$A$-模的直和因子, 因此结论成立. $l&gt;0$时, 由正合列: $0 \to N’ \to L \to N \to 0$, 其中$L$自由, 于是$\dim N’ = l-1$. 由归纳法得证.</p>
+<p>引理2(<strong>Ischebeck</strong>) 设$(A, \mathfrak{m})$是Noetherian局部环, $M \neq 0 \neq N$是有限生成$A$-模. 若$depth M = k, \dim N = r$. 则<br>$$Ext _A ^i (N,M) = 0 \quad (i&lt;k-r)$$<br>Proof: 对$r$归纳法证明.(并不简单, 都是用模的短正合列, (再由投射分解, 得到复形的短正合列, 从而)导出同调群之间的长正合列, 然后应用数学归纳得出结论)</p>
+<p>定理: 设$(A,\mathfrak{m})$ 是Noetherian半局部环, 且$M \neq 0$是有限生成$A$-模. 那么对任意$p \in Spec(A), \quad depth M \leq \dim(A/p)$.<br>Proof: 由于 $\hom(A/p,M) \neq  0$, 上面引理反证即可.</p>
+<p>引理3: 设$M,N$是局部环$(A,\mathfrak{m},k)$上的有限生成模, 则<br>$$M \otimes _A N \neq 0 \Longleftrightarrow M \neq 0 \neq N$$<br>若$M \neq  0 \neq N$, 则由<strong>NAK lemma</strong>知: $M \otimes k =  M/\mathfrak{m}M \neq 0 \neq N \otimes k$. 由于$k$是域. $(M \otimes N) \otimes k = (E \otimes k) \otimes_k  (F \otimes k) \neq  0$. 从而$M \otimes N \neq 0$.</p>
+<p>引理4: 设$E,F$是环$A$上的有限生成模, 则$Supp(E \otimes F) = Supp(E) \cap Supp(F)$.<br>Proof: 对任意$p \in Spec(A,\quad (E \otimes F)_p = (E_p \otimes_{A\p} F_p)$.<br>由引理3, $(E \otimes F)_p \neq 0 \Longleftrightarrow E_p \neq 0 \neq F_p$.</p>
+<p>引理5: 设$M \neq 0$是Noetherian局部环$A$上的有限生成模, $a_1, \cdots, a_r$是$M$-regular序列. 那么<br>$$\dim M/(a_1, \cdots, a_r)M =  \dim M -r$$<br>Proof: 首先由于此时$\dim M = d(M)$, 我们有$\dim M/(a_1, \cdots, a_r)M \gep \dim M -r$, 另一方面, 若$x$是$M$-regular元, 那么由引理4$Supp(M/xM) = Supp(M) \cap Supp(A/xA) = Supp(M) \cap V(x)$. 由因为$x$不在$Supp(M) = V(Ann(M))$的极小素理想中. 从而<br>$$\dim(M/xM) = \dim(A/Ann(M)+xA) &lt;  \dim(A/Ann(M)) = \dim(M)$$</p>
+<p>引理6: 设$M$是Noetherian环$A$上的有限生成模, $I$是$A$的理想, 则<br>$$ depth_I(M) = \inf \lbrace depth M_p | p \in V(I) \rbrace $$<br>Proof: 将等式右边记作$n$. 若$n=0$. 则存在$P \supseteq I$使得$M_P = 0$. 从而$I \subseteq p \in Ass(M)$. 从而$depth_I(M) = 0$.若 $0 &lt; n &lt; \infty$. 此时$I$不包含于任何$M$的associated素理想中, 因此存在$M$-regular元$a \in I$. 记$M’ = M/aM$. 则由引理5知 $\depth (M’)_P = depth M_P/aM_P = depth M_P -1, \mobox{for } P \supset I$. 且$depth_I(M’) = depth_I(M)-1$. 从而归纳法知结论成立, 当$n = \infty$时, 对任意$P \in V(I), \quad PM_P = M_P$. 若$IM \neq M$, 对任意$P \in Supp(M/IM) = V(I) \cap Supp(M)$, 我们有$(M/IM)_P \neq 0$. 若$P$是$Supp(M/IM)$中的极小素理想, 则$Supp_{A_P}(M/IM)_P = \lbrace PA_P \rbrace$. 因此$(M/IM)_P = M_P/IM_P$在$M_P$中coprimary. 又因为$P$是$M_P$的零因子且有限生成, 所以存在$s&gt;0$使得$P^s \subseteq IM_P$. 因此$PM_P \neq M_P$矛盾. 从而$IM = M, \quad depth_I(M) = \infty$.</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指<strong>含幺交换环(commutative ring with identity)</strong></p>]]>
