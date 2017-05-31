@@ -192,7 +192,7 @@
     <link href="http://dna049.com/2017/05/23/CommAlg/"/>
     <id>http://dna049.com/2017/05/23/CommAlg/</id>
     <published>2017-05-23T00:40:06.000Z</published>
-    <updated>2017-05-30T06:31:57.000Z</updated>
+    <updated>2017-05-31T01:38:07.000Z</updated>
     <content type="html"><![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指<strong>含幺交换环(commutative ring with identity)</strong></p>
 <a id="more"></a>
 <h2 id="u57FA_u672C_u6982_u5FF5"><a href="#u57FA_u672C_u6982_u5FF5" class="headerlink" title="基本概念"></a>基本概念</h2><p>可以说书中没一句废话, 开头直接给出下面概念, 并且叙述一些常见等价刻画: </p>
@@ -511,7 +511,7 @@
 </ol>
 <p>Proof: $1 \to 2 \to 3$显然, $3 \to 4$: 我们有$Ext_A ^0 (N,M) = \hom_A (N,M) = 0$. 若$I$中无元素是$M$-regular, 则$I$包含在$Ass(M)$全体的(Noetherian所以有限)并中, 从而$I$包含于某个素理想$P$中, 从而由单射$A/P \to M$. 在$P$处作局部化, 我们有$\hom_{A_P}(k, M_P) \neq 0$, 其中$k = A_P / P A_P$. 由于$P \in V(I) = Supp(N)$. 从而$N_P \neq 0$, 从而由<strong>NAK lemma</strong> $N \otimes k = N_P / PN_P \neq 0$. 从而$\hom(N \otimes k, k) \neq 0$. 从而$\hom_{A_P}(N_P, M_P) \neq 0$. (三个映射的复合, 第一个满第三个单). 然而它$\hom_A(N,M)=0$在$P$处局部化的结果, 矛盾. 从而$\exists a_1 \in I$, 若$n&gt;1$, 取$M_1 = M/a_1 M$. 由模的短正合列<br>$$ 0 \to M \xrightarrow{a_1} M \to M_1 \to 0$$<br>得到同调群的长正合列:<br>$$ \cdots \to Ext_A ^i (N,M) \to Ext_A ^i (N,M_1) \to Ext_A ^{i+1} (N,M) \to \cdots$$<br>这说明 $Ext_A ^i(N,M_1) =0 (i<n-1)$, 0="" 从而由数学归纳知.="" 存在$m\_1$-regular序列="" $a\_2,="" \cdots,="" a\_n$.="" $4="" \to="" 1$:="" 设$m\_1="M/aM$." 则由数学归纳知$ext\_a="" ^i="" (n,m\_1)="0" (1="" <="" n-1)$.="" 从而我们有正合列="" $$="" ext\_a="" (n,m)="" \xrightarrow{a\_1}="" ^{i+1}="" (i<n)$$="" 又="" $supp(n)="V(Ann(N))" \subseteq="" v(i)$,="" 因此="" $i="" \sqrt{ann(n)}$.="" 因此存在$r=""> 0$使得$a_1 ^r N = 0$. 因此$a_1^r$ 也零化$Ext_A^i(N,M)$. 从而 $Ext_A(N,M) 0 (1 &lt;n)$.</n-1)$,></p>
 <blockquote>
-<p>我们将上述$I$中最长的$M$-regular序列称为$I$-depth of $M$. 记作$depth_I(M)$. 上述定理表明 $$depth_I(M) = \min \lbrace i | Ext_A ^i(A/I,M) \neq 0 \rbrace$$<br>当$(A, \mathfrak{m})$ 是(Noetherian局部环时), 我们用 $depth(M), depth_A(M)$来表示$depth_{\mathfrak{m}}(M)$称作$M$的深度.<br>对任意$P \in Spec(A)$, $depth M_P = 0 \Longleftrightarrow PA_P \in Ass_{A_P}(M_P) \Longleftrightarrow P \in Ass(M) \Longleftrightarrow depth_p(M) = 0$. 一般地, 由于局部化函子正合, 因此$depth_{A_P} (M_p) \gep depth_P (M)$<br>若$M = 0$, 定义$depth_I(M) = 0$; 若$IM = M \neq 0$, 定义$depth_I(M) = \infty$.</p>
+<p>我们将上述$I$中最长的$M$-regular序列称为$I$-depth of $M$. 记作$depth_I(M)$. 上述定理表明 $$depth_I(M) = \min \lbrace i | Ext_A ^i(A/I,M) \neq 0 \rbrace$$<br>当$(A, \mathfrak{m})$ 是(Noetherian局部环时), 我们用 $depth(M), depth_A(M)$来表示$depth_{\mathfrak{m}}(M)$称作$M$的深度.<br>对任意$P \in Spec(A)$, $depth M_P = 0 \Longleftrightarrow PA_P \in Ass_{A_P}(M_P) \Longleftrightarrow P \in Ass(M) \to depth_p(M) = 0$. 一般地, 由于局部化函子正合, 因此$depth_{A_P} (M_p) \gep depth_P (M)$<br>若$M = 0$, 定义$depth_I(M) = 0$; 若$IM = M \neq 0$, 定义$depth_I(M) = \infty$.</p>
 </blockquote>
 <h4 id="Grade"><a href="#Grade" class="headerlink" title="Grade"></a>Grade</h4><p>设$M$是Noetherian环$A$上的有限生成模. 定义$M$的garde为:<br>$$grade M = \inf \lbrace i | Ext_A ^i (M,A) \ neq 0 \rbrace$$<br>由上面定义知:<br>$$grade M = depth_I(A), \quad I = Ann(M)$$<br>同理, 由定义知: $grade M  \leq proj.dim M$</p>
 <p>对于$A$中任意理想$I$, $depth_I(A)$为$I$中最长的$A$-sequence序列$a_1, \cdots, a_r$的长度. 又此时$ht(a_1, \cdots, a_r) = r$. 从而$depth_I(A) \leq ht(I)$</p>
@@ -521,8 +521,32 @@
 <p>引理3: 设$M,N$是局部环$(A,\mathfrak{m},k)$上的有限生成模, 则<br>$$M \otimes _A N \neq 0 \Longleftrightarrow M \neq 0 \neq N$$<br>若$M \neq  0 \neq N$, 则由<strong>NAK lemma</strong>知: $M \otimes k =  M/\mathfrak{m}M \neq 0 \neq N \otimes k$. 由于$k$是域. $(M \otimes N) \otimes k = (E \otimes k) \otimes_k  (F \otimes k) \neq  0$. 从而$M \otimes N \neq 0$.</p>
 <p>引理4: 设$E,F$是环$A$上的有限生成模, 则$Supp(E \otimes F) = Supp(E) \cap Supp(F)$.<br>Proof: 对任意$p \in Spec(A,\quad (E \otimes F)_p = (E_p \otimes_{A\p} F_p)$.<br>由引理3, $(E \otimes F)_p \neq 0 \Longleftrightarrow E_p \neq 0 \neq F_p$.</p>
 <p>引理5: 设$M \neq 0$是Noetherian局部环$A$上的有限生成模, $a_1, \cdots, a_r$是$M$-regular序列. 那么<br>$$\dim M/(a_1, \cdots, a_r)M =  \dim M -r$$<br>Proof: 首先由于此时$\dim M = d(M)$, 我们有$\dim M/(a_1, \cdots, a_r)M \gep \dim M -r$, 另一方面, 若$x$是$M$-regular元, 那么由引理4$Supp(M/xM) = Supp(M) \cap Supp(A/xA) = Supp(M) \cap V(x)$. 由因为$x$不在$Supp(M) = V(Ann(M))$的极小素理想中. 从而<br>$$\dim(M/xM) = \dim(A/Ann(M)+xA) &lt;  \dim(A/Ann(M)) = \dim(M)$$</p>
-<p>引理6: 设$M$是Noetherian环$A$上的有限生成模, $I$是$A$的理想, 则<br>$$ depth_I(M) = \inf \lbrace depth M_p | p \in V(I) \rbrace $$<br>Proof: 将等式右边记作$n$. 若$n=0$. 则存在$P \supseteq I$使得$M_P = 0$. 从而$I \subseteq p \in Ass(M)$. 从而$depth_I(M) = 0$.若 $0 &lt; n &lt; \infty$. 此时$I$不包含于任何$M$的associated素理想中, 因此存在$M$-regular元$a \in I$. 记$M’ = M/aM$. 则由引理5知 $\depth (M’)_P = depth M_P/aM_P = depth M_P -1, \mobox{for } P \supset I$. 且$depth_I(M’) = depth_I(M)-1$. 从而归纳法知结论成立, 当$n = \infty$时, 对任意$P \in V(I), \quad PM_P = M_P$. 若$IM \neq M$, 对任意$P \in Supp(M/IM) = V(I) \cap Supp(M)$, 我们有$(M/IM)_P \neq 0$. 若$P$是$Supp(M/IM)$中的极小素理想, 则$Supp_{A_P}(M/IM)_P = \lbrace PA_P \rbrace$. 因此$(M/IM)_P = M_P/IM_P$在$M_P$中coprimary. 又因为$P$是$M_P$的零因子且有限生成, 所以存在$s&gt;0$使得$P^s \subseteq IM_P$. 因此$PM_P \neq M_P$矛盾. 从而$IM = M, \quad depth_I(M) = \infty$.</p>
-]]></content>
+<p>引理6: 设$M$是Noetherian环$A$上的有限生成模, $I$是$A$的理想, 则<br>$$ depth_I(M) = \inf \lbrace depth M_p | p \in V(I) \rbrace $$<br>Proof: 将等式右边记作$n$. 若$n=0$. 则存在$P \supseteq I$使得$M_P = 0$. 从而$I \subseteq p \in Ass(M)$. 从而$depth_I(M) = 0$.若 $0 &lt; n &lt; \infty$. 此时$I$不包含于任何$M$的associated素理想中, 因此存在$M$-regular元$a \in I$. 记$M’ = M/aM$. 则由depth和$M$-regular的关系(上面定理)知 $\depth (M’)_P = depth M_P/aM_P = depth M_P -1, \mobox{for } P \supset I$. 且$depth_I(M’) = depth_I(M)-1$. 从而归纳法知结论成立, 当$n = \infty$时, 对任意$P \in V(I), \quad PM_P = M_P$. 若$IM \neq M$, 对任意$P \in Supp(M/IM) = V(I) \cap Supp(M)$, 我们有$(M/IM)_P \neq 0$. 若$P$是$Supp(M/IM)$中的极小素理想, 则$Supp_{A_P}(M/IM)_P = \lbrace PA_P \rbrace$. 因此$(M/IM)_P = M_P/IM_P$在$M_P$中coprimary. 又因为$P$是$M_P$的零因子且有限生成, 所以存在$s&gt;0$使得$P^s \subseteq IM_P$. 因此$PM_P \neq M_P$矛盾. 从而$IM = M, \quad depth_I(M) = \infty$.</p>
+<h3 id="Cohen-Macaulay_Rings"><a href="#Cohen-Macaulay_Rings" class="headerlink" title="Cohen-Macaulay Rings"></a>Cohen-Macaulay Rings</h3><p>设$M$是Noetherian环$A$上的有限生成模, 当$M\neq 0$时, $\hom(M,M) \neq 0$, 从而由引理2(Ischebeck)知$depth M \leq \dim M$. 我们称$M$是<strong>Cohen-Macaulay</strong>(C.M.), 如果$M = 0$或$depth M = \dim M$. 若$A$作为$A$-模是$C.M.$, 则称$A$是$C.M.$环.</p>
+<p>设$(A,\mathfrak{m})$是局部环, $M$是有限生成$A$-模. 则:</p>
+<ol>
+<li>若$M$是C.M.模, $p \in Ass(M)$, 则$depth(M) = \dim(A/P)$. 从而 $Ass(M)$中元素没有包含关系.</li>
+<li>若$a_1, \cdots, a_r$是$\mathfrak{m}$中的$M$-regular序列, 取$M’ = M/(a_1, \cdots, a_r)M$. 则 $M$是C.M.当且仅当$M’$是C.M.</li>
+<li>若$M$是C.M.模, 则对任意$P \in Spec(A)$, $A_P$模$M_P$是C.M.模, 且当$M_P \neq 0$时, $depth_P(M) = depth _{A_P} M_P = \dim M_P$</li>
+</ol>
+<p>Proof: 1)由于$Ass(M) \neq 0$, 所以$M \neq 0$, 因此$depth(M) = \dim M$. 又因为$P \in Supp(M)$, 我们有$\dim M \geq \dim A/P \geq depth M$. 证毕.<br>2) 有<strong>NAK lemma</strong>, 我们有$M = 0 \Longleftrightarrow M’ = 0$. 若$M \neq 0$. 则由引理5知$\dim M’=\dim M -r$. 由$\depth$的$M$-regular序列刻画知, $<br>depth M’ = depth M - r$.<br>3) 我们假定$M_P \neq 0$. 此时$P \supseteq Ann(M)$. 我们有 $\dim M_P \geq depth_{A_P} M_P \geq depth_P(M)$. 对$depth_P(M)$数学归纳, 若$depth_P(M) = 0$, 则$P$包含于某个$P’ \in Ass(M)$. 因为$Ann(M) \subseteq P \suseteq P’$. 由1)的结论, 包含$Ass(M)$中的素理想是包含$Ann(M)$的极小素理想, 从而$P = P’$. 从而$\dim M_P = 0$. 若$depth_P(M)&gt;0$, 取一个$M$-regular元$a \in P$, 记 $M_1 = M/aM$. 由于局部化函子是正合的, $a$也是$M_P$-regular. 因此$\dim (M_1)_P = \dim M_P/aM_P = \dim M_P-1$且$\depth_P(M_1) = \depth_P(M) - 1$. 由2)$M_1$是C.M. 从而由归纳法, $\dim (M_1)_P = depth_P(M_1)$, 证毕.</p>
+<p>引理7: 设$(A, \mathfrak{m})$是C.M.局部环, 则对任意序列$a_1, \cdots, a_r \in \mathfrak{m}$, 下列条件等价:</p>
+<ol>
+<li>$a_1, \cdots, a_r$是$A$-regular序列</li>
+<li>$ht(a_1, \cdots, a_i) = i (1 \leq i \leq r)$</li>
+<li>$ht(a_1, \cdots, a_r) = r$</li>
+<li>存在$a_{r+1} \cdots a_n \in \mathfrak{m}, (n = \dim A)$ 使得 $\lbrace a_1, \cdots a_n \rbrace$是SOP.</li>
+</ol>
+<p>Proof: $1 \to 2$: 由广义Krull定理: $ht(a_1, \cdots, a_i) \leq i$, 再由$a_1, \cdots, a_r$是$A$-regular序列知$ht(a_1, \cdots, a_i) \geq i$. $2 \to 3$显然, $3 \to 4$: 若$\dim A = r$则结论是平凡的. 若$\dim A &gt; r$, 则可以找到$a_{r+1} \in \mathfrak{m}$不在包含$(a_1, \cdots, a_r)$的极小素理想中, 从而 $ht(a_1, \cdots, a_{r+1}) = r+1$. 于是一直这样进行下去即可. $4 \to 1$: 只需证明每个SOP$x_1, \cdots, x_n$都是$A$-regular序列. 若$P \in Ass(A)$, 则$\dim A/P = n$. 因此 $x_1 \notin P$(否则它在$A/P$下的像怎么生成$\mathfrak{m}/P$). 因此$x_1$是$A$-regular. 记 $A’ = A/(x_1)$. 则$A’$是C.M.维数为$n-1$局部环. 由归纳法结论成立.</p>
+<p>设$I$是C.M.局部环$(A, \mathfrak{m})$的真理想, 则</p>
+<ol>
+<li>$ht(I) = depth_I(A) = \dim A - \dim(A/I)$</li>
+<li>对任意素理想$p \subset q, ht(q) = ht(p) + ht(q/p)$.<br>Proof: 1. $ht(I) = r$. 我们可以选择$a_1, \cdots, a_r \in I$使得$ht(a_1, \cdots, a_i) = i \quad 1 \leq i \leq r$. 由引理7, $a_1, \cdots, a_r$是$I$中$A$-regular序列. 从而$ht(I) \leq depth_I(A)$. 另一方面, 若$b_1, \cdots, b_s$是$I$中$A$-regular序列, 则 $ht(b_1, \cdots, b_s) = s \leq ht(I)$. 因此$ht(I) = depth_I(A)$. 由于$ht(I) = \inf \lbrace ht(P) | P \in V(I) \rbrace$, $\dim(A/I) = \sup \lbrace \dim A/P | P \in V(I) \rbrace$. 若$ht(P) = \dim(A) - \dim(A/P)$, 对任意$P \in Spec(A)$成立, 那么$ht(I) = \dim A - \dim(A/I)$显然也成立. 由于$A_P$是C.M.环, $ht(P) = \dim(A_P) = \depth_P(A)$. 从而我们可以找$P$中一个$A$-regular序列$a_1, \cdots, a_r$. $A/(a_1, \cdots, a_r)$是维数为$n-r$的C.M.环, $P$是包含$a_1, \cdots, a_r$的极小素理想. 从而$\dim(A/P) - n-r$(由上面的性质).</li>
+<li>若$p supset q$是$A$的素理想, 则$A_q$是C.M.环, 从而$\dim A_q = ht pA_q + \dim A_q / pA_q$. 即$ht(q) = ht(p) + ht(q/p)$.</li>
+</ol>
+<p><strong>Cohen-Macauly Ring</strong> 称一个Noetherian环$A$是Cohen-Macaulay如果对任意$A_P \in Spec(A)$, $A_P$是C.M. local ring. 实际上只要在对$A_P \in \omega(A)$成立即可.</p>
+<p>设$A$是Cohen-Macaulay环, 则多项式环$A[x_1, \cdots, x_n]$也是Cohen-Macaulay环.</p>
+<h2 id="To_be_Continue"><a href="#To_be_Continue" class="headerlink" title="To be Continue."></a>To be Continue.</h2>]]></content>
     <summary type="html">
     <![CDATA[<p>在学习非交换环论的过程中, 发现交换环有些东西依然没搞清楚, 复习一下, 顺便再理一理 Matsumura 这本言简意赅的《Commutative Algebra》. 以下环都是指<strong>含幺交换环(commutative ring with identity)</strong></p>]]>
     
